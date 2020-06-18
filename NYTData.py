@@ -8,7 +8,7 @@ from pprint import pprint
 import datetime
 
 
-def load_nyt(filename="us-counties_2020-06-16"):
+def load_nyt(filename="data/us-counties_2020-06-16"):
     """
     Loads in NYTimes data
 
@@ -30,15 +30,15 @@ def load_nyt(filename="us-counties_2020-06-16"):
     return cases_data, start, end
 
 
-def load_adj():
+def load_adj(adjfile="data/countyadj.csv", masterfile="data/county_fips_master.csv"):
     """
     Loads adjacency matrix as dataframe
 
     Replaces columns and rows with fips 
     """
-    county_adj = pd.read_csv("countyadj.csv")
+    county_adj = pd.read_csv(adjfile)
     county_adj = county_adj.rename(columns={'Unnamed: 0':'long_name'})
-    county_fips = pd.read_csv("county_fips_master.csv")
+    county_fips = pd.read_csv(masterfile)
 
     county_fips.loc[county_fips['long_name']=="Autauga County AL"]
 
