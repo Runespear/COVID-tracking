@@ -16,11 +16,19 @@ def load_nyt(filename="data/us-counties_2020-06-16"):
 
     Adds in column showing how many days from start
     """
+    
+
     cases_data = pd.read_csv(filename)
     cases_data.dropna(subset=["fips"], inplace=True)
+    
     cases_data["fips"] = cases_data["fips"].astype("int")
+    fips_list = cases_data["fips"].unique()
+
     cases_data["datetime"] = pd.to_datetime(cases_data["date"])
     cases_data["logcases"] = np.log(cases_data["cases"])
+
+    for fips in fips_list:
+        cases_data.loc[cases_data["fips"]==fips,"difflogcases"] = cases_data.loc[cases_data["fips"]==fips,"logcases"].diff()
 
     start = (cases_data.nsmallest(1, "datetime")["datetime"].values)[0]
     end = (cases_data.nlargest(1, "datetime")["datetime"].values)[0]
