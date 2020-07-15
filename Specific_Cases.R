@@ -1,0 +1,163 @@
+list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "choroplethr", "choroplethrMaps", "foreach", "evaluate")
+
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+require(new.packages)
+
+# Set Working Directory to File source directory
+# setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+# registerDoParallel(cores=6)
+county_analysis <- function(state, county_data, cutoff){
+  
+  state_df = county_data[which(county_data$state==state),]
+  
+  state_fips_list = sort(unique(state_df$fips))
+  
+  # Define log linear and double parameter exponent models
+  log_exp <-function(t,r,t0){r*t-r*t0}
+  double_exp <- function(t,r,t0){exp(r*t-r*t0)}
+  
+  
+  earliest_start = min(state_df$days_from_start)
+  latest_start = earliest_start
+  for (fips in state_fips_list){
+    county_df = state_df[which(state_df$fips == fips),]
+    county_start = min(county_df$days_from_start)
+    #print(county_start)
+    if (county_start > latest_start ){
+      latest_start = county_start
+    }
+  }
+  
+  # Restrict analyses < 80 days from start
+  # cutoff = 73
+  restricted_state_df = state_df[which(state_df$days_from_start < cutoff),]
+  restricted_state_fips_list = sort(unique(restricted_state_df$fips))
+  rlist = c()
+  t0list = c()
+  
+  for (fips in restricted_state_fips_list){
+    #print(fips)
+    county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
+    
+    logmodel = lm(formula = log_rolled_cases ~ days_from_start, data=county_df)
+    #print(fips)
+    #print(coef(summary(logmodel)))
+    rguess <- NULL
+    try(rguess <- coef(summary(logmodel))["days_from_start","Estimate"])
+    if (is.null(rguess)){
+      rguess <- NA
+      t0guess <- NA
+      SE_rguess <-NA
+      next
+    }
+    if (rguess == 0){
+      t0guess = min(county_df$days_from_start)
+      sigma_rguess = 0
+    }
+    else{
+      t0guess = coef(summary(logmodel))["(Intercept)","Estimate"]/(-rguess)
+      #guess = c(r = rguess, t0 = t0guess)
+      SE_rguess = coef(summary(logmodel))["days_from_start", "Std. Error"]
+    }
+    #print(coef(logmodel))
+    #print(confint(logmodel))
+    #return(logmodel)
+    while(FALSE){
+      expmodel<-NULL
+      # Note if nls fails, then carry on with r and t0 set to NA
+      try(expmodel<-nls(formula = rolled_cases ~ double_exp(days_from_start, r, t0), data=county_df, start = c(r = rguess, t0 = t0guess) )); # does not stop in the case of error
+      
+      if(!is.null(expmodel)){
+        r = coef(expmodel)[[1]]
+        t0 = coef(expmodel)[[2]]
+        
+        rlist = c(rlist, r)
+        t0list = c(t0list, t0)
+        
+        break; # if nls works, then quit from the loop
+      }
+      r = NA
+      t0 = NA
+      rlist = c(rlist,NA)
+      t0list = c(t0list,NA)
+      break;
+    }
+    restricted_state_df[which(restricted_state_df$fips == fips),"t0"] = t0guess
+    restricted_state_df[which(restricted_state_df$fips == fips),"r"] = rguess
+    restricted_state_df[which(restricted_state_df$fips == fips),"r.SE"] = SE_rguess
+  }
+  
+  # Method 1: Calculate ln(I) = r*t - intercept and feed into GRF
+  # Method 2: Cluster time series by DTW -> then refit model with exponential model
+  restricted_state_df = na.omit(restricted_state_df)
+  tau.forest <- NULL
+  
+  num_trees_list = c(2000,4000,6000,8000)
+  for (num_trees in num_trees_list){
+    tau.forest <-grf::causal_forest(X=restricted_state_df[,c("r","t0")], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
+    # Re-estimated r
+    restricted_state_fips_list = sort(unique(restricted_state_df$fips))
+    r.grflist = c()
+    for (fips in restricted_state_fips_list){
+      # print(fips)
+      county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
+      X.test <- unique(restricted_state_df[which(restricted_state_df$fips == fips), c("r","t0")])
+      
+      tau.hat <- predict(tau.forest,X.test, estimate.variance = TRUE)
+      sigma.hat <- sqrt(tau.hat$variance.estimates)
+      
+      restricted_state_df[which(restricted_state_df$fips == fips), paste("r.grf",toString(num_trees),sep="")] <- tau.hat
+      restricted_state_df[which(restricted_state_df$fips == fips), paste("r.SE.grf",toString(num_trees),sep="")] <- 1.96*sigma.hat
+      r.grflist = c(r.grflist,tau.hat)
+      
+      county_df$X <- county_df$days_from_start * tau.hat[[1]]
+      # Re-estimate t0
+      t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$X))/(-tau.hat)
+      
+      restricted_state_df[which(restricted_state_df$fips == fips), paste("t0.grf",toString(num_trees),sep="")] <- t0.hat
+  }
+  
+  }
+  return(restricted_state_df)
+  #write.csv(restricted_idaho_df,"./data/idaho_grf.csv",row.names=FALSE)
+  
+}
+
+# Load Data
+
+county_data <- read.csv(file = './data/processed_us-counties.csv')
+county_data$datetime <- anytime::anydate(county_data$date)
+county_data$log_rolled_cases <- log(county_data$rolled_cases)
+
+state_list = sort(unique(county_data$state))
+
+for (state in c("Idaho")){
+  state_df = county_data[which(county_data$state==state),]
+  earliest_start = min(state_df$days_from_start)
+  for (cutoff in (earliest_start+7):(earliest_start + 30)){
+    restricted_state_df <- NULL
+    try(restricted_state_df <- county_analysis(state, county_data, cutoff))
+    if(is.null(restricted_state_df)){
+      next
+    }
+    
+    mainDir = "./data/output/"
+    subDir = state
+    file_sub = paste(mainDir,subDir,sep="")
+    dir.create(file.path(mainDir, subDir))
+    
+    write.csv(restricted_state_df,paste(file_sub,"/",state,"_",toString(cutoff),"_grf.csv",sep=""),row.names=FALSE)
+    
+    print(paste("Done writing csv for day ", toString(cutoff), " of " ,state,sep=""))
+  }
+}
+
+
+
+
+closeAllConnections()
+
