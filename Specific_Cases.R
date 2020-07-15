@@ -111,7 +111,7 @@ county_analysis <- function(state, county_data, cutoff){
       sigma.hat <- sqrt(tau.hat$variance.estimates)
       
       restricted_state_df[which(restricted_state_df$fips == fips), paste("r.grf",toString(num_trees),sep="")] <- tau.hat
-      restricted_state_df[which(restricted_state_df$fips == fips), paste("r.SE.grf",toString(num_trees),sep="")] <- 1.96*sigma.hat
+      restricted_state_df[which(restricted_state_df$fips == fips), paste("r.SE.grf",toString(num_trees),sep="")] <- sigma.hat
       r.grflist = c(r.grflist,tau.hat)
       
       county_df$X <- county_df$days_from_start * tau.hat[[1]]
@@ -134,7 +134,7 @@ county_data$datetime <- anytime::anydate(county_data$date)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 
 state_list = sort(unique(county_data$state))
-
+# switch to state_list for all states
 for (state in c("Idaho")){
   state_df = county_data[which(county_data$state==state),]
   earliest_start = min(state_df$days_from_start)
