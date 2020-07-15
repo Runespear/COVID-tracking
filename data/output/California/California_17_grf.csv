@@ -1,0 +1,14 @@
+"date","county","state","fips","cases","deaths","datetime","days_from_start","logcases","rolled_cases","log_rolled_cases","t0","r","r.SE","r.grf","r.SE.grf","t0.grf"
+"2020-01-31","Orange","California",6059,1,0,2020-01-31,10,0,1,0,10,0,0,0,NA,NA
+"2020-02-01","Los Angeles","California",6037,1,0,2020-02-01,11,0,1,0,11,0,0,0,NA,NA
+"2020-02-01","Orange","California",6059,1,0,2020-02-01,11,0,1,0,10,0,0,0,NA,NA
+"2020-02-02","Los Angeles","California",6037,1,0,2020-02-02,12,0,1,0,11,0,0,0,NA,NA
+"2020-02-02","Orange","California",6059,1,0,2020-02-02,12,0,1,0,10,0,0,0,NA,NA
+"2020-02-03","Los Angeles","California",6037,1,0,2020-02-03,13,0,1,0,11,0,0,0,NA,NA
+"2020-02-03","Orange","California",6059,1,0,2020-02-03,13,0,1,0,10,0,0,0,NA,NA
+"2020-02-04","Los Angeles","California",6037,1,0,2020-02-04,14,0,1,0,11,0,0,0,NA,NA
+"2020-02-04","Orange","California",6059,1,0,2020-02-04,14,0,1,0,10,0,0,0,NA,NA
+"2020-02-05","Los Angeles","California",6037,1,0,2020-02-05,15,0,1,0,11,0,0,0,NA,NA
+"2020-02-05","Orange","California",6059,1,0,2020-02-05,15,0,1,0,10,0,0,0,NA,NA
+"2020-02-06","Los Angeles","California",6037,1,0,2020-02-06,16,0,1,0,11,0,0,0,NA,NA
+"2020-02-06","Orange","California",6059,1,0,2020-02-06,16,0,1,0,10,0,0,0,NA,NA
