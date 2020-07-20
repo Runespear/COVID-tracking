@@ -11,6 +11,6 @@ Data files are also included in the ```data``` folder
 
 Workflow:
 
-```Preprocess-us-counties.R ``` to pull the latest data from NYTimes repo and preprocess data
-```Specific_Cases.R``` to backtest grf and lm
-```Generate_Predictions_grf.R``` to generate whether there will be an outbreak in the next 7 days
+```Preprocess-us-counties.R ``` to pull the latest data from NYTimes repo and preprocess data  
+```Specific_Cases.R``` to backtest grf and lm  
+```Generate_Predictions_grf.R``` to generate whether there will be an outbreak in the next 7 days  
