@@ -70,4 +70,4 @@ inspect_2 <- prediction_df[which(prediction_df["Outbreak_Class"] == 2),]
 # Give to jag
 
 outbreak_df <- prediction_df[c("date","fips","county","state","Outbreak_Class")]
-write.csv(outbreak_df,paste(mainDir,"allstates_","ourbreak","_prediction.csv",sep=""),row.names=FALSE)
+write.csv(outbreak_df,paste(mainDir,"allstates_","outbreak","_prediction.csv",sep=""),row.names=FALSE)
