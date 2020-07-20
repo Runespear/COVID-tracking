@@ -1,5 +1,5 @@
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-list.of.packages <- c(list.of.packages, "zoo", "dtw", "choroplethr", "choroplethrMaps", "foreach", "evaluate","rlist")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)

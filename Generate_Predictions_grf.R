@@ -1,5 +1,5 @@
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-list.of.packages <- c(list.of.packages, "zoo", "dtw", "choroplethr", "choroplethrMaps", "foreach", "evaluate","rlist")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -19,11 +19,18 @@ registerDoParallel(cores=detectCores())
 
 OutbreakClass <- function(Double_Days){
   # Less than or equal to 3 days is outbreak
-  if (0 <= Double_Days & Double_Days <= 3){
+  if (0 <= Double_Days & Double_Days <= 7){
+    return(4)
+  }
+  else if (7 < Double_Days & Double_Days <=14){
+    return(3)
+  }
+  else if (14 < Double_Days & Double_Days <=21){
     return(2)
   }
-  else if (3 < Double_Days & Double_Days <=7)
+  else if (21 < Double_Days & Double_Days <=28){
     return(1)
+  }
   else{
     return(0)
   }
