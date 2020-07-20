@@ -8,16 +8,22 @@ if(length(new.packages)) install.packages(new.packages)
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-registerDoParallel(cores=6)
+#registerDoParallel(cores=6)
 
 # Blaine County, Idaho Ski Bar
 # fips = 16013
 # Cases = 126
 # Date ~= 2020-06-03
 
+# URL of NYTimes Data
+nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+
+destfile <- paste("./data/us-counties_",Sys.Date(),".csv",sep="")
+county_data <- read.csv(nyt_url)
+write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
 
-county_data <- read.csv(file = './data/us-counties_2020-06-16.csv')
+county_data <- read.csv(file = destfile)
 
 county_data$datetime <- anytime::anydate(county_data$date)
 
@@ -55,6 +61,8 @@ county_data = county_data[complete.cases(county_data),]
 start_date = min(county_data$datetime)
 end_date = max(county_data$datetime)
 
-write.csv(county_data, "./data/processed_us-counties.csv", row.names=FALSE)
+end_file = paste("./data/processed_us-counties_",Sys.Date(),".csv",sep="")
+
+write.csv(county_data, end_file, row.names=FALSE)
 
 closeAllConnections()
