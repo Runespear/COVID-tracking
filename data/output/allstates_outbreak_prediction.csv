@@ -36,7 +36,7 @@
 "2020-07-18",1069,"Houston","Alabama",2
 "2020-07-18",1071,"Jackson","Alabama",3
 "2020-07-18",1073,"Jefferson","Alabama",2
-"2020-07-18",1075,"Lamar","Alabama",1
+"2020-07-18",1075,"Lamar","Alabama",2
 "2020-07-18",1077,"Lauderdale","Alabama",2
 "2020-07-18",1079,"Lawrence","Alabama",3
 "2020-07-18",1081,"Lee","Alabama",1
@@ -73,7 +73,7 @@
 "2020-07-18",2060,"Bristol Bay Borough","Alaska",1
 "2020-07-18",2068,"Denali Borough","Alaska",2
 "2020-07-18",2070,"Dillingham Census Area","Alaska",0
-"2020-07-18",2090,"Fairbanks North Star Borough","Alaska",2
+"2020-07-18",2090,"Fairbanks North Star Borough","Alaska",3
 "2020-07-18",2100,"Haines Borough","Alaska",0
 "2020-07-18",2110,"Juneau City and Borough","Alaska",0
 "2020-07-18",2122,"Kenai Peninsula Borough","Alaska",1
@@ -81,7 +81,7 @@
 "2020-07-18",2150,"Kodiak Island Borough","Alaska",3
 "2020-07-18",2158,"Kusilvak Census Area","Alaska",3
 "2020-07-18",2164,"Lake and Peninsula Borough","Alaska",3
-"2020-07-18",2170,"Matanuska-Susitna Borough","Alaska",1
+"2020-07-18",2170,"Matanuska-Susitna Borough","Alaska",2
 "2020-07-18",2180,"Nome Census Area","Alaska",3
 "2020-07-18",2185,"North Slope Borough","Alaska",3
 "2020-07-18",2188,"Northwest Arctic Borough","Alaska",2
@@ -93,14 +93,14 @@
 "2020-07-18",2275,"Wrangell City and Borough","Alaska",0
 "2020-07-18",2290,"Yukon-Koyukuk Census Area","Alaska",3
 "2020-07-18",4001,"Apache","Arizona",0
-"2020-07-18",4003,"Cochise","Arizona",2
+"2020-07-18",4003,"Cochise","Arizona",1
 "2020-07-18",4005,"Coconino","Arizona",0
-"2020-07-18",4007,"Gila","Arizona",2
-"2020-07-18",4009,"Graham","Arizona",2
-"2020-07-18",4011,"Greenlee","Arizona",2
+"2020-07-18",4007,"Gila","Arizona",1
+"2020-07-18",4009,"Graham","Arizona",1
+"2020-07-18",4011,"Greenlee","Arizona",1
 "2020-07-18",4012,"La Paz","Arizona",0
 "2020-07-18",4013,"Maricopa","Arizona",1
-"2020-07-18",4015,"Mohave","Arizona",2
+"2020-07-18",4015,"Mohave","Arizona",1
 "2020-07-18",4017,"Navajo","Arizona",0
 "2020-07-18",4019,"Pima","Arizona",0
 "2020-07-18",4021,"Pinal","Arizona",1
@@ -114,11 +114,11 @@
 "2020-07-18",5009,"Boone","Arkansas",3
 "2020-07-18",5011,"Bradley","Arkansas",3
 "2020-07-18",5013,"Calhoun","Arkansas",3
-"2020-07-18",5015,"Carroll","Arkansas",0
+"2020-07-18",5015,"Carroll","Arkansas",1
 "2020-07-18",5017,"Chicot","Arkansas",1
 "2020-07-18",5019,"Clark","Arkansas",2
 "2020-07-18",5021,"Clay","Arkansas",0
-"2020-07-18",5023,"Cleburne","Arkansas",0
+"2020-07-18",5023,"Cleburne","Arkansas",1
 "2020-07-18",5025,"Cleveland","Arkansas",2
 "2020-07-18",5027,"Columbia","Arkansas",1
 "2020-07-18",5029,"Conway","Arkansas",2
@@ -130,7 +130,7 @@
 "2020-07-18",5041,"Desha","Arkansas",2
 "2020-07-18",5043,"Drew","Arkansas",1
 "2020-07-18",5045,"Faulkner","Arkansas",1
-"2020-07-18",5047,"Franklin","Arkansas",1
+"2020-07-18",5047,"Franklin","Arkansas",2
 "2020-07-18",5049,"Fulton","Arkansas",0
 "2020-07-18",5051,"Garland","Arkansas",1
 "2020-07-18",5053,"Grant","Arkansas",2
@@ -217,7 +217,7 @@
 "2020-07-18",6067,"Sacramento","California",2
 "2020-07-18",6069,"San Benito","California",2
 "2020-07-18",6071,"San Bernardino","California",2
-"2020-07-18",6073,"San Diego","California",0
+"2020-07-18",6073,"San Diego","California",1
 "2020-07-18",6075,"San Francisco","California",0
 "2020-07-18",6077,"San Joaquin","California",2
 "2020-07-18",6079,"San Luis Obispo","California",2
@@ -231,7 +231,7 @@
 "2020-07-18",6095,"Solano","California",1
 "2020-07-18",6097,"Sonoma","California",2
 "2020-07-18",6099,"Stanislaus","California",2
-"2020-07-18",6101,"Sutter","California",2
+"2020-07-18",6101,"Sutter","California",3
 "2020-07-18",6103,"Tehama","California",1
 "2020-07-18",6105,"Trinity","California",0
 "2020-07-18",6107,"Tulare","California",0
@@ -296,7 +296,7 @@
 "2020-07-18",8111,"San Juan","Colorado",0
 "2020-07-18",8113,"San Miguel","Colorado",3
 "2020-07-18",8117,"Summit","Colorado",0
-"2020-07-18",8119,"Teller","Colorado",1
+"2020-07-18",8119,"Teller","Colorado",2
 "2020-07-18",8121,"Washington","Colorado",0
 "2020-07-18",8123,"Weld","Colorado",0
 "2020-07-18",8125,"Yuma","Colorado",0
@@ -332,11 +332,11 @@
 "2020-07-18",12037,"Franklin","Florida",3
 "2020-07-18",12039,"Gadsden","Florida",2
 "2020-07-18",12041,"Gilchrist","Florida",2
-"2020-07-18",12043,"Glades","Florida",1
+"2020-07-18",12043,"Glades","Florida",0
 "2020-07-18",12045,"Gulf","Florida",3
-"2020-07-18",12047,"Hamilton","Florida",1
+"2020-07-18",12047,"Hamilton","Florida",0
 "2020-07-18",12049,"Hardee","Florida",1
-"2020-07-18",12051,"Hendry","Florida",1
+"2020-07-18",12051,"Hendry","Florida",0
 "2020-07-18",12053,"Hernando","Florida",3
 "2020-07-18",12055,"Highlands","Florida",2
 "2020-07-18",12057,"Hillsborough","Florida",2
@@ -349,11 +349,11 @@
 "2020-07-18",12071,"Lee","Florida",2
 "2020-07-18",12073,"Leon","Florida",2
 "2020-07-18",12075,"Levy","Florida",2
-"2020-07-18",12077,"Liberty","Florida",1
+"2020-07-18",12077,"Liberty","Florida",0
 "2020-07-18",12079,"Madison","Florida",3
 "2020-07-18",12081,"Manatee","Florida",2
 "2020-07-18",12083,"Marion","Florida",3
-"2020-07-18",12085,"Martin","Florida",1
+"2020-07-18",12085,"Martin","Florida",0
 "2020-07-18",12086,"Miami-Dade","Florida",2
 "2020-07-18",12087,"Monroe","Florida",3
 "2020-07-18",12089,"Nassau","Florida",3
@@ -371,11 +371,11 @@
 "2020-07-18",12117,"Seminole","Florida",2
 "2020-07-18",12109,"St. Johns","Florida",2
 "2020-07-18",12111,"St. Lucie","Florida",2
-"2020-07-18",12119,"Sumter","Florida",3
+"2020-07-18",12119,"Sumter","Florida",2
 "2020-07-18",12121,"Suwannee","Florida",1
 "2020-07-18",12123,"Taylor","Florida",3
 "2020-07-18",12125,"Union","Florida",2
-"2020-07-18",12127,"Volusia","Florida",2
+"2020-07-18",12127,"Volusia","Florida",3
 "2020-07-18",12129,"Wakulla","Florida",3
 "2020-07-18",12131,"Walton","Florida",3
 "2020-07-18",12133,"Washington","Florida",3
@@ -398,7 +398,7 @@
 "2020-07-18",13033,"Burke","Georgia",3
 "2020-07-18",13035,"Butts","Georgia",0
 "2020-07-18",13037,"Calhoun","Georgia",0
-"2020-07-18",13039,"Camden","Georgia",3
+"2020-07-18",13039,"Camden","Georgia",2
 "2020-07-18",13043,"Candler","Georgia",3
 "2020-07-18",13045,"Carroll","Georgia",2
 "2020-07-18",13047,"Catoosa","Georgia",0
@@ -406,7 +406,7 @@
 "2020-07-18",13051,"Chatham","Georgia",2
 "2020-07-18",13053,"Chattahoochee","Georgia",0
 "2020-07-18",13055,"Chattooga","Georgia",0
-"2020-07-18",13057,"Cherokee","Georgia",0
+"2020-07-18",13057,"Cherokee","Georgia",1
 "2020-07-18",13059,"Clarke","Georgia",2
 "2020-07-18",13061,"Clay","Georgia",0
 "2020-07-18",13063,"Clayton","Georgia",1
@@ -454,7 +454,7 @@
 "2020-07-18",13147,"Hart","Georgia",3
 "2020-07-18",13149,"Heard","Georgia",1
 "2020-07-18",13151,"Henry","Georgia",1
-"2020-07-18",13153,"Houston","Georgia",1
+"2020-07-18",13153,"Houston","Georgia",2
 "2020-07-18",13155,"Irwin","Georgia",1
 "2020-07-18",13157,"Jackson","Georgia",1
 "2020-07-18",13159,"Jasper","Georgia",0
@@ -511,7 +511,7 @@
 "2020-07-18",13263,"Talbot","Georgia",0
 "2020-07-18",13265,"Taliaferro","Georgia",3
 "2020-07-18",13267,"Tattnall","Georgia",2
-"2020-07-18",13269,"Taylor","Georgia",1
+"2020-07-18",13269,"Taylor","Georgia",0
 "2020-07-18",13271,"Telfair","Georgia",2
 "2020-07-18",13273,"Terrell","Georgia",0
 "2020-07-18",13275,"Thomas","Georgia",1
@@ -525,7 +525,7 @@
 "2020-07-18",13291,"Union","Georgia",3
 "2020-07-18",13293,"Upson","Georgia",0
 "2020-07-18",13295,"Walker","Georgia",0
-"2020-07-18",13297,"Walton","Georgia",1
+"2020-07-18",13297,"Walton","Georgia",0
 "2020-07-18",13299,"Ware","Georgia",2
 "2020-07-18",13301,"Warren","Georgia",2
 "2020-07-18",13303,"Washington","Georgia",2
@@ -551,7 +551,7 @@
 "2020-07-18",16013,"Blaine","Idaho",0
 "2020-07-18",16015,"Boise","Idaho",4
 "2020-07-18",16017,"Bonner","Idaho",3
-"2020-07-18",16019,"Bonneville","Idaho",2
+"2020-07-18",16019,"Bonneville","Idaho",3
 "2020-07-18",16021,"Boundary","Idaho",4
 "2020-07-18",16025,"Camas","Idaho",2
 "2020-07-18",16027,"Canyon","Idaho",3
@@ -615,7 +615,7 @@
 "2020-07-18",17059,"Gallatin","Illinois",4
 "2020-07-18",17061,"Greene","Illinois",3
 "2020-07-18",17063,"Grundy","Illinois",0
-"2020-07-18",17065,"Hamilton","Illinois",1
+"2020-07-18",17065,"Hamilton","Illinois",0
 "2020-07-18",17067,"Hancock","Illinois",0
 "2020-07-18",17069,"Hardin","Illinois",4
 "2020-07-18",17071,"Henderson","Illinois",0
@@ -674,7 +674,7 @@
 "2020-07-18",17177,"Stephenson","Illinois",0
 "2020-07-18",17179,"Tazewell","Illinois",1
 "2020-07-18",17181,"Union","Illinois",0
-"2020-07-18",17183,"Vermilion","Illinois",1
+"2020-07-18",17183,"Vermilion","Illinois",0
 "2020-07-18",17185,"Wabash","Illinois",0
 "2020-07-18",17187,"Warren","Illinois",0
 "2020-07-18",17189,"Washington","Illinois",0
@@ -703,7 +703,7 @@
 "2020-07-18",18029,"Dearborn","Indiana",0
 "2020-07-18",18031,"Decatur","Indiana",0
 "2020-07-18",18035,"Delaware","Indiana",0
-"2020-07-18",18037,"Dubois","Indiana",1
+"2020-07-18",18037,"Dubois","Indiana",2
 "2020-07-18",18039,"Elkhart","Indiana",0
 "2020-07-18",18041,"Fayette","Indiana",0
 "2020-07-18",18043,"Floyd","Indiana",0
@@ -749,7 +749,7 @@
 "2020-07-18",18123,"Perry","Indiana",0
 "2020-07-18",18125,"Pike","Indiana",2
 "2020-07-18",18127,"Porter","Indiana",0
-"2020-07-18",18129,"Posey","Indiana",2
+"2020-07-18",18129,"Posey","Indiana",3
 "2020-07-18",18131,"Pulaski","Indiana",0
 "2020-07-18",18133,"Putnam","Indiana",0
 "2020-07-18",18135,"Randolph","Indiana",0
@@ -757,7 +757,7 @@
 "2020-07-18",18139,"Rush","Indiana",0
 "2020-07-18",18143,"Scott","Indiana",0
 "2020-07-18",18145,"Shelby","Indiana",0
-"2020-07-18",18147,"Spencer","Indiana",2
+"2020-07-18",18147,"Spencer","Indiana",3
 "2020-07-18",18141,"St. Joseph","Indiana",0
 "2020-07-18",18149,"Starke","Indiana",2
 "2020-07-18",18151,"Steuben","Indiana",0
@@ -791,7 +791,7 @@
 "2020-07-18",19023,"Butler","Iowa",1
 "2020-07-18",19025,"Calhoun","Iowa",1
 "2020-07-18",19027,"Carroll","Iowa",0
-"2020-07-18",19029,"Cass","Iowa",1
+"2020-07-18",19029,"Cass","Iowa",0
 "2020-07-18",19031,"Cedar","Iowa",0
 "2020-07-18",19033,"Cerro Gordo","Iowa",3
 "2020-07-18",19035,"Cherokee","Iowa",0
@@ -799,7 +799,7 @@
 "2020-07-18",19039,"Clarke","Iowa",0
 "2020-07-18",19041,"Clay","Iowa",0
 "2020-07-18",19043,"Clayton","Iowa",0
-"2020-07-18",19045,"Clinton","Iowa",1
+"2020-07-18",19045,"Clinton","Iowa",2
 "2020-07-18",19047,"Crawford","Iowa",0
 "2020-07-18",19049,"Dallas","Iowa",0
 "2020-07-18",19051,"Davis","Iowa",0
@@ -819,7 +819,7 @@
 "2020-07-18",19079,"Hamilton","Iowa",0
 "2020-07-18",19081,"Hancock","Iowa",1
 "2020-07-18",19083,"Hardin","Iowa",0
-"2020-07-18",19085,"Harrison","Iowa",1
+"2020-07-18",19085,"Harrison","Iowa",0
 "2020-07-18",19087,"Henry","Iowa",0
 "2020-07-18",19089,"Howard","Iowa",0
 "2020-07-18",19091,"Humboldt","Iowa",0
@@ -893,7 +893,7 @@
 "2020-07-18",20029,"Cloud","Kansas",0
 "2020-07-18",20031,"Coffey","Kansas",0
 "2020-07-18",20033,"Comanche","Kansas",0
-"2020-07-18",20035,"Cowley","Kansas",1
+"2020-07-18",20035,"Cowley","Kansas",0
 "2020-07-18",20037,"Crawford","Kansas",0
 "2020-07-18",20041,"Dickinson","Kansas",3
 "2020-07-18",20043,"Doniphan","Kansas",0
@@ -922,7 +922,7 @@
 "2020-07-18",20091,"Johnson","Kansas",2
 "2020-07-18",20093,"Kearny","Kansas",0
 "2020-07-18",20095,"Kingman","Kansas",4
-"2020-07-18",20097,"Kiowa","Kansas",1
+"2020-07-18",20097,"Kiowa","Kansas",0
 "2020-07-18",20099,"Labette","Kansas",1
 "2020-07-18",20101,"Lane","Kansas",0
 "2020-07-18",20103,"Leavenworth","Kansas",0
@@ -941,7 +941,7 @@
 "2020-07-18",20129,"Morton","Kansas",0
 "2020-07-18",20131,"Nemaha","Kansas",0
 "2020-07-18",20133,"Neosho","Kansas",2
-"2020-07-18",20135,"Ness","Kansas",1
+"2020-07-18",20135,"Ness","Kansas",0
 "2020-07-18",20137,"Norton","Kansas",3
 "2020-07-18",20139,"Osage","Kansas",3
 "2020-07-18",20141,"Osborne","Kansas",0
@@ -950,7 +950,7 @@
 "2020-07-18",20147,"Phillips","Kansas",2
 "2020-07-18",20149,"Pottawatomie","Kansas",0
 "2020-07-18",20151,"Pratt","Kansas",3
-"2020-07-18",20155,"Reno","Kansas",3
+"2020-07-18",20155,"Reno","Kansas",2
 "2020-07-18",20157,"Republic","Kansas",4
 "2020-07-18",20159,"Rice","Kansas",4
 "2020-07-18",20161,"Riley","Kansas",0
@@ -999,10 +999,10 @@
 "2020-07-18",21041,"Carroll","Kentucky",3
 "2020-07-18",21043,"Carter","Kentucky",3
 "2020-07-18",21045,"Casey","Kentucky",3
-"2020-07-18",21047,"Christian","Kentucky",2
+"2020-07-18",21047,"Christian","Kentucky",1
 "2020-07-18",21049,"Clark","Kentucky",0
 "2020-07-18",21051,"Clay","Kentucky",1
-"2020-07-18",21053,"Clinton","Kentucky",2
+"2020-07-18",21053,"Clinton","Kentucky",3
 "2020-07-18",21055,"Crittenden","Kentucky",3
 "2020-07-18",21057,"Cumberland","Kentucky",3
 "2020-07-18",21059,"Daviess","Kentucky",0
@@ -1032,14 +1032,14 @@
 "2020-07-18",21107,"Hopkins","Kentucky",0
 "2020-07-18",21109,"Jackson","Kentucky",0
 "2020-07-18",21111,"Jefferson","Kentucky",0
-"2020-07-18",21113,"Jessamine","Kentucky",2
+"2020-07-18",21113,"Jessamine","Kentucky",1
 "2020-07-18",21115,"Johnson","Kentucky",1
 "2020-07-18",21117,"Kenton","Kentucky",0
 "2020-07-18",21119,"Knott","Kentucky",3
 "2020-07-18",21121,"Knox","Kentucky",2
 "2020-07-18",21123,"Larue","Kentucky",2
 "2020-07-18",21125,"Laurel","Kentucky",2
-"2020-07-18",21127,"Lawrence","Kentucky",1
+"2020-07-18",21127,"Lawrence","Kentucky",2
 "2020-07-18",21129,"Lee","Kentucky",0
 "2020-07-18",21131,"Leslie","Kentucky",0
 "2020-07-18",21133,"Letcher","Kentucky",1
@@ -1060,14 +1060,14 @@
 "2020-07-18",21163,"Meade","Kentucky",2
 "2020-07-18",21165,"Menifee","Kentucky",1
 "2020-07-18",21167,"Mercer","Kentucky",0
-"2020-07-18",21169,"Metcalfe","Kentucky",1
+"2020-07-18",21169,"Metcalfe","Kentucky",2
 "2020-07-18",21171,"Monroe","Kentucky",1
 "2020-07-18",21173,"Montgomery","Kentucky",1
 "2020-07-18",21175,"Morgan","Kentucky",3
 "2020-07-18",21177,"Muhlenberg","Kentucky",0
 "2020-07-18",21179,"Nelson","Kentucky",2
 "2020-07-18",21181,"Nicholas","Kentucky",1
-"2020-07-18",21183,"Ohio","Kentucky",2
+"2020-07-18",21183,"Ohio","Kentucky",1
 "2020-07-18",21185,"Oldham","Kentucky",1
 "2020-07-18",21187,"Owen","Kentucky",3
 "2020-07-18",21189,"Owsley","Kentucky",0
@@ -1098,7 +1098,7 @@
 "2020-07-18",21239,"Woodford","Kentucky",0
 "2020-07-18",22001,"Acadia","Louisiana",2
 "2020-07-18",22003,"Allen","Louisiana",2
-"2020-07-18",22005,"Ascension","Louisiana",1
+"2020-07-18",22005,"Ascension","Louisiana",0
 "2020-07-18",22007,"Assumption","Louisiana",0
 "2020-07-18",22009,"Avoyelles","Louisiana",2
 "2020-07-18",22011,"Beauregard","Louisiana",3
@@ -1112,7 +1112,7 @@
 "2020-07-18",22027,"Claiborne","Louisiana",0
 "2020-07-18",22029,"Concordia","Louisiana",2
 "2020-07-18",22031,"De Soto","Louisiana",0
-"2020-07-18",22033,"East Baton Rouge","Louisiana",1
+"2020-07-18",22033,"East Baton Rouge","Louisiana",0
 "2020-07-18",22035,"East Carroll","Louisiana",0
 "2020-07-18",22037,"East Feliciana","Louisiana",0
 "2020-07-18",22039,"Evangeline","Louisiana",3
@@ -1185,7 +1185,7 @@
 "2020-07-18",24013,"Carroll","Maryland",0
 "2020-07-18",24015,"Cecil","Maryland",0
 "2020-07-18",24017,"Charles","Maryland",0
-"2020-07-18",24019,"Dorchester","Maryland",1
+"2020-07-18",24019,"Dorchester","Maryland",0
 "2020-07-18",24021,"Frederick","Maryland",0
 "2020-07-18",24023,"Garrett","Maryland",1
 "2020-07-18",24025,"Harford","Maryland",0
@@ -1194,12 +1194,12 @@
 "2020-07-18",24031,"Montgomery","Maryland",0
 "2020-07-18",24033,"Prince George's","Maryland",0
 "2020-07-18",24035,"Queen Anne's","Maryland",1
-"2020-07-18",24039,"Somerset","Maryland",1
+"2020-07-18",24039,"Somerset","Maryland",0
 "2020-07-18",24037,"St. Mary's","Maryland",0
 "2020-07-18",24041,"Talbot","Maryland",1
 "2020-07-18",24043,"Washington","Maryland",0
 "2020-07-18",24045,"Wicomico","Maryland",0
-"2020-07-18",24047,"Worcester","Maryland",1
+"2020-07-18",24047,"Worcester","Maryland",0
 "2020-07-18",25001,"Barnstable","Massachusetts",0
 "2020-07-18",25003,"Berkshire","Massachusetts",0
 "2020-07-18",25005,"Bristol","Massachusetts",0
@@ -1218,7 +1218,7 @@
 "2020-07-18",26003,"Alger","Michigan",0
 "2020-07-18",26005,"Allegan","Michigan",0
 "2020-07-18",26007,"Alpena","Michigan",0
-"2020-07-18",26009,"Antrim","Michigan",0
+"2020-07-18",26009,"Antrim","Michigan",1
 "2020-07-18",26011,"Arenac","Michigan",0
 "2020-07-18",26013,"Baraga","Michigan",0
 "2020-07-18",26015,"Barry","Michigan",0
@@ -1304,7 +1304,7 @@
 "2020-07-18",27009,"Benton","Minnesota",0
 "2020-07-18",27011,"Big Stone","Minnesota",0
 "2020-07-18",27013,"Blue Earth","Minnesota",1
-"2020-07-18",27015,"Brown","Minnesota",2
+"2020-07-18",27015,"Brown","Minnesota",3
 "2020-07-18",27017,"Carlton","Minnesota",0
 "2020-07-18",27019,"Carver","Minnesota",1
 "2020-07-18",27021,"Cass","Minnesota",2
@@ -1324,7 +1324,7 @@
 "2020-07-18",27049,"Goodhue","Minnesota",0
 "2020-07-18",27051,"Grant","Minnesota",3
 "2020-07-18",27053,"Hennepin","Minnesota",0
-"2020-07-18",27055,"Houston","Minnesota",1
+"2020-07-18",27055,"Houston","Minnesota",0
 "2020-07-18",27057,"Hubbard","Minnesota",3
 "2020-07-18",27059,"Isanti","Minnesota",0
 "2020-07-18",27061,"Itasca","Minnesota",1
@@ -1375,7 +1375,7 @@
 "2020-07-18",27153,"Todd","Minnesota",0
 "2020-07-18",27155,"Traverse","Minnesota",3
 "2020-07-18",27157,"Wabasha","Minnesota",2
-"2020-07-18",27159,"Wadena","Minnesota",1
+"2020-07-18",27159,"Wadena","Minnesota",0
 "2020-07-18",27161,"Waseca","Minnesota",0
 "2020-07-18",27163,"Washington","Minnesota",0
 "2020-07-18",27165,"Watonwan","Minnesota",0
@@ -1384,7 +1384,7 @@
 "2020-07-18",27171,"Wright","Minnesota",0
 "2020-07-18",27173,"Yellow Medicine","Minnesota",0
 "2020-07-18",28001,"Adams","Mississippi",0
-"2020-07-18",28003,"Alcorn","Mississippi",3
+"2020-07-18",28003,"Alcorn","Mississippi",2
 "2020-07-18",28005,"Amite","Mississippi",1
 "2020-07-18",28007,"Attala","Mississippi",0
 "2020-07-18",28009,"Benton","Mississippi",2
@@ -1407,7 +1407,7 @@
 "2020-07-18",28043,"Grenada","Mississippi",1
 "2020-07-18",28045,"Hancock","Mississippi",1
 "2020-07-18",28047,"Harrison","Mississippi",1
-"2020-07-18",28049,"Hinds","Mississippi",0
+"2020-07-18",28049,"Hinds","Mississippi",1
 "2020-07-18",28051,"Holmes","Mississippi",0
 "2020-07-18",28053,"Humphreys","Mississippi",1
 "2020-07-18",28055,"Issaquena","Mississippi",1
@@ -1450,7 +1450,7 @@
 "2020-07-18",28129,"Smith","Mississippi",0
 "2020-07-18",28131,"Stone","Mississippi",1
 "2020-07-18",28133,"Sunflower","Mississippi",2
-"2020-07-18",28135,"Tallahatchie","Mississippi",3
+"2020-07-18",28135,"Tallahatchie","Mississippi",2
 "2020-07-18",28137,"Tate","Mississippi",2
 "2020-07-18",28139,"Tippah","Mississippi",0
 "2020-07-18",28141,"Tishomingo","Mississippi",2
@@ -1489,7 +1489,7 @@
 "2020-07-18",29043,"Christian","Missouri",3
 "2020-07-18",29045,"Clark","Missouri",0
 "2020-07-18",29047,"Clay","Missouri",0
-"2020-07-18",29049,"Clinton","Missouri",0
+"2020-07-18",29049,"Clinton","Missouri",1
 "2020-07-18",29051,"Cole","Missouri",3
 "2020-07-18",29053,"Cooper","Missouri",2
 "2020-07-18",29055,"Crawford","Missouri",2
@@ -1510,10 +1510,10 @@
 "2020-07-18",29085,"Hickory","Missouri",3
 "2020-07-18",29087,"Holt","Missouri",0
 "2020-07-18",29089,"Howard","Missouri",3
-"2020-07-18",29091,"Howell","Missouri",0
+"2020-07-18",29091,"Howell","Missouri",1
 "2020-07-18",29093,"Iron","Missouri",0
 "2020-07-18",29095,"Jackson","Missouri",1
-"2020-07-18",29097,"Jasper","Missouri",0
+"2020-07-18",29097,"Jasper","Missouri",1
 "2020-07-18",29099,"Jefferson","Missouri",2
 "2020-07-18",29101,"Johnson","Missouri",3
 "2020-07-18",29103,"Knox","Missouri",0
@@ -1547,7 +1547,7 @@
 "2020-07-18",29159,"Pettis","Missouri",2
 "2020-07-18",29161,"Phelps","Missouri",0
 "2020-07-18",29163,"Pike","Missouri",0
-"2020-07-18",29165,"Platte","Missouri",1
+"2020-07-18",29165,"Platte","Missouri",2
 "2020-07-18",29167,"Polk","Missouri",3
 "2020-07-18",29169,"Pulaski","Missouri",0
 "2020-07-18",29171,"Putnam","Missouri",0
@@ -1559,7 +1559,7 @@
 "2020-07-18",29195,"Saline","Missouri",0
 "2020-07-18",29197,"Schuyler","Missouri",0
 "2020-07-18",29199,"Scotland","Missouri",0
-"2020-07-18",29201,"Scott","Missouri",0
+"2020-07-18",29201,"Scott","Missouri",1
 "2020-07-18",29203,"Shannon","Missouri",2
 "2020-07-18",29205,"Shelby","Missouri",1
 "2020-07-18",29183,"St. Charles","Missouri",2
@@ -1589,7 +1589,7 @@
 "2020-07-18",30021,"Dawson","Montana",0
 "2020-07-18",30023,"Deer Lodge","Montana",3
 "2020-07-18",30027,"Fergus","Montana",3
-"2020-07-18",30029,"Flathead","Montana",2
+"2020-07-18",30029,"Flathead","Montana",3
 "2020-07-18",30031,"Gallatin","Montana",3
 "2020-07-18",30035,"Glacier","Montana",0
 "2020-07-18",30037,"Golden Valley","Montana",0
@@ -1605,15 +1605,15 @@
 "2020-07-18",30063,"Missoula","Montana",0
 "2020-07-18",30065,"Musselshell","Montana",0
 "2020-07-18",30067,"Park","Montana",3
-"2020-07-18",30073,"Pondera","Montana",2
+"2020-07-18",30073,"Pondera","Montana",3
 "2020-07-18",30081,"Ravalli","Montana",2
 "2020-07-18",30083,"Richland","Montana",2
 "2020-07-18",30085,"Roosevelt","Montana",1
-"2020-07-18",30087,"Rosebud","Montana",2
+"2020-07-18",30087,"Rosebud","Montana",3
 "2020-07-18",30091,"Sheridan","Montana",4
 "2020-07-18",30093,"Silver Bow","Montana",2
 "2020-07-18",30095,"Stillwater","Montana",3
-"2020-07-18",30099,"Teton","Montana",2
+"2020-07-18",30099,"Teton","Montana",3
 "2020-07-18",30101,"Toole","Montana",0
 "2020-07-18",30103,"Treasure","Montana",0
 "2020-07-18",30105,"Valley","Montana",0
@@ -1687,7 +1687,7 @@
 "2020-07-18",31153,"Sarpy","Nebraska",0
 "2020-07-18",31155,"Saunders","Nebraska",0
 "2020-07-18",31157,"Scotts Bluff","Nebraska",0
-"2020-07-18",31159,"Seward","Nebraska",1
+"2020-07-18",31159,"Seward","Nebraska",0
 "2020-07-18",31161,"Sheridan","Nebraska",0
 "2020-07-18",31163,"Sherman","Nebraska",0
 "2020-07-18",31165,"Sioux","Nebraska",0
@@ -1700,14 +1700,14 @@
 "2020-07-18",31179,"Wayne","Nebraska",0
 "2020-07-18",31181,"Webster","Nebraska",2
 "2020-07-18",31185,"York","Nebraska",0
-"2020-07-18",32510,"Carson City","Nevada",0
+"2020-07-18",32510,"Carson City","Nevada",1
 "2020-07-18",32001,"Churchill","Nevada",2
 "2020-07-18",32003,"Clark","Nevada",1
-"2020-07-18",32005,"Douglas","Nevada",0
+"2020-07-18",32005,"Douglas","Nevada",1
 "2020-07-18",32007,"Elko","Nevada",2
 "2020-07-18",32011,"Eureka","Nevada",1
 "2020-07-18",32013,"Humboldt","Nevada",0
-"2020-07-18",32015,"Lander","Nevada",0
+"2020-07-18",32015,"Lander","Nevada",1
 "2020-07-18",32017,"Lincoln","Nevada",1
 "2020-07-18",32019,"Lyon","Nevada",0
 "2020-07-18",32021,"Mineral","Nevada",2
@@ -1770,7 +1770,7 @@
 "2020-07-18",35039,"Rio Arriba","New Mexico",2
 "2020-07-18",35041,"Roosevelt","New Mexico",0
 "2020-07-18",35045,"San Juan","New Mexico",0
-"2020-07-18",35047,"San Miguel","New Mexico",2
+"2020-07-18",35047,"San Miguel","New Mexico",1
 "2020-07-18",35043,"Sandoval","New Mexico",0
 "2020-07-18",35049,"Santa Fe","New Mexico",1
 "2020-07-18",35051,"Sierra","New Mexico",1
@@ -1892,7 +1892,7 @@
 "2020-07-18",37107,"Lenoir","North Carolina",0
 "2020-07-18",37109,"Lincoln","North Carolina",2
 "2020-07-18",37113,"Macon","North Carolina",0
-"2020-07-18",37115,"Madison","North Carolina",1
+"2020-07-18",37115,"Madison","North Carolina",2
 "2020-07-18",37117,"Martin","North Carolina",0
 "2020-07-18",37111,"McDowell","North Carolina",0
 "2020-07-18",37119,"Mecklenburg","North Carolina",0
@@ -1913,7 +1913,7 @@
 "2020-07-18",37149,"Polk","North Carolina",0
 "2020-07-18",37151,"Randolph","North Carolina",0
 "2020-07-18",37153,"Richmond","North Carolina",0
-"2020-07-18",37155,"Robeson","North Carolina",1
+"2020-07-18",37155,"Robeson","North Carolina",0
 "2020-07-18",37157,"Rockingham","North Carolina",0
 "2020-07-18",37159,"Rowan","North Carolina",0
 "2020-07-18",37161,"Rutherford","North Carolina",0
@@ -1935,7 +1935,7 @@
 "2020-07-18",37193,"Wilkes","North Carolina",0
 "2020-07-18",37195,"Wilson","North Carolina",1
 "2020-07-18",37197,"Yadkin","North Carolina",0
-"2020-07-18",37199,"Yancey","North Carolina",1
+"2020-07-18",37199,"Yancey","North Carolina",2
 "2020-07-18",38003,"Barnes","North Dakota",0
 "2020-07-18",38005,"Benson","North Dakota",3
 "2020-07-18",38007,"Billings","North Dakota",0
@@ -1999,7 +1999,7 @@
 "2020-07-18",39019,"Carroll","Ohio",1
 "2020-07-18",39021,"Champaign","Ohio",3
 "2020-07-18",39023,"Clark","Ohio",0
-"2020-07-18",39025,"Clermont","Ohio",1
+"2020-07-18",39025,"Clermont","Ohio",2
 "2020-07-18",39027,"Clinton","Ohio",2
 "2020-07-18",39029,"Columbiana","Ohio",0
 "2020-07-18",39031,"Coshocton","Ohio",1
@@ -2008,8 +2008,8 @@
 "2020-07-18",39037,"Darke","Ohio",0
 "2020-07-18",39039,"Defiance","Ohio",0
 "2020-07-18",39041,"Delaware","Ohio",2
-"2020-07-18",39043,"Erie","Ohio",1
-"2020-07-18",39045,"Fairfield","Ohio",1
+"2020-07-18",39043,"Erie","Ohio",2
+"2020-07-18",39045,"Fairfield","Ohio",2
 "2020-07-18",39047,"Fayette","Ohio",1
 "2020-07-18",39049,"Franklin","Ohio",0
 "2020-07-18",39051,"Fulton","Ohio",0
@@ -2025,7 +2025,7 @@
 "2020-07-18",39071,"Highland","Ohio",2
 "2020-07-18",39073,"Hocking","Ohio",0
 "2020-07-18",39075,"Holmes","Ohio",0
-"2020-07-18",39077,"Huron","Ohio",0
+"2020-07-18",39077,"Huron","Ohio",1
 "2020-07-18",39079,"Jackson","Ohio",3
 "2020-07-18",39081,"Jefferson","Ohio",3
 "2020-07-18",39083,"Knox","Ohio",1
@@ -2044,7 +2044,7 @@
 "2020-07-18",39109,"Miami","Ohio",0
 "2020-07-18",39111,"Monroe","Ohio",0
 "2020-07-18",39113,"Montgomery","Ohio",1
-"2020-07-18",39115,"Morgan","Ohio",0
+"2020-07-18",39115,"Morgan","Ohio",1
 "2020-07-18",39117,"Morrow","Ohio",0
 "2020-07-18",39119,"Muskingum","Ohio",1
 "2020-07-18",39121,"Noble","Ohio",1
@@ -2054,7 +2054,7 @@
 "2020-07-18",39129,"Pickaway","Ohio",0
 "2020-07-18",39131,"Pike","Ohio",2
 "2020-07-18",39133,"Portage","Ohio",0
-"2020-07-18",39135,"Preble","Ohio",1
+"2020-07-18",39135,"Preble","Ohio",2
 "2020-07-18",39137,"Putnam","Ohio",0
 "2020-07-18",39139,"Richland","Ohio",0
 "2020-07-18",39141,"Ross","Ohio",1
@@ -2119,7 +2119,7 @@
 "2020-07-18",40083,"Logan","Oklahoma",3
 "2020-07-18",40085,"Love","Oklahoma",1
 "2020-07-18",40093,"Major","Oklahoma",3
-"2020-07-18",40095,"Marshall","Oklahoma",1
+"2020-07-18",40095,"Marshall","Oklahoma",0
 "2020-07-18",40097,"Mayes","Oklahoma",2
 "2020-07-18",40087,"McClain","Oklahoma",1
 "2020-07-18",40089,"McCurtain","Oklahoma",0
@@ -2145,7 +2145,7 @@
 "2020-07-18",40137,"Stephens","Oklahoma",2
 "2020-07-18",40139,"Texas","Oklahoma",0
 "2020-07-18",40141,"Tillman","Oklahoma",0
-"2020-07-18",40143,"Tulsa","Oklahoma",0
+"2020-07-18",40143,"Tulsa","Oklahoma",1
 "2020-07-18",40145,"Wagoner","Oklahoma",1
 "2020-07-18",40147,"Washington","Oklahoma",0
 "2020-07-18",40149,"Washita","Oklahoma",3
@@ -2241,7 +2241,7 @@
 "2020-07-18",42105,"Potter","Pennsylvania",0
 "2020-07-18",42107,"Schuylkill","Pennsylvania",0
 "2020-07-18",42109,"Snyder","Pennsylvania",0
-"2020-07-18",42111,"Somerset","Pennsylvania",1
+"2020-07-18",42111,"Somerset","Pennsylvania",2
 "2020-07-18",42113,"Sullivan","Pennsylvania",0
 "2020-07-18",42115,"Susquehanna","Pennsylvania",0
 "2020-07-18",42117,"Tioga","Pennsylvania",0
@@ -2250,7 +2250,7 @@
 "2020-07-18",42123,"Warren","Pennsylvania",2
 "2020-07-18",42125,"Washington","Pennsylvania",2
 "2020-07-18",42127,"Wayne","Pennsylvania",0
-"2020-07-18",42129,"Westmoreland","Pennsylvania",1
+"2020-07-18",42129,"Westmoreland","Pennsylvania",0
 "2020-07-18",42131,"Wyoming","Pennsylvania",1
 "2020-07-18",42133,"York","Pennsylvania",0
 "2020-07-18",72001,"Adjuntas","Puerto Rico",0
@@ -2328,7 +2328,7 @@
 "2020-07-18",72143,"Vega Alta","Puerto Rico",1
 "2020-07-18",72145,"Vega Baja","Puerto Rico",3
 "2020-07-18",72147,"Vieques","Puerto Rico",1
-"2020-07-18",72149,"Villalba","Puerto Rico",1
+"2020-07-18",72149,"Villalba","Puerto Rico",0
 "2020-07-18",72151,"Yabucoa","Puerto Rico",1
 "2020-07-18",72153,"Yauco","Puerto Rico",1
 "2020-07-18",44001,"Bristol","Rhode Island",0
@@ -2356,9 +2356,9 @@
 "2020-07-18",45035,"Dorchester","South Carolina",2
 "2020-07-18",45037,"Edgefield","South Carolina",2
 "2020-07-18",45039,"Fairfield","South Carolina",1
-"2020-07-18",45041,"Florence","South Carolina",0
+"2020-07-18",45041,"Florence","South Carolina",1
 "2020-07-18",45043,"Georgetown","South Carolina",2
-"2020-07-18",45045,"Greenville","South Carolina",0
+"2020-07-18",45045,"Greenville","South Carolina",1
 "2020-07-18",45047,"Greenwood","South Carolina",2
 "2020-07-18",45049,"Hampton","South Carolina",3
 "2020-07-18",45051,"Horry","South Carolina",1
@@ -2381,7 +2381,7 @@
 "2020-07-18",45085,"Sumter","South Carolina",1
 "2020-07-18",45087,"Union","South Carolina",3
 "2020-07-18",45089,"Williamsburg","South Carolina",1
-"2020-07-18",45091,"York","South Carolina",2
+"2020-07-18",45091,"York","South Carolina",1
 "2020-07-18",46003,"Aurora","South Dakota",0
 "2020-07-18",46005,"Beadle","South Dakota",0
 "2020-07-18",46007,"Bennett","South Dakota",0
@@ -2470,7 +2470,7 @@
 "2020-07-18",47043,"Dickson","Tennessee",2
 "2020-07-18",47045,"Dyer","Tennessee",1
 "2020-07-18",47047,"Fayette","Tennessee",1
-"2020-07-18",47049,"Fentress","Tennessee",2
+"2020-07-18",47049,"Fentress","Tennessee",3
 "2020-07-18",47051,"Franklin","Tennessee",2
 "2020-07-18",47053,"Gibson","Tennessee",3
 "2020-07-18",47055,"Giles","Tennessee",3
@@ -2517,7 +2517,7 @@
 "2020-07-18",47137,"Pickett","Tennessee",3
 "2020-07-18",47139,"Polk","Tennessee",1
 "2020-07-18",47141,"Putnam","Tennessee",0
-"2020-07-18",47143,"Rhea","Tennessee",2
+"2020-07-18",47143,"Rhea","Tennessee",1
 "2020-07-18",47145,"Roane","Tennessee",3
 "2020-07-18",47147,"Robertson","Tennessee",0
 "2020-07-18",47149,"Rutherford","Tennessee",1
@@ -2589,7 +2589,7 @@
 "2020-07-18",48093,"Comanche","Texas",2
 "2020-07-18",48095,"Concho","Texas",2
 "2020-07-18",48097,"Cooke","Texas",2
-"2020-07-18",48099,"Coryell","Texas",0
+"2020-07-18",48099,"Coryell","Texas",1
 "2020-07-18",48101,"Cottle","Texas",0
 "2020-07-18",48103,"Crane","Texas",0
 "2020-07-18",48105,"Crockett","Texas",4
@@ -2618,7 +2618,7 @@
 "2020-07-18",48151,"Fisher","Texas",2
 "2020-07-18",48153,"Floyd","Texas",1
 "2020-07-18",48155,"Foard","Texas",0
-"2020-07-18",48157,"Fort Bend","Texas",0
+"2020-07-18",48157,"Fort Bend","Texas",1
 "2020-07-18",48159,"Franklin","Texas",1
 "2020-07-18",48161,"Freestone","Texas",3
 "2020-07-18",48163,"Frio","Texas",2
@@ -2702,7 +2702,7 @@
 "2020-07-18",48327,"Menard","Texas",1
 "2020-07-18",48329,"Midland","Texas",2
 "2020-07-18",48331,"Milam","Texas",3
-"2020-07-18",48333,"Mills","Texas",4
+"2020-07-18",48333,"Mills","Texas",3
 "2020-07-18",48335,"Mitchell","Texas",3
 "2020-07-18",48337,"Montague","Texas",2
 "2020-07-18",48339,"Montgomery","Texas",3
@@ -2712,7 +2712,7 @@
 "2020-07-18",48347,"Nacogdoches","Texas",2
 "2020-07-18",48349,"Navarro","Texas",2
 "2020-07-18",48351,"Newton","Texas",4
-"2020-07-18",48353,"Nolan","Texas",2
+"2020-07-18",48353,"Nolan","Texas",3
 "2020-07-18",48355,"Nueces","Texas",3
 "2020-07-18",48357,"Ochiltree","Texas",0
 "2020-07-18",48359,"Oldham","Texas",0
@@ -2774,12 +2774,12 @@
 "2020-07-18",48475,"Ward","Texas",3
 "2020-07-18",48477,"Washington","Texas",0
 "2020-07-18",48479,"Webb","Texas",3
-"2020-07-18",48481,"Wharton","Texas",2
+"2020-07-18",48481,"Wharton","Texas",3
 "2020-07-18",48483,"Wheeler","Texas",0
-"2020-07-18",48485,"Wichita","Texas",2
+"2020-07-18",48485,"Wichita","Texas",1
 "2020-07-18",48487,"Wilbarger","Texas",2
 "2020-07-18",48489,"Willacy","Texas",3
-"2020-07-18",48491,"Williamson","Texas",1
+"2020-07-18",48491,"Williamson","Texas",2
 "2020-07-18",48493,"Wilson","Texas",3
 "2020-07-18",48495,"Winkler","Texas",2
 "2020-07-18",48497,"Wise","Texas",2
@@ -2813,7 +2813,7 @@
 "2020-07-18",49047,"Uintah","Utah",2
 "2020-07-18",49049,"Utah","Utah",0
 "2020-07-18",49051,"Wasatch","Utah",0
-"2020-07-18",49053,"Washington","Utah",0
+"2020-07-18",49053,"Washington","Utah",1
 "2020-07-18",49057,"Weber","Utah",2
 "2020-07-18",50001,"Addison","Vermont",0
 "2020-07-18",50003,"Bennington","Vermont",0
@@ -2832,7 +2832,7 @@
 "2020-07-18",51001,"Accomack","Virginia",0
 "2020-07-18",51003,"Albemarle","Virginia",0
 "2020-07-18",51510,"Alexandria city","Virginia",0
-"2020-07-18",51005,"Alleghany","Virginia",3
+"2020-07-18",51005,"Alleghany","Virginia",2
 "2020-07-18",51007,"Amelia","Virginia",0
 "2020-07-18",51009,"Amherst","Virginia",0
 "2020-07-18",51011,"Appomattox","Virginia",0
@@ -2912,7 +2912,7 @@
 "2020-07-18",51121,"Montgomery","Virginia",0
 "2020-07-18",51125,"Nelson","Virginia",1
 "2020-07-18",51127,"New Kent","Virginia",2
-"2020-07-18",51700,"Newport News city","Virginia",3
+"2020-07-18",51700,"Newport News city","Virginia",2
 "2020-07-18",51710,"Norfolk city","Virginia",3
 "2020-07-18",51131,"Northampton","Virginia",0
 "2020-07-18",51133,"Northumberland","Virginia",2
@@ -2961,21 +2961,21 @@
 "2020-07-18",51195,"Wise","Virginia",3
 "2020-07-18",51197,"Wythe","Virginia",0
 "2020-07-18",51199,"York","Virginia",2
-"2020-07-18",53001,"Adams","Washington",2
+"2020-07-18",53001,"Adams","Washington",1
 "2020-07-18",53003,"Asotin","Washington",0
 "2020-07-18",53005,"Benton","Washington",0
 "2020-07-18",53007,"Chelan","Washington",2
 "2020-07-18",53009,"Clallam","Washington",3
 "2020-07-18",53011,"Clark","Washington",1
-"2020-07-18",53013,"Columbia","Washington",1
+"2020-07-18",53013,"Columbia","Washington",0
 "2020-07-18",53015,"Cowlitz","Washington",2
 "2020-07-18",53017,"Douglas","Washington",2
 "2020-07-18",53019,"Ferry","Washington",3
 "2020-07-18",53021,"Franklin","Washington",0
-"2020-07-18",53025,"Grant","Washington",1
+"2020-07-18",53025,"Grant","Washington",0
 "2020-07-18",53027,"Grays Harbor","Washington",3
 "2020-07-18",53029,"Island","Washington",0
-"2020-07-18",53031,"Jefferson","Washington",1
+"2020-07-18",53031,"Jefferson","Washington",0
 "2020-07-18",53033,"King","Washington",0
 "2020-07-18",53035,"Kitsap","Washington",1
 "2020-07-18",53037,"Kittitas","Washington",3
@@ -2991,7 +2991,7 @@
 "2020-07-18",53057,"Skagit","Washington",0
 "2020-07-18",53059,"Skamania","Washington",3
 "2020-07-18",53061,"Snohomish","Washington",0
-"2020-07-18",53063,"Spokane","Washington",2
+"2020-07-18",53063,"Spokane","Washington",1
 "2020-07-18",53065,"Stevens","Washington",3
 "2020-07-18",53067,"Thurston","Washington",2
 "2020-07-18",53069,"Wahkiakum","Washington",1
@@ -3022,7 +3022,7 @@
 "2020-07-18",54043,"Lincoln","West Virginia",2
 "2020-07-18",54045,"Logan","West Virginia",2
 "2020-07-18",54049,"Marion","West Virginia",1
-"2020-07-18",54051,"Marshall","West Virginia",3
+"2020-07-18",54051,"Marshall","West Virginia",2
 "2020-07-18",54053,"Mason","West Virginia",0
 "2020-07-18",54047,"McDowell","West Virginia",3
 "2020-07-18",54055,"Mercer","West Virginia",0
@@ -3051,7 +3051,7 @@
 "2020-07-18",54101,"Webster","West Virginia",2
 "2020-07-18",54103,"Wetzel","West Virginia",3
 "2020-07-18",54105,"Wirt","West Virginia",1
-"2020-07-18",54107,"Wood","West Virginia",2
+"2020-07-18",54107,"Wood","West Virginia",1
 "2020-07-18",54109,"Wyoming","West Virginia",0
 "2020-07-18",55001,"Adams","Wisconsin",2
 "2020-07-18",55003,"Ashland","Wisconsin",4
@@ -3072,14 +3072,14 @@
 "2020-07-18",55033,"Dunn","Wisconsin",1
 "2020-07-18",55035,"Eau Claire","Wisconsin",0
 "2020-07-18",55037,"Florence","Wisconsin",3
-"2020-07-18",55039,"Fond du Lac","Wisconsin",1
+"2020-07-18",55039,"Fond du Lac","Wisconsin",0
 "2020-07-18",55041,"Forest","Wisconsin",0
 "2020-07-18",55043,"Grant","Wisconsin",1
 "2020-07-18",55045,"Green","Wisconsin",0
 "2020-07-18",55047,"Green Lake","Wisconsin",0
 "2020-07-18",55049,"Iowa","Wisconsin",1
 "2020-07-18",55051,"Iron","Wisconsin",4
-"2020-07-18",55053,"Jackson","Wisconsin",1
+"2020-07-18",55053,"Jackson","Wisconsin",0
 "2020-07-18",55055,"Jefferson","Wisconsin",1
 "2020-07-18",55057,"Juneau","Wisconsin",2
 "2020-07-18",55059,"Kenosha","Wisconsin",0
@@ -3101,7 +3101,7 @@
 "2020-07-18",55089,"Ozaukee","Wisconsin",1
 "2020-07-18",55091,"Pepin","Wisconsin",4
 "2020-07-18",55093,"Pierce","Wisconsin",2
-"2020-07-18",55095,"Polk","Wisconsin",1
+"2020-07-18",55095,"Polk","Wisconsin",0
 "2020-07-18",55097,"Portage","Wisconsin",1
 "2020-07-18",55099,"Price","Wisconsin",4
 "2020-07-18",55101,"Racine","Wisconsin",0
@@ -3125,7 +3125,7 @@
 "2020-07-18",55137,"Waushara","Wisconsin",2
 "2020-07-18",55139,"Winnebago","Wisconsin",0
 "2020-07-18",55141,"Wood","Wisconsin",1
-"2020-07-18",56001,"Albany","Wyoming",3
+"2020-07-18",56001,"Albany","Wyoming",2
 "2020-07-18",56003,"Big Horn","Wyoming",2
 "2020-07-18",56005,"Campbell","Wyoming",1
 "2020-07-18",56007,"Carbon","Wyoming",0
@@ -3144,7 +3144,7 @@
 "2020-07-18",56033,"Sheridan","Wyoming",3
 "2020-07-18",56035,"Sublette","Wyoming",3
 "2020-07-18",56037,"Sweetwater","Wyoming",2
-"2020-07-18",56039,"Teton","Wyoming",1
+"2020-07-18",56039,"Teton","Wyoming",0
 "2020-07-18",56041,"Uinta","Wyoming",0
 "2020-07-18",56043,"Washakie","Wyoming",0
 "2020-07-18",56045,"Weston","Wyoming",3

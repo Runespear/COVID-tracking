@@ -31,50 +31,49 @@ predictionsize = 7
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
-for (cutoff in (latest_date - predictionsize-1):(latest_date - predictionsize)){
-  state_df_list <- list()
-  lm_mseS<-list()
-  grf_mseS<-list()
-  cutoff_S <-list()
-  state_S <-list()
-  total_df <- NULL
+
+cutoff = 171
+mainDir = "./data/output"
+subDir = "backtest"
+backtest_dir = file.path(mainDir, subDir)
+dir.create(backtest_dir)
+
+cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
+#cutofflist = 150:(latest_date - predictionsize)
+
+for(cutoff in cutofflist){
+  print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
-  restricted_state_df1 <- foreach(state = state_list, .combine=rbind) %dopar%{
-    k = county_analysis(state, county_data, earliest_start,cutoff + predictionsize,predictionsize)
+  restricted_state_df0 <- NULL
+  restricted_state_df1 <- NULL
+  
+  # Validation set
+  restricted_state_df1 <- subset(county_data,days_from_start == cutoff + predictionsize)
+  # Training Set
+  
+  restricted_state_df0 <- NULL
+  try(restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
+    k = NULL
+    k = try(county_analysis(state, county_data, cutoff-windowsize, cutoff,predictionsize))
     return(k)
+  })
+  
+  if(is.null(restricted_state_df0)){
+    next
   }
   
-  restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
-    k = county_analysis(state, county_data, cutoff-windowsize, cutoff,predictionsize)
-    return(k)
-  }
-  
-    
-  today<-restricted_state_df0[c("date","county","state","fips","r","t0","lm_predict","r.grf","t0.grf","grf_predict")]
-  tomorrow<-restricted_state_df1[c("date","fips","log_rolled_cases")]
+  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","r","t0","lm_predict","r.grf","t0.grf","grf_predict")]
+  tomorrow<-restricted_state_df1[c("date","days_from_start","fips","log_rolled_cases")]
   restricted_state_df2<-merge(x=today,y=tomorrow,by="fips",x.all=TRUE)
   restricted_state_df2$lm_mse<-with(restricted_state_df2,(lm_predict-log_rolled_cases)**2)
   restricted_state_df2$grf_mse<-with(restricted_state_df2,(grf_predict-log_rolled_cases)**2)
-    
-  #lm_mseS<-list.append(lm_mseS,sum(restricted_state_df2$lm_mse))
-  #grf_mseS<-list.append(grf_mseS,sum(restricted_state_df2$grf_mse))
-  #cutoff_S<-list.append(cutoff_S,cutoff)
-  #state_S<-list.append(state_S,state)
-    
-  total_df <- rbind(total_df,restricted_state_df2)
   
-  mainDir = "./data/output/"
-  subDir = state
-  file_sub = paste(mainDir,subDir,sep="")
-  dir.create(file.path(mainDir, subDir))
-    
-  # write.csv(restricted_state_df2,paste(file_sub,"/",state,"_",toString(cutoff),"_grf.csv",sep=""),row.names=FALSE)
+  print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
   
-  #print(paste("Done writing csv for day ", toString(cutoff), " of " ,state,sep=""))
-  # break
-
-  #print(cbind(state_list,lm_mseS, grf_mseS))
-  write.csv(total_df,paste(mainDir,"allstates_",toString(cutoff),"_grf.csv",sep=""),row.names=FALSE)
+  backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
+  
+  write.csv(restricted_state_df2,backtest_file_path,row.names=FALSE)
+  #break
 }
 
 
