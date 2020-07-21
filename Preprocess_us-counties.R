@@ -18,7 +18,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # URL of NYTimes Data
 nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
-destfile <- paste("./data/us-counties_",Sys.Date(),".csv",sep="")
+destfile <- paste("./data/us-counties_latest",".csv",sep="")
 county_data <- read.csv(nyt_url)
 write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
@@ -61,7 +61,7 @@ county_data = county_data[complete.cases(county_data),]
 start_date = min(county_data$datetime)
 end_date = max(county_data$datetime)
 
-end_file = paste("./data/processed_us-counties_",Sys.Date(),".csv",sep="")
+end_file = paste("./data/processed_us-counties_latest",".csv",sep="")
 
 write.csv(county_data, end_file, row.names=FALSE)
 

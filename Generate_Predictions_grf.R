@@ -39,7 +39,7 @@ OutbreakClass <- function(Double_Days){
 
 # Load Data
 mainDir = "./data/output/"
-destfile <- paste("./data/processed_us-counties_",Sys.Date(),".csv",sep="")
+destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
 county_data$datetime <- anytime::anydate(county_data$date)

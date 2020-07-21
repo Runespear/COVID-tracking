@@ -17,7 +17,7 @@ registerDoParallel(cores=detectCores())
 
 # Load Data
 
-destfile <- paste("./data/processed_us-counties_",Sys.Date(),".csv",sep="")
+destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
 county_data$datetime <- anytime::anydate(county_data$date)
@@ -39,6 +39,7 @@ backtest_dir = file.path(mainDir, subDir)
 dir.create(backtest_dir)
 
 cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
+#cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 
 for(cutoff in cutofflist){
