@@ -64,18 +64,18 @@ for(cutoff in cutofflist){
     next
   }
   
-  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","r","t0","lm_predict","r.grf","t0.grf","grf_predict")]
+  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r","t0","lm_predict","r.grf","t0.grf","grf_predict")]
   tomorrow<-restricted_state_df1[c("date","days_from_start","fips","log_rolled_cases")]
   restricted_state_df2<-merge(x=today,y=tomorrow,by="fips",x.all=TRUE)
-  restricted_state_df2$lm_mse<-with(restricted_state_df2,(lm_predict-log_rolled_cases)**2)
-  restricted_state_df2$grf_mse<-with(restricted_state_df2,(grf_predict-log_rolled_cases)**2)
+  restricted_state_df2$lm_mse<-with(restricted_state_df2,(lm_predict-log_rolled_cases.y)**2)
+  restricted_state_df2$grf_mse<-with(restricted_state_df2,(grf_predict-log_rolled_cases.y)**2)
   
   print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
   
   backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
   
   write.csv(restricted_state_df2,backtest_file_path,row.names=FALSE)
-  #break
+  # break
 }
 
 

@@ -17,7 +17,7 @@ registerDoParallel(cores=detectCores())
 
 # Define Classes
 
-OutbreakClass <- function(Double_Days){
+PredictedOutbreakClass <- function(Double_Days){
   # Less than or equal to 3 days is outbreak
   if (0 <= Double_Days & Double_Days <= 7){
     return(4)
@@ -68,13 +68,15 @@ prediction_df <- allstates_latest_df
 
 prediction_df["Double_Days"] <- log(2,exp(1))/prediction_df["r.grf"]
 
-class_list <- lapply(prediction_df[["Double_Days"]], OutbreakClass)
-prediction_df["Outbreak_Class"] <- unlist(class_list)
+class_list <- lapply(prediction_df[["Double_Days"]], PredictedOutbreakClass)
+prediction_df["Predicted_Outbreak_Class"] <- unlist(class_list)
 
-inspect_1 <- prediction_df[which(prediction_df["Outbreak_Class"] == 1),]
-inspect_2 <- prediction_df[which(prediction_df["Outbreak_Class"] == 2),]
+inspect_1 <- prediction_df[which(prediction_df["Predicted_Outbreak_Class"] == 1),]
+inspect_2 <- prediction_df[which(prediction_df["Predicted_Outbreak_Class"] == 2),]
 
 # Give to jag
 
-outbreak_df <- prediction_df[c("date","fips","county","state","Outbreak_Class")]
+outbreak_df <- prediction_df[c("date","fips","county","state","Predicted_Outbreak_Class")]
 write.csv(outbreak_df,paste(mainDir,"allstates_","outbreak","_prediction.csv",sep=""),row.names=FALSE)
+
+closeAllConnections()
