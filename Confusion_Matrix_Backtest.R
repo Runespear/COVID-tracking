@@ -101,9 +101,13 @@ CM.hash <- hash()
 mse <- NULL
 mse.hash <- hash()
 
+# Place to save resuslts
+confusionDir <- file.path(mainDir,"confusion")
+dir.create(confusionDir)
+
 for(cutoff in cutoff_list){
-  filename <- paste("allstates_",toString(cutoff),"_grf.csv",sep="")
-  filename <- file.path(backtestDir,filename)
+  filename_raw <- paste("allstates_",toString(cutoff),"_grf.csv",sep="")
+  filename <- file.path(backtestDir,filename_raw)
   # Check if file exists
   print(filename)
   if (file.exists(filename)){
@@ -140,6 +144,12 @@ for(cutoff in cutoff_list){
     # Add into actual_cutoff_list
     actual_cutoff_list = c(actual_cutoff_list,cutoff)
     #break
+    # Write the actual and predicted classes to separate folder
+    
+    confusion_filename_raw <- paste("confusion_",filename_raw,sep="")
+    confusion.file.path <- file.path(confusionDir, confusion_filename_raw)
+    write.csv(prediction_df,confusion.file.path,row.names=FALSE)
+    
   }
   
 }

@@ -1,0 +1,2 @@
+"fips","date.x","days_from_start.x","county","state","log_rolled_cases.x","r","t0","lm_predict","r.grf","t0.grf","grf_predict","date.y","days_from_start.y","log_rolled_cases.y","lm_mse","grf_mse","Predicted_Double_Days","Predicted_Outbreak_Class","Actual_Outbreak_Class"
+17031,"2020-02-06",16,"Cook","Illinois",0.693147180559945,0.083340219611134,6.89370933943001,0.675580043883588,0.0823406308420749,6.82565077438046,1.33180611869754,"2020-02-13",23,0.693147180559945,0.000308604291005823,0.407885239263038,8.41804554411741,3,0
