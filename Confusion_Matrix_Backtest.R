@@ -43,8 +43,8 @@ ActualOutbreakClass <- function(log_rolled_cases.x.col,log_rolled_cases.y.col, D
   #DD.list <- c(7,14,21,28)
   Helper <- function(log_rolled_cases.x,log_rolled_cases.y){
     
-    rolled_cases.x <- exp(log_rolled_cases.x)
-    rolled_cases.y <- exp(log_rolled_cases.y)
+    #rolled_cases.x <- exp(log_rolled_cases.x)
+    #rolled_cases.y <- exp(log_rolled_cases.y)
       
     #print(rolled_cases.x)
     
@@ -53,11 +53,13 @@ ActualOutbreakClass <- function(log_rolled_cases.x.col,log_rolled_cases.y.col, D
     # Upper and lower bounds per class from now
     # Inf > r7 > r14 > r21 > r28 > 0
     # rate.list := c(r7,r14,r21,r28,0)
-    cases.bound.list <- rolled_cases.x*exp(rate.list*predictionsize)
+    #cases.bound.list <- rolled_cases.x*exp(rate.list*predictionsize)
+    
+    cases.bound.list <- log_rolled_cases.x + predictionsize*rate.list
     
     numClasses <- length(DD.list) + 1
     for (i in 1:numClasses){
-      if (rolled_cases.y >= cases.bound.list[i]){
+      if (log_rolled_cases.y >= cases.bound.list[i]){
         return(numClasses - i)
       }
     }
