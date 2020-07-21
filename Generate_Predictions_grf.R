@@ -66,9 +66,9 @@ write.csv(allstates_latest_df,paste(mainDir,"allstates_","latest","_grf.csv",sep
 # Combine with counties that are not included in allstates_latest_df
 prediction_df <- allstates_latest_df
 
-prediction_df["Double_Days"] <- log(2,exp(1))/prediction_df["r.grf"]
+prediction_df["Predicted_Double_Days"] <- log(2,exp(1))/prediction_df["r.grf"]
 
-class_list <- lapply(prediction_df[["Double_Days"]], PredictedOutbreakClass)
+class_list <- lapply(prediction_df[["Predicted_Double_Days"]], PredictedOutbreakClass)
 prediction_df["Predicted_Outbreak_Class"] <- unlist(class_list)
 
 inspect_1 <- prediction_df[which(prediction_df["Predicted_Outbreak_Class"] == 1),]
