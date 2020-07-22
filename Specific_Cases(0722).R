@@ -53,7 +53,7 @@ for(cutoff in cutofflist){
   
   restricted_state_df0 <- NULL
   restricted_state_df1 <- NULL
-  
+  restricted_state_df11 <- NULL
   # Validation set
   restricted_state_df1 <- subset(county_data,days_from_start == cutoff + predictionsize)
   

@@ -91,7 +91,7 @@ df_list <- c()
 # List of existing cutoffs
 actual_cutoff_list <- c()
 # List of doubling days
-DD.list <- c(14,28)
+DD.list <- c(14)
 NumClasses <- length(DD.list) + 1
 predictionsize <- 7
 
@@ -168,11 +168,11 @@ for(cutoff in cutoff_list){
     days<-list.append(days,cutoff)
     acc<-list.append(acc,CM$overall['Accuracy'])
     
-    for(i in (1:3)){preci[d,i]<-CM[["byClass"]][i,"Precision"]}
+    for(i in (1:NumClasses)){preci[d,i]<-CM[["byClass"]][i,"Precision"]}
     
-    for(i in (1:3)){recall[d,i]<-CM[["byClass"]][i,"Recall"]}
+    for(i in (1:NumClasses)){recall[d,i]<-CM[["byClass"]][i,"Recall"]}
     
-    for(i in (1:3)){f1[d,i]<-CM[["byClass"]][i,"F1"]}
+    for(i in (1:NumClasses)){f1[d,i]<-CM[["byClass"]][i,"F1"]}
     
     d<-d+1
     
