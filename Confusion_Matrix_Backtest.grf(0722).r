@@ -91,7 +91,7 @@ df_list <- c()
 # List of existing cutoffs
 actual_cutoff_list <- c()
 # List of doubling days
-DD.list <- c(14)
+DD.list <- c(28)
 NumClasses <- length(DD.list) + 1
 predictionsize <- 7
 
@@ -113,11 +113,15 @@ acc<-list()
 
 nr<-114
 
-preci<-matrix(0,nrow=nr,ncol=3)
+num.result.cols <- 1
+if (NumClasses > 2)
+  {num.result.cols <- NumClasses}
 
-recall<-matrix(0,nrow=nr,ncol=3)
+preci<-matrix(0,nrow=nr,ncol=num.result.cols)
 
-f1<-matrix(0,nrow=nr,ncol=3)
+recall<-matrix(0,nrow=nr,ncol=num.result.cols)
+
+f1<-matrix(0,nrow=nr,ncol=num.result.cols)
 
 d<-1
 
@@ -125,9 +129,10 @@ for(cutoff in cutoff_list){
   filename_raw <- paste("allstates_",toString(cutoff),"_grf.csv",sep="")
   filename <- file.path(backtestDir,filename_raw)
   # Check if file exists
-  print(filename)
+  
   if (file.exists(filename)){
     # Read the file
+    print(filename)
     cutoff_df <- read.csv(file=filename)
     # Drop NAs
     cutoff_df <- na.omit(cutoff_df)
@@ -154,7 +159,7 @@ for(cutoff in cutoff_list){
     X <- factor(prediction_df$Predicted_Outbreak_Class,levels = level.list)
     Y <- factor(prediction_df$Actual_Outbreak_Class, levels = level.list)
     
-    CM <- confusionMatrix(X,Y)
+    CM <- confusionMatrix(X,Y, positive="1")
     CM.hash[[toString(cutoff)]] <- (CM)
     
     # Add into actual_cutoff_list
@@ -168,11 +173,18 @@ for(cutoff in cutoff_list){
     days<-list.append(days,cutoff)
     acc<-list.append(acc,CM$overall['Accuracy'])
     
-    for(i in (1:NumClasses)){preci[d,i]<-CM[["byClass"]][i,"Precision"]}
-    
-    for(i in (1:NumClasses)){recall[d,i]<-CM[["byClass"]][i,"Recall"]}
-    
-    for(i in (1:NumClasses)){f1[d,i]<-CM[["byClass"]][i,"F1"]}
+    if (NumClasses > 2){
+      for(i in (1:NumClasses)){preci[d,i]<-CM[["byClass"]][i,"Precision"]}
+      
+      for(i in (1:NumClasses)){recall[d,i]<-CM[["byClass"]][i,"Recall"]}
+      
+      for(i in (1:NumClasses)){f1[d,i]<-CM[["byClass"]][i,"F1"]}
+    }
+    else{
+      preci[d,1]<-CM[["byClass"]][["Precision"]]
+      recall[d,i]<-CM[["byClass"]][["Recall"]]
+      f1[d,i]<-CM[["byClass"]][["F1"]]
+    }
     
     d<-d+1
     
@@ -180,33 +192,40 @@ for(cutoff in cutoff_list){
   
 }
 
-CM.hash[["100"]]
+if (num.result.cols > 1){
+  plot(days,acc, xlab="days", ylab="Accuracy",xlim=c(0,180), ylim=c(0,1), xaxs="i", yaxs="i")
+  
+  plot(days,recall[,1], type="b", pch=19, col="gray", xlab="days", ylab="Recall",xlim=c(0,180), ylim=c(0,1), xaxs="i", yaxs="i")
+  
+  #for(i in (2:5)){lines(days,preci[,i])}
+  
+  #par(xaxs="i", yaxs="i")
+  
+  lines(days,recall[,2], pch=18, col="orange", type="b", lty=2)
+  
+  lines(days,recall[,3], pch=17, col="red", type="b", lty=3)
+  
+  #lines(days,f1[,4], pch=16, col="pink", type="b", lty=4)
+  
+  #lines(days,f1[,5], pch=15, col="red", type="b", lty=5)
+  
+  legend(0, 0.8, legend=c("Class 0", "Class 1", "Class 2"), col=c("gray", "orange", "red"), lty=1:3, cex=0.8)
+}else{
+  # Binary Class
+  png(paste("./data/output/confusionMatrix_",toString(DD.list[1]),"_plot.png",sep=""), width = 1080, height = 720)
+  
+  title=paste("Binary Classification", " I{0 < Doubling Days <=", toString(DD.list[1]),"}",sep="")
+  
+  plot(days, acc,pch=19, col="gray", type="b", xlab="days", ylab="Metrics", xlim=c(0,180),ylim=c(0,1),xaxs="i",yaxs="i", main=title)
+  lines(days, recall,pch=18, col="blue", type="b", lty=2)
+  lines(days, preci, pch=17, col="green", type="b",lty=3)
+  lines(days, f1, pch=16, col="red", type="b",lty=4)
+  legend(0, 0.8, legend=c("Raw Accuracy", "Recall", "Precision", "F1"), col=c("gray", "blue", "green", "red"), lty=1:4, cex=0.8)
+  
+  dev.off()
+  
+}
 
-CM.hash[["100"]][["byClass"]][,"F1"]
-
-CM.hash[["100"]][["byClass"]][1,"F1"]
-
-CM.hash[["100"]]$byClass 
-
-
-plot(days,acc, xlab="days", ylab="Accuracy",xlim=c(0,180), ylim=c(0,1), xaxs="i", yaxs="i")
-
-plot(days,recall[,1], type="b", pch=19, col="gray", xlab="days", ylab="Recall",xlim=c(0,180), ylim=c(0,1), xaxs="i", yaxs="i")
-
-#for(i in (2:5)){lines(days,preci[,i])}
-
-#par(xaxs="i", yaxs="i")
-
-lines(days,recall[,2], pch=18, col="orange", type="b", lty=2)
-
-lines(days,recall[,3], pch=17, col="red", type="b", lty=3)
-
-#lines(days,f1[,4], pch=16, col="pink", type="b", lty=4)
-
-#lines(days,f1[,5], pch=15, col="red", type="b", lty=5)
-
-legend(0, 0.8, legend=c("Class 0", "Class 1", "Class 2"),
-       col=c("gray", "orange", "red"), lty=1:3, cex=0.8)
 
 
 # Compute the predicted class and actual class
