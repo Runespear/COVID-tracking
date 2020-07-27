@@ -38,6 +38,9 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     #print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
     
+    county_df$logdiff <- county_df$log_rolled_cases - min(county_df$log_rolled_cases)
+    county_df$shifted_time <- county_df$days_from_start - cutoffstart
+    
     logmodel = lm(formula = log_rolled_cases ~ days_from_start, data=county_df)
     #print(fips)
     #print(coef(summary(logmodel)))

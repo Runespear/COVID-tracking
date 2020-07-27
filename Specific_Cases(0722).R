@@ -46,7 +46,8 @@ dir.create(backtest_dir)
 
 cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
-cutofflist = 150:(latest_date - predictionsize)
+#cutofflist = 150:(latest_date - predictionsize)
+cutofflist = 150:150
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
@@ -65,7 +66,7 @@ for(cutoff in cutofflist){
   state_list1 <- sort(unique(state_df1$state))
   try(restricted_state_df11 <- foreach(state = state_list1, .combine=rbind) %dopar%{
     k = NULL
-    k = try(county_analysis(state, county_data, cutoff, cutoff+ predictionsize,predictionsize))
+    k = try(county_analysis(state, restricted_state_df, cutoff, cutoff+ predictionsize,predictionsize))
     return(k)
   })
   
@@ -85,7 +86,7 @@ for(cutoff in cutofflist){
   state_list <- sort(unique(state_df$state))
   try(restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
     k = NULL
-    k = try(county_analysis(state, county_data, cutoff-windowsize, cutoff,predictionsize))
+    k = try(county_analysis(state, restricted_state_df, cutoff-windowsize, cutoff,predictionsize))
     return(k)
   })
   
