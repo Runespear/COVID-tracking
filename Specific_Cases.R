@@ -52,7 +52,7 @@ for(cutoff in cutofflist){
   restricted_state_df1 <- subset(county_data,days_from_start == cutoff + predictionsize)
   # Training Set
   
-  state_df <- subset(county_data,days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
+  state_df <- subset(county_data,days_from_start >= cutoff-windowsize & days_from_start <= cutoff & log_rolled_cases >= log(20,exp(1)))
   state_list <- sort(unique(state_df$state))
   try(restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
     k = NULL

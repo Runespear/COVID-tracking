@@ -1,3 +1,5 @@
+require("data.table")
+
 county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictionsize){
   
   state_df = county_data[which(county_data$state==state),]
@@ -20,11 +22,17 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     }
   }
   
-  restricted_state_df = subset(state_df, days_from_start <= cutoffend & days_from_start >= cutoffstart)
+  restricted_state_df = subset(state_df, days_from_start <= cutoffend & days_from_start > cutoffstart)
   # print(restricted_state_df)
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   rlist = c()
   t0list = c()
+  
+  # Check these 2 lines
+  #tt <- table(restricted_state_df$fips)
+  #restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  #restricted_state_df <- restricted_state_df[restricted_state_df$fips %in% names(tt[tt >= 7]), ]
+  #print(restricted_state_df)
   
   for (fips in restricted_state_fips_list){
     #print(fips)
@@ -51,7 +59,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
       t0guess = coef(summary(logmodel))["(Intercept)","Estimate"]/(-rguess)
       #guess = c(r = rguess, t0 = t0guess)
       #      SE_rguess = coef(summary(logmodel))["days_from_start", "Std. Error"]
-      predict_guess = log_exp(cutoffend-1,rguess,t0guess)
+      predict_guess = log_exp(cutoffend+predictionsize,rguess,t0guess)
     }
     #print(coef(logmodel))
     #print(confint(logmodel))

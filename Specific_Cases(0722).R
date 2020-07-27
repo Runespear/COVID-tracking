@@ -1,5 +1,5 @@
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -46,19 +46,22 @@ dir.create(backtest_dir)
 
 cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
-#cutofflist = 150:(latest_date - predictionsize)
+cutofflist = 150:(latest_date - predictionsize)
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   restricted_state_df0 <- NULL
-  restricted_state_df1 <- NULL
   restricted_state_df11 <- NULL
   # Validation set
   restricted_state_df1 <- subset(county_data,days_from_start == cutoff + predictionsize)
   
+  restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff+ predictionsize)
+  tt <- table(restricted_state_df$fips)
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  
   # Validation set 11
-  state_df1 <- subset(county_data,days_from_start >= cutoff-windowsize & days_from_start <= cutoff+ predictionsize)
+  state_df1 <- subset(restricted_state_df,days_from_start >= cutoff-windowsize & days_from_start <= cutoff+ predictionsize)
   state_list1 <- sort(unique(state_df1$state))
   try(restricted_state_df11 <- foreach(state = state_list1, .combine=rbind) %dopar%{
     k = NULL
@@ -67,11 +70,17 @@ for(cutoff in cutofflist){
   })
   
   if(is.null(restricted_state_df11)){
+    print("no restricted_state_df11")
     next
   }
   
 
   # Training Set
+  restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
+  tt <- table(restricted_state_df$fips)
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  
+  
   state_df <- subset(county_data,days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
   state_list <- sort(unique(state_df$state))
   try(restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
@@ -81,6 +90,7 @@ for(cutoff in cutofflist){
   })
   
   if(is.null(restricted_state_df0)){
+    print("no restricted_state_df0")
     next
   }
   
