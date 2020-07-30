@@ -32,42 +32,72 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     #print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
     
+    # 2 types of linear models
+    # ln(I_t) = rt - rt_0
+    # ln(I_t) - ln(I_tw) = r(t-t_w)
     county_df$logdiff <- county_df$log_rolled_cases - min(county_df$log_rolled_cases)
     county_df$shifted_time <- county_df$days_from_start - cutoffstart
     
-    logmodel = lm(formula = logdiff ~ shifted_time, data=county_df)
+    # SHIFTED LOGMODEL
+    shifted.logmodel = lm(formula = logdiff ~ shifted_time, data=county_df)
+    print(shifted.logmodel)
+    shifted.rguess <- NULL
+    shifted.t0 <- NULL
+    shifted.predict_guess <- NULL
     
-    #print(fips)
-    #(coef(summary(logmodel)))
-    rguess <- NULL
-    try(rguess <- coef(summary(logmodel))["shifted_time","Estimate"])
-    if (is.null(rguess)){
-      rguess <- NA
-      t0guess <- NA
-      #      SE_rguess <-NA
-      predict_guess<-NA
+    # NORMAL LOGMODEL
+    logmodel = lm(formula = log_rolled_cases ~ days_from_start, data=county_df)
+    print(logmodel)
+    lm.rguess <- NULL
+    lm.t0 <- NULL
+    lm.predict_guess <- NULL
+    
+    
+    # CALCULATE INTERCEPT AND PREDICTION FOR SHIFTED LOGMODEL
+    try(shifted.rguess <- coef(summary(shifted.logmodel))["shifted_time","Estimate"])
+    print(shifted.rguess)
+    if (is.null(shifted.rguess)){
+      shifted.rguess <- NA
+      shifted.t0 <- NA
+      shifted.predict_guess<-NA
       next
     }
-    if (rguess == 0){
-      t0guess = min(county_df$days_from_start)
-      sigma_rguess = 0
-      predict_guess=0
+    else if (shifted.rguess == 0){
+      shifted.t0 = min(county_df$days_from_start)
+      shifted.predict_guess=min(county_df$log_rolled_cases)
     }
     else{
-      t0guess =( mean(county_df$log_rolled_cases) - rguess*mean(county_df$days_from_start))/(-rguess)
-      #t0guess = coef(summary(logmodel))["(Intercept)","Estimate"]/(-rguess)
-      #guess = c(r = rguess, t0 = t0guess)
-      #      SE_rguess = coef(summary(logmodel))["days_from_start", "Std. Error"]
-      predict_guess = log_exp(cutoffend+predictionsize,rguess,t0guess)
+      shifted.t0 =( mean(county_df$log_rolled_cases) - shifted.rguess*mean(county_df$days_from_start))/(-shifted.rguess)
+      shifted.predict_guess = log_exp(cutoffend+predictionsize,shifted.rguess,shifted.t0)
     }
-    #print(coef(logmodel))
-    #print(confint(logmodel))
-    #return(logmodel)
-    restricted_state_df[which(restricted_state_df$fips == fips),"t0"] = t0guess
-    restricted_state_df[which(restricted_state_df$fips == fips),"r"] = rguess
-    #   restricted_state_df[which(restricted_state_df$fips == fips),"r.SE"] = SE_rguess
-    restricted_state_df[which(restricted_state_df$fips == fips),"lm_predict"] = predict_guess
+    restricted_state_df[which(restricted_state_df$fips == fips),"t0.slm"] = shifted.t0
+    restricted_state_df[which(restricted_state_df$fips == fips),"r.slm"] = shifted.rguess
+    restricted_state_df[which(restricted_state_df$fips == fips),"predicted.slm"] = shifted.predict_guess
+  
+    
+    # CALCULATE INTERCEPT AND PREDICTION FOR LOGMODEL
+    try(lm.rguess <- coef(summary(logmodel))["days_from_start","Estimate"])
+    if (is.null(lm.rguess)){
+      lm.rguess <- NA
+      lm.t0 <- NA
+      lm.predict_guess<-NA
+      next
+    }
+    else if (lm.rguess == 0){
+      lm.t0 = min(county_df$days_from_start)
+      lm.predict_guess=min(county_df$log_rolled_cases)
+    }
+    else{
+      lm.t0 = coef(summary(logmodel))["(Intercept)","Estimate"]/(-lm.rguess)
+      lm.predict_guess = log_exp(cutoffend+predictionsize,lm.rguess,lm.t0)
+    }
+    restricted_state_df[which(restricted_state_df$fips == fips),"t0.lm"] = lm.t0
+    restricted_state_df[which(restricted_state_df$fips == fips),"r.lm"] = lm.rguess
+    restricted_state_df[which(restricted_state_df$fips == fips),"predicted.lm"] = lm.predict_guess
   }
+  
+  
+  
   # print(restricted_state_df)
   # Method 1: Calculate ln(I) = r*t - intercept and feed into GRF
   # Method 2: Cluster time series by DTW -> then refit model with exponential model
@@ -76,26 +106,26 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   
   # num_trees_list = c(2000)
   num_trees =2000
-  tau.forest <-grf::causal_forest(X=restricted_state_df[,c("r","t0")], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
+  tau.forest <-grf::causal_forest(X=restricted_state_df[,c("r.slm","t0.slm")], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
   # Re-estimated r
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   r.grflist = c()
   for (fips in restricted_state_fips_list){
     # print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
-    X.test <- unique(restricted_state_df[which(restricted_state_df$fips == fips), c("r","t0")])
+    X.test <- unique(restricted_state_df[which(restricted_state_df$fips == fips), c("r.slm","r.slm")])
     
     tau.hat <- predict(tau.forest,X.test, estimate.variance = TRUE)
     sigma.hat <- sqrt(tau.hat$variance.estimates)
     #print(tau.hat)
     
     r.grf.string = paste("r.grf","",sep="")
-    r.SE.grf.string = paste("r.SE.grf","",sep="")
-    grf.predict.string = paste("grf_predict","",sep="")
+    # r.SE.grf.string = paste("r.SE.grf","",sep="")
+    grf.predict.string = paste("predicted.grf","",sep="")
     t0.grf.string = paste("t0.grf","",sep="")
     
     restricted_state_df[which(restricted_state_df$fips == fips), r.grf.string] <- tau.hat
-    restricted_state_df[which(restricted_state_df$fips == fips), r.SE.grf.string] <- sigma.hat
+    # restricted_state_df[which(restricted_state_df$fips == fips), r.SE.grf.string] <- sigma.hat
     r.grflist = c(r.grflist,tau.hat)
     
     county_df$X <- county_df$days_from_start * tau.hat[[1]]
@@ -108,6 +138,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     #print(restricted_state_df)
   }
   restricted_state_df = subset(restricted_state_df, days_from_start == cutoffend)
+  
   #print(restricted_state_df)
   return(restricted_state_df)
   #write.csv(restricted_idaho_df,"./data/idaho_grf.csv",row.names=FALSE)
