@@ -104,6 +104,8 @@ for(cutoff in cutofflist){
   restricted_state_df2$lm_mse<-with(restricted_state_df2,(lm_predict-log_rolled_cases.y)**2)
   restricted_state_df2$grf_mse<-with(restricted_state_df2,(grf_predict-log_rolled_cases.y)**2)
   
+  restricted_state_df2 <- na.omit(restricted_state_df2)
+  
   print(paste("lm_mse=",toString(mean(restricted_state_df2$lm_mse))," grf_mse=", toString(mean(restricted_state_df2$grf_mse)) ,sep=""))
   print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
   

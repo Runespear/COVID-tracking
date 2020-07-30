@@ -54,7 +54,8 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
       predict_guess=0
     }
     else{
-      t0guess = coef(summary(logmodel))["(Intercept)","Estimate"]/(-rguess)
+      t0guess =( mean(county_df$log_rolled_cases) - rguess*mean(county_df$days_from_start))/(-rguess)
+      #t0guess = coef(summary(logmodel))["(Intercept)","Estimate"]/(-rguess)
       #guess = c(r = rguess, t0 = t0guess)
       #      SE_rguess = coef(summary(logmodel))["days_from_start", "Std. Error"]
       predict_guess = log_exp(cutoffend+predictionsize,rguess,t0guess)
