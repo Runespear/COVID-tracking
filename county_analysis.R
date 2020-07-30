@@ -28,12 +28,6 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   rlist = c()
   t0list = c()
   
-  # Check these 2 lines
-  #tt <- table(restricted_state_df$fips)
-  #restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
-  #restricted_state_df <- restricted_state_df[restricted_state_df$fips %in% names(tt[tt >= 7]), ]
-  #print(restricted_state_df)
-  
   for (fips in restricted_state_fips_list){
     #print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
@@ -41,11 +35,12 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     county_df$logdiff <- county_df$log_rolled_cases - min(county_df$log_rolled_cases)
     county_df$shifted_time <- county_df$days_from_start - cutoffstart
     
-    logmodel = lm(formula = log_rolled_cases ~ days_from_start, data=county_df)
+    logmodel = lm(formula = logdiff ~ shifted_time, data=county_df)
+    
     #print(fips)
-    #print(coef(summary(logmodel)))
+    #(coef(summary(logmodel)))
     rguess <- NULL
-    try(rguess <- coef(summary(logmodel))["days_from_start","Estimate"])
+    try(rguess <- coef(summary(logmodel))["shifted_time","Estimate"])
     if (is.null(rguess)){
       rguess <- NA
       t0guess <- NA

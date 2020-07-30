@@ -47,7 +47,7 @@ dir.create(backtest_dir)
 cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
-cutofflist = 150:150
+#cutofflist = 150:150
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
@@ -104,6 +104,7 @@ for(cutoff in cutofflist){
   restricted_state_df2$lm_mse<-with(restricted_state_df2,(lm_predict-log_rolled_cases.y)**2)
   restricted_state_df2$grf_mse<-with(restricted_state_df2,(grf_predict-log_rolled_cases.y)**2)
   
+  print(paste("lm_mse=",toString(mean(restricted_state_df2$lm_mse))," grf_mse=", toString(mean(restricted_state_df2$grf_mse)) ,sep=""))
   print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
   
   backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
