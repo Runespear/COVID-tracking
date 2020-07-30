@@ -47,7 +47,7 @@ dir.create(backtest_dir)
 cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
-cutofflist = 150:151
+#cutofflist = 150:151
 
 cutoff.list <- c()
 lm.mse.list <- c()
