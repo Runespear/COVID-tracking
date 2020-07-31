@@ -49,8 +49,8 @@ cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = (latest_date - predictionsize):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 #cutofflist = 150:151
-lastcutoff = tail(cutofflist,n=1)
-#cutofflist = (latest_date-predictionsize+1):(latest_date)
+#lastcutoff = tail(cutofflist,n=1)
+#cutofflist = (latest_date-predictionsize):(latest_date)
 
 cutoff.list <- c()
 date.x.list <- c()
@@ -119,7 +119,7 @@ for(cutoff in cutofflist){
     restricted_state_df2$grf.mse<-with(restricted_state_df2,(predicted.grf-log_rolled_cases.y)**2)
     restricted_state_df2$augmented.grf.mse<-with(restricted_state_df2,(predicted.grf.augmented-log_rolled_cases.y)**2)
     
-    restricted_state_df2 <- na.omit(restricted_state_df2)
+    restricted_state_df2 <- na.omit(unique(restricted_state_df2))
     
     cutoff.list <- c(cutoff.list, cutoff)
     date.x.list <- c(date.x.list, max(anytime::anydate(restricted_state_df2$date.x)))
