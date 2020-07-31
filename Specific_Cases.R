@@ -29,6 +29,8 @@ destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
+county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
+
 
 state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
@@ -50,7 +52,7 @@ cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 #cutofflist = 150:151
 #lastcutoff = tail(cutofflist,n=1)
-cutofflist = (latest_date-predictionsize):(latest_date)
+#cutofflist = (latest_date-predictionsize):(latest_date)
 
 cutoff.list <- c()
 date.x.list <- c()
@@ -58,6 +60,7 @@ lm.mse.list <- c()
 slm.mse.list <- c()
 grf.mse.list <- c()
 augmented.grf.mse.list <- c()
+fonly.grf.mse.list <- c()
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
@@ -103,7 +106,7 @@ for(cutoff in cutofflist){
   }
   
   
-  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","r.grf","t0.grf","predicted.grf","r.grf.augmented","t0.grf.augmented","predicted.grf.augmented")]
+  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","r.grf","t0.grf","predicted.grf","r.grf.augmented","t0.grf.augmented","predicted.grf.augmented","r.grf.fonly","t0.grf.fonly","predicted.grf.fonly")]
   tomorrow<-state_df1[c("date","days_from_start","fips","log_rolled_cases")]
   #tomorrow1<-restricted_state_df11[c("fips","r.lm","r.slm")]
   
@@ -119,6 +122,7 @@ for(cutoff in cutofflist){
     restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
     restricted_state_df2$grf.mse<-with(restricted_state_df2,(predicted.grf-log_rolled_cases.y)**2)
     restricted_state_df2$augmented.grf.mse<-with(restricted_state_df2,(predicted.grf.augmented-log_rolled_cases.y)**2)
+    restricted_state_df2$fonly.grf.mse<-with(restricted_state_df2,(predicted.grf.fonly-log_rolled_cases.y)**2)
     
     restricted_state_df2 <- na.omit(unique(restricted_state_df2))
     
@@ -128,7 +132,9 @@ for(cutoff in cutofflist){
     slm.mse.list <- c(slm.mse.list, mean(restricted_state_df2$slm.mse))
     grf.mse.list <- c(grf.mse.list, mean(restricted_state_df2$grf.mse))
     augmented.grf.mse.list <- c(augmented.grf.mse.list, mean(restricted_state_df2$augmented.grf.mse))
-    print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse))," augmented.grf.mse=", toString(mean(restricted_state_df2$augmented.grf.mse)) ,sep=""))
+    fonly.grf.mse.list <- c(fonly.grf.mse.list, mean(restricted_state_df2$fonly.grf.mse))
+    
+    print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse))," augmented.grf.mse=", toString(mean(restricted_state_df2$augmented.grf.mse))," fonly.grf.mse=", toString(mean(restricted_state_df2$fonly.grf.mse))  ,sep=""))
     print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
     
   }
@@ -144,7 +150,7 @@ for(cutoff in cutofflist){
   write.csv(restricted_state_df2,confusion_file_path,row.names=FALSE)
 }
 
-performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list, augmented.grf.mse=augmented.grf.mse.list)
+performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list, augmented.grf.mse=augmented.grf.mse.list, fonly.grf.mse=fonly.grf.mse.list)
 performance.table <- as.data.frame(performance.list)
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 

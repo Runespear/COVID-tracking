@@ -66,7 +66,7 @@ county_features <- read.csv(file=file.path("./data/county_features.csv"))
 
 # Drop all "E_..." prefix
 
-county_features <- county_features[,which(!grepl("E_",names(county_features)))]
+county_features <- county_features[,which(!grepl("M_",names(county_features)))]
 
 # Convert -999 to NA
 
