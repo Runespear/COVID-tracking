@@ -9,8 +9,7 @@ Example code demonstrated in the ipynb file
 
 Data files are also included in the ```data``` folder
 
-Workflow:
+Backend Workflow:
 
-```Preprocess-us-counties.R ``` to pull the latest data from NYTimes repo and preprocess data  
-```Specific_Cases.R``` to backtest grf and lm  
-```Generate_Predictions_grf.R``` to generate whether there will be an outbreak in the next 7 days  
+```Preprocess-us-counties.R ``` to pull the latest data from NYTimes repo + augment with various features and preprocess data. The processed data exceeeds GitHub file size limits so you have to construct it locally first.   
+```Specific_Cases.R``` to backtest the log linear model, simple grf, and the augmented grf
