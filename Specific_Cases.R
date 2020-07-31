@@ -50,7 +50,7 @@ cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 #cutofflist = 150:151
 #lastcutoff = tail(cutofflist,n=1)
-#cutofflist = (latest_date-predictionsize):(latest_date)
+cutofflist = (latest_date-predictionsize):(latest_date)
 
 cutoff.list <- c()
 date.x.list <- c()
@@ -109,6 +109,7 @@ for(cutoff in cutofflist){
   
   today$Predicted_Double_Days <- log(2, exp(1))/today$r.grf.augmented
   restricted_state_df2 <- today
+  restricted_state_df2 <- unique(restricted_state_df2)
   # Merge only when there is validation data available
   if (cutoff + predictionsize <= latest_date){
     print(paste("Validation data available for cutoff=",toString(cutoff)),sep="")
