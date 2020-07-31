@@ -24,7 +24,6 @@ write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
 
 county_data <- read.csv(file = destfile)
-
 county_data$datetime <- anytime::anydate(county_data$date)
 
 # Find the earliest date and latest dates
@@ -61,8 +60,30 @@ county_data = county_data[complete.cases(county_data),]
 start_date = min(county_data$datetime)
 end_date = max(county_data$datetime)
 
-end_file = paste("./data/processed_us-counties_latest",".csv",sep="")
+# Process county features
 
-write.csv(county_data, end_file, row.names=FALSE)
+county_features <- read.csv(file=file.path("./data/county_features.csv"))
+
+# Drop all "E_..." prefix
+
+county_features <- county_features[,which(!grepl("E_",names(county_features)))]
+
+# Convert -999 to NA
+
+county_features[county_features==-999] <-NA
+
+# DROP STm, STATE, ST_ABBR, COUNTY, LOCATION since we already have fips
+
+county_features <- county_features[, -which(names(county_features) %in% c("ST","STATE","ST_ABBR","COUNTY","LOCATION"))]
+
+names(county_features)[names(county_features)=="FIPS"] <- "fips"
+
+county_data_augmented <- merge(x=county_data, y=county_features, by="fips" )
+
+
+end_file = paste("./data/augmented_us-counties_latest",".csv",sep="")
+#end_file = paste("./data/processed_us-counties_latest",".csv",sep="")
+
+write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 closeAllConnections()

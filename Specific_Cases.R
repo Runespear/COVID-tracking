@@ -23,10 +23,10 @@ registerDoParallel(cores=detectCores())
 
 # Load Data
 
-destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
+destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
-county_data$datetime <- anytime::anydate(county_data$date)
+county_data$date <- anytime::anydate(county_data$date)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 
 state_list = sort(unique(county_data$state))
@@ -53,6 +53,7 @@ cutoff.list <- c()
 lm.mse.list <- c()
 slm.mse.list <- c()
 grf.mse.list <- c()
+augmented.grf.mse.list <- c()
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
@@ -69,16 +70,16 @@ for(cutoff in cutofflist){
   # Validation set 11
   state_df1 <- subset(restricted_state_df,days_from_start >= cutoff-windowsize & days_from_start <= cutoff+ predictionsize)
   state_list1 <- sort(unique(state_df1$state))
-  try(restricted_state_df11 <- foreach(state = state_list1, .combine=rbind) %dopar%{
-    k = NULL
-    k = try(county_analysis(state, restricted_state_df, cutoff, cutoff+ predictionsize,predictionsize))
-    return(k)
-  })
-  
-  if(is.null(restricted_state_df11)){
-    print("no restricted_state_df11")
-    next
-  }
+  #try(restricted_state_df11 <- foreach(state = state_list1, .combine=rbind) %dopar%{
+  #  k = NULL
+  #  k = try(county_analysis(state, restricted_state_df, cutoff, cutoff+ predictionsize,predictionsize))
+  #  return(k)
+  #})
+  #
+  #if(is.null(restricted_state_df11)){
+  #  print("no restricted_state_df11")
+  #  next
+  #}
   
 
   # Training Set
@@ -100,35 +101,35 @@ for(cutoff in cutofflist){
     next
   }
   
-  if (!is.null(restricted_state_df11) && !is.null(restricted_state_df0)) {
-    today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","r.grf","t0.grf","predicted.grf")]
-    tomorrow<-restricted_state_df1[c("date","days_from_start","fips","log_rolled_cases")]
-    #tomorrow1<-restricted_state_df11[c("fips","r.lm","r.slm")]
-    restricted_state_df2<-merge(x=today,y=tomorrow,by="fips",x.all=TRUE)
-    #restricted_state_df2<-merge(x=merge(x=today,y=tomorrow,by="fips",x.all=TRUE),y=tomorrow1,by="fips",x.all=TRUE)
-    restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
-    restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
-    restricted_state_df2$grf.mse<-with(restricted_state_df2,(predicted.grf-log_rolled_cases.y)**2)
-    
-    
-    restricted_state_df2 <- na.omit(restricted_state_df2)
-    
-    cutoff.list <- c(cutoff.list, cutoff)
-    lm.mse.list <- c(lm.mse.list, mean(restricted_state_df2$lm.mse))
-    slm.mse.list <- c(slm.mse.list, mean(restricted_state_df2$slm.mse))
-    grf.mse.list <- c(grf.mse.list, mean(restricted_state_df2$grf.mse))
-    
-    print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse)) ,sep=""))
-    print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
-    
-    backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
-    
-    write.csv(restricted_state_df2,backtest_file_path,row.names=FALSE)
-    # break
-  }
+  
+  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","r.grf","t0.grf","predicted.grf","r.grf.augmented","t0.grf.augmented","predicted.grf.augmented")]
+  tomorrow<-restricted_state_df1[c("date","days_from_start","fips","log_rolled_cases")]
+  #tomorrow1<-restricted_state_df11[c("fips","r.lm","r.slm")]
+  restricted_state_df2<-merge(x=today,y=tomorrow,by="fips",x.all=TRUE)
+  #restricted_state_df2<-merge(x=merge(x=today,y=tomorrow,by="fips",x.all=TRUE),y=tomorrow1,by="fips",x.all=TRUE)
+  restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
+  restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
+  restricted_state_df2$grf.mse<-with(restricted_state_df2,(predicted.grf-log_rolled_cases.y)**2)
+  restricted_state_df2$augmented.grf.mse<-with(restricted_state_df2,(predicted.grf.augmented-log_rolled_cases.y)**2)
+  
+  restricted_state_df2 <- na.omit(restricted_state_df2)
+  
+  cutoff.list <- c(cutoff.list, cutoff)
+  lm.mse.list <- c(lm.mse.list, mean(restricted_state_df2$lm.mse))
+  slm.mse.list <- c(slm.mse.list, mean(restricted_state_df2$slm.mse))
+  grf.mse.list <- c(grf.mse.list, mean(restricted_state_df2$grf.mse))
+  augmented.grf.mse.list <- c(augmented.grf.mse.list, mean(restricted_state_df2$augmented.grf.mse))
+  
+  print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse))," augmented.grf.mse=", toString(mean(restricted_state_df2$augmented.grf.mse)) ,sep=""))
+  print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
+  
+  backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
+  
+  write.csv(restricted_state_df2,backtest_file_path,row.names=FALSE)
+  # break
 }
 
-performance.list <- list(cutoff=cutoff.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list)
+performance.list <- list(cutoff=cutoff.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list, augmented.grf.mse=augmented.grf.mse.list)
 performance.table <- as.data.frame(performance.list)
 discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 

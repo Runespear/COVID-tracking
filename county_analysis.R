@@ -35,19 +35,23 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     # 2 types of linear models
     # ln(I_t) = rt - rt_0
     # ln(I_t) - ln(I_tw) = r(t-t_w)
-    county_df$logdiff <- county_df$log_rolled_cases - min(county_df$log_rolled_cases)
+    window.start.log_rolled_cases <- min(county_df$log_rolled_cases)
+    restricted_state_df[which(restricted_state_df$fips == fips),"window.start.log_rolled_cases"] <- window.start.log_rolled_cases
+    
+    county_df$logdiff <- county_df$log_rolled_cases - window.start.log_rolled_cases
     county_df$shifted_time <- county_df$days_from_start - cutoffstart
+    
     
     # SHIFTED LOGMODEL
     shifted.logmodel = lm(formula = logdiff ~ shifted_time, data=county_df)
-    print(shifted.logmodel)
+    #print(shifted.logmodel)
     shifted.rguess <- NULL
     shifted.t0 <- NULL
     shifted.predict_guess <- NULL
     
     # NORMAL LOGMODEL
     logmodel = lm(formula = log_rolled_cases ~ days_from_start, data=county_df)
-    print(logmodel)
+    #print(logmodel)
     lm.rguess <- NULL
     lm.t0 <- NULL
     lm.predict_guess <- NULL
@@ -55,7 +59,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     
     # CALCULATE INTERCEPT AND PREDICTION FOR SHIFTED LOGMODEL
     try(shifted.rguess <- coef(summary(shifted.logmodel))["shifted_time","Estimate"])
-    print(shifted.rguess)
+    #print(shifted.rguess)
     if (is.null(shifted.rguess)){
       shifted.rguess <- NA
       shifted.t0 <- NA
@@ -102,21 +106,35 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   # Method 1: Calculate ln(I) = r*t - intercept and feed into GRF
   # Method 2: Cluster time series by DTW -> then refit model with exponential model
   restricted_state_df = na.omit(restricted_state_df)
-  tau.forest <- NULL
-  
-  # num_trees_list = c(2000)
-  num_trees =2000
-  tau.forest <-grf::causal_forest(X=restricted_state_df[,c("r.slm","t0.slm")], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
-  # Re-estimated r
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
-  r.grflist = c()
+  
+  #print(restricted_state_df)
+  
+  num_trees =2000
+  # Default GRF with only r.slm, t0.slm, window.start.log_rolled_cases as features
+  tau.forest <- NULL
+  tau.forest <-grf::causal_forest(X=restricted_state_df[,c("r.slm","t0.slm","window.start.log_rolled_cases")], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
+
+  augmented.tau.forest <- NULL
+  feature.exclusion <- c("fips","r.lm","t0.lm","predicted.lm","predicted.slm","date","county","state","cases","datetime","deaths","days_from_start","logcases","rolled_cases","log_rolled_cases", "r.grf","t0.grf","predicted.grf","r.grf.augmented","t0.grf.augmented","predicted.grf.augmented")
+  augmented.tau.forest <-grf::causal_forest(X=restricted_state_df[,-which(names(restricted_state_df) %in% feature.exclusion )], Y=restricted_state_df[,"log_rolled_cases"], W= restricted_state_df[,"days_from_start"], num.trees = num_trees)
+  
+  
+  
+  #r.grflist = c()
   for (fips in restricted_state_fips_list){
     # print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
-    X.test <- unique(restricted_state_df[which(restricted_state_df$fips == fips), c("r.slm","r.slm")])
+    X.test <- unique(county_df[, c("r.slm","t0.slm","window.start.log_rolled_cases")])
+    augmented.X.test <- unique(county_df[, -which(names(restricted_state_df) %in% feature.exclusion)])
+    
+    #print(X.test)
+    #print(augmented.X.test)
     
     tau.hat <- predict(tau.forest,X.test, estimate.variance = TRUE)
     sigma.hat <- sqrt(tau.hat$variance.estimates)
+    
+    augmented.tau.hat <- predict(augmented.tau.forest, augmented.X.test, estimate.variance = TRUE)
     #print(tau.hat)
     
     r.grf.string = paste("r.grf","",sep="")
@@ -125,17 +143,26 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     t0.grf.string = paste("t0.grf","",sep="")
     
     restricted_state_df[which(restricted_state_df$fips == fips), r.grf.string] <- tau.hat
+    restricted_state_df[which(restricted_state_df$fips == fips), "r.grf.augmented"] <- augmented.tau.hat
     # restricted_state_df[which(restricted_state_df$fips == fips), r.SE.grf.string] <- sigma.hat
-    r.grflist = c(r.grflist,tau.hat)
+    #r.grflist = c(r.grflist,tau.hat)
     
-    county_df$X <- county_df$days_from_start * tau.hat[[1]]
+    county_df$y.hat <- county_df$days_from_start * tau.hat[[1]]
+    county_df$augmented.y.hat <- county_df$days_from_start * augmented.tau.hat[[1]]
     # Re-estimate t0
-    t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$X))/(-tau.hat)
+    t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$y.hat))/(-tau.hat)
+    augmented.t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$augmented.y.hat))/(-augmented.tau.hat)
     
+    # Put in the predicted cases
     restricted_state_df[which(restricted_state_df$fips == fips), grf.predict.string] <-log_exp(cutoffend+ predictionsize,tau.hat,t0.hat)
+    restricted_state_df[which(restricted_state_df$fips == fips), "predicted.grf.augmented"] <-log_exp(cutoffend+ predictionsize,augmented.tau.hat,augmented.t0.hat)
     
+    # Put in thee predicted intercepts
     restricted_state_df[which(restricted_state_df$fips == fips), t0.grf.string] <- t0.hat
-    #print(restricted_state_df)
+    restricted_state_df[which(restricted_state_df$fips == fips), "t0.grf.augmented"] <- augmented.t0.hat
+    
+    
+    
   }
   restricted_state_df = subset(restricted_state_df, days_from_start == cutoffend)
   
