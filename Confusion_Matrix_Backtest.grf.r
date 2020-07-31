@@ -84,14 +84,14 @@ backtestDir <- file.path(mainDir,"backtest")
 
 # read all the allstates_$(CUTOFF)_grf.csv files
 cutoff_list <- earliest_start:latest_date
-#cutoff_list <- c(174)
+cutoff_list <- c(latest_date-7:latest_date)
 
 # List of dataframes
 df_list <- c()
 # List of existing cutoffs
 actual_cutoff_list <- c()
 # List of doubling days
-DD.list <- c(28)
+DD.list <- c(7,21,28,31)
 NumClasses <- length(DD.list) + 1
 predictionsize <- 7
 
@@ -142,11 +142,11 @@ for(cutoff in cutoff_list){
     # Analyze the backtest dataset
     prediction_df <- cutoff_df
     # Calculate the doubling days from r.grf
-    prediction_df["Predicted_Double_Days"] <- log(2,exp(1))/cutoff_df["r.grf"]
+    prediction_df["Predicted_Double_Days"] <- log(2,exp(1))/cutoff_df["r.grf.augmented"]
     class_list <- PredictedOutbreakClass(prediction_df$Predicted_Double_Days, DD.list)
     # Generate the predicted labels for each county
     prediction_df["Predicted_Outbreak_Class"] <- unlist(class_list)
-    
+    next
     # Calculate the actual labels of each county 7 days later
     actual_class_list <- (ActualOutbreakClass(prediction_df$log_rolled_cases.x,DD.list,predictionsize,prediction_df$r.y))
     prediction_df["Actual_Outbreak_Class"] <- actual_class_list

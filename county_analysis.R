@@ -1,7 +1,7 @@
 require("data.table")
 
 county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictionsize){
-  
+  #print(state)
   state_df = county_data[which(county_data$state==state),]
   
   state_fips_list = sort(unique(state_df$fips))
@@ -29,7 +29,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   t0list = c()
   
   for (fips in restricted_state_fips_list){
-    #print(fips)
+    print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
     
     # 2 types of linear models
@@ -108,7 +108,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   restricted_state_df = na.omit(restricted_state_df)
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   
-  #print(restricted_state_df)
+  # print(restricted_state_df)
   
   num_trees =2000
   # Default GRF with only r.slm, t0.slm, window.start.log_rolled_cases as features
@@ -123,7 +123,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
   
   #r.grflist = c()
   for (fips in restricted_state_fips_list){
-    # print(fips)
+    print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
     X.test <- unique(county_df[, c("r.slm","t0.slm","window.start.log_rolled_cases")])
     augmented.X.test <- unique(county_df[, -which(names(restricted_state_df) %in% feature.exclusion)])
@@ -131,31 +131,36 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     #print(X.test)
     #print(augmented.X.test)
     
-    tau.hat <- predict(tau.forest,X.test, estimate.variance = TRUE)
-    sigma.hat <- sqrt(tau.hat$variance.estimates)
-    
-    augmented.tau.hat <- predict(augmented.tau.forest, augmented.X.test, estimate.variance = TRUE)
-    #print(tau.hat)
+    tau.hat <- predict(tau.forest,X.test, estimate.variance = FALSE)
+    r.grf <- unlist(tau.hat)[1]
+    #sigma.hat <- sqrt(tau.hat$variance.estimates)
+    #print(tau.hat[[1]])
+    augmented.tau.hat <- predict(augmented.tau.forest, augmented.X.test, estimate.variance = FALSE)
+    augmented.r.grf <- unlist(augmented.tau.hat)[1]
+    print(augmented.r.grf)
+    print(augmented.X.test)
     
     r.grf.string = paste("r.grf","",sep="")
     # r.SE.grf.string = paste("r.SE.grf","",sep="")
     grf.predict.string = paste("predicted.grf","",sep="")
     t0.grf.string = paste("t0.grf","",sep="")
     
-    restricted_state_df[which(restricted_state_df$fips == fips), r.grf.string] <- tau.hat
-    restricted_state_df[which(restricted_state_df$fips == fips), "r.grf.augmented"] <- augmented.tau.hat
+    restricted_state_df[which(restricted_state_df$fips == fips), r.grf.string] <- r.grf
+    
+    restricted_state_df[which(restricted_state_df$fips == fips), "r.grf.augmented"] <- augmented.r.grf
+    
     # restricted_state_df[which(restricted_state_df$fips == fips), r.SE.grf.string] <- sigma.hat
     #r.grflist = c(r.grflist,tau.hat)
     
-    county_df$y.hat <- county_df$days_from_start * tau.hat[[1]]
-    county_df$augmented.y.hat <- county_df$days_from_start * augmented.tau.hat[[1]]
+    county_df$y.hat <- county_df$days_from_start * r.grf
+    county_df$augmented.y.hat <- county_df$days_from_start * augmented.r.grf
     # Re-estimate t0
-    t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$y.hat))/(-tau.hat)
-    augmented.t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$augmented.y.hat))/(-augmented.tau.hat)
+    t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$y.hat))/(-r.grf)
+    augmented.t0.hat <- (mean(county_df$log_rolled_cases) - mean(county_df$augmented.y.hat))/(-augmented.r.grf)
     
     # Put in the predicted cases
-    restricted_state_df[which(restricted_state_df$fips == fips), grf.predict.string] <-log_exp(cutoffend+ predictionsize,tau.hat,t0.hat)
-    restricted_state_df[which(restricted_state_df$fips == fips), "predicted.grf.augmented"] <-log_exp(cutoffend+ predictionsize,augmented.tau.hat,augmented.t0.hat)
+    restricted_state_df[which(restricted_state_df$fips == fips), grf.predict.string] <-log_exp(cutoffend+ predictionsize,r.grf,t0.hat)
+    restricted_state_df[which(restricted_state_df$fips == fips), "predicted.grf.augmented"] <-log_exp(cutoffend+ predictionsize,augmented.r.grf,augmented.t0.hat)
     
     # Put in thee predicted intercepts
     restricted_state_df[which(restricted_state_df$fips == fips), t0.grf.string] <- t0.hat
