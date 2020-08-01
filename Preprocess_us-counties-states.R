@@ -106,12 +106,14 @@ for (i in 4:length(names(df))) {
   } 
 }
 
+# DROP State, State_Abbreviation 
+
+df <- df[, -which(names(df) %in% c("State", "State_Abbreviation"))]
+
 
 #merge CUSP Data with county_data_augmented Data
 
 county_data_augmented["State_FIPS_Code"]<- as.numeric(fips(county_data_augmented$state, county = c()))
-
-#names(data)
 
 data<-merge(x=county_data_augmented, y=df, by = "State_FIPS_Code", all.x = TRUE)
 
