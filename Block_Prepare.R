@@ -47,6 +47,7 @@ for(cutoff in cutofflist){
   Tfirst<-Tfirst[, which(names(restricted_state_df) %in% c("fips","log_rolled_cases"))]
   
   Tlast<-subset(restricted_state_df, days_from_start ==cutoff)
+  Tlast["cutoff"]<-Tlast$days_from_start
   Tlast<-Tlast[,-which(names(Tlast) %in% c("State_FIPS_Code", "date", "datetime", "state", "county","days_from_start","log_rolled_cases","rolled_cases","logcases","deaths", "cases"))]
   
   Tcase<- restricted_state_df[, which(names(restricted_state_df) %in% c("fips", "State_FIPS_Code", "datetime", "state", "county","log_rolled_cases"))]
