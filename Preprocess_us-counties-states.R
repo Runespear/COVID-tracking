@@ -4,6 +4,7 @@ list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
+lapply(list.of.packages, require, character.only = TRUE)
 
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
@@ -123,7 +124,8 @@ data$datetime<-as.Date(data$datetime, "%Y-%m-%d")
 for (i in length(names(county_data_augmented)):length(names(data))) {
   
   if (inherits(data[,i], 'Date')){
-    data[,i]<- data$datetime-data[,i]
+    data[,i]<-data$datetime-data[,i]+1
+    data[,i][data[,i]<0]<-0
   }
 }
 
