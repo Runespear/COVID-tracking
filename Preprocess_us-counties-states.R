@@ -54,6 +54,10 @@ for (fips in fips_list){
   county_data[which(county_data$fips==fips), "rolled_cases"] <- county_slice$rolled_cases
 }
 
+# Write intermediate result as processed_us-counties_latest.csv
+
+write.csv(county_data,"./data/processed_us-counties_latest.csv",row.names=FALSE)
+
 # Slice away first 6 days
 
 county_data = county_data[complete.cases(county_data),]
