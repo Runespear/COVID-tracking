@@ -55,6 +55,16 @@ county_data$log_rolled_cases <- log(county_data$rolled_cases)
 fips.master <- read.csv("./data/county_fips_master.csv")
 
 
+
+fips.master$county <- fips.master$county_name
+fips.master$state <- fips.master$state_name
+fips.master <-  fips.master[c("fips","county","state")]
+fips.master$predicted.grf.augmented <- NA
+fips.master$Predicted_Double_Days <- NA
+fips.master$FIPS.STRING <- mapply(prepend, fips.master$fips)
+
+
+
 # Loop through files in ./data/output/backtest
 
 backtest.folder <- "data/output/backtest"
@@ -83,10 +93,16 @@ for (x in filelist){
     m <- t[c("fips","days_from_start","date","county","state","predicted.grf.augmented","Predicted_Double_Days")]
     cdata$days_from_start <- unique(m$days_from_start)
     cdata$date <- unique(m$date)
+    
+    fips.master$days_from_start <- unique(m$days_from_start)
+    fips.master$date <- unique(m$date)
   }
   else{
     cdata$days_from_start.x <- unique(m$days_from_start.x)
     cdata$date.x <- unique(m$date.x)
+    
+    fips.master$days_from_start.x <- unique(m$days_from_start.x)
+    fips.master$date.x <- unique(m$date.x)
   }
   
   
@@ -101,14 +117,23 @@ for (x in filelist){
   
   for (fips in fips_all){
     if (! fips %in% m.fips.list){
-      m <- rbind(m, cdata[which(cdata$fips==fips),])
+      m <- dplyr::bind_rows(m, cdata[which(cdata$fips==fips),])
+      m.fips.list <- append(m.fips.list, fips)
     }
   }
+  for (fips in unique(fips.master$fips)){
+    if (! fips %in% m.fips.list){
+      m <- dplyr::bind_rows(m, fips.master[which(fips.master$fips==fips),])
+      m.fips.list <- append(m.fips.list, fips)
+    }
+  }
+  
+  m<-m[order(m$fips),]
   
   # Write file in ./data/output/confusion/ folder
   destfolder <- "./data/output/confusion/"
   fname <- paste("confusion_",x,sep="")
   write.csv(m, file.path(destfolder,fname),row.names=FALSE)
-  #break
+  # break
 }
 
