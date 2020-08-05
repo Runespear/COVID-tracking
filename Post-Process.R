@@ -50,6 +50,10 @@ county_data$logcases <- log(county_data$cases)
 
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 
+earliest_start = min(county_data$days_from_start)
+latest_date = max(county_data$days_from_start)
+
+
 # Load county_fips_master.csv
 
 fips.master <- read.csv("./data/county_fips_master.csv")
@@ -76,10 +80,28 @@ t <- NULL
 cdata <- NULL
 mdata <- NULL
 t.fips.list <- NULL
-for (x in filelist){
-  print(x)
+
+cutoff <- NA
+cutoff.list <- earliest_start:latest_date
+
+
+
+for (cutoff in cutoff.list){
   
-  t <- read.csv(file.path(backtest.folder,x))
+  fname <- paste("allstates_",toString(cutoff),"_grf.csv",sep="")
+  
+  
+  
+  full.path <-file.path(backtest.folder,fname)
+  
+  if (file.exists(full.path)){
+    t <- read.csv(full.path)
+  }
+  else{
+    next
+  }
+  
+  print(fname)
   
   m <- NULL
   
@@ -129,13 +151,39 @@ for (x in filelist){
   }
   
   m<-m[order(m$fips),]
+  # Add actual number of cases currently
+  m$log_rolled_cases.x[is.na(m$log_rolled_cases.x)] <- m$log_rolled_cases[!is.na(m$log_rolled_cases)]
+  m <- subset(m, select = -c(log_rolled_cases))
+  
+  # Check to see if prediction of today's cases 7 days ago is present, if yes, get them
+  past.fname <- paste("allstates_",toString(cutoff-7),"_grf.csv",sep="")
+  
+  
+  
+  past.full.path <-file.path(backtest.folder,past.fname)
+  m.new <- m
+  if (file.exists(past.full.path)){
+    past.t <- read.csv(past.full.path)
+    print(paste("Past data exists as ",toString(cutoff-7),sep=""))
+    # Add in prediction of today from past  
+    
+    past.t <- past.t[c("fips","predicted.grf")]
+    
+    m.new <- merge(x=m,y=past.t,by="fips",all=TRUE)
+    
+    #break
+  }
+  else{
+    print(paste("No past data exists as ",toString(cutoff-7),sep=""))
+  }
+  
   
   # Write file in ./data/output/confusion/ folder
   destfolder <- "./data/output/confusion/"
-  fname <- paste("confusion_",x,sep="")
-  # write.csv(m, file.path(destfolder,fname),row.names=FALSE)
-  break
+  fname <- paste("confusion_",fname,sep="")
+  write.csv(m.new, file.path(destfolder,fname),row.names=FALSE)
   
+  #break
   
 }
 
