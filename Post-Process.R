@@ -59,7 +59,7 @@ fips.master <- read.csv("./data/county_fips_master.csv")
 fips.master$county <- fips.master$county_name
 fips.master$state <- fips.master$state_name
 fips.master <-  fips.master[c("fips","county","state")]
-fips.master$predicted.grf.augmented <- NA
+fips.master$predicted.grf <- NA
 fips.master$Predicted_Double_Days <- NA
 fips.master$FIPS.STRING <- mapply(prepend, fips.master$fips)
 
@@ -84,13 +84,13 @@ for (x in filelist){
   m <- NULL
   
   cdata <- subset(county_data, days_from_start == max(county_data$days_from_start))
-  cdata <- na.omit(cdata[c("fips","county","state")])
+  cdata <- na.omit(cdata[c("fips","county","state","log_rolled_cases")])
   cdata$FIPS.STRING <- mapply(prepend, cdata$fips)
   
-  try(m <- t[c("fips","days_from_start.x","date.x","county","state","predicted.grf.augmented","Predicted_Double_Days")])
+  try(m <- t[c("fips","days_from_start.x","date.x","county","state","predicted.grf","log_rolled_cases.x","Predicted_Double_Days")])
   
   if (is.null(m)){
-    m <- t[c("fips","days_from_start","date","county","state","predicted.grf.augmented","Predicted_Double_Days")]
+    m <- t[c("fips","days_from_start","date","county","state","predicted.grf","log_rolled_cases","Predicted_Double_Days")]
     cdata$days_from_start <- unique(m$days_from_start)
     cdata$date <- unique(m$date)
     
@@ -110,7 +110,7 @@ for (x in filelist){
     
   
   
-  cdata$predicted.grf.augmented <- NA
+  cdata$predicted.grf <- NA
   cdata$Predicted_Double_Days <- NA
   
   m.fips.list <- sort(unique(m$fips))
@@ -133,7 +133,9 @@ for (x in filelist){
   # Write file in ./data/output/confusion/ folder
   destfolder <- "./data/output/confusion/"
   fname <- paste("confusion_",x,sep="")
-  write.csv(m, file.path(destfolder,fname),row.names=FALSE)
-  # break
+  # write.csv(m, file.path(destfolder,fname),row.names=FALSE)
+  break
+  
+  
 }
 

@@ -52,7 +52,7 @@ cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 #cutofflist = 150:151
 #lastcutoff = tail(cutofflist,n=1)
-#cutofflist = (latest_date-predictionsize):(latest_date)
+cutofflist = (latest_date-predictionsize-5):(latest_date)
 
 cutoff.list <- c()
 date.x.list <- c()
@@ -110,7 +110,7 @@ for(cutoff in cutofflist){
   tomorrow<-state_df1[c("date","days_from_start","fips","log_rolled_cases")]
   #tomorrow1<-restricted_state_df11[c("fips","r.lm","r.slm")]
   
-  today$Predicted_Double_Days <- log(2, exp(1))/today$r.grf.augmented
+  today$Predicted_Double_Days <- log(2, exp(1))/today$r.grf
   restricted_state_df2 <- today
   restricted_state_df2 <- unique(restricted_state_df2)
   # Merge only when there is validation data available
@@ -135,19 +135,22 @@ for(cutoff in cutofflist){
     fonly.grf.mse.list <- c(fonly.grf.mse.list, mean(restricted_state_df2$fonly.grf.mse))
     
     print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse))," augmented.grf.mse=", toString(mean(restricted_state_df2$augmented.grf.mse))," fonly.grf.mse=", toString(mean(restricted_state_df2$fonly.grf.mse))  ,sep=""))
-    print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
     
+    
+  }
+  else{
+    # Append .x to column names of date, days_from_start, log_rolled_cases
+    rename(restricted_state_df2, c("date"="date.x","days_from_start"="days_from_start.x","log_rolled_cases"="log_rolled_cases.x"))
   }
   
   
-  
-  
+  print(paste("Finished writing backtest for cutoff=",toString(cutoff),setp=""))
   backtest_file_path = file.path(backtest_dir, paste("allstates_",toString(cutoff),"_grf.csv",sep=""))
-  confusion_file_path = file.path(mainDir, "confusion", paste("confusion_allstates_",toString(cutoff),"_grf.csv",sep=""))
+  #confusion_file_path = file.path(mainDir, "confusion", paste("confusion_allstates_",toString(cutoff),"_grf.csv",sep=""))
   
   write.csv(restricted_state_df2,backtest_file_path,row.names=FALSE)
   # temp measure
-  write.csv(restricted_state_df2,confusion_file_path,row.names=FALSE)
+  #write.csv(restricted_state_df2,confusion_file_path,row.names=FALSE)
 }
 
 performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list, augmented.grf.mse=augmented.grf.mse.list, fonly.grf.mse=fonly.grf.mse.list)
