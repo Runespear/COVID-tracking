@@ -1,6 +1,6 @@
 closeAllConnections()
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -162,6 +162,8 @@ for (cutoff in cutoff.list){
   
   past.full.path <-file.path(backtest.folder,past.fname)
   m.new <- m
+  
+  
   if (file.exists(past.full.path)){
     past.t <- read.csv(past.full.path)
     print(paste("Past data exists as ",toString(cutoff-7),sep=""))
@@ -171,13 +173,18 @@ for (cutoff in cutoff.list){
     
     m.new <- merge(x=m,y=past.t,by="fips",all=TRUE)
     
-    #break
+    m.new <-rename(m.new, c("predicted.grf.x"="predicted.grf.future"))
+    m.new <-rename(m.new, c("predicted.grf.y"="predicted.grf.past"))
+    
   }
   else{
     print(paste("No past data exists as ",toString(cutoff-7),sep=""))
+    
+    m.new <-rename(m, c("predicted.grf"="predicted.grf.future"))
+    m.new$predicted.grf.past <- NA
   }
   
-  
+
   # Write file in ./data/output/confusion/ folder
   destfolder <- "./data/output/confusion/"
   fname <- paste("confusion_",fname,sep="")

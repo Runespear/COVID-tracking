@@ -1,4 +1,4 @@
-"fips","days_from_start.x","date.x","county","state","predicted.grf.x","log_rolled_cases.x","Predicted_Double_Days","FIPS.STRING","predicted.grf.y"
+"fips","days_from_start.x","date.x","county","state","predicted.grf.future","log_rolled_cases.x","Predicted_Double_Days","FIPS.STRING","predicted.grf.past"
 1001,95,"2020-04-25","Autauga","Alabama",3.72963435852093,3.46126162240481,15.085914633938,"'01001",NA
 1003,95,"2020-04-25","Baldwin","Alabama",5.14560168388403,4.88927443709199,15.0697678786296,"'01003",5.0891161980564
 1005,95,"2020-04-25","Barbour","Alabama",NA,6.3888014727656,NA,"'01005",NA
