@@ -1,6 +1,6 @@
 closeAllConnections()
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table")
+list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -40,6 +40,7 @@ predictionsize = 7
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
+print(latest_date)
 
 cutoff = 171
 mainDir = "./data/output"
@@ -52,7 +53,7 @@ cutofflist = (earliest_start+predictionsize+1):(latest_date - predictionsize)
 #cutofflist = 150:(latest_date - predictionsize)
 #cutofflist = 150:151
 #lastcutoff = tail(cutofflist,n=1)
-cutofflist = (latest_date-predictionsize-5):(latest_date)
+#cutofflist = (latest_date-predictionsize-3):(latest_date)
 
 cutoff.list <- c()
 date.x.list <- c()
@@ -140,7 +141,7 @@ for(cutoff in cutofflist){
   }
   else{
     # Append .x to column names of date, days_from_start, log_rolled_cases
-    rename(restricted_state_df2, c("date"="date.x","days_from_start"="days_from_start.x","log_rolled_cases"="log_rolled_cases.x"))
+    restricted_state_df2<-rename(restricted_state_df2, c("date"="date.x","days_from_start"="days_from_start.x","log_rolled_cases"="log_rolled_cases.x"))
   }
   
   

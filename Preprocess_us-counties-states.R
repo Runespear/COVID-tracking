@@ -85,6 +85,10 @@ names(county_features)[names(county_features)=="FIPS"] <- "fips"
 
 county_data_augmented <- merge(x=county_data, y=county_features, by="fips" )
 
+end_file = paste("./data/augmented_us-counties_latest",".csv",sep="")
+
+write.csv(county_data_augmented, end_file, row.names=FALSE)
+
 
 # Load CUSP Data
 
