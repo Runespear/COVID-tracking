@@ -150,9 +150,18 @@ for (cutoff in cutoff.list){
     }
   }
   
+  # Merge missing
+  missing.fips <- read.csv("./data/missing-fips.csv")
+  m.test <- merge(x=m,y=missing.fips,all=TRUE)
+  m.test[which(is.na(m.test$days_from_start.x)),"days_from_start.x"] <- unique(m$days_from_start.x)
+  m.test[which(is.na(m.test$date.x)),"date.x"] <- unique(m$date.x)
+  m.test <- subset(m.test, select=-c(STATEFP,FIPS.STRING))
+  m <- m.test
+  
+  
   m<-m[order(m$fips),]
   # Add actual number of cases currently
-  m$log_rolled_cases.x[is.na(m$log_rolled_cases.x)] <- m$log_rolled_cases[!is.na(m$log_rolled_cases)]
+  m$log_rolled_cases.x[is.na(m$log_rolled_cases.x)] <- m$log_rolled_cases[is.na(m$log_rolled_cases.x)]
   m <- subset(m, select = -c(log_rolled_cases))
   
   # Check to see if prediction of today's cases 7 days ago is present, if yes, get them
@@ -193,4 +202,7 @@ for (cutoff in cutoff.list){
   #break
   
 }
+# Latest
+fname <- "confusion_allstates_latest_grf.csv"
 
+write.csv(m.new, file.path(destfolder,fname),row.names=FALSE)
