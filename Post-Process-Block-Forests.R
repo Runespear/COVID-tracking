@@ -66,7 +66,7 @@ dir.create(confusion.block.folder, showWarnings=FALSE)
 
 
 
-mse.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mse"=NA)
+mse.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mse"=NA, "block.mse0"=NA, "block.mse6"=NA)
 
 for (cutoff in cutoff.start:end_date){
   fname <- paste("block_results_",toString(cutoff),".csv",sep="")
@@ -87,7 +87,9 @@ for (cutoff in cutoff.start:end_date){
     past.df <- read.csv(past.full.path)
     
     past.df$predicted.grf.past <- past.df$predicted.grf.future
-    past.df <- past.df[c("fips","predicted.grf.past")]
+    past.df$predicted.grf.past0 <- past.df$predicted.grf.future0
+    past.df$predicted.grf.past6 <- past.df$predicted.grf.future6
+    past.df <- past.df[c("fips","predicted.grf.past","predicted.grf.past0","predicted.grf.past6")]
     
     new.df <- merge(x=df,y=past.df,by="fips",all=TRUE)
     new.df$block.mse <- NA
@@ -95,8 +97,13 @@ for (cutoff in cutoff.start:end_date){
     mask <- -which(is.na(new.df$predicted.grf.past))
     
     new.df[mask,"block.mse"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past"])**2
+    new.df[mask,"block.mse0"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past0"])**2
+    new.df[mask,"block.mse6"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past6"])**2
     
     mse.table[which(mse.table$cutoff==cutoff),"block.mse"] <- mean(na.omit(new.df[,"block.mse"]))
+    mse.table[which(mse.table$cutoff==cutoff),"block.mse0"] <- mean(na.omit(new.df[,"block.mse0"]))
+    mse.table[which(mse.table$cutoff==cutoff),"block.mse6"] <- mean(na.omit(new.df[,"block.mse6"]))
+    
   }
   
   # Write the csv

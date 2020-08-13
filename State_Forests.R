@@ -50,7 +50,7 @@ for (cutoff in cutoff.list){
     break
   }
 }
-num_trees=200
+num_trees=2000
 cutoff.list <- first.block.cutoff:latest_date
 #cutoff.list <- latest_date:latest_date
 # Main loop, parallelize later
@@ -59,7 +59,7 @@ mainDir = "./data/output"
 subDir = "backtest_state_forests"
 outputfolder = file.path(mainDir, subDir)
 
-dir.create(outputfolder, showWarnings = TRUE)
+dir.create(outputfolder, showWarnings = FALSE)
 
 
 counter <- 1
@@ -95,14 +95,19 @@ foreach(cutoff = cutoff.list) %dopar%{
   exclusion <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","log_rolled_cases.x","shifted_time")
   
   covariates <- (df[,-which(names(df) %in% exclusion)])
-  
+  #covariates <- unique(covariates)
   
   state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
   
+  exclusion.test <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
+  
   current.block <- read.csv(file.path(block.folder, paste("block_",toString(cutoff),".csv",sep="")))
-  covariates.test <- current.block[,-which(names(current.block) %in% exclusion)]
+  current.block <- subset(current.block, shifted_time==6)
+  covariates.test <- current.block[,-which(names(current.block) %in% exclusion.test)]
   covariates.test.unique <- unique(covariates.test)
   
+  final.day.cases <- covariates.test.unique$log_rolled_cases.x
+  covariates.test.unique <- covariates.test.unique[,-which(names(covariates.test.unique) %in% c("log_rolled_cases.x"))]
   
   state.tau.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = FALSE)$predictions
   #state.tau.hat <- unlist(state.tau.hat)
@@ -118,14 +123,14 @@ foreach(cutoff = cutoff.list) %dopar%{
     current.county.block <- subset(current.block, fips == fips & log_rolled_cases.y == cases)
     E.log_rolled_cases <- c(E.log_rolled_cases,mean(current.county.block$log_rolled_cases.x))
     # Doesn't matter that order for time is reversed
-    E.shifted_time <- c(E.shifted_time,mean(cutoff-current.county.block$shifted_time))
+    E.shifted_time <- c(E.shifted_time,mean(cutoff-6+current.county.block$shifted_time))
   }
   state.t0.hat <- (E.log_rolled_cases - state.tau.hat*E.shifted_time)/(-state.tau.hat)
   
   print(state.t0.hat)
   
   predicted.grf.future <- state.tau.hat*(cutoff + 7 - state.t0.hat)
-  
+  predicted.grf.future0<-state.tau.hat*(6 + 7)+ covariates.test.unique$log_rolled_cases.y
   # Write down results
   results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
   results <- merge(x=results,y=current.block[which(current.block$shifted_time==6),],by="fips")
@@ -134,6 +139,8 @@ foreach(cutoff = cutoff.list) %dopar%{
   results$t0.hat <- state.t0.hat
   results$tau.hat <- state.tau.hat
   results$predicted.grf.future <- (state.tau.hat*((cutoff + 7) - state.t0.hat ))
+  results$predicted.grf.future0 <- state.tau.hat*(6 + 7)+ covariates.test.unique$log_rolled_cases.y
+  results$predicted.grf.future6 <- state.tau.hat*(7)+ final.day.cases
   results$Predicted_Double_Days <- log(2,exp(1))/state.tau.hat
   #results$date <- unique(current.block[which(current.block$shifted_time==6),"datetime"])
   #results$log_rolled_cases.x <- (current.block[which(current.block$shifted_time==6),"log_rolled_cases.x"])
@@ -154,6 +161,6 @@ foreach(cutoff = cutoff.list) %dopar%{
   }
   #break
   counter <- counter + 1
-  return(results)
+  #return(NULL)
 }
 
