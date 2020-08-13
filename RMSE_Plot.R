@@ -45,9 +45,19 @@ mainDir <- "./data/output"
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
 
+block.filename <- file.path(mainDir,"block_mse.csv")
+
+block_df <- read.csv(block.filename)
+block_df <- na.omit(block_df)
+
 cutoff_df <- read.csv(file=filename)
 cutoff_df <- na.omit(cutoff_df)
-restricted_state_df2 <- cutoff_df
+cutoff_df <- cutoff_df[,!(names(cutoff_df) %in% c("date.x"))]
+
+
+
+restricted_state_df2 <- merge(x=cutoff_df,y=block_df,by="cutoff")
+
 
 
     
@@ -56,6 +66,7 @@ slm.mse.list <- sqrt(restricted_state_df2$slm.mse)
 grf.mse.list <- sqrt(restricted_state_df2$grf.mse)
 augmented.grf.mse.list <- sqrt(restricted_state_df2$augmented.grf.mse)
 fonly.grf.mse.list <- sqrt(restricted_state_df2$fonly.grf.mse)
+block.grf.mse.list <- sqrt(restricted_state_df2$block.mse)
 days<-restricted_state_df2$cutoff
 
 
@@ -66,7 +77,8 @@ lines(days, grf.mse.list,pch=18, col="green", type="l", lty=2)
 lines(days, augmented.grf.mse.list,pch=18, col="blue", type="l", lty=3)
 lines(days, fonly.grf.mse.list,pch=18, col="white", type="l", lty=4)
 lines(days, slm.mse.list,pch=18, col="red", type="l", lty=5)
-legend(60, 0.5, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM"), col=c("gray", "green", "blue","white","red"), lty=1:5, cex=0.8)
+lines(days, block.grf.mse.list,pch=18, col="purple", type="l", lty=6)
+legend(60, 0.5, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM","GRF.block"), col=c("gray", "green", "blue","white","red","purple"), lty=1:6, cex=0.8)
 
 
 
