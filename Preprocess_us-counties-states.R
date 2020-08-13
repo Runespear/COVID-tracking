@@ -83,7 +83,7 @@ county_features <- county_features[, -which(names(county_features) %in% c("ST","
 
 names(county_features)[names(county_features)=="FIPS"] <- "fips"
 
-county_data_augmented <- merge(x=county_data, y=county_features, by="fips" )
+county_data_augmented <- merge(x=county_data, y=county_features, by="fips", all.x = TRUE)
 
 end_file = paste("./data/augmented_us-counties_latest",".csv",sep="")
 
