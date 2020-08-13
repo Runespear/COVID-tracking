@@ -32,7 +32,7 @@ block_dir = file.path(mainDir, subDir)
 dir.create(block_dir)
 
 cutofflist = (earliest_start+windowsize):(latest_date)
-#cutofflist = (earliest_start+windowsize):(earliest_start+windowsize)
+#cutofflist = (latest_date):(latest_date)
 
 for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
