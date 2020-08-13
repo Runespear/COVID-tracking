@@ -10,7 +10,7 @@ lapply(list.of.packages, require, character.only = TRUE)
 
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-
+source("county_analysis_lm.R")
 
 # Load Data
 
@@ -49,11 +49,14 @@ for(cutoff in cutofflist){
   Tlast<-subset(restricted_state_df, days_from_start ==cutoff)
   Tlast["cutoff"]<-Tlast$days_from_start
   Tlast<-Tlast[,-which(names(Tlast) %in% c("State_FIPS_Code", "date", "datetime", "state", "county","days_from_start","log_rolled_cases","rolled_cases","logcases","deaths", "cases"))]
-  
+
+  Tlm<-county_analysis_lm(restricted_state_df,cutoff)
+  Tlm<-Tlm[,which (names(Tlm) %in% c("fips","r.lm","t0.lm"))]
+    
   Tcase<- restricted_state_df[, which(names(restricted_state_df) %in% c("fips", "State_FIPS_Code", "datetime", "state", "county","log_rolled_cases"))]
   Tcase["shifted_time"]<- restricted_state_df$days_from_start - first
-
-  Tmain<-merge(x=merge(x=Tcase,y=Tfirst,by="fips",x.all=TRUE),y=Tlast,by="fips",x.all=TRUE)
+  
+  Tmain<-merge(x=merge(x=merge(x=Tcase,y=Tfirst,by="fips",x.all=TRUE),y=Tlast,by="fips",x.all=TRUE), y=Tlm,by="fips",x.all=TRUE)
   Tmain["shifted_log_rolled_cases"]<-Tmain$log_rolled_cases.x-Tmain$log_rolled_cases.y
 
   

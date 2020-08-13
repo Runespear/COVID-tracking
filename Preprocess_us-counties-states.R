@@ -79,7 +79,7 @@ county_features[county_features==-999] <-NA
 
 # DROP STm, STATE, ST_ABBR, COUNTY, LOCATION since we already have fips
 
-county_features <- county_features[, -which(names(county_features) %in% c("ST","STATE","ST_ABBR","COUNTY","LOCATION"))]
+#county_features <- county_features[, -which(names(county_features) %in% c("ST","STATE","ST_ABBR","COUNTY","LOCATION"))]
 
 names(county_features)[names(county_features)=="FIPS"] <- "fips"
 

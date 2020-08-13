@@ -22,9 +22,15 @@ county<- read.delim("./data/2019_Gaz_counties_national.txt")
 
 county<- county %>% select(GEOID, INTPTLAT, INTPTLONG)
 
+county$FIPS<-county$GEOID
+
 county$LAT<-county$INTPTLAT
 
 county$LON<-county$INTPTLONG
+
+features<-select(county,-c(GEOID,INTPTLAT,INTPTLONG))
+
+write_csv(features, "./data/county_features.csv")
 
 # Centroids + SVI ---------------------------------------------------------
 
@@ -32,8 +38,8 @@ svi <- read_csv("./data/SVI2018_US_COUNTY.csv") # source: https://svi.cdc.gov/da
 
 svi$GEOID<-as.numeric(svi$FIPS)
 
-features <- left_join(county,svi, by = "GEOID" )
+#features <- left_join(county,svi, by = "GEOID" )
 
-features<-select(features,-c(GEOID,INTPTLAT,INTPTLONG))
+#features<-select(features,-c(GEOID,INTPTLAT,INTPTLONG))
 
-write_csv(features, "./data/county_features.csv")
+#write_csv(features, "./data/county_features.csv")
