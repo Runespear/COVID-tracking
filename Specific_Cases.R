@@ -16,7 +16,7 @@ lapply(list.of.packages, require, character.only = TRUE)
 
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-source("county_analysis.R")
+source("county_analysis(shifted).R")
 
 registerDoParallel(cores=detectCores())
 
@@ -34,7 +34,7 @@ county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
 state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
-windowsize = 7
+windowsize = 6
 predictionsize = 7
 #for (cutoff in (earliest_start+windowsize):(latest_date -predictionsize)){
 earliest_start = min(county_data$days_from_start)
