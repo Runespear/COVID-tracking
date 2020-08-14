@@ -16,7 +16,7 @@ lapply(list.of.packages, require, character.only = TRUE)
 
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-source("county_analysis.R")
+#source("county_analysis.R")
 
 registerDoParallel(cores=detectCores())
 
@@ -67,18 +67,24 @@ grf.mse.list <- sqrt(restricted_state_df2$grf.mse)
 augmented.grf.mse.list <- sqrt(restricted_state_df2$augmented.grf.mse)
 fonly.grf.mse.list <- sqrt(restricted_state_df2$fonly.grf.mse)
 block.grf.mse.list <- sqrt(restricted_state_df2$block.mse)
+block.grf.mse0.list <- sqrt(restricted_state_df2$block.mse0)
+block.grf.mse6.list <- sqrt(restricted_state_df2$block.mse6)
+
 days<-restricted_state_df2$cutoff
 
 
 title="One Week Prediction"
 
-plot(days, lm.mse.list, pch=19, col="gray", type="l", xlab="days", ylab="RMSE", xlim=c(60,185),ylim=c(0,0.6),xaxs="i",yaxs="i", main=title)
+plot(days, lm.mse.list, pch=19, col="gray", type="l", xlab="days", ylab="RMSE", xlim=c(10,185),ylim=c(0,0.7),xaxs="i",yaxs="i", main=title)
 lines(days, grf.mse.list,pch=18, col="green", type="l", lty=2)
 lines(days, augmented.grf.mse.list,pch=18, col="blue", type="l", lty=3)
-lines(days, fonly.grf.mse.list,pch=18, col="white", type="l", lty=4)
+lines(days, fonly.grf.mse.list,pch=18, col="orange", type="l", lty=4)
 lines(days, slm.mse.list,pch=18, col="red", type="l", lty=5)
 lines(days, block.grf.mse.list,pch=18, col="purple", type="l", lty=6)
-legend(60, 0.5, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM","GRF.block"), col=c("gray", "green", "blue","white","red","purple"), lty=1:6, cex=0.8)
+lines(days, block.grf.mse0.list,pch=18, col="magenta", type="l", lty=7)
+lines(days, block.grf.mse6.list,pch=18, col="cyan", type="l", lty=8)
+
+legend(10, 0.7, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM","GRF.block","GRF.block0","GRF.block6"), col=c("gray", "green", "blue","orange","red","purple","magenta","cyan"), lty=1:6, cex=0.8)
 
 
 
