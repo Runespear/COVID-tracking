@@ -1,3 +1,3 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","predicted.grf.future","Predicted_Double_Days","predicted.grf.past","block.mse"
-6085,"Santa Clara","California",53,"2020-03-14",4.06780500698749,33.6314321816242,0.218312783061432,5.75659542577372,3.17501875446706,NA,NA
-53033,"King","Washington",53,"2020-03-14",5.44612141845928,28.4341342292165,0.218312783061432,6.89123200616334,3.17501875446706,NA,NA
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","predicted.grf.future","predicted.grf.future0","predicted.grf.future6","Predicted_Double_Days","predicted.grf.past","block.mse"
+6085,"Santa Clara","California",53,"2020-03-14",4.06780500698749,34.0008795006513,0.214104911178754,5.56653938523876,5.82788628304722,5.56653938523877,3.23741840737714,NA,NA
+53033,"King","Washington",53,"2020-03-14",5.44612141845928,27.5633045572113,0.214104911178754,6.94485579671055,6.67809535364188,6.94485579671056,3.23741840737714,NA,NA

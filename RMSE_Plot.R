@@ -90,3 +90,4 @@ legend(10, 0.7, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM"
 
 closeAllConnections()
 
+
