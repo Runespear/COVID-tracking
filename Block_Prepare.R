@@ -11,6 +11,7 @@ lapply(list.of.packages, require, character.only = TRUE)
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source("county_analysis_lm.R")
+registerDoParallel(cores=detectCores())
 
 # Load Data
 
@@ -34,7 +35,8 @@ dir.create(block_dir)
 cutofflist = (earliest_start+windowsize):(latest_date)
 #cutofflist = (latest_date):(latest_date)
 
-for(cutoff in cutofflist){
+#for(cutoff in cutofflist){
+foreach(cutoff = cutofflist) %dopar%{
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize

@@ -48,7 +48,7 @@ fips_list = sort(unique(county_data$fips))
 
 # Take 7 day rolling average per county
 
-for (fips in fips_list){
+foreach(fips = fips_list)%do%{
   county_slice = county_data[which(county_data$fips==fips), ]
   county_slice$rolled_cases =  zoo::rollmean(county_slice$cases, 7, fill=NA, align="right")
   county_data[which(county_data$fips==fips), "rolled_cases"] <- county_slice$rolled_cases
@@ -79,7 +79,7 @@ county_features[county_features==-999] <-NA
 
 # DROP STm, STATE, ST_ABBR, COUNTY, LOCATION since we already have fips
 
-#county_features <- county_features[, -which(names(county_features) %in% c("ST","STATE","ST_ABBR","COUNTY","LOCATION"))]
+county_features <- county_features[, -which(names(county_features) %in% c("ST","STATE","ST_ABBR","COUNTY","LOCATION"))]
 
 names(county_features)[names(county_features)=="FIPS"] <- "fips"
 
@@ -98,13 +98,13 @@ CUSP = paste("./data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
 df <- read_excel(CUSP, sheet=2, n_max=51)
 
-for (i in 3:13) { df <- merge(df, read_excel(CUSP, i, n_max=51)) }
+foreach(i = 3:13)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
 
-for (i in 15:18) { df <- merge(df, read_excel(CUSP, i, n_max=51)) }
+foreach(i = 15:18)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
 
 names(df) <- gsub(" ","_",names(df))
 
-for (i in 4:length(names(df))) {
+for(i in 4:length(names(df))){
   
   if(!(all(df[,i]  %in% c(0,1), na.rm = TRUE))){
     
