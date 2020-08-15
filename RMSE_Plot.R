@@ -40,7 +40,7 @@ mainDir <- "./data/output"
 #subDir = "backtest"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
-windowsize=3
+windowsize=4
 
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)

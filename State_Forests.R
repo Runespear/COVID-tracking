@@ -29,7 +29,7 @@ county_data <- read.csv(file = destfile)
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
-windowsize = 4
+windowsize = 7
 block.folder = paste("./data/block_windowsize=",toString(windowsize),sep="")
 
 cutoff.list <- earliest_start:latest_date
