@@ -29,8 +29,8 @@ county_data <- read.csv(file = destfile)
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
-
-block.folder = "./data/block"
+windowsize = 4
+block.folder = paste("./data/block_windowsize=",toString(windowsize),sep="")
 
 cutoff.list <- earliest_start:latest_date
 
@@ -55,112 +55,118 @@ cutoff.list <- first.block.cutoff:latest_date
 #cutoff.list <- latest_date:latest_date
 # Main loop, parallelize later
 
+
 mainDir = "./data/output"
-subDir = "backtest_state_forests"
+subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),sep="")
 outputfolder = file.path(mainDir, subDir)
 
 dir.create(outputfolder, showWarnings = FALSE)
 
+#cutoff.list <- 120:120
 
 counter <- 1
 foreach(cutoff = cutoff.list) %dopar%{
-#for (cutoff in cutoff.list){
+#for(cutoff in cutoff.list){
+  
   # See if block is already in there
   # Block is numbered by last day in it
-  start_time <- Sys.time()
-  
-  fname <- paste("block_",toString(cutoff),".csv",sep="")
-  full.path <- file.path(block.folder,fname)
-  
-  # Concatenate every 7 days until no more
-  # e.g. 51 is the start
-  # Then on 63, we have 63,56
-  shift <- (cutoff - first.block.cutoff)%%7 
-  data.cutoff.list <- c(seq(first.block.cutoff + shift, cutoff, 7))
-  
-  print(data.cutoff.list)
-  
-  block.fullpath.list <- c()
-  for (block.number in data.cutoff.list){
-    block.fullpath.list <- c(block.fullpath.list, file.path(block.folder, paste("block_",toString(block.number),".csv",sep="")))
-  }
-  
-  df.list <- lapply(block.fullpath.list,read.csv)
-  df <- do.call(rbind,df.list)
-  
-  treatment <- df$shifted_time
-  outcome <- df$shifted_log_rolled_cases
-  
-  #exclusion <- c("shifted_log_rolled_cases","fips","State_FIPS_Code","county","state","datetime","log_rolled_cases.x","shifted_time")
-  exclusion <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","log_rolled_cases.x","shifted_time")
-  
-  covariates <- (df[,-which(names(df) %in% exclusion)])
-  #covariates <- unique(covariates)
-  
-  state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
-  
-  exclusion.test <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
-  
-  current.block <- read.csv(file.path(block.folder, paste("block_",toString(cutoff),".csv",sep="")))
-  current.block <- subset(current.block, shifted_time==6)
-  covariates.test <- current.block[,-which(names(current.block) %in% exclusion.test)]
-  covariates.test.unique <- unique(covariates.test)
-  
-  final.day.cases <- covariates.test.unique$log_rolled_cases.x
-  covariates.test.unique <- covariates.test.unique[,-which(names(covariates.test.unique) %in% c("log_rolled_cases.x"))]
-  
-  state.tau.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = FALSE)$predictions
-  #state.tau.hat <- unlist(state.tau.hat)
-  print(state.tau.hat)
-  
-  identifiers <- unique(covariates.test.unique[c("fips","log_rolled_cases.y")])
-  E.log_rolled_cases <- c()
-  E.shifted_time <- c()
-  nrows <- dim(identifiers)[1]
-  for (i in 1:nrows){
-    fips <- identifiers[i,1]
-    cases <- identifiers[i,2]
-    current.county.block <- subset(current.block, fips == fips & log_rolled_cases.y == cases)
-    E.log_rolled_cases <- c(E.log_rolled_cases,mean(current.county.block$log_rolled_cases.x))
-    # Doesn't matter that order for time is reversed
-    E.shifted_time <- c(E.shifted_time,mean(cutoff-6+current.county.block$shifted_time))
-  }
-  state.t0.hat <- (E.log_rolled_cases - state.tau.hat*E.shifted_time)/(-state.tau.hat)
-  
-  print(state.t0.hat)
-  
-  predicted.grf.future <- state.tau.hat*(cutoff + 7 - state.t0.hat)
-  predicted.grf.future0<-state.tau.hat*(6 + 7)+ covariates.test.unique$log_rolled_cases.y
-  # Write down results
-  results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
-  results <- merge(x=results,y=current.block[which(current.block$shifted_time==6),],by="fips")
-  results <- results[, c("fips","county","state","days_from_start","datetime","log_rolled_cases.x")]
-  results <- unique(results)
-  results$t0.hat <- state.t0.hat
-  results$tau.hat <- state.tau.hat
-  results$predicted.grf.future <- (state.tau.hat*((cutoff + 7) - state.t0.hat ))
-  results$predicted.grf.future0 <- state.tau.hat*(6 + 7)+ covariates.test.unique$log_rolled_cases.y
-  results$predicted.grf.future6 <- state.tau.hat*(7)+ final.day.cases
-  results$Predicted_Double_Days <- log(2,exp(1))/state.tau.hat
-  #results$date <- unique(current.block[which(current.block$shifted_time==6),"datetime"])
-  #results$log_rolled_cases.x <- (current.block[which(current.block$shifted_time==6),"log_rolled_cases.x"])
-  
-  output.fname = paste("block_results_",toString(cutoff),".csv",sep="")
-  destfolder = file.path(outputfolder,output.fname)
-  write.csv(results, destfolder, row.names=FALSE)
-  
-  end_time <- Sys.time()
-  
-  time_taken <- end_time - start_time
-  
-  print(paste("Time taken for cutoff=",toString(cutoff)," is ",toString(time_taken),sep=""))
-  
-  if (counter >= 10){
+  try({
+    start_time <- Sys.time()
     
+    fname <- paste("block_",toString(cutoff),".csv",sep="")
+    full.path <- file.path(block.folder,fname)
+    
+    # Concatenate every 7 days until no more
+    # e.g. 51 is the start
+    # Then on 63, we have 63,56
+    shift <- (cutoff - first.block.cutoff)%%windowsize 
+    data.cutoff.list <- c(seq(first.block.cutoff + shift, cutoff, windowsize))
+    
+    print(data.cutoff.list)
+    
+    block.fullpath.list <- c()
+    for (block.number in data.cutoff.list){
+      block.fullpath.list <- c(block.fullpath.list, file.path(block.folder, paste("block_",toString(block.number),".csv",sep="")))
+    }
+    
+    df.list <- lapply(block.fullpath.list,read.csv)
+    df <- do.call(rbind,df.list)
+    
+    treatment <- df$shifted_time
+    outcome <- df$shifted_log_rolled_cases
+    
+    #exclusion <- c("shifted_log_rolled_cases","fips","State_FIPS_Code","county","state","datetime","log_rolled_cases.x","shifted_time")
+    exclusion <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","log_rolled_cases.x","shifted_time")
+    
+    covariates <- (df[,-which(names(df) %in% exclusion)])
+    #covariates <- unique(covariates)
+    
+    state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
+    
+    exclusion.test <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
+    
+    current.block <- read.csv(file.path(block.folder, paste("block_",toString(cutoff),".csv",sep="")))
+    current.block <- subset(current.block, shifted_time==(windowsize-1))
+    covariates.test <- current.block[,-which(names(current.block) %in% exclusion.test)]
+    covariates.test.unique <- unique(covariates.test)
+    
+    final.day.cases <- covariates.test.unique$log_rolled_cases.x
+    covariates.test.unique <- covariates.test.unique[,-which(names(covariates.test.unique) %in% c("log_rolled_cases.x"))]
+    
+    state.tau.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = FALSE)$predictions
+    #state.tau.hat <- unlist(state.tau.hat)
+    print(state.tau.hat)
+    
+    identifiers <- unique(covariates.test.unique[c("fips","log_rolled_cases.y")])
+    E.log_rolled_cases <- c()
+    E.shifted_time <- c()
+    nrows <- dim(identifiers)[1]
+    for (i in 1:nrows){
+      fips <- identifiers[i,1]
+      cases <- identifiers[i,2]
+      current.county.block <- subset(current.block, fips == fips & log_rolled_cases.y == cases)
+      E.log_rolled_cases <- c(E.log_rolled_cases,mean(current.county.block$log_rolled_cases.x))
+      # Doesn't matter that order for time is reversed
+      E.shifted_time <- c(E.shifted_time,mean(cutoff-6+current.county.block$shifted_time))
+    }
+    state.t0.hat <- (E.log_rolled_cases - state.tau.hat*E.shifted_time)/(-state.tau.hat)
+    
+    print(state.t0.hat)
+    
+    predicted.grf.future <- state.tau.hat*(cutoff + 7 - state.t0.hat)
+    predicted.grf.future0<-state.tau.hat*(windowsize-1 + 7)+ covariates.test.unique$log_rolled_cases.y
+    # Write down results
+    results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
+    results <- merge(x=results,y=current.block[which(current.block$shifted_time==windowsize-1),],by="fips")
+    results <- results[, c("fips","county","state","days_from_start","datetime","log_rolled_cases.x")]
+    results <- unique(results)
+    results$t0.hat <- state.t0.hat
+    results$tau.hat <- state.tau.hat
+    results$predicted.grf.future <- (state.tau.hat*((cutoff + 7) - state.t0.hat ))
+    results$predicted.grf.future.0 <- state.tau.hat*(windowsize-1 + 7)+ covariates.test.unique$log_rolled_cases.y
+    results$predicted.grf.future.last <- state.tau.hat*(7)+ final.day.cases
+    results$Predicted_Double_Days <- log(2,exp(1))/state.tau.hat
+    #results$date <- unique(current.block[which(current.block$shifted_time==6),"datetime"])
+    #results$log_rolled_cases.x <- (current.block[which(current.block$shifted_time==6),"log_rolled_cases.x"])
+    
+    output.fname = paste("block_results_",toString(cutoff),".csv",sep="")
+    destfolder = file.path(outputfolder,output.fname)
+    write.csv(results, destfolder, row.names=FALSE)
+    
+    end_time <- Sys.time()
+    
+    time_taken <- end_time - start_time
+    
+    print(paste("Time taken for cutoff=",toString(cutoff)," is ",toString(time_taken),sep=""))
+    
+    if (counter >= 10){
+      
+      #break
+    }
     #break
-  }
+    counter <- counter + 1
+    #return(NULL)
+  })
   #break
-  counter <- counter + 1
-  #return(NULL)
 }
-
+closeAllConnections()

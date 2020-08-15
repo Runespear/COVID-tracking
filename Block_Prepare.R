@@ -21,14 +21,14 @@ county_data <- read.csv(file = destfile)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
-
-windowsize = 6
+# note -1 to the actual windowsize here
+windowsize = 3
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
 
 mainDir = "./data"
-subDir = "block"
+subDir = paste("block_windowsize=",toString(windowsize+1),sep="")
 block_dir = file.path(mainDir, subDir)
 dir.create(block_dir)
 
@@ -40,10 +40,14 @@ foreach(cutoff = cutofflist) %dopar%{
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize
-  
-  restricted_state_df <- subset(county_data, days_from_start >= first & days_from_start <= cutoff)
+  # Get rid of counties where there are less than 7 records so far
+  restricted_state_df <- subset(county_data, days_from_start <= cutoff)
   tt <- table(restricted_state_df$fips)
   restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  
+  restricted_state_df <- subset(restricted_state_df, days_from_start >= first & days_from_start <= cutoff)
+  
+  
   
   Tfirst<-subset(restricted_state_df, days_from_start ==first)
   Tfirst<-Tfirst[, which(names(restricted_state_df) %in% c("fips","log_rolled_cases"))]

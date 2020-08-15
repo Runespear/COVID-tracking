@@ -40,12 +40,13 @@ mainDir <- "./data/output"
 #subDir = "backtest"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
-
+windowsize=3
 
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
 
-block.filename <- file.path(mainDir,"block_mse.csv")
+block.filename <- paste("block_mse_windowsize=",toString(windowsize),".csv",sep="")
+block.filename <- file.path(mainDir,block.filename)
 
 block_df <- read.csv(block.filename)
 block_df <- na.omit(block_df)
@@ -67,8 +68,8 @@ grf.mse.list <- sqrt(restricted_state_df2$grf.mse)
 augmented.grf.mse.list <- sqrt(restricted_state_df2$augmented.grf.mse)
 fonly.grf.mse.list <- sqrt(restricted_state_df2$fonly.grf.mse)
 block.grf.mse.list <- sqrt(restricted_state_df2$block.mse)
-block.grf.mse0.list <- sqrt(restricted_state_df2$block.mse0)
-block.grf.mse6.list <- sqrt(restricted_state_df2$block.mse6)
+block.grf.mse.0.list <- sqrt(restricted_state_df2$block.mse.0)
+block.grf.mse.last.list <- sqrt(restricted_state_df2$block.mse.last)
 
 days<-restricted_state_df2$cutoff
 
@@ -81,10 +82,10 @@ lines(days, augmented.grf.mse.list,pch=18, col="blue", type="l", lty=3)
 lines(days, fonly.grf.mse.list,pch=18, col="orange", type="l", lty=4)
 lines(days, slm.mse.list,pch=18, col="red", type="l", lty=5)
 lines(days, block.grf.mse.list,pch=18, col="purple", type="l", lty=6)
-lines(days, block.grf.mse0.list,pch=18, col="magenta", type="l", lty=7)
-lines(days, block.grf.mse6.list,pch=18, col="cyan", type="l", lty=8)
+lines(days, block.grf.mse.0.list,pch=18, col="magenta", type="l", lty=7)
+lines(days, block.grf.mse.last.list,pch=18, col="cyan", type="l", lty=8)
 
-legend(10, 0.7, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM","GRF.block","GRF.block0","GRF.block6"), col=c("gray", "green", "blue","orange","red","purple","magenta","cyan"), lty=1:6, cex=0.8)
+legend(10, 0.7, legend=c("LM","GRF","GRF.AllFeatures","GRF.CountyFeatures","SLM","GRF.block","GRF.block.0","GRF.block.last"), col=c("gray", "green", "blue","orange","red","purple","magenta","cyan"), lty=1:6, cex=0.8)
 
 
 
