@@ -1,4 +1,4 @@
-list.of.packages <- c("tidyverse")
+list.of.packages <- c("tidyverse","matrixStats")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -41,5 +41,29 @@ svi$GEOID<-as.numeric(svi$FIPS)
 features <- left_join(county,svi, by = "GEOID" )
 
 features<-select(features,-c(GEOID,INTPTLAT,INTPTLONG))
+
+# Generate a new row for NYC, by taking the median of New York, Kings, Queens, Bronx and Richmond counties
+# {36005: Bronx, 36047: Kings, 36061: New York, 36081: Queens, Richmond: 36085 }
+
+NYC.counties <- c(36005,36047,36061,36081,36085)
+
+NYC.counties.features <- features[which(features$FIPS %in% NYC.counties),-which(names(features)%in% c("STATE","ST_ABBR","COUNTY","LOCATION","FIPS"))]
+NYC.counties.features <- mutate_all(NYC.counties.features, function(x) as.numeric(as.character(x)))
+
+NYC.features <- colMedians(as.matrix(NYC.counties.features))
+NYC.features <- rbind(NYC.counties.features,NYC.features)
+NYC.features <- NYC.features[c(dim(NYC.features)[1]),]
+#NYC.features <- apply(NYC.counties.features,2,median)
+#NYC.features <- as.data.frame(NYC.features)
+#break
+#"STATE","ST_ABBR","COUNTY","LOCATION", "FIPS"
+
+NYC.features$STATE <- "NEW YORK"
+NYC.features$ST_ABBR <- "NY"
+NYC.features$FIPS <- 99999
+NYC.features$COUNTY <- "New York City"
+NYC.features$LOCATION <- "New York City, New York"
+
+features <- rbind(features, NYC.features)
 
 write_csv(features, "./data/county_features.csv")

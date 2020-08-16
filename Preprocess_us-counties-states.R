@@ -27,6 +27,10 @@ write.csv(county_data, destfile, row.names=FALSE)
 county_data <- read.csv(file = destfile)
 county_data$datetime <- anytime::anydate(county_data$date)
 
+# CONVERY NYC fips from NA -> 99999
+
+county_data[which(county_data$county=="New York City"),"fips"] <- 99999
+
 # Find the earliest date and latest dates
 
 start_date = min(county_data$datetime)
