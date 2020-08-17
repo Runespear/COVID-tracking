@@ -42,7 +42,7 @@ latest_date = max(county_data$days_from_start)
 
 print(latest_date)
 
-cutoff = 171
+#cutoff = 171
 mainDir = "./data/output"
 subDir = "backtest"
 backtest_dir = file.path(mainDir, subDir)
@@ -107,11 +107,11 @@ for(cutoff in cutofflist){
   }
   
   
-  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","r.grf","t0.grf","predicted.grf","r.grf.augmented","t0.grf.augmented","predicted.grf.augmented","r.grf.fonly","t0.grf.fonly","predicted.grf.fonly")]
+  today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm")]
   tomorrow<-state_df1[c("date","days_from_start","fips","log_rolled_cases")]
   #tomorrow1<-restricted_state_df11[c("fips","r.lm","r.slm")]
   
-  today$Predicted_Double_Days <- log(2, exp(1))/today$r.grf
+ 
   restricted_state_df2 <- today
   restricted_state_df2 <- unique(restricted_state_df2)
   # Merge only when there is validation data available
@@ -121,9 +121,7 @@ for(cutoff in cutofflist){
     #restricted_state_df2<-merge(x=merge(x=today,y=tomorrow,by="fips",x.all=TRUE),y=tomorrow1,by="fips",x.all=TRUE)
     restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
     restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
-    restricted_state_df2$grf.mse<-with(restricted_state_df2,(predicted.grf-log_rolled_cases.y)**2)
-    restricted_state_df2$augmented.grf.mse<-with(restricted_state_df2,(predicted.grf.augmented-log_rolled_cases.y)**2)
-    restricted_state_df2$fonly.grf.mse<-with(restricted_state_df2,(predicted.grf.fonly-log_rolled_cases.y)**2)
+  
     
     restricted_state_df2 <- na.omit(unique(restricted_state_df2))
     
@@ -131,9 +129,7 @@ for(cutoff in cutofflist){
     date.x.list <- c(date.x.list, max(anytime::anydate(restricted_state_df2$date.x)))
     lm.mse.list <- c(lm.mse.list, mean(restricted_state_df2$lm.mse))
     slm.mse.list <- c(slm.mse.list, mean(restricted_state_df2$slm.mse))
-    grf.mse.list <- c(grf.mse.list, mean(restricted_state_df2$grf.mse))
-    augmented.grf.mse.list <- c(augmented.grf.mse.list, mean(restricted_state_df2$augmented.grf.mse))
-    fonly.grf.mse.list <- c(fonly.grf.mse.list, mean(restricted_state_df2$fonly.grf.mse))
+
     
     print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=", toString(mean(restricted_state_df2$grf.mse))," augmented.grf.mse=", toString(mean(restricted_state_df2$augmented.grf.mse))," fonly.grf.mse=", toString(mean(restricted_state_df2$fonly.grf.mse))  ,sep=""))
     
@@ -154,7 +150,7 @@ for(cutoff in cutofflist){
   #write.csv(restricted_state_df2,confusion_file_path,row.names=FALSE)
 }
 
-performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list, grf.mse=grf.mse.list, augmented.grf.mse=augmented.grf.mse.list, fonly.grf.mse=fonly.grf.mse.list)
+performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list)
 performance.table <- as.data.frame(performance.list)
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
