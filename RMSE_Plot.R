@@ -74,6 +74,8 @@ block.grf.mse.last.list <- sqrt(restricted_state_df2$block.mse.last)
 days<-restricted_state_df2$cutoff
 
 
+png(paste("./data/output/","RMSE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
+
 title="One Week Prediction"
 
 plot(days, lm.mse.list, pch=19, col="gray", type="l", xlab="days", ylab="RMSE", xlim=c(10,185),ylim=c(0,0.7),xaxs="i",yaxs="i", main=title)
@@ -87,6 +89,7 @@ lines(days, block.grf.mse.last.list,pch=18, col="cyan", type="l", lty=8)
 
 legend(10, 0.7, legend=c("LM","SLM","GRF.block","GRF.block.0","GRF.block.last"), col=c("gray", "red","purple","magenta","cyan"), lty=1:6, cex=0.8)
 
+dev.off()
 
 
 closeAllConnections()
