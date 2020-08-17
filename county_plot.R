@@ -22,20 +22,27 @@ earliest_start <- min(county_data$days_from_start)
 latest_date <- max(county_data$days_from_start)-7
 county_list <- sort(unique(county_data$fips))
 
+windowsize=7
+
 # Backtest directory
 backtestDir <- file.path(mainDir,"backtest")
 
-forest_backtestDir<-file.path(mainDir,"backtest_state_forests_windowsize=3")
+forest_backtestDir<-file.path(mainDir,paste0("backtest_state_forests_windowsize=",toString(windowsize)))
 
 # read all the allstates_$(CUTOFF)_grf.csv files
 cutoff_list <- earliest_start:latest_date
 
 
 # Place to save resuslts
-CountyDir <- file.path(mainDir,"Backtest_by_County")
+
+CountyPlot<-file.path(mainDir,paste0("Backtest_by_County_Windowsize=",toString(windowsize)))
+dir.create(CountyPlot)
+
+
+CountyDir <- file.path(CountyPlot,"Backtest_by_County")
 dir.create(CountyDir)
 
-plotDir <- file.path(mainDir,"Backtest_by_County_plots")
+plotDir <- file.path(CountyPlot,"Backtest_by_County_plots")
 dir.create(plotDir)
 
 for(c in county_list){
@@ -98,7 +105,10 @@ for(c in county_list){
     
     print(paste("Finished writing backtest for ",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),setp=""))
     
-    png(paste("./data/output/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
+    #plot_file_path= file.path(plotDir, paste(toString(c),"_plot.png",sep=""))
+    #png(plot_file_path, width = 1080, height = 720))
+    
+    png(paste("./data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
     
     title=paste("One Week Prediction","(",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),")",sep="")
     
