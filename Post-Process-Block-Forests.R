@@ -32,7 +32,7 @@ end_date = max(county_data$days_from_start)
 
 
 # Loop through files in ./data/output/backtest_state_forests
-windowsize=4
+windowsize=7
 backtest.folder <- paste("data/output/backtest_state_forests_windowsize=",toString(windowsize),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
 
