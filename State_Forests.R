@@ -96,14 +96,14 @@ foreach(cutoff = cutoff.list) %dopar%{
     outcome <- df$shifted_log_rolled_cases
     
     #exclusion <- c("shifted_log_rolled_cases","fips","State_FIPS_Code","county","state","datetime","log_rolled_cases.x","shifted_time")
-    exclusion <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","log_rolled_cases.x","shifted_time")
+    exclusion <- c("shifted_log_rolled_cases","new_rolled_cases","datetime","State_FIPS_Code","county","state","log_rolled_cases.x","shifted_time")
     
     covariates <- (df[,-which(names(df) %in% exclusion)])
     #covariates <- unique(covariates)
     
     state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
     
-    exclusion.test <- c("shifted_log_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
+    exclusion.test <- c("shifted_log_rolled_cases","new_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
     
     current.block <- read.csv(file.path(block.folder, paste("block_",toString(cutoff),".csv",sep="")))
     current.block <- subset(current.block, shifted_time==(windowsize-1))
