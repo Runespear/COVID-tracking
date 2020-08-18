@@ -109,10 +109,10 @@ for (cutoff in cutoff.list){
   cdata <- na.omit(cdata[c("fips","county","state","log_rolled_cases")])
   cdata$FIPS.STRING <- mapply(prepend, cdata$fips)
   
-  try(m <- t[c("fips","days_from_start.x","date.x","county","state","predicted.grf","log_rolled_cases.x","Predicted_Double_Days")])
+  try(m <- t[c("fips","days_from_start.x","date.x","county","state","log_rolled_cases.x")])
   
   if (is.null(m)){
-    m <- t[c("fips","days_from_start","date","county","state","predicted.grf","log_rolled_cases","Predicted_Double_Days")]
+    m <- t[c("fips","days_from_start","date","county","state","log_rolled_cases")]
     cdata$days_from_start <- unique(m$days_from_start)
     cdata$date <- unique(m$date)
     

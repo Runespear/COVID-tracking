@@ -25,7 +25,8 @@ write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
 
 county_data <- read.csv(file = destfile)
-county_data$datetime <- anytime::anydate(county_data$date)
+county_data$datetime <- as.Date(county_data$date)
+county_data$date <- as.Date(county_data$date)
 
 # CONVERY NYC fips from NA -> 99999
 
@@ -56,6 +57,45 @@ foreach(fips = fips_list)%do%{
   county_slice = county_data[which(county_data$fips==fips), ]
   county_slice$rolled_cases =  zoo::rollmean(county_slice$cases, 7, fill=NA, align="right")
   county_data[which(county_data$fips==fips), "rolled_cases"] <- county_slice$rolled_cases
+}
+
+# Obtain the daily new cases
+present.fips.list <- sort(unique(county_data$fips))
+
+county_data$new_rolled_cases <- NA
+# First loop through counties
+# present.fips.list
+for (fips in present.fips.list){
+  
+  fips.df <- county_data[which(county_data$fips==fips & !is.na(county_data$rolled_cases)),]
+  if (dim(fips.df)[1] == 0){
+    next
+  }
+  first.fips.date <- min(fips.df$days_from_start)
+  last.fips.date <- max(fips.df$days_from_start)
+  fips.df[which(fips.df$days_from_start == first.fips.date),"new_rolled_cases"] <- fips.df[which(fips.df$days_from_start == first.fips.date),"rolled_cases"]
+  print(fips)
+  for (day in (first.fips.date+1):last.fips.date){
+    print(day)
+    
+    county.day.slice <- fips.df[which(fips.df$days_from_start == day),]
+    if (dim(county.day.slice)[1] == 0){
+      # Missing days inbetween e.g. fips 31057 day 184 jumps to 189
+      print(paste("imputing for day ",toString(day)," of fips ",toString(fips),sep=""))
+      imputter <- fips.df[which(fips.df$days_from_start == day-1),]
+      # Change the date
+      imputter$days_from_start <- day
+      
+      imputter$datetime <- as.Date(imputter$datetime)+1
+      imputter$date <- as.Date(imputter$date)+1
+      fips.df<-rbind(fips.df,imputter)
+      county_data <- rbind(county_data,imputter)
+      county_data[which(county_data$fips==fips & !is.na(county_data$rolled_cases) & county_data$days_from_start == day),] <- fips.df[which(fips.df$days_from_start == day),]
+    }
+    
+    fips.df[which(fips.df$days_from_start == day),"new_rolled_cases"] <- fips.df[which(fips.df$days_from_start == day),"rolled_cases"] - fips.df[which(fips.df$days_from_start == day-1),"rolled_cases"]
+  }
+  county_data[which(county_data$fips==fips& !is.na(county_data$rolled_cases)),"new_rolled_cases"] <- fips.df[,"new_rolled_cases"]
 }
 
 # Write intermediate result as processed_us-counties_latest.csv

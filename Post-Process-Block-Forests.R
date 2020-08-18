@@ -23,12 +23,14 @@ registerDoParallel(cores=detectCores())
 # POST PROCESSING FOR STATE FOREST BLOCKS
 #########################################################
 
-destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
+destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
 
 start_date = min(county_data$days_from_start)
 end_date = max(county_data$days_from_start)
+
+
 
 
 # Loop through files in ./data/output/backtest_state_forests
@@ -53,6 +55,8 @@ for (cutoff.check in start_date:end_date){
     break
   }
 }
+
+#break
 
 #########################################################################
 #  LOOP THROUGH FILES, CHECK 7 DAYS BEHIND
