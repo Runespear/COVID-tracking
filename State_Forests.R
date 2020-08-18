@@ -65,8 +65,9 @@ dir.create(outputfolder, showWarnings = FALSE)
 #cutoff.list <- 120:120
 
 counter <- 1
-foreach(cutoff = cutoff.list) %dopar%{
-#for(cutoff in cutoff.list){
+#cutoff.list
+#foreach(cutoff = 51) %dopar%{
+for(cutoff in 51:51){
   
   # See if block is already in there
   # Block is numbered by last day in it
@@ -138,7 +139,7 @@ foreach(cutoff = cutoff.list) %dopar%{
     # Write down results
     results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
     results <- merge(x=results,y=current.block[which(current.block$shifted_time==windowsize-1),],by="fips")
-    results <- results[, c("fips","county","state","days_from_start","datetime","log_rolled_cases.x")]
+    results <- results[, c("fips","county","new_rolled_cases","state","days_from_start","datetime","log_rolled_cases.x")]
     results <- unique(results)
     results$t0.hat <- state.t0.hat
     results$tau.hat <- state.tau.hat

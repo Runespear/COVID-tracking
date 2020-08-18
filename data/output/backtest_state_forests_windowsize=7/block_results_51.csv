@@ -1,2 +1,2 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
-53033,"King","Washington",51,"2020-03-12",4.99721227376411,33.1598062415087,0.280109753370005,6.95798054735415,6.97363130398527,6.95798054735415,2.47455567762521
+"fips","county","new_rolled_cases","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+53033,"King",31.2857142857143,"Washington",51,"2020-03-12",4.99721227376411,33.1448965364637,0.279875850843957,6.95634322967181,6.97059057114664,6.95634322967181,2.47662375467473
