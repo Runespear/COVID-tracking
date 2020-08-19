@@ -1,39 +1,35 @@
 require("data.table")
 
-county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictionsize){
-  #print(state)
-  state_df = county_data[which(county_data$state==state),]
-  
-  state_fips_list = sort(unique(state_df$fips))
+county_analysis <- function(restricted_state_df0, cutoffstart,cutoffend, predictionsize){
   
   # Define log linear and double parameter exponent models
   log_exp <-function(t,r,t0){r*t-r*t0}
   double_exp <- function(t,r,t0){exp(r*t-r*t0)}
   
   
-  earliest_start = min(state_df$days_from_start)
-  latest_start = earliest_start
-  for (fips in state_fips_list){
-    county_df = state_df[which(state_df$fips == fips),]
-    county_start = min(county_df$days_from_start)
-    #print(county_start)
-    if (county_start > latest_start ){
-      latest_start = county_start
-    }
-  }
+  #  earliest_start = min(state_df$days_from_start)
+  #  latest_start = earliest_start
+  #  for (fips in state_fips_list){
+  #    county_df = state_df[which(state_df$fips == fips),]
+  #    county_start = min(county_df$days_from_start)
+  #print(county_start)
+  #    if (county_start > latest_start ){
+  #      latest_start = county_start
+  #    }
+  #  }
   
-  restricted_state_df0 <- subset(state_df, days_from_start <= cutoffend & days_from_start >= cutoffstart)
-  restricted_state_df_end <- subset(state_df, days_from_start == cutoffend)
-  names(restricted_state_df_end)[names(restricted_state_df_end)=="log_rolled_cases"] <- "log_rolled_cases_last"
-  restricted_state_df_end <- restricted_state_df_end[c("fips","log_rolled_cases_last")]
-  restricted_state_df<-merge(x=restricted_state_df0,y=restricted_state_df_end, by="fips", all.x=TRUE)
+  #  restricted_state_df0 <- subset(state_df, days_from_start <= cutoffend & days_from_start >= cutoffstart)
+     restricted_state_df_end <- subset(restricted_state_df0, days_from_start == cutoffend)
+     names(restricted_state_df_end)[names(restricted_state_df_end)=="log_rolled_cases"] <- "log_rolled_cases_last"
+     restricted_state_df_end <- restricted_state_df_end[c("fips","log_rolled_cases_last")]
+     restricted_state_df<-merge(x=restricted_state_df0,y=restricted_state_df_end, by="fips", all.x=TRUE)
   # print(restricted_state_df)
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   rlist = c()
   t0list = c()
   
   for (fips in restricted_state_fips_list){
-    print(fips)
+    #print(fips)
     county_df = restricted_state_df[which(restricted_state_df$fips == fips),]
     
     # 2 types of linear models
@@ -82,7 +78,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     restricted_state_df[which(restricted_state_df$fips == fips),"t0.slm"] = shifted.t0
     restricted_state_df[which(restricted_state_df$fips == fips),"r.slm"] = shifted.rguess
     restricted_state_df[which(restricted_state_df$fips == fips),"predicted.slm"] = shifted.predict_guess
-  
+    
     
     # CALCULATE INTERCEPT AND PREDICTION FOR LOGMODEL
     try(lm.rguess <- coef(summary(logmodel))["days_from_start","Estimate"])
