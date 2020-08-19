@@ -40,7 +40,7 @@ mainDir <- "./data/output"
 #subDir = "backtest"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
-windowsize=7
+windowsize=3
 
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
@@ -57,7 +57,7 @@ cutoff_df <- cutoff_df[,!(names(cutoff_df) %in% c("date.x"))]
 
 
 
-restricted_state_df2 <- merge(x=cutoff_df,y=block_df,by="cutoff")
+restricted_state_df2 <- merge(x=cutoff_df,y=block_df,by="cutoff", all.y=TRUE)
 
 
 
@@ -74,11 +74,14 @@ block.grf.mse.last.list <- sqrt(restricted_state_df2$block.mse.last)
 days<-restricted_state_df2$cutoff
 
 
+MaxDay<-max(days)
+MinDay<-min(days)
+
 png(paste("./data/output/","RMSE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
 
 title="One Week Prediction"
 
-plot(days, lm.mse.list, pch=19, col="gray", type="l", xlab="days", ylab="RMSE", xlim=c(10,185),ylim=c(0,0.7),xaxs="i",yaxs="i", main=title)
+plot(days, lm.mse.list, pch=19, col="gray", type="l", xlab="days", ylab="RMSE", xlim=c(MinDay,MaxDay),ylim=c(0,0.2),xaxs="i",yaxs="i", main=title)
 #lines(days, grf.mse.list,pch=18, col="green", type="l", lty=2)
 #lines(days, augmented.grf.mse.list,pch=18, col="blue", type="l", lty=3)
 #lines(days, fonly.grf.mse.list,pch=18, col="orange", type="l", lty=4)
@@ -87,7 +90,7 @@ lines(days, block.grf.mse.list,pch=18, col="purple", type="l", lty=6)
 lines(days, block.grf.mse.0.list,pch=18, col="magenta", type="l", lty=7)
 lines(days, block.grf.mse.last.list,pch=18, col="cyan", type="l", lty=8)
 
-legend(10, 0.7, legend=c("LM","SLM","GRF.block","GRF.block.0","GRF.block.last"), col=c("gray", "red","purple","magenta","cyan"), lty=1:6, cex=0.8)
+legend(MinDay, 0.2, legend=c("LM","SLM","GRF.block","GRF.block.0","GRF.block.last"), col=c("gray", "red","purple","magenta","cyan"), lty=1:6, cex=0.8)
 
 dev.off()
 
