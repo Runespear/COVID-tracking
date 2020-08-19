@@ -23,13 +23,28 @@ registerDoParallel(cores=detectCores())
 # POST PROCESSING FOR STATE FOREST BLOCKS
 #########################################################
 
-destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
+destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
 
+# DROP fips = NA 
+county_data <- county_data[-which(is.na(county_data$fips)),]
 start_date = min(county_data$days_from_start)
 end_date = max(county_data$days_from_start)
 
+#fips list
+
+fips.list.dest = "./data/fips-list.csv"
+fips.list.df <- read.csv(fips.list.dest)
+
+# Merge the two
+
+all.info <- merge(x=fips.list.df,y=subset(county_data,select=-c(county,state)),by="fips",all=TRUE)
+
+# Check for missing fips
+
+all.info.fips <- sort(unique(all.info$fips))
+missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.df$fips)) ]
 
 
 
@@ -73,13 +88,26 @@ dir.create(confusion.block.folder, showWarnings=FALSE)
 
 mse.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mse"=NA, "block.mse.0"=NA, "block.mse.last"=NA)
 
-for (cutoff in cutoff.start:end_date){
+#cutoff.start:end_date
+
+for (cutoff in (end_date-1):end_date){
   fname <- paste("block_results_",toString(cutoff),".csv",sep="")
   full.path <- file.path(backtest.folder,fname)
   
   
   df <- read.csv(full.path)
   new.df <- df
+  
+  # We need to populate the entire table with fips even if they had no cases / predictions
+  
+  # Step 1: Generate a table of fips:county:state:date:days_from_start
+  cases.data.exclude <- c("county","state","date","days_from_start")
+  cases.date.slice <- county_data[which(county_data$days_from_start==cutoff), -which(names(county_data) %in% cases.data.exclude)] 
+  
+  imputter.df <- fips.list.df
+  imputter.df$cutoff <- cutoff
+  
+  imputter.df <- merge(x=imputter.df,y=cases.date.slice,by="fips",all=TRUE)
   
   if(cutoff - windowsize < cutoff.start){
     # Data not available
@@ -105,25 +133,42 @@ for (cutoff in cutoff.start:end_date){
     new.df[mask,"block.mse.0"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.0"])**2
     new.df[mask,"block.mse.last"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.last"])**2
     
+    new.df[mask,"block.mape"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past"])/new.df[mask,"log_rolled_cases.x"] )
+    new.df[mask,"block.mape.0"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.0"])/new.df[mask,"log_rolled_cases.x"] )
+    new.df[mask,"block.mape.last"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.last"])/new.df[mask,"log_rolled_cases.x"] )
+    
     mse.table[which(mse.table$cutoff==cutoff),"block.mse"] <- mean(na.omit(new.df[,"block.mse"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.0"] <- mean(na.omit(new.df[,"block.mse.0"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.last"] <- mean(na.omit(new.df[,"block.mse.last"]))
     
   }
   
+  test.df <- new.df[,-which(names(new.df) %in% c("county","state","datetime","new_rolled_cases"))]
+  test.df <- merge(x=imputter.df,y=test.df,by="fips",all=TRUE)
+  test.df <- test.df[,-which(names(test.df) %in% c("deaths","cases","logcases","rolled_cases","cutoff"))]
+  # Rename datetime to date.x
+  names(test.df)[names(test.df) == "datetime"] <- "date.x"
+  
+  
   # Write the csv
   results.fname <- paste("confusion_block_",toString(cutoff),".csv",sep="")
   results.fullpath <- file.path(confusion.block.folder,results.fname)
-  write.csv(new.df,results.fullpath,row.names=FALSE)
+  write.csv(test.df,results.fullpath,row.names=FALSE)
   
   if (cutoff==114){
     #break
+  }
+  # Write the final csv if last
+  if (cutoff == end_date){
+    latest.results.fname <- paste("confusion_block_latest.csv",sep="")
+    latest.results.fullpath <- file.path(confusion.block.folder,latest.results.fname)
+    write.csv(test.df,latest.results.fullpath,row.names=FALSE)
   }
 }
 
 # Write the mse
 
 
-write.csv(mse.table,paste("./data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+#write.csv(mse.table,paste("./data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
 
 closeAllConnections()
