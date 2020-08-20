@@ -23,7 +23,7 @@ earliest_start<-60
 latest_date <- max(county_data$days_from_start)
 county_list <- sort(unique(county_data$fips))
 
-windowsize=3
+windowsize=2
 
 # Backtest directory
 backtestDir <- file.path(mainDir,"backtest")

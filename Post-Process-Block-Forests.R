@@ -23,7 +23,7 @@ registerDoParallel(cores=detectCores())
 # POST PROCESSING FOR STATE FOREST BLOCKS
 #########################################################
 
-destfile = paste("./data/processed_us-counties_latest",".csv",sep="")
+destfile = paste("./data/processed_us-counties_latest_minus7",".csv",sep="")
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
 
@@ -49,7 +49,7 @@ missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.d
 
 
 # Loop through files in ./data/output/backtest_state_forests
-windowsize=3
+windowsize=2
 backtest.folder <- paste("data/output/backtest_state_forests_windowsize=",toString(windowsize),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
 
@@ -133,7 +133,7 @@ for (cutoff in cutofflist){
     
     mask <- -which(is.na(new.df$predicted.grf.past))
     
-    new.df[mask,"weekly new cases"] <- exp(new.df[mask,"log_rolled_cases.x.x"])-exp(new.df[mask,"log_rolled_cases.x.y"])
+    new.df[mask,"block new cases"] <- exp(new.df[mask,"log_rolled_cases.x.x"])-exp(new.df[mask,"log_rolled_cases.x.y"])
     
     new.df[mask,"block.mse"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past"])**2
     new.df[mask,"block.mse.0"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])**2
@@ -158,6 +158,8 @@ for (cutoff in cutofflist){
   test.df <- test.df[,-which(names(test.df) %in% c("deaths","cases","logcases","rolled_cases","cutoff"))]
   # Rename datetime to date.x
   names(test.df)[names(test.df) == "datetime"] <- "date.x"
+  # Rename datetime to date.x
+  names(test.df)[names(test.df) == "new_rolled_cases"] <- "weekly new cases"
   
   
   # Write the csv

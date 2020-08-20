@@ -22,8 +22,8 @@ county_data$log_rolled_cases <- log(county_data$rolled_cases)
 county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
 # note -1 to the actual windowsize here
-windowsize = 2
-feature_window =6 
+windowsize = 1
+feature_window = 1 
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 

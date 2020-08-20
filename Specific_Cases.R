@@ -35,7 +35,9 @@ county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
 state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
-windowsize = 6
+# windowsize = n-1
+windowsize = 1
+window_element= windowsize +1
 predictionsize = 7
 #for (cutoff in (earliest_start+windowsize):(latest_date -predictionsize)){
 earliest_start = min(county_data$days_from_start)
@@ -92,7 +94,7 @@ for(cutoff in cutofflist){
   # Training Set
   restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
   tt <- table(restricted_state_df$fips)
-  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=window_element]) )
   
   
   restricted_state_df0<-county_analysis(restricted_state_df,cutoff-windowsize,cutoff, predictionsize)
