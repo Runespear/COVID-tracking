@@ -61,10 +61,10 @@ cutoff.list <- c()
 date.x.list <- c()
 lm.mse.list <- c()
 slm.mse.list <- c()
+lm.mape.list<-c()
+slm.mape.list<-c()
 
 for(cutoff in cutofflist){
-  
-  #cutoff_future<-cutoff+predictionsize
   
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
@@ -123,19 +123,29 @@ for(cutoff in cutofflist){
     print(paste("Validation data available for cutoff=",toString(cutoff)),sep="")
     restricted_state_df2<-merge(x=today,y=tomorrow,by="fips",x.all=TRUE)
     #restricted_state_df2<-merge(x=merge(x=today,y=tomorrow,by="fips",x.all=TRUE),y=tomorrow1,by="fips",x.all=TRUE)
+    
     restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
     restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
+    
+    restricted_state_df2$lm.mape <- with(restricted_state_df2, abs( (predicted.lm-log_rolled_cases.y)/log_rolled_cases.y ))
+    restricted_state_df2$slm.mape <- with(restricted_state_df2, abs( (predicted.slm-log_rolled_cases.y)/log_rolled_cases.y ))
     
     
     restricted_state_df2 <- na.omit(unique(restricted_state_df2))
     
-    cutoff.list <- c(cutoff.list, cutoff)
+    cutoff_future<-cutoff+predictionsize
+    
+    cutoff.list <- c(cutoff.list, cutoff_future)
     date.x.list <- c(date.x.list, max(anytime::anydate(restricted_state_df2$date.x)))
     lm.mse.list <- c(lm.mse.list, mean(restricted_state_df2$lm.mse))
     slm.mse.list <- c(slm.mse.list, mean(restricted_state_df2$slm.mse))
+    lm.mape.list <- c(lm.mape.list, mean(restricted_state_df2$lm.mape))
+    slm.mape.list <- c(slm.mape.list, mean(restricted_state_df2$slm.mape))
     
     
-    print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse))," lm.mse=",toString(mean(restricted_state_df2$lm.mse))," grf.mse=",sep=""))
+    print(paste("cutoff=",toString(cutoff)," slm.mse=", toString(mean(restricted_state_df2$slm.mse)),
+                " lm.mse=",toString(mean(restricted_state_df2$lm.mse))," slm.mape=", toString(mean(restricted_state_df2$slm.mape)),
+                " lm.mape=",toString(mean(restricted_state_df2$lm.mape)),sep=""))
     
     
   }
@@ -160,11 +170,17 @@ for(cutoff in cutofflist){
   #write.csv(restricted_state_df2,confusion_file_path,row.names=FALSE)
 }
 
-performance.list <- list(cutoff=cutoff.list, date.x=date.x.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list)
+performance.list <- list(cutoff=cutoff.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list)
 performance.table <- as.data.frame(performance.list)
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
 write.csv(performance.table,file.path(mainDir,"mse_table.csv"),row.names=FALSE)
+
+mape.list <- list(cutoff=cutoff.list, lm.mape=lm.mape.list, slm.mape=slm.mape.list)
+mape.table <- as.data.frame(mape.list)
+# discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
+
+write.csv(mape.table,file.path(mainDir,"mape_table.csv"),row.names=FALSE)
 
 
 closeAllConnections()

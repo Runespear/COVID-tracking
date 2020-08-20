@@ -29,7 +29,7 @@ county_data <- read.csv(file = destfile)
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
-windowsize = 7
+windowsize = 3
 block.folder = paste("./data/block_windowsize=",toString(windowsize),sep="")
 
 cutoff.list <- earliest_start:latest_date
@@ -50,7 +50,7 @@ for (cutoff in cutoff.list){
     break
   }
 }
-num_trees=2000
+num_trees=200
 cutoff.list <- first.block.cutoff:latest_date
 #cutoff.list <- latest_date:latest_date
 # Main loop, parallelize later
@@ -65,9 +65,14 @@ dir.create(outputfolder, showWarnings = FALSE)
 #cutoff.list <- 120:120
 
 counter <- 1
+
+
+cutofflist=earliest_start:latest_date
+#cutofflist = (latest_date):(latest_date)
+
 #cutoff.list
 #foreach(cutoff = 51) %dopar%{
-for(cutoff in 51:51){
+for(cutoff in cutofflist){
   
   # See if block is already in there
   # Block is numbered by last day in it

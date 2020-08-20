@@ -22,7 +22,8 @@ county_data$log_rolled_cases <- log(county_data$rolled_cases)
 county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
 # note -1 to the actual windowsize here
-windowsize = 6
+windowsize = 2
+feature_window =6 
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
@@ -32,20 +33,20 @@ subDir = paste("block_windowsize=",toString(windowsize+1),sep="")
 block_dir = file.path(mainDir, subDir)
 dir.create(block_dir)
 
-cutofflist = (earliest_start+windowsize):(latest_date)
+cutofflist = (earliest_start+6):(latest_date)
 #cutofflist = (latest_date):(latest_date)
 
-#for(cutoff in cutofflist){
-foreach(cutoff = cutofflist) %dopar%{
+for(cutoff in cutofflist){
+#foreach(cutoff = cutofflist) %dopar%{
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize
   # Get rid of counties where there are less than 7 records so far
-  restricted_state_df <- subset(county_data, days_from_start <= cutoff)
-  tt <- table(restricted_state_df$fips)
-  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  restricted_state_df0 <- subset(county_data, days_from_start <= cutoff)
+  tt <- table(restricted_state_df0$fips)
+  restricted_state_df0 <- subset(restricted_state_df0,  fips %in% names(tt[tt>=7]) )
   
-  restricted_state_df <- subset(restricted_state_df, days_from_start >= first & days_from_start <= cutoff)
+  restricted_state_df <- subset(restricted_state_df0, days_from_start >= first & days_from_start <= cutoff)
   
   
   
@@ -56,7 +57,7 @@ foreach(cutoff = cutofflist) %dopar%{
   Tlast["cutoff"]<-Tlast$days_from_start
   Tlast<-Tlast[,-which(names(Tlast) %in% c("State_FIPS_Code", "date", "datetime", "state", "county","days_from_start","log_rolled_cases","rolled_cases","logcases","deaths", "cases"))]
 
-  Tlm<-county_analysis_lm(restricted_state_df,cutoff)
+  Tlm<-county_analysis_lm(restricted_state_df0,cutoff, feature_window)
   Tlm<-Tlm[,which (names(Tlm) %in% c("fips","r.lm","t0.lm"))]
     
   Tcase<- restricted_state_df[, which(names(restricted_state_df) %in% c("fips", "State_FIPS_Code", "datetime", "state", "county","log_rolled_cases"))]

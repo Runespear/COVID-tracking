@@ -22,7 +22,7 @@ county_analysis <- function(state, county_data, cutoffstart,cutoffend, predictio
     }
   }
   
-  restricted_state_df = subset(state_df, days_from_start <= cutoffend & days_from_start > cutoffstart)
+  restricted_state_df = subset(state_df, days_from_start <= cutoffend & days_from_start >= cutoffstart)
   # print(restricted_state_df)
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   rlist = c()

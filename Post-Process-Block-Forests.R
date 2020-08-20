@@ -49,7 +49,7 @@ missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.d
 
 
 # Loop through files in ./data/output/backtest_state_forests
-windowsize=7
+windowsize=3
 backtest.folder <- paste("data/output/backtest_state_forests_windowsize=",toString(windowsize),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
 
@@ -88,9 +88,13 @@ dir.create(confusion.block.folder, showWarnings=FALSE)
 
 mse.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mse"=NA, "block.mse.0"=NA, "block.mse.last"=NA)
 
-#cutoff.start:end_date
+mape.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mape"=NA, "block.mape.0"=NA, "block.mape.last"=NA)
 
-for (cutoff in (end_date-1):end_date){
+cutofflist<-cutoff.start:end_date
+#cutofflist<-(end_date-1):end_date
+
+
+for (cutoff in cutofflist){
   fname <- paste("block_results_",toString(cutoff),".csv",sep="")
   full.path <- file.path(backtest.folder,fname)
   
@@ -109,37 +113,43 @@ for (cutoff in (end_date-1):end_date){
   
   imputter.df <- merge(x=imputter.df,y=cases.date.slice,by="fips",all=TRUE)
   
-  if(cutoff - windowsize < cutoff.start){
+  if(cutoff - 7 < cutoff.start){
     # Data not available
     new.df$predicted.grf.past <- NA
     new.df$block.mse <- NA
   }
   else{
-    past.fname <- paste("block_results_",toString(cutoff-windowsize),".csv",sep="")
+    past.fname <- paste("block_results_",toString(cutoff-7),".csv",sep="")
     past.full.path <- file.path(backtest.folder,past.fname)
     past.df <- read.csv(past.full.path)
     
     past.df$predicted.grf.past <- past.df$predicted.grf.future
     past.df$predicted.grf.past.0 <- past.df$predicted.grf.future.0
     past.df$predicted.grf.past.last <- past.df$predicted.grf.future.last
-    past.df <- past.df[c("fips","predicted.grf.past","predicted.grf.past.0","predicted.grf.past.last")]
+    past.df <- past.df[c("fips","predicted.grf.past","predicted.grf.past.0","predicted.grf.past.last","log_rolled_cases.x")]
     
     new.df <- merge(x=df,y=past.df,by="fips",all=TRUE)
     new.df$block.mse <- NA
     
     mask <- -which(is.na(new.df$predicted.grf.past))
     
-    new.df[mask,"block.mse"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past"])**2
-    new.df[mask,"block.mse.0"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.0"])**2
-    new.df[mask,"block.mse.last"] <- (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.last"])**2
+    new.df[mask,"weekly new cases"] <- exp(new.df[mask,"log_rolled_cases.x.x"])-exp(new.df[mask,"log_rolled_cases.x.y"])
     
-    new.df[mask,"block.mape"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past"])/new.df[mask,"log_rolled_cases.x"] )
-    new.df[mask,"block.mape.0"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.0"])/new.df[mask,"log_rolled_cases.x"] )
-    new.df[mask,"block.mape.last"] <- abs( (new.df[mask,"log_rolled_cases.x"] - new.df[mask,"predicted.grf.past.last"])/new.df[mask,"log_rolled_cases.x"] )
+    new.df[mask,"block.mse"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past"])**2
+    new.df[mask,"block.mse.0"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])**2
+    new.df[mask,"block.mse.last"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.last"])**2
+    
+    new.df[mask,"block.mape"] <- abs( (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past"])/new.df[mask,"log_rolled_cases.x.x"] )
+    new.df[mask,"block.mape.0"] <- abs( (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])/new.df[mask,"log_rolled_cases.x.x"] )
+    new.df[mask,"block.mape.last"] <- abs( (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.last"])/new.df[mask,"log_rolled_cases.x.x"] )
     
     mse.table[which(mse.table$cutoff==cutoff),"block.mse"] <- mean(na.omit(new.df[,"block.mse"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.0"] <- mean(na.omit(new.df[,"block.mse.0"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.last"] <- mean(na.omit(new.df[,"block.mse.last"]))
+    
+    mape.table[which(mape.table$cutoff==cutoff),"block.mape"] <- mean(na.omit(new.df[,"block.mape"]))
+    mape.table[which(mape.table$cutoff==cutoff),"block.mape.0"] <- mean(na.omit(new.df[,"block.mape.0"]))
+    mape.table[which(mape.table$cutoff==cutoff),"block.mape.last"] <- mean(na.omit(new.df[,"block.mape.last"]))
     
   }
   
@@ -155,9 +165,9 @@ for (cutoff in (end_date-1):end_date){
   results.fullpath <- file.path(confusion.block.folder,results.fname)
   write.csv(test.df,results.fullpath,row.names=FALSE)
   
-  if (cutoff==114){
+  #if (cutoff==114){
     #break
-  }
+  #}
   # Write the final csv if last
   if (cutoff == end_date){
     latest.results.fname <- paste("confusion_block_latest.csv",sep="")
@@ -169,6 +179,8 @@ for (cutoff in (end_date-1):end_date){
 # Write the mse
 
 
-#write.csv(mse.table,paste("./data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+write.csv(mse.table,paste("./data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+
+write.csv(mape.table,paste("./data/output/block_mape_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
 
 closeAllConnections()

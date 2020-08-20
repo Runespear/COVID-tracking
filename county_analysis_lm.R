@@ -1,5 +1,8 @@
-county_analysis_lm <- function(restricted_state_df,cutoff){
-
+county_analysis_lm <- function(county_data,cutoff, feature_window){
+  
+  
+  restricted_state_df = subset(county_data, days_from_start <= cutoff & days_from_start >= cutoff - feature_window)
+  
   restricted_state_fips_list = sort(unique(restricted_state_df$fips))
   rlist = c()
   t0list = c()

@@ -18,11 +18,12 @@ mainDir <- "./data/output"
 destfile <- paste("./data/augmented_us-counties-states_latest",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
-earliest_start <- min(county_data$days_from_start)
+#earliest_start <- min(county_data$days_from_start)
+earliest_start<-60
 latest_date <- max(county_data$days_from_start)
 county_list <- sort(unique(county_data$fips))
 
-windowsize=7
+windowsize=3
 
 # Backtest directory
 backtestDir <- file.path(mainDir,"backtest")
@@ -48,8 +49,8 @@ dir.create(plotDir)
 #DplotDir <- file.path(CountyPlot,"Backtest_by_County_Dplots")
 #dir.create(DplotDir)
 
-#for(c in county_list){
-foreach(c=county_list)%dopar%{
+  for(c in county_list){
+#foreach(c=county_list)%dopar%{
   plot.prepare <- data.frame("fips" = NA, "county"=NA, "state"=NA, "r.lm"=NA, "predicted.lm"=NA
                              , "r.slm"=NA, "predicted.slm"=NA, "date.y"=NA, "days_from_start.y" = NA, "log_rolled_cases.y"=NA, "tau.hat"=NA, "predicted.grf.future.0"=NA, "predicted.grf.future.last"=NA)
   for(cutoff in cutoff_list){
