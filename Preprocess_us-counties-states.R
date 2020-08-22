@@ -1,4 +1,4 @@
-﻿list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
+list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
 list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate")
 
 
@@ -127,7 +127,7 @@ for (fips in present.fips.list){
 # Write intermediate result as processed_us-counties_latest.csv
 
 
-# write.csv(county_data,"./data/processed_us-counties_latest.csv",row.names=FALSE)
+#write.csv(county_data,"./data/processed_us-counties_latest.csv",row.names=FALSE)
 
 
 # Slice away first 6 days
@@ -173,7 +173,7 @@ county_data_augmented <- merge(x=county_data, y=county_features, by="fips", all.
 end_file = paste("./data/augmented_us-counties_latest",".csv",sep="")
 
 
-#write.csv(county_data_augmented, end_file, row.names=FALSE)
+write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 
 
