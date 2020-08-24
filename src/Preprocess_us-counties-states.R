@@ -20,7 +20,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
 
-destfile <- paste("./data/us-counties_latest",".csv",sep="")
+destfile <- paste("../data/us-counties_latest",".csv",sep="")
 county_data <- read.csv(nyt_url)
 write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
@@ -127,7 +127,7 @@ for (fips in present.fips.list){
 # Write intermediate result as processed_us-counties_latest.csv
 
 
-#write.csv(county_data,"./data/processed_us-counties_latest.csv",row.names=FALSE)
+#write.csv(county_data,"../data/processed_us-counties_latest.csv",row.names=FALSE)
 
 
 # Slice away first 6 days
@@ -143,7 +143,7 @@ county_data = county_data[complete.cases(county_data),]
 # Process county features
 
 
-county_features <- read.csv(file=file.path("./data/county_features.csv"))
+county_features <- read.csv(file=file.path("../data/county_features.csv"))
 
 
 # Drop all "M_..." prefix
@@ -170,7 +170,7 @@ names(county_features)[names(county_features)=="FIPS"] <- "fips"
 county_data_augmented <- merge(x=county_data, y=county_features, by="fips", all.x = TRUE)
 
 
-end_file = paste("./data/augmented_us-counties_latest",".csv",sep="")
+end_file = paste("../data/augmented_us-counties_latest",".csv",sep="")
 
 
 write.csv(county_data_augmented, end_file, row.names=FALSE)
@@ -181,7 +181,7 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 # Load CUSP Data
 
 
-CUSP = paste("./data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
+CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
 
 # Pre-processing CUSP data
@@ -250,8 +250,8 @@ for (i in length(names(county_data_augmented)):length(names(data))) {
 
 
 
-end_file = paste("./data/augmented_us-counties-states_latest",".csv",sep="")
-#end_file = paste("./data/processed_us-counties_latest",".csv",sep="")
+end_file = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
+#end_file = paste("../data/processed_us-counties_latest",".csv",sep="")
 
 
 write.csv(data, end_file, row.names=FALSE)

@@ -14,8 +14,8 @@ registerDoParallel(cores=detectCores())
 
 # Location of processed county data
 
-mainDir <- "./data/output"
-destfile <- paste("./data/augmented_us-counties-states_latest",".csv",sep="")
+mainDir <- "../data/output"
+destfile <- paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
 #earliest_start <- min(county_data$days_from_start)
@@ -156,7 +156,7 @@ dir.create(plotDir)
     #plot_file_path= file.path(plotDir, paste(toString(c),"_plot.png",sep=""))
     #png(plot_file_path, width = 1080, height = 720))
     
-    png(paste("./data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
+    png(paste("../data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
     
     title=paste("One Week Prediction","(",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),")",sep="")
     
@@ -178,7 +178,7 @@ dir.create(plotDir)
     #MaxDay<-max(plot.prepare$days_from_start.y)
     #MinDay<-min(plot.prepare$days_from_start.y)
     
-    #png(paste("./data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_Dplots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
+    #png(paste("../data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_Dplots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
     
     #title=paste("One Week Prediction","(",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),")",sep="")
     

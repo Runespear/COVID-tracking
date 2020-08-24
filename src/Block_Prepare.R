@@ -21,7 +21,7 @@ registerDoParallel(cores=detectCores())
 # Load Data
 
 
-destfile = paste("./data/augmented_us-counties-states_latest",".csv",sep="")
+destfile = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 
 
 county_data <- read.csv(file = destfile)
@@ -38,7 +38,7 @@ latest_date = max(county_data$days_from_start)
 
 
 
-mainDir = "./data"
+mainDir = "../data"
 subDir = paste("block_windowsize=",toString(windowsize+1),sep="")
 block_dir = file.path(mainDir, subDir)
 dir.create(block_dir)

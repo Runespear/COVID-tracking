@@ -24,8 +24,8 @@ source("county_analysis(shifted).R")
 
 # Load Data
 
-destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
-#destfile = paste("./data/county_features",".csv",sep="")
+destfile = paste("../data/augmented_us-counties_latest",".csv",sep="")
+#destfile = paste("../data/county_features",".csv",sep="")
 
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
@@ -46,7 +46,7 @@ latest_date = max(county_data$days_from_start)
 print(latest_date)
 
 #cutoff = 171
-mainDir = "./data/output"
+mainDir = "../data/output"
 subDir = "backtest"
 backtest_dir = file.path(mainDir, subDir)
 dir.create(backtest_dir)

@@ -18,7 +18,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # Load County Location
 
-county<- read.delim("./data/2019_Gaz_counties_national.txt")
+county<- read.delim("../data/2019_Gaz_counties_national.txt")
 
 county<- county %>% select(GEOID, INTPTLAT, INTPTLONG)
 
@@ -30,11 +30,11 @@ county$LON<-county$INTPTLONG
 
 #features<-select(county,-c(GEOID,INTPTLAT,INTPTLONG))
 
-#write_csv(features, "./data/county_features.csv")
+#write_csv(features, "../data/county_features.csv")
 
 # Centroids + SVI ---------------------------------------------------------
 
-svi <- read_csv("./data/SVI2018_US_COUNTY.csv") # source: https://svi.cdc.gov/data-and-tools-download.html
+svi <- read_csv("../data/SVI2018_US_COUNTY.csv") # source: https://svi.cdc.gov/data-and-tools-download.html
 
 svi$GEOID<-as.numeric(svi$FIPS)
 
@@ -66,4 +66,4 @@ NYC.features$LOCATION <- "New York City, New York"
 
 features <- rbind(features, NYC.features)
 
-write_csv(features, "./data/county_features.csv")
+write_csv(features, "../data/county_features.csv")

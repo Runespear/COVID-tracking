@@ -19,7 +19,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # URL of NYTimes Data
 nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
-destfile <- paste("./data/us-counties_latest",".csv",sep="")
+destfile <- paste("../data/us-counties_latest",".csv",sep="")
 county_data <- read.csv(nyt_url)
 write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
@@ -112,7 +112,7 @@ for (fips in present.fips.list){
 #break
 # Write intermediate result as processed_us-counties_latest.csv
 
-write.csv(county_data,"./data/processed_us-counties_latest_minus7.csv",row.names=FALSE)
+write.csv(county_data,"../data/processed_us-counties_latest_minus7.csv",row.names=FALSE)
 
 
 closeAllConnections()

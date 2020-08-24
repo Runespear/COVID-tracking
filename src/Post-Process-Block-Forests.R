@@ -17,7 +17,7 @@ registerDoParallel(cores=detectCores())
 # POST PROCESSING FOR STATE FOREST BLOCKS
 #########################################################
 
-destfile = paste("./data/processed_us-counties_latest_minus7",".csv",sep="")
+destfile = paste("../data/processed_us-counties_latest_minus7",".csv",sep="")
 county_data <- read.csv(file = destfile)
 county_data$date <- anytime::anydate(county_data$date)
 
@@ -28,7 +28,7 @@ end_date = max(county_data$days_from_start)
 
 #fips list
 
-fips.list.dest = "./data/fips-list.csv"
+fips.list.dest = "../data/fips-list.csv"
 fips.list.df <- read.csv(fips.list.dest)
 
 # Merge the two
@@ -42,7 +42,7 @@ missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.d
 
 
 
-# Loop through files in ./data/output/backtest_state_forests
+# Loop through files in .,/data/output/backtest_state_forests
 windowsize=2
 backtest.folder <- paste("data/output/backtest_state_forests_windowsize=",toString(windowsize),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
@@ -75,7 +75,7 @@ for (cutoff.check in start_date:end_date){
 # Create a folder for analysis results
 
 
-confusion.block.folder <- paste("./data/output/confusion_state_forests_windowsize=",toString(windowsize),sep="")
+confusion.block.folder <- paste("../data/output/confusion_state_forests_windowsize=",toString(windowsize),sep="")
 dir.create(confusion.block.folder, showWarnings=FALSE)
 
 
@@ -166,15 +166,15 @@ for (cutoff in cutofflist){
   #}
   # Write the final csv if last
   if (cutoff == end_date){
-    write.csv(test.df,"./data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
+    write.csv(test.df,"../data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
   }
 }
 
 # Write the mse
 
 
-write.csv(mse.table,paste("./data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+write.csv(mse.table,paste("../data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
 
-write.csv(mape.table,paste("./data/output/block_mape_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+write.csv(mape.table,paste("../data/output/block_mape_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
 
 closeAllConnections()

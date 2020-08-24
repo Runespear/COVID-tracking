@@ -22,7 +22,7 @@ registerDoParallel(cores=detectCores())
 # Obtain the latest data to see how many dates there are
 
 
-destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
+destfile = paste("../data/augmented_us-counties_latest",".csv",sep="")
 
 
 county_data <- read.csv(file = destfile)
@@ -33,7 +33,7 @@ latest_date = max(county_data$days_from_start)
 
 
 windowsize = 2
-block.folder = paste("./data/block_windowsize=",toString(windowsize),sep="")
+block.folder = paste("../data/block_windowsize=",toString(windowsize),sep="")
 
 
 cutoff.list <- earliest_start:latest_date
@@ -64,7 +64,7 @@ cutoff.list <- first.block.cutoff:latest_date
 
 
 
-mainDir = "./data/output"
+mainDir = "../data/output"
 subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),sep="")
 outputfolder = file.path(mainDir, subDir)
 

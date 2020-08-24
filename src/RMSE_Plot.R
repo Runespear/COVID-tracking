@@ -24,8 +24,8 @@ registerDoParallel(cores=detectCores())
 
 # Location of MSE data
 
-mainDir <- "./data/output"
-#destfile <- paste("./data/processed_us-counties_latest",".csv",sep="")
+mainDir <- "../data/output"
+#destfile <- paste("../data/processed_us-counties_latest",".csv",sep="")
 
 #county_data <- read.csv(file = destfile)
 
@@ -36,7 +36,7 @@ mainDir <- "./data/output"
 
 
 #cutoff = 171
-#mainDir = "./data/output"
+#mainDir = "../data/output"
 #subDir = "backtest"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
@@ -77,7 +77,7 @@ days<-restricted_state_df2$cutoff
 MaxDay<-max(days)
 MinDay<-min(days)
 
-png(paste("./data/output/","RMSE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
+png(paste("../data/output/","RMSE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
 
 title="One Week Prediction"
 
