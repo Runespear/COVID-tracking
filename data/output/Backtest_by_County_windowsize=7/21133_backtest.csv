@@ -1,3 +1,0 @@
-"fips","county","state","predicted.lm","predicted.slm","predicted.grf","predicted.grf.augmented","predicted.grf.fonly","date.y","days_from_start.y","log_rolled_cases.y"
-21133,"Letcher","Kentucky",3.40757414071798,3.32659033314557,3.35783425021567,3.47199434520631,3.47499370435269,"2020-07-29",190,3.55125799427067
-21133,"Letcher","Kentucky",3.45649532786465,3.38042326954431,3.40505326179449,3.51595307374015,3.49733657276867,"2020-07-30",191,3.61861014332484

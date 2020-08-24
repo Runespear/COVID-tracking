@@ -1,3 +1,0 @@
-"fips","county","state","predicted.lm","predicted.slm","predicted.grf","predicted.grf.augmented","predicted.grf.fonly","date.y","days_from_start.y","log_rolled_cases.y"
-40009,"Beckham","Oklahoma",3.62524617090629,3.60820248254044,3.68822712095428,3.63620564379976,3.63378270935035,"2020-07-29",190,3.50512817575501
-40009,"Beckham","Oklahoma",3.53874702042077,3.55360077848234,3.62688100089135,3.58377579712521,3.58470134558536,"2020-07-30",191,3.56347806611517

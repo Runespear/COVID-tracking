@@ -1,3 +1,0 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","predicted.grf.future","predicted.grf.future0","predicted.grf.future6","Predicted_Double_Days","predicted.grf.past","block.mse"
-6085,"Santa Clara","California",53,"2020-03-14",4.06780500698749,34.210034195565,0.216488153801076,5.58322208359502,5.85886843713741,5.58322208359503,3.20177879662115,NA,NA
-53033,"King","Washington",53,"2020-03-14",5.44612141845928,27.8433282706843,0.216488153801076,6.96153849506681,6.70907750773207,6.96153849506682,3.20177879662115,NA,NA

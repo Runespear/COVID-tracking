@@ -1,3 +1,0 @@
-"fips","county","state","predicted.lm","predicted.slm","predicted.grf","predicted.grf.augmented","predicted.grf.fonly","date.y","days_from_start.y","log_rolled_cases.y"
-54023,"Grant","West Virginia",3.38352027264119,3.2966724193604,3.35225443780477,3.40838995191238,3.39742134338782,"2020-07-29",190,3.80029313733148
-54023,"Grant","West Virginia",3.54718069925099,3.40115002994902,3.47230766168456,3.51756758978508,3.50428226153348,"2020-07-30",191,3.88597241620474
