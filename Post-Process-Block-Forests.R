@@ -5,12 +5,6 @@ list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rli
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-#install.packages("RApiDatetime", repos="http://cran.rstudio.com/", dependencies=TRUE)
-
-#install.packages("grf", repos="http://cran.rstudio.com/", dependencies=TRUE)
-
-#install.packages("rattle", repos="http://cran.rstudio.com/", dependencies=TRUE)
-
 lapply(list.of.packages, require, character.only = TRUE)
 
 
@@ -172,9 +166,7 @@ for (cutoff in cutofflist){
   #}
   # Write the final csv if last
   if (cutoff == end_date){
-    latest.results.fname <- paste("confusion_block_latest.csv",sep="")
-    latest.results.fullpath <- file.path(confusion.block.folder,latest.results.fname)
-    write.csv(test.df,latest.results.fullpath,row.names=FALSE)
+    write.csv(test.df,"./data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
   }
 }
 

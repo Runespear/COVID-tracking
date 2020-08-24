@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38009,"Bottineau","North Dakota",0.00634922767866077,3.16112947772228,0.00634922767866142,3.16112947772228,"2020-08-28",220,NA,0.00641146415832862,3.16162736955962,3.16156513307995,NA,NA,NA,NA,NA,NA
+38009,"Bottineau","North Dakota",0.0125787822068607,3.21731514162654,0.0125787822068606,3.21731514162654,"2020-08-29",221,NA,0.0134454805578823,3.22424872843471,3.2233820300837,0.00622955452819993,0.00622955452819918,0.00703401639955368,1,1,1

@@ -1,0 +1,2 @@
+"fips","date.x","days_from_start.x","county","state","log_rolled_cases.x","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","lm.mse","slm.mse","lm.mape","slm.mape"
+53033,2020-03-08,47,"King","Washington",3.89473150831808,0.264692554227081,32.2858289886886,5.74757938790765,0.264692554227082,32.2858289886886,5.74757938790766,2020-03-15,54,5.63121178182137,0.0135414197462523,0.0135414197462541,0.0206647539810063,0.0206647539810078

@@ -2,39 +2,45 @@ closeAllConnections()
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr")
 
+
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-#install.packages("RApiDatetime", repos="http://cran.rstudio.com/", dependencies=TRUE)
-
-#install.packages("grf", repos="http://cran.rstudio.com/", dependencies=TRUE)
-
-#install.packages("rattle", repos="http://cran.rstudio.com/", dependencies=TRUE)
 
 lapply(list.of.packages, require, character.only = TRUE)
 
 
+
+
 # Set Working Directory to File source directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-source("county_analysis.R")
+
 
 registerDoParallel(cores=detectCores())
 
+
 # Obtain the latest data to see how many dates there are
+
 
 destfile = paste("./data/augmented_us-counties_latest",".csv",sep="")
 
+
 county_data <- read.csv(file = destfile)
+
 
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
 
+
 windowsize = 2
 block.folder = paste("./data/block_windowsize=",toString(windowsize),sep="")
 
+
 cutoff.list <- earliest_start:latest_date
 
+
 first.block.cutoff <- Inf
+
 
 # Check for the first block file
 for (cutoff in cutoff.list){
@@ -56,29 +62,42 @@ cutoff.list <- first.block.cutoff:latest_date
 # Main loop, parallelize later
 
 
+
+
 mainDir = "./data/output"
 subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),sep="")
 outputfolder = file.path(mainDir, subDir)
 
+
 dir.create(outputfolder, showWarnings = FALSE)
+
 
 #cutoff.list <- 120:120
 
+
 counter <- 1
+
+
 
 
 cutofflist=earliest_start:latest_date
 #cutofflist = (latest_date):(latest_date)
 
+
 #cutoff.list
 #foreach(cutoff = 51) %dopar%{
 for(cutoff in cutofflist){
-  
+  #################################
+  # Skip file if it exists  
+  check.file.name <- paste0("block_results_",toString(cutoff),".csv")
+  check.file.full.name <- file.path(outputfolder, check.file.name) 
+  if (file.exists(check.file.full.name)){next}
+  #################################
   # See if block is already in there
   # Block is numbered by last day in it
   try({
     start_time <- Sys.time()
-    
+    # Given my current cutoff, which block numbers should I use?
     fname <- paste("block_",toString(cutoff),".csv",sep="")
     full.path <- file.path(block.folder,fname)
     
@@ -138,13 +157,11 @@ for(cutoff in cutofflist){
     state.t0.hat <- (E.log_rolled_cases - state.tau.hat*E.shifted_time)/(-state.tau.hat)
     
     print(state.t0.hat)
-    
-    predicted.grf.future <- state.tau.hat*(cutoff + 7 - state.t0.hat)
-    predicted.grf.future0<-state.tau.hat*(windowsize-1 + 7)+ covariates.test.unique$log_rolled_cases.y
+   
     # Write down results
     results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
     results <- merge(x=results,y=current.block[which(current.block$shifted_time==windowsize-1),],by="fips")
-    results <- results[, c("fips","county","new_rolled_cases","state","days_from_start","datetime","log_rolled_cases.x")]
+    results <- results[, c("fips","county","state","days_from_start","datetime","log_rolled_cases.x")]
     results <- unique(results)
     results$t0.hat <- state.t0.hat
     results$tau.hat <- state.tau.hat

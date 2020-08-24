@@ -59,6 +59,20 @@ cutofflist = (earliest_start+windowsize):latest_date
 #lastcutoff = tail(cutofflist,n=1)
 #cutofflist = (latest_date-predictionsize-3):(latest_date)
 
+
+destfile = file.path(mainDir,"mse_table.csv")
+performance.table0 <- read.csv(file = destfile)
+#performance.table0<-head(performance.table0,-7)
+
+#destfile = file.path(mainDir,"mape_table.csv")
+#mape.table0 <- read.csv(file = destfile)
+#mape.table0<-head(mape.table0,-7)
+
+cutoff.start<-max(performance.table0$cutoff)-7+1
+                               
+                               
+updatelist = cutoff.start:latest_date
+
 cutoff.list <- c()
 date.x.list <- c()
 lm.mse.list <- c()
@@ -66,30 +80,18 @@ slm.mse.list <- c()
 lm.mape.list<-c()
 slm.mape.list<-c()
 
-for(cutoff in cutofflist){
+for(cutoff in updatelist){
+  
+  #################################
+  # Skip file if it exists  
+  #check.file.name <- paste0("allstates_",toString(cutoff),"_grf.csv") 
+  #check.file.full.name <- file.path(backtest_dir, check.file.name) 
+  #if (file.exists(check.file.full.name)){next}
+  #################################
   
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
-  # restricted_state_df0 <- NULL
-  # restricted_state_df1 <- NULL
-  # Validation set
-  # restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff+ predictionsize)
-  # tt <- table(restricted_state_df$fips)
-  # restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
-  
   state_df1 <- subset(county_data, days_from_start == cutoff+ predictionsize)
-  #  state_list1 <- sort(unique(state_df1$state))
-  #try(restricted_state_df11 <- foreach(state = state_list1, .combine=rbind) %dopar%{
-  #  k = NULL
-  #  k = try(county_analysis(state, restricted_state_df, cutoff, cutoff+ predictionsize,predictionsize))
-  #  return(k)
-  #})
-  #
-  #if(is.null(restricted_state_df11)){
-  #  print("no restricted_state_df11")
-  #  next
-  #}
-  
   
   # Training Set
   restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
@@ -99,14 +101,7 @@ for(cutoff in cutofflist){
   
   restricted_state_df0<-county_analysis(restricted_state_df,cutoff-windowsize,cutoff, predictionsize)
   
-  #  state_df <- subset(county_data,days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
-  #  state_list <- sort(unique(state_df$state))
-  #  try(restricted_state_df0 <- foreach(state = state_list, .combine=rbind) %dopar%{
-  #    k = NULL
-  #    k = try(county_analysis(state, restricted_state_df, cutoff-windowsize, cutoff,predictionsize))
-  #    return(k)
-  #  })
-  
+
   if(is.null(restricted_state_df0)){
     print("no restricted_state_df0")
     next
@@ -173,14 +168,28 @@ for(cutoff in cutofflist){
 }
 
 performance.list <- list(cutoff=cutoff.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list)
-performance.table <- as.data.frame(performance.list)
+performance.table1 <- as.data.frame(performance.list)
+
+destfile = file.path(mainDir,"mse_table.csv")
+performance.table0 <- read.csv(file = destfile)
+
+performance.table<- rbind(performance.table0,performance.table1)
+#performance.table<-performance.table %>% distinct()
+
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
 write.csv(performance.table,file.path(mainDir,"mse_table.csv"),row.names=FALSE)
 
 mape.list <- list(cutoff=cutoff.list, lm.mape=lm.mape.list, slm.mape=slm.mape.list)
-mape.table <- as.data.frame(mape.list)
+mape.table1 <- as.data.frame(mape.list)
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
+
+destfile = file.path(mainDir,"mape_table.csv")
+mape.table0 <- read.csv(file = destfile)
+
+mape.table<- rbind(mape.table0,mape.table1)
+#mape.table<-mape.table %>% distinct()
+
 
 write.csv(mape.table,file.path(mainDir,"mape_table.csv"),row.names=FALSE)
 

@@ -1,4 +1,4 @@
-﻿closeAllConnections()
+closeAllConnections()
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table")
 
@@ -50,6 +50,16 @@ cutofflist = (earliest_start+6):(latest_date)
 
 for(cutoff in cutofflist){
 #foreach(cutoff = cutofflist) %dopar%{
+  
+  
+  #################################
+  # Skip file if it exists  
+  #check.file.name <- paste0("block_",toString(cutoff),".csv") 
+  #check.file.full.name <- file.path(block_dir, check.file.name) 
+  #if (file.exists(check.file.full.name)){next}
+  #################################
+  
+  
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize
@@ -79,7 +89,7 @@ for(cutoff in cutofflist){
   Tcase["shifted_time"]<- restricted_state_df$days_from_start - first
   
 
-
+  #Tmain<-merge(x=merge(x=merge(x=Tcase,y=Tfirst,by="fips",x.all=TRUE),y=Tlast,by="fips",x.all=TRUE), y=Tlm,by="fips",x.all=TRUE)
   Tmain0<-merge(x=Tcase,y=Tfirst,by="fips",x.all=TRUE)
   Tmain1<-merge(x=Tmain0,y=Tlast,by="fips",x.all=TRUE)
   Tmain<-merge(x=Tmain1, y=Tlm,by="fips",x.all=TRUE)
