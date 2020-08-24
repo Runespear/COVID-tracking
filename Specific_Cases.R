@@ -68,6 +68,8 @@ performance.table0 <- read.csv(file = destfile)
 #mape.table0 <- read.csv(file = destfile)
 #mape.table0<-head(mape.table0,-7)
 
+
+# the cutoff in mse_table.csv is defined as cutoff_future<-cutoff+predictionsize
 cutoff.start<-max(performance.table0$cutoff)-7+1
                                
                                
@@ -81,13 +83,6 @@ lm.mape.list<-c()
 slm.mape.list<-c()
 
 for(cutoff in updatelist){
-  
-  #################################
-  # Skip file if it exists  
-  #check.file.name <- paste0("allstates_",toString(cutoff),"_grf.csv") 
-  #check.file.full.name <- file.path(backtest_dir, check.file.name) 
-  #if (file.exists(check.file.full.name)){next}
-  #################################
   
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   

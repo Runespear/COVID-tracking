@@ -1,0 +1,43 @@
+1. County_Features.R
+Input: "./data/2019_Gaz_counties_national.txt", "./data/SVI2018_US_COUNTY.csv"
+Output: "./data/county_features.csv"
+
+2. Preprocess_us-counties-states.R
+Input: "./data/county_features.csv", "./data/COVID-19 US state policy database (CUSP).xlsx"
+Output: "./data/augmented_us-counties_latest.csv", "./data/augmented_us-counties-states_latest.csv"
+
+3. Specific_Cases.R
+Input: "./data/augmented_us-counties_latest.csv", county_analysis(shifted).R, "./data/output/backtest/", "./data/output/mse_table.csv", "./data/output/mape_table.csv"
+Output: "./data/output/backtest/", "./data/output/mse_table.csv", "./data/output/mape_table.csv"
+
+4. Block_Prepare.R
+Input: "./data/augmented_us-counties_latest.csv", "county_analysis_lm.R", "./data/block_windowsize=2/"
+Output: "./data/block_windowsize=2/"
+
+5. State_Forests.R
+Input: "./data/augmented_us-counties_latest.csv", "./data/block_windowsize=2/", "./data/output/backtest_state_forests_windowsize=2/"
+Output: "./data/output/backtest_state_forests_windowsize=2/"
+
+6. Preprocess_us-counties-states_minus7.R
+Input: 
+Output: "./data/processed_us-counties_latest_minus7.csv"
+
+7. Post-Process-Block-Forests.R
+Input: "./data/processed_us-counties_latest_minus7.csv", "./data/fips-list.csv", "./data/output/backtest_state_forests_windowsize=2/"
+Output: "./data/output/confusion_state_forests_windowsize=2/", "./data/output/file_to_plot/confusion_block_latest.csv", "./data/output/block_mse_windowsize=2.csv", "./data/output/block_mape_windowsize=2.csv"
+
+
+Performance Evaluation:
+
+8. RMSE_Plot.R
+Input: "./data/output/mse_table.csv", "./data/output/block_mse_windowsize=2.csv"
+Output: "./data/output/","RMSE_windowsize=2_plot.png"
+
+9. MAPE_Plot.R
+Input: "./data/output/mape_table.csv", "./data/output/block_mape_windowsize=2.csv"
+Output: "./data/output/","MAPE_windowsize=2_plot.png"
+
+10. county_plot.R
+Input: "./data/augmented_us-counties-states_latest.csv", "./data/output/backtest/", "./data/output/backtest_state_forests_windowsize=2/", "./data/output/Backtest_by_County_Windowsize=2/Backtest_by_County/"
+Output: "./data/output/Backtest_by_County_Windowsize=2/
+

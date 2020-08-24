@@ -54,9 +54,9 @@ for(cutoff in cutofflist){
   
   #################################
   # Skip file if it exists  
-  #check.file.name <- paste0("block_",toString(cutoff),".csv") 
-  #check.file.full.name <- file.path(block_dir, check.file.name) 
-  #if (file.exists(check.file.full.name)){next}
+  check.file.name <- paste0("block_",toString(cutoff),".csv") 
+  check.file.full.name <- file.path(block_dir, check.file.name) 
+  if (file.exists(check.file.full.name)){next}
   #################################
   
   
