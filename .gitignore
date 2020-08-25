@@ -4,3 +4,5 @@ __pycache__
 .RDataTmp
 **/augmented_us-counties_latest.csv
 **/augmented_us-counties-states_latest.csv
+**/processed_us-counties_latest_minus7.csv
+**/us-counties_latest.csv

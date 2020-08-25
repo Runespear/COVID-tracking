@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38043,"Kidder","North Dakota",0.0121213605323454,3.25092716302765,0.0121213605323454,3.25092716302765,"2020-08-30",222,NA,0.0122369099255135,3.25185155817299,3.25173600877982,NA,NA,NA,NA,NA,NA

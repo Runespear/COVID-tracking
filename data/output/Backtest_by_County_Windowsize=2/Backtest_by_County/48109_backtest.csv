@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48109,"Culberson","Texas",0.00655740054616103,3.13042957616025,0.0065574005461615,3.13042957616025,"2020-08-30",222,NA,0.00691617733548799,3.13329979047486,3.13294101368554,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26131,"Ontonagon","Michigan",0.0288481543376567,3.60788506478435,0.0288481543376564,3.60788506478435,"2020-08-30",222,NA,0.0285875441869863,3.60580018357899,3.60606079372965,NA,NA,NA,NA,NA,NA

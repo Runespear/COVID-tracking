@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27149,"Stevens","Minnesota",0.0188093319574933,3.2671595396316,0.0188093319574949,3.26715953963161,"2020-08-30",222,NA,0.0195248821091385,3.27288394084476,3.27216839069312,NA,NA,NA,NA,NA,NA
