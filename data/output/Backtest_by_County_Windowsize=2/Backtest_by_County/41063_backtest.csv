@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-41063,"Wallowa","Oregon",6.28036983473505e-16,3.04452243772343,0,3.04452243772342,"2020-08-29",221,NA,0.00125032786631154,3.05452506065391,3.0532747327876,NA,NA,NA,NA,NA,NA
-41063,"Wallowa","Oregon",-6.2803698347353e-16,3.04452243772342,0,3.04452243772342,"2020-08-30",222,NA,0.000764487493634173,3.05063833767249,3.04987385017886,-1.25607396694703e-15,0,-0.000485840372677367,-1,0,-1

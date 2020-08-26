@@ -52,18 +52,76 @@ county_data$days_from_start <- as.numeric(county_data$datetime- start_date , uni
 # county_data <- county_data[which(county_data$days_from_start <= 180)  ,]
 
 
-# Add logcases
-
-
-county_data$logcases <- log(county_data$cases)
-
-
-
-
 # Obtain list of fips
 
 
 fips_list = sort(unique(county_data$fips))
+
+# get active cases
+
+for (fips in fips_list){
+  
+  fips.df <- county_data[which(county_data$fips==fips),]
+  if (dim(fips.df)[1] == 0){
+    print(paste("fips ",toString(fips)," has no entry ",sep=""))
+    next
+  }
+  first.fips.date <- min(fips.df$days_from_start)
+  last.fips.date <- max(fips.df$days_from_start)
+  
+  if(first.fips.date == last.fips.date){
+    print(paste("fips ",toString(fips)," only has one entry ",sep=""))
+    next
+  }
+  for (day in (first.fips.date+1):last.fips.date){
+    print(day)
+    county.day.slice <- fips.df[which(fips.df$days_from_start == day),]
+    if (dim(county.day.slice)[1] == 0){
+      # Missing days inbetween e.g. fips 31057 day 184 jumps to 189
+      print(paste("imputing for day ",toString(day)," of fips ",toString(fips),sep=""))
+      imputter <- fips.df[which(fips.df$days_from_start == day-1),]
+      # Change the date
+      imputter$days_from_start <- day
+      imputter$datetime <- as.Date(imputter$datetime)+1
+      imputter$date <- as.Date(imputter$date)+1
+      # Change the deaths
+      imputter$deaths<-0
+      # Append the data
+      fips.df<-rbind(fips.df,imputter)
+      county_data <- rbind(county_data,imputter)
+      #county_data[which(county_data$fips==fips & !is.na(county_data$rolled_cases) & county_data$days_from_start == day),] <- fips.df[which(fips.df$days_from_start == day),]
+    }
+    #fips.df[which(fips.df$days_from_start == day),"new_rolled_cases"] <- fips.df[which(fips.df$days_from_start == day),"rolled_cases"] - fips.df[which(fips.df$days_from_start == day-1),"rolled_cases"]
+  }
+  
+  if((first.fips.date+22) > last.fips.date){
+    for(day in first.fips.date:last.fips.date){
+    fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"]
+    }
+    next
+  }else{
+    
+    for(day in first.fips.date:(first.fips.date+21)){
+      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"]
+    }
+    
+    for (day in (first.fips.date+22):last.fips.date){
+      
+      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- (fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"])- (fips.df[which(fips.df$days_from_start == day-22),"cases"]- fips.df[which(fips.df$days_from_start == day-22),"deaths"])
+      
+      }
+    
+    }
+  county_data[which(county_data$fips==fips),"cases"] <- fips.df[,"active_cases"]
+  
+  print(fips)
+}
+
+
+# Add logcases
+
+
+county_data$logcases <- log(county_data$cases)
 
 
 

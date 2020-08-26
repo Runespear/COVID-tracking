@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-38049,"McHenry","North Dakota",0.0170944333592982,3.3499006170336,0.0170944333592988,3.34990061703361,"2020-08-30",222,NA,0.0179980675008728,3.3571296901662,3.35622605602463,NA,NA,NA,NA,NA,NA

@@ -10,6 +10,8 @@ Output: "./data/augmented_us-counties_latest.csv", "./data/augmented_us-counties
 Input: "./data/augmented_us-counties_latest.csv", county_analysis(shifted).R, "./data/output/backtest/", "./data/output/mse_table.csv", "./data/output/mape_table.csv"
 Output: "./data/output/backtest/", "./data/output/mse_table.csv", "./data/output/mape_table.csv"
 
+(note: Use Specific_Cases(from Day 0).R if compute from the scratch)
+
 4. Block_Prepare.R
 Input: "./data/augmented_us-counties_latest.csv", "county_analysis_lm.R", "./data/block_windowsize=2/"
 Output: "./data/block_windowsize=2/"
