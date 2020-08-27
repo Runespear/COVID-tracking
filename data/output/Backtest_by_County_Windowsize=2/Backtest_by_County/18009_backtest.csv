@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-18009,"Blackford","Indiana",-0.0277795641070779,2.8154599597964,0,3.00991690854595,"2020-08-26",218,NA,-0.0269542255759343,2.82206266804556,2.82123732951441,NA,NA,NA,NA,NA,NA

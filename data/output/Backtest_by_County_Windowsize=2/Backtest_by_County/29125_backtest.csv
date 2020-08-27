@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29125,"Maries","Missouri",-0.013423020332143,2.9573409823838,0,3.0513021247088,"2020-09-02",225,NA,-0.0150060074827211,2.94467708517917,2.94626007232975,NA,NA,NA,NA,NA,NA

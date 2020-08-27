@@ -146,7 +146,7 @@ for(cutoff in updatelist){
     #restricted_state_df2<-rename(restricted_state_df2, c("date"="date.x","days_from_start"="days_from_start.x","log_rolled_cases"="log_rolled_cases.x"))
     
     #today<-restricted_state_df0[c("date","days_from_start","county","state","fips","log_rolled_cases","r.lm","t0.lm","predicted.lm","r.slm","t0.slm","predicted.slm")]
-    restricted_state_df2 <- restricted_state_df2 %>% rename( date.x=date, days_from_start.x=days_from_start, log_rolled_cases.x=log_rolled_cases)
+    restricted_state_df2 <- restricted_state_df2 %>% dplyr::rename( date.x=date, days_from_start.x=days_from_start, log_rolled_cases.x=log_rolled_cases)
     restricted_state_df2$date.y<- ymd(restricted_state_df2$date.x)+days(7)
     restricted_state_df2$days_from_start.y<- restricted_state_df2$days_from_start.x+7
     restricted_state_df2$log_rolled_cases.y<- NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27065,"Kanabec","Minnesota",0.0597192347016238,3.80484328712142,0.0597192347016215,3.80484328712141,"2020-09-02",225,NA,0.0610395319195066,3.81540566486449,3.81408536764661,NA,NA,NA,NA,NA,NA

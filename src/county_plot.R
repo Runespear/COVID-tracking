@@ -151,14 +151,14 @@ dir.create(plotDir)
     performance_file_path = file.path(CountyDir, paste(toString(c),"_backtest.csv",sep=""))
     write.csv(plot.prepare,performance_file_path,row.names=FALSE)
     
-    print(paste("Finished writing backtest for ",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),setp=""))
+    print(paste("Finished writing backtest for ",toString(plot.prepare$county[1])," county, ",toString(plot.prepare$state[1]),setp=""))
     
     #plot_file_path= file.path(plotDir, paste(toString(c),"_plot.png",sep=""))
     #png(plot_file_path, width = 1080, height = 720))
     
     png(paste("../data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
     
-    title=paste("One Week Prediction","(",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),")",sep="")
+    title=paste("One Week Prediction","(",toString(plot.prepare$county[1])," county, ",toString(plot.prepare$state[1]),")",sep="")
     
     plot(plot.prepare$days_from_start.y, plot.prepare$predicted.lm,pch=19, col="gray", type="b", xlab="days", ylab="Log Case Number", xlim=c(MinDay,MaxDay),ylim=c(MinCase,MaxCase),xaxs="i",yaxs="i", main=title)
     lines(plot.prepare$days_from_start.y, plot.prepare$predicted.slm,pch=18, col="blue", type="b", lty=2)
@@ -190,6 +190,6 @@ dir.create(plotDir)
     #dev.off()
     
     
-    print(paste("Finished ploting backtest for ",toString(cutoff_df$county)," county, ",toString(cutoff_df$state),setp=""))
+    print(paste("Finished ploting backtest for ",toString(plot.prepare$county[1])," county, ",toString(plot.prepare$state[1]),setp=""))
 }
 

@@ -96,18 +96,21 @@ for (fips in fips_list){
   
   if((first.fips.date+22) > last.fips.date){
     for(day in first.fips.date:last.fips.date){
-    fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"]
+      #total.deaths<- sum(fips.df[which(fips.df$days_from_start<= day),"deaths"])
+    fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]
     }
     next
   }else{
     
     for(day in first.fips.date:(first.fips.date+21)){
-      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"]
+      #total.deaths<- sum(fips.df[which(fips.df$days_from_start<= day),"deaths"])
+      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]
     }
     
     for (day in (first.fips.date+22):last.fips.date){
-      
-      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- (fips.df[which(fips.df$days_from_start == day),"cases"]- fips.df[which(fips.df$days_from_start == day),"deaths"])- (fips.df[which(fips.df$days_from_start == day-22),"cases"]- fips.df[which(fips.df$days_from_start == day-22),"deaths"])
+      #total.deaths0<- sum(fips.df[which(fips.df$days_from_start<= day),"deaths"])
+      #total.deaths22<- sum(fips.df[which(fips.df$days_from_start<= day-22),"deaths"])
+      fips.df[which(fips.df$days_from_start == day),"active_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"] - fips.df[which(fips.df$days_from_start == day-22),"cases"]
       
       }
     

@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-72149,"Villalba","Puerto Rico",-0.0411016756855534,2.72922275140572,0,3.01693448120459,"2020-06-06",137,3.00284974132285,-0.052109271502451,2.64116198487054,2.65216958068743,NA,NA,NA,NA,NA,NA
+72149,"Villalba","Puerto Rico",-0.0411016756855534,2.72922275140572,0,3.01693448120459,"2020-06-06",137,3.00284974132285,-0.0519642674771749,2.64232201707275,2.65318460886437,NA,NA,NA,NA,NA,NA

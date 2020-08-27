@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20095,"Kingman","Kansas",0.0273989741881139,3.46623849533981,0.027398974188114,3.46623849533981,"2020-09-02",225,NA,0.0325852422910495,3.5077286401633,3.50254237206036,NA,NA,NA,NA,NA,NA

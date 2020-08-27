@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+51181,"Surry","Virginia",0.0402738991379383,3.35988766575653,0.0402738991379374,3.35988766575652,"2020-09-02",225,NA,0.0432033885157676,3.38332358077917,3.38039409140133,NA,NA,NA,NA,NA,NA

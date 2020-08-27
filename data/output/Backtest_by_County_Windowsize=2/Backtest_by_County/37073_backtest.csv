@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+37073,"Gates","North Carolina",0.0342331716422417,3.6312601321417,0.0342331716422426,3.6312601321417,"2020-09-02",225,NA,0.0371438693075898,3.65454571346448,3.65163501579913,NA,NA,NA,NA,NA,NA

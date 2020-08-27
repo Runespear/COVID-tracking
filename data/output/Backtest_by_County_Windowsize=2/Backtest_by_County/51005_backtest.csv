@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-51005,"Alleghany","Virginia",-6.2803698347353e-16,3.16607763930122,0,3.16607763930123,"2020-07-30",191,3.02390315052069,-0.00583337188378775,3.11941066423093,3.12524403611472,NA,NA,NA,NA,NA,NA
+51005,"Alleghany","Virginia",-6.2803698347353e-16,3.16607763930122,0,3.16607763930123,"2020-07-30",191,3.03082359336526,-0.00392583443257878,3.1346709638406,3.13859679827318,NA,NA,NA,NA,NA,NA
