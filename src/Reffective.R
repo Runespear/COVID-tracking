@@ -29,8 +29,26 @@ new.output.data <- merge(x=county.data,y=parameters.data,by="state",all=TRUE)
 
 # SEIR Assumption
 # R=(1+r/b1)/(1+r/b2)
-new.output.data$R0 <- (1 + new.output.data$tau.hat/new.output.data$b1)*(1 + new.output.data$tau.hat/new.output.data$b2)
+
+new.output.data$R0 <- NA
+# Indices where r > min{-b1,-b2}
+mask <- which(new.output.data$tau.hat > pmin(-new.output.data$b1,-new.output.data$b1))
+#break
+
+new.output.data[mask,"R0"] <- (1 + new.output.data[mask,"tau.hat"]/new.output.data[mask,"b1"])*(1 + new.output.data[mask,"tau.hat"]/new.output.data[mask,"b2"])
+
+new.output.data$days_from_start <- max(na.omit(unique(new.output.data$days_from_start)))
+new.output.data<-new.output.data[!(new.output.data$state=="US"),]
+
+
 
 write.csv(new.output.data,"../data/output/file_to_plot/confusion_block_latest_R0.csv",row.names=FALSE)
+
+
+
+# state	fips	county	date.x	weekly.new.cases	days_from_start	log_rolled_cases.x.x	t0.hat	tau.hat	Predicted_Double_Days	b1	b2	R0
+simplified.data <- new.output.data[, names(new.output.data) %in% c("state", "fips", "county", "date.x", "weekly.new.cases", "days_from_start", "log_rolled_cases.x.x", "tau.hat", "Predicted_Double_Days","b1","b2","R0")]
+write.csv(simplified.data,"../data/output/file_to_plot/confusion_block_latest_R0_simplified.csv",row.names=FALSE)
+
 
 closeAllConnections()
