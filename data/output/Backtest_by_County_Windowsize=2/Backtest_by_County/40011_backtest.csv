@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40011,"Blaine","Oklahoma",0.133531392624528,4.06398341455021,0.133531392624525,4.06398341455019,"2020-09-05",228,NA,0.108536535438734,3.86402455706386,3.88901941424965,NA,NA,NA,NA,NA,NA

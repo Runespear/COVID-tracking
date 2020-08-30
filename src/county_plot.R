@@ -160,12 +160,12 @@ dir.create(plotDir)
     
     title=paste("One Week Prediction","(",toString(plot.prepare$county[1])," county, ",toString(plot.prepare$state[1]),")",sep="")
     
-    plot(plot.prepare$days_from_start.y, plot.prepare$predicted.lm,pch=19, col="gray", type="b", xlab="days", ylab="Log Case Number", xlim=c(MinDay,MaxDay),ylim=c(MinCase,MaxCase),xaxs="i",yaxs="i", main=title)
-    lines(plot.prepare$days_from_start.y, plot.prepare$predicted.slm,pch=18, col="blue", type="b", lty=2)
-    lines(plot.prepare$days_from_start.y, plot.prepare$predicted.grf.future.last, pch=17, col="green", type="b",lty=3)
-    lines(plot.prepare$days_from_start.y, plot.prepare$predicted.grf.future.0, pch=16, col="red", type="b",lty=4)
-    lines(plot.prepare$days_from_start.y, plot.prepare$log_rolled_cases.y, pch=15, col="black", type="b",lty=5)
-    legend(MinDay, MaxCase, legend=c("Predicted by LM", "Predicted by SLM", "Predicted by Block GRF Last", "Predicted by Block GRF 0","Actual Case Number"), col=c("gray", "blue", "green", "red","black"), lty=1:5, cex=0.8)
+    plot(plot.prepare$days_from_start.y, plot.prepare$predicted.lm,pch=19, col="blue", type="b", xlab="days", ylab="Log Case Number", xlim=c(MinDay,MaxDay),ylim=c(MinCase,MaxCase),xaxs="i",yaxs="i", main=title)
+    lines(plot.prepare$days_from_start.y, plot.prepare$predicted.slm,pch=18, col="green", type="b", lty=2)
+    lines(plot.prepare$days_from_start.y, plot.prepare$predicted.grf.future.last, pch=17, col="red", type="b",lty=3)
+    #lines(plot.prepare$days_from_start.y, plot.prepare$predicted.grf.future.0, pch=16, col="red", type="b",lty=4)
+    lines(plot.prepare$days_from_start.y, plot.prepare$log_rolled_cases.y, pch=15, col="black", type="b",lty=4)
+    legend(MinDay, MaxCase, legend=c("Predicted by LM", "Predicted by SLM", "Predicted by Block GRF Last","Actual Case Number"), col=c("blue", "green", "red","black"), lty=1:4, cex=0.8)
     
     dev.off()
   

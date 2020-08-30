@@ -37,7 +37,7 @@ state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
 # windowsize = n-1
 windowsize = 1
-window_element= windowsize +1
+window_number= windowsize +3
 predictionsize = 7
 #for (cutoff in (earliest_start+windowsize):(latest_date -predictionsize)){
 earliest_start = min(county_data$days_from_start)
@@ -89,9 +89,24 @@ for(cutoff in updatelist){
   state_df1 <- subset(county_data, days_from_start == cutoff+ predictionsize)
   
   # Training Set
-  restricted_state_df <- subset(county_data, days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
+  
+  # Get rid of counties where there are less than 7 records so far
+  restricted_state_df <- subset(county_data, days_from_start <= cutoff)
   tt <- table(restricted_state_df$fips)
-  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=window_element]) )
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  
+  # Get rid of counties that have less than 10 log_rolled_cases in the past3 days
+  #restricted_state_df <- subset(county_data, days_from_start > cutoff-window_number & days_from_start <= cutoff)
+  #tt <- table(restricted_state_df$fips)
+  #restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=window_number]) )
+  
+  if(nrow(restricted_state_df)==0){
+    next
+  }
+  
+  restricted_state_df <- subset(restricted_state_df, days_from_start >= cutoff-windowsize & days_from_start <= cutoff)
+  tt <- table(restricted_state_df$fips)
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=2]) )
   
   
   restricted_state_df0<-county_analysis(restricted_state_df,cutoff-windowsize,cutoff, predictionsize)
@@ -119,8 +134,8 @@ for(cutoff in updatelist){
     restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
     restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
     
-    restricted_state_df2$lm.mape <- with(restricted_state_df2, abs( (predicted.lm-log_rolled_cases.y)/log_rolled_cases.y ))
-    restricted_state_df2$slm.mape <- with(restricted_state_df2, abs( (predicted.slm-log_rolled_cases.y)/log_rolled_cases.y ))
+    restricted_state_df2$lm.mape <- with(restricted_state_df2, abs( (predicted.lm - log_rolled_cases.y)/log_rolled_cases.y ))
+    restricted_state_df2$slm.mape <- with(restricted_state_df2, abs( (predicted.slm - log_rolled_cases.y)/log_rolled_cases.y ))
     
     
     restricted_state_df2 <- na.omit(unique(restricted_state_df2))

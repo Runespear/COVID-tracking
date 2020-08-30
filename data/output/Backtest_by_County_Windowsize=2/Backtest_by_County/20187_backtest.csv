@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-20187,"Stanton","Kansas",-0.013605652055774,2.94245690826261,0,3.03769647265303,"2020-08-27",219,NA,-0.0155513130320424,2.92689162045246,2.92883728142873,NA,NA,NA,NA,NA,NA
-20187,"Stanton","Kansas",-0.0207619914484314,2.87160054106557,0,3.01693448120459,"2020-08-28",220,NA,-0.0225001550647315,2.85769523213518,2.85943339575147,-0.0071563393926574,0,-0.0069488420326891,-1,0,-1

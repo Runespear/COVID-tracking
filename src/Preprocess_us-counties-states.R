@@ -124,9 +124,13 @@ for (fips in fips_list){
 # Add logcases
 
 
-county_data$logcases <- log(county_data$cases)
+#county_data$logcases <- log(county_data$cases)
 
 
+
+#Replace less than 0 cases with 0.01 cases to make 7 days average less than 1/7
+
+#county_data$cases[county_data$cases==0]<-0.1
 
 
 # Take 7 day rolling average per county

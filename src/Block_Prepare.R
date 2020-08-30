@@ -31,6 +31,7 @@ county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
 # note -1 to the actual windowsize here
 windowsize = 1
+window_number= windowsize +3
 feature_window = 1 
 earliest_start = min(county_data$days_from_start)
 latest_date = max(county_data$days_from_start)
@@ -59,7 +60,6 @@ for(cutoff in cutofflist){
   if (file.exists(check.file.full.name)){next}
   #################################
   
-  
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize
@@ -67,6 +67,15 @@ for(cutoff in cutofflist){
   restricted_state_df0 <- subset(county_data, days_from_start <= cutoff)
   tt <- table(restricted_state_df0$fips)
   restricted_state_df0 <- subset(restricted_state_df0,  fips %in% names(tt[tt>=7]) )
+  
+  # Get rid of counties that have less than 20 log_rolled_cases in the past 2 days
+  restricted_state_df0 <- subset(restricted_state_df0, days_from_start >= cutoff-1 & days_from_start <= cutoff)
+  tt <- table(restricted_state_df0$fips)
+  restricted_state_df0 <- subset(restricted_state_df0,  fips %in% names(tt[tt>=2]) )
+  
+  if(nrow(restricted_state_df0)==0){
+    next
+  }
   
   restricted_state_df <- subset(restricted_state_df0, days_from_start >= first & days_from_start <= cutoff)
   
@@ -82,7 +91,7 @@ for(cutoff in cutofflist){
   Tlast<-Tlast[,-which(names(Tlast) %in% c("State_FIPS_Code", "date", "datetime", "state", "county","days_from_start","log_rolled_cases","rolled_cases","logcases","deaths", "cases"))]
 
 
-  Tlm<-county_analysis_lm(restricted_state_df0,cutoff, feature_window)
+  Tlm<-county_analysis_lm(restricted_state_df,cutoff, feature_window)
   Tlm<-Tlm[,which (names(Tlm) %in% c("fips","r.lm","t0.lm"))]
     
   Tcase<- restricted_state_df[, which(names(restricted_state_df) %in% c("fips", "State_FIPS_Code", "datetime", "state", "county","log_rolled_cases"))]

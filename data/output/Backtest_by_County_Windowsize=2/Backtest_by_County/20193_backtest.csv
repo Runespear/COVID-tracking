@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-20193,"Thomas","Kansas",-0.0212022076505999,2.84731681999979,0,2.99573227355399,"2020-08-30",222,NA,-0.0223791758155299,2.83790107468035,2.83907804284528,NA,NA,NA,NA,NA,NA
+20193,"Thomas","Kansas",-0.0212022076506031,2.84731681999977,0,2.99573227355399,"2020-08-30",222,NA,-0.0218637740979599,2.84202428842091,2.84268585486827,NA,NA,NA,NA,NA,NA

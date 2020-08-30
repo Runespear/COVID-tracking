@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-33001,"Belknap","New Hampshire",-0.0139862419747399,2.91201321472277,0,3.00991690854595,"2020-08-27",219,NA,-0.0151652872782211,2.90258085229492,2.9037598975984,NA,NA,NA,NA,NA,NA
