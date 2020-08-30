@@ -20,7 +20,7 @@ registerDoParallel(cores=detectCores())
 results.file.name = "../data/output/file_to_plot/confusion_block_latest.csv"
 county.data <- read.csv(file = results.file.name)
 
-parameters.file.name = "../data/epidemic_paramters.csv"
+parameters.file.name = "../data/epidemic_parameters.csv"
 parameters.data <- read.csv(parameters.file.name)
 
 names(parameters.data)[names(parameters.data)=="X"] <- "state"

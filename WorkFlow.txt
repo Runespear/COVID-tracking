@@ -45,5 +45,5 @@ Output: "./data/output/Backtest_by_County_Windowsize=2/
 
 11. Reffective.R
 
-Input: "./data/output/file_to_plot/confusion_block_latest.csv", "./data/epidemic_paramters.csv"
+Input: "./data/output/file_to_plot/confusion_block_latest.csv", "./data/epidemic_parameters.csv"
 Output: "./data/output/file_to_plot/confusion_block_latest_R0.csv"
