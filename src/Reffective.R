@@ -31,6 +31,6 @@ new.output.data <- merge(x=county.data,y=parameters.data,by="state",all=TRUE)
 # R=(1+r/b1)/(1+r/b2)
 new.output.data$R0 <- (1 + new.output.data$tau.hat/new.output.data$b1)*(1 + new.output.data$tau.hat/new.output.data$b2)
 
-write.csv(new.output.data,"../data/output/file_to_plot/confusion_block_latest_R0.csv")
+write.csv(new.output.data,"../data/output/file_to_plot/confusion_block_latest_R0.csv",row.names=FALSE)
 
 closeAllConnections()
