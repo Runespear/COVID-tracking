@@ -43,3 +43,7 @@ Output: "./data/output/","MAPE_windowsize=2_plot.png"
 Input: "./data/augmented_us-counties-states_latest.csv", "./data/output/backtest/", "./data/output/backtest_state_forests_windowsize=2/", "./data/output/Backtest_by_County_Windowsize=2/Backtest_by_County/"
 Output: "./data/output/Backtest_by_County_Windowsize=2/
 
+11. Reffective.R
+
+Input: "./data/output/file_to_plot/confusion_block_latest.csv", "./data/epidemic_paramters.csv"
+Output: "./data/output/file_to_plot/confusion_block_latest_R0.csv"
