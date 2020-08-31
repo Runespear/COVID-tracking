@@ -28,15 +28,15 @@ names(parameters.data)[names(parameters.data)=="X"] <- "state"
 new.output.data <- merge(x=county.data,y=parameters.data,by="state",all=TRUE)
 
 # SEIR Assumption
-# R=(1+r/b1)*(1+r/b2)
-# b1, b2 provided might be in months
+# R=(1+r/b1)*(1+r/b2) # units supposed to be in rates 1/day
+# b1, b2 provided are duration in days 
 
 new.output.data$R0 <- NA
 # Indices where r > min{-b1,-b2}
-mask <- which(new.output.data$tau.hat > pmin(-new.output.data$b1,-new.output.data$b1))
+mask <- which(new.output.data$tau.hat > pmin(-1/new.output.data$b1,-1/new.output.data$b1))
 #break
 
-new.output.data[mask,"R0"] <- (1 + (30)*new.output.data[mask,"tau.hat"]/new.output.data[mask,"b1"])*(1 + (30)*new.output.data[mask,"tau.hat"]/new.output.data[mask,"b2"])
+new.output.data[mask,"R0"] <- (1 + new.output.data[mask,"tau.hat"]*new.output.data[mask,"b1"])*(1 + new.output.data[mask,"tau.hat"]*new.output.data[mask,"b2"])
 
 new.output.data$days_from_start <- max(na.omit(unique(new.output.data$days_from_start)))
 new.output.data<-new.output.data[!(new.output.data$state=="US"),]
