@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17071,"Henderson","Illinois",0.028170876966697,3.62656439739573,0.0281708769666977,3.62656439739574,"2020-09-07",230,NA,0.0301974252733874,3.64277678384926,3.64075023554256,NA,NA,NA,NA,NA,NA

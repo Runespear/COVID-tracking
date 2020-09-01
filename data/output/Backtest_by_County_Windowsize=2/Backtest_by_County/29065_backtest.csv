@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29065,"Dent","Missouri",0.0289875368732506,3.42178858298095,0.0289875368732515,3.42178858298096,"2020-09-07",230,NA,0.0305977699794359,3.43467044783044,3.43306021472425,NA,NA,NA,NA,NA,NA

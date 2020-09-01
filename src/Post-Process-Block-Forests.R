@@ -166,9 +166,9 @@ for (cutoff in cutofflist){
   #}
   # Write the final csv if last
   if (cutoff == end_date){
-    mu<- 6.7
-    sigma<- 5.2
-    test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
+    #mu<- 6.7
+    #sigma<- 5.2
+    #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
     write.csv(test.df,"../data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
   }
 }

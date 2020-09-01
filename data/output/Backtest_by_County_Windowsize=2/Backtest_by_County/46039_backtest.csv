@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46039,"Deuel","South Dakota",0.0392207131532788,3.66617292271896,0.0392207131532798,3.66617292271896,"2020-09-07",230,NA,0.041444197647824,3.68396079867531,3.68173731418077,NA,NA,NA,NA,NA,NA

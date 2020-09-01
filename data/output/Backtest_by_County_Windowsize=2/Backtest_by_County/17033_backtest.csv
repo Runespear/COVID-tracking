@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17033,"Crawford","Illinois",0.0710959216837326,4.2753464046832,0.0710959216837304,4.27534640468318,"2020-09-07",230,NA,0.0729201258045704,4.2899400376499,4.28811583352906,NA,NA,NA,NA,NA,NA
