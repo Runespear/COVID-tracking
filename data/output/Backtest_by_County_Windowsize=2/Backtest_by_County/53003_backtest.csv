@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-53003,"Asotin","Washington",0.034887259000443,3.4630866378713,0.0348872590004423,3.4630866378713,"2020-09-04",227,NA,0.0368194973114611,3.47854454435945,3.47661230604843,NA,NA,NA,NA,NA,NA
-53003,"Asotin","Washington",0.0281708769666963,3.44424284060177,0.028170876966696,3.44424284060177,"2020-09-05",228,NA,0.0310269062294574,3.46709107470386,3.4642350454411,-0.0067163820337467,-0.0067163820337463,-0.0057925910820037,-1,-1,-1

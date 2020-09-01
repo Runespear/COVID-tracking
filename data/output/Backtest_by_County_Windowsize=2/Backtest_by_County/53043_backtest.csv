@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-53043,"Lincoln","Washington",-0.0202027073175189,2.90310348650079,0,3.04452243772342,"2020-08-30",222,NA,-0.0212736866262729,2.89453565203076,2.89560663133951,NA,NA,NA,NA,NA,NA
-53043,"Lincoln","Washington",-0.0275879565188317,2.82381878557277,0,3.01693448120459,"2020-08-31",223,NA,-0.0282511342385019,2.8185133638154,2.81917654153508,-0.0073852492013128,0,-0.006977447612229,-1,0,-1

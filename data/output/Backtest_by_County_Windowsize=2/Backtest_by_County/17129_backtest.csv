@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-17129,"Menard","Illinois",-0.0281708769666993,2.7985361347871,0,2.99573227355399,"2020-08-30",222,NA,-0.0260986856184911,2.81511366557276,2.81304147422455,NA,NA,NA,NA,NA,NA

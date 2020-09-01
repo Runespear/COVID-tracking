@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-16007,"Bear Lake","Idaho",-0.0509664435920271,2.72776266719293,0,3.08452777233712,"2020-09-04",227,NA,-0.0507309196232256,2.72964685894335,2.72941133497454,NA,NA,NA,NA,NA,NA
-16007,"Bear Lake","Idaho",-0.0537041789718654,2.6548943405622,0,3.03082359336526,"2020-09-05",228,NA,-0.0536260013981022,2.6555197611523,2.65544158357854,-0.0027377353798383,0,-0.00289508177487659,-1,0,-1

@@ -80,13 +80,13 @@ counter <- 1
 
 
 
-cutofflist=earliest_start:latest_date
+#cutofflist=earliest_start:latest_date
 #cutofflist = (latest_date):(latest_date)
 
 
 #cutoff.list
 #foreach(cutoff = 51) %dopar%{
-for(cutoff in cutofflist){
+for(cutoff in cutoff.list){
   #################################
   # Skip file if it exists  
   check.file.name <- paste0("block_results_",toString(cutoff),".csv")

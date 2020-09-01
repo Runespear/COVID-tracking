@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-38019,"Cavalier","North Dakota",0.0119049025063138,3.26732288341196,0.0119049025063145,3.26732288341196,"2020-08-03",195,3.01693448120459,0.0123639211046867,3.27099503219893,3.27053601360057,NA,NA,NA,NA,NA,NA

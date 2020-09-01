@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-18101,"Martin","Indiana",0.123869481712788,4.65451749983195,0.123869481712785,4.65451749983192,"2020-09-05",228,NA,0.110378088374421,4.54658635312502,4.56007774646338,NA,NA,NA,NA,NA,NA

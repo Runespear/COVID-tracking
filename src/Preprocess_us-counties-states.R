@@ -1,5 +1,5 @@
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate")
+list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate","tidyverse")
 
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -23,12 +23,22 @@ nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-co
 destfile <- paste("../data/us-counties_latest",".csv",sep="")
 county_data <- read.csv(nyt_url)
 write.csv(county_data, destfile, row.names=FALSE)
+
+
+# URL of COVID Tracking Data
+track_url<-"https://covidtracking.com/data/download/all-states-history.csv"
+track_data<-read.csv(track_url)
+
 # Pre-processing the data
 
 
 county_data <- read.csv(file = destfile)
 county_data$datetime <- as.Date(county_data$date)
 county_data$date <- as.Date(county_data$date)
+
+
+track_data<-track_data[, !(names(track_data) %in% c("dataQualityGrade"))]
+track_data$date<-ymd(track_data$date)
 
 
 # CONVERT NYC fips from NA -> 99999
@@ -265,11 +275,11 @@ names(df) <- gsub(" ","_",names(df))
 
 
 for(i in 4:length(names(df))){
-  # If the data is not all binary, then it’s a calendar column
+  # If the data is not all binary, then it is a calendar column
   if(!(all(df[,i]  %in% c(0,1), na.rm = TRUE))){
     # For some columns with dates, there are 0, we should have treated them as NA
     # Format them as 2030 instead
-    # For sheet “State Characteristics”, values are neither 0,1 nor calendar, we leave it alone
+    # For sheet "State Characteristics", values are neither 0,1 nor calendar, we leave it alone
     # Only change those calendar columns
     if(all(format(as.Date(df[,i], origin="1899-12-30"),"%Y")  %in% c(1899,2019,2020), na.rm = TRUE)){
       df[,i]<-as.Date(df[,i], origin="1899-12-30")
@@ -279,13 +289,9 @@ for(i in 4:length(names(df))){
 }
 
 
-# DROP State, State_Abbreviation 
 
-
-df <- df[, -which(names(df) %in% c("State", "State_Abbreviation"))]
-
-
-
+# DROP State
+df <- df[, -which(names(df) %in% c("State"))]
 
 #merge CUSP Data with county_data_augmented Data
 
@@ -299,8 +305,6 @@ data<-merge(x=county_data_augmented, y=df, by = "State_FIPS_Code", all.x = TRUE)
 data$datetime<-as.Date(data$datetime, "%Y-%m-%d")
 
 
-
-
 for (i in length(names(county_data_augmented)):length(names(data))) {
   # Set number of days  policies that have already started by this datetime as 1,2,3...., 
   # otherwise 0
@@ -310,7 +314,13 @@ for (i in length(names(county_data_augmented)):length(names(data))) {
   }
 }
 
+#merge COVID Tracking Data with data
 
+track_data <- track_data %>% dplyr::rename( State_Abbreviation=state)
+dataT<-merge(x=data, y=track_data, by = c("State_Abbreviation","date"), all.x = TRUE)
+
+# DROP State_Abbreviation, state 
+dataT <- dataT[, -which(names(dataT) %in% c("State_Abbreviation"))]
 
 
 
@@ -319,7 +329,7 @@ end_file = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 #end_file = paste("../data/processed_us-counties_latest",".csv",sep="")
 
 
-write.csv(data, end_file, row.names=FALSE)
+write.csv(dataT, end_file, row.names=FALSE)
 
 
 closeAllConnections()
