@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55047,"Green Lake","Wisconsin",0.0515135344501078,3.89114814402695,0.0515135344501076,3.89114814402695,"2020-09-06",229,NA,0.0515005425641361,3.89104420893918,3.89105720082515,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+53043,"Lincoln","Washington",-0.0275879565188317,2.82381878557277,0,3.01693448120459,"2020-08-31",223,NA,-0.0292163075932238,2.81079197697763,2.81242032805202,NA,NA,NA,NA,NA,NA

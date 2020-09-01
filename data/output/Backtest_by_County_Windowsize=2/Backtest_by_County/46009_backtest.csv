@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46009,"Bon Homme","South Dakota",0.0600642407426547,3.88171130760339,0.0600642407426513,3.88171130760337,"2020-09-06",229,NA,0.0645794009550825,3.91783258930282,3.91331742909039,NA,NA,NA,NA,NA,NA

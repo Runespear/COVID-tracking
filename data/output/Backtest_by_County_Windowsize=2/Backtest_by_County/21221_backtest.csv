@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+21221,"Trigg","Kentucky",0.109433841045469,3.91999316608717,0.109433841045461,3.91999316608711,"2020-09-06",229,NA,0.0923729620664013,3.78350613425463,3.80056701323369,NA,NA,NA,NA,NA,NA

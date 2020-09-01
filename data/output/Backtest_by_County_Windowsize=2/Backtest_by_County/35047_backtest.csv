@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+35047,"San Miguel","New Mexico",0.0410080237273774,3.75279206889137,0.0410080237273776,3.75279206889137,"2020-09-06",229,NA,0.0414359626490029,3.75621558026437,3.75578764134275,NA,NA,NA,NA,NA,NA
