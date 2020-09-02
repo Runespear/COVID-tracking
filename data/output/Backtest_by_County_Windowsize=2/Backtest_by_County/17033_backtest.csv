@@ -1,2 +1,3 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
 17033,"Crawford","Illinois",0.0710959216837326,4.2753464046832,0.0710959216837304,4.27534640468318,"2020-09-07",230,NA,0.0729201258045704,4.2899400376499,4.28811583352906,NA,NA,NA,NA,NA,NA
+17033,"Crawford","Illinois",0.0602400803773576,4.25959559591593,0.0602400803773562,4.25959559591592,"2020-09-08",231,NA,0.0611536210059483,4.26690392094466,4.26599038031606,-0.010855841306375,-0.0108558413063742,-0.0117665047986221,-1,-1,-1

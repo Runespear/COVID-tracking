@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17127,"Massac","Illinois",-0.00530505222969064,3.2533964481668,0,3.29053181377464,"2020-09-08",231,NA,-0.00890712805384666,3.22457984157356,3.22818191739771,NA,NA,NA,NA,NA,NA

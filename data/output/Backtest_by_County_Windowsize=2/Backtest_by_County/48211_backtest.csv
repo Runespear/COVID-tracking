@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-48211,"Hemphill","Texas",0.013158084577512,3.17663436437971,0.0131580845775114,3.1766343643797,"2020-08-10",202,2.99573227355399,0.0128674192403446,3.17430904168237,3.17459970701953,NA,NA,NA,NA,NA,NA
+48211,"Hemphill","Texas",0.0131580845775111,3.1766343643797,0.0131580845775114,3.1766343643797,"2020-08-10",202,2.99573227355399,0.0128674192403446,3.17430904168237,3.17459970701953,NA,NA,NA,NA,NA,NA

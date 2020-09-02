@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26029,"Charlevoix","Michigan",0.0113637586503155,3.30978589407073,0.0113637586503157,3.30978589407073,"2020-09-08",231,NA,0.0114369323292771,3.31037128350242,3.31029810982346,NA,NA,NA,NA,NA,NA

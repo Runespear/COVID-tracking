@@ -1,2 +1,3 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
 46039,"Deuel","South Dakota",0.0392207131532788,3.66617292271896,0.0392207131532798,3.66617292271896,"2020-09-07",230,NA,0.041444197647824,3.68396079867531,3.68173731418077,NA,NA,NA,NA,NA,NA
+46039,"Deuel","South Dakota",0.0515336501151846,3.80389713156748,0.0515336501151835,3.80389713156747,"2020-09-08",231,NA,0.0507716148893019,3.79780084976042,3.7985628849863,0.0123129369619058,0.0123129369619037,0.0093274172414779,1,1,1

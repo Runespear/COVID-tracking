@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30089,"Sanders","Montana",0.0382212128202002,3.39681215591992,0.0382212128201993,3.39681215591991,"2020-09-08",231,NA,0.0407591304140663,3.41711549667085,3.41457757907698,NA,NA,NA,NA,NA,NA
