@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29063,"DeKalb","Missouri",0.052770035980067,3.78945611782701,0.0527700359800649,3.78945611782699,"2020-09-10",233,NA,0.0593912869372699,3.84242612548463,3.83580487452743,NA,NA,NA,NA,NA,NA

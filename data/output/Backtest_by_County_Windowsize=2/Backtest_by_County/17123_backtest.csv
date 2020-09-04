@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17123,"Marshall","Illinois",0.0121952730938187,3.245402236502,0.0121952730938188,3.245402236502,"2020-09-10",233,NA,0.0133755965279349,3.25484482397493,3.25366450054081,NA,NA,NA,NA,NA,NA

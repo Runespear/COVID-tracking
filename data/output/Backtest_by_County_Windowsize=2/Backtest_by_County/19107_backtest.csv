@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+19107,"Keokuk","Iowa",0.0359936026479046,3.59431210017455,0.0359936026479053,3.59431210017456,"2020-09-10",233,NA,0.0384425580580804,3.61390374345596,3.61145478804578,NA,NA,NA,NA,NA,NA

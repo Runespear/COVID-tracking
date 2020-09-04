@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29149,"Oregon","Missouri",0.0542930823666612,3.93947296344368,0.054293082366661,3.93947296344368,"2020-09-10",233,NA,0.0551661844900299,3.94645778043063,3.94558467830726,NA,NA,NA,NA,NA,NA

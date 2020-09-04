@@ -36,7 +36,7 @@ county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
 # windowsize = n-1
-windowsize = 3
+windowsize = 1
 window_number= windowsize +3
 predictionsize = 7
 #for (cutoff in (earliest_start+windowsize):(latest_date -predictionsize)){
@@ -188,7 +188,7 @@ performance.table <- as.data.frame(performance.list)
 
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
-write.csv(performance.table,file.path(mainDir,paste("mse_table_windowsize=",toString(windowsize+1),".csv" ,sep="") ),row.names=FALSE)
+write.csv(performance.table,file.path(mainDir,paste("mse_table.csv" ,sep="") ),row.names=FALSE)
 
 mape.list <- list(cutoff=cutoff.list, lm.mape=lm.mape.list, slm.mape=slm.mape.list)
 mape.table <- as.data.frame(mape.list)
@@ -201,7 +201,7 @@ mape.table <- as.data.frame(mape.list)
 #mape.table<-mape.table %>% distinct()
 
 
-write.csv(mape.table,file.path(mainDir,paste("mape_table_windowsize=",toString(windowsize+1),".csv" ,sep="")),row.names=FALSE)
+write.csv(mape.table,file.path(mainDir,paste("mape_table.csv" ,sep="")),row.names=FALSE)
 
 
 closeAllConnections()

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30021,"Dawson","Montana",0.044206092504493,3.58388832355446,0.0442060925044943,3.58388832355447,"2020-09-10",233,NA,0.0451917274049781,3.59177340275834,3.59078776785786,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+51735,"Poquoson city","Virginia",0.0185763855729341,3.27787475076199,0.0185763855729344,3.27787475076199,"2020-09-10",233,NA,0.0196707576653848,3.2866297275016,3.28553535540914,NA,NA,NA,NA,NA,NA
