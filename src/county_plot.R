@@ -144,7 +144,7 @@ dir.create(plotDir)
     #plot.prepare<-merge(x=plot.prepare0,y=plot.prepare1, by="fips",x.all=TRUE)
     
     MaxCase<-max(plot.prepare$predicted.grf.future.last)+1
-    MinCase<-min(plot.prepare$predicted.grf.future.last)
+    MinCase<-min(plot.prepare$predicted.grf.future.last)-2
     MaxDay<-max(plot.prepare$days_from_start.y)
     MinDay<-min(plot.prepare$days_from_start.y)
     

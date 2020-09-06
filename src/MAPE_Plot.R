@@ -79,13 +79,13 @@ png(paste("../data/output/","MAPE_windowsize=",toString(windowsize),"_plot.png",
 
 title="One Week Prediction"
 
-plot(days, lm.mape.list, pch=19, col="blue", type="l", xlab="days", ylab="MAPE", xlim=c(MinDay,MaxDay),ylim=c(0,0.3),xaxs="i",yaxs="i", main=title)
+plot(days, lm.mape.list, pch=19, col="blue", type="l", xlab="days", ylab="MAPE", xlim=c(MinDay,MaxDay),ylim=c(0,0.1),xaxs="i",yaxs="i", main=title)
 lines(days, slm.mape.list,pch=18, col="green", type="l", lty=2)
 #lines(days, block.grf.mape.list,pch=18, col="purple", type="l", lty=6)
 #lines(days, block.grf.mape.0.list,pch=18, col="magenta", type="l", lty=7)
 lines(days, block.grf.mape.last.list,pch=18, col="red", type="l", lty=3)
 
-legend(MinDay, 0.3, legend=c("LM","SLM","GRF.block.last"), col=c("blue", "green", "red"), lty=1:3, cex=0.8)
+legend(MinDay, 0.1, legend=c("LM","SLM","GRF.block.last"), col=c("blue", "green", "red"), lty=1:3, cex=0.8)
 
 dev.off()
 
