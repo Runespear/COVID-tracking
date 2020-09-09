@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-27159,"Wadena","Minnesota",6.2803698347348e-16,3.09751496786394,0,3.09751496786393,"2020-09-11",234,NA,0.00269541793982024,3.11907831138249,3.11638289344267,NA,NA,NA,NA,NA,NA
-27159,"Wadena","Minnesota",6.2803698347348e-16,3.09751496786394,0,3.09751496786393,"2020-09-12",235,NA,0.00453027937651564,3.13375720287606,3.12922692349954,0,0,0.0018348614366954,0,0,1

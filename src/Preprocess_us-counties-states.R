@@ -31,15 +31,13 @@ track_data<-read.csv(track_url)
 
 # Pre-processing the data
 
+track_data<-track_data[, !(names(track_data) %in% c("dataQualityGrade"))]
+track_data$date<-ymd(track_data$date)
+
 
 county_data <- read.csv(file = destfile)
 county_data$datetime <- as.Date(county_data$date)
 county_data$date <- as.Date(county_data$date)
-
-
-track_data<-track_data[, !(names(track_data) %in% c("dataQualityGrade"))]
-track_data$date<-ymd(track_data$date)
-
 
 # CONVERT NYC fips from NA -> 99999
 
@@ -256,37 +254,51 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 # Load CUSP Data
 
 
-CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
+#CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
+CUSP = paste("../data/COVID-19 US state policy database 9_01_2020",".xlsx",sep="")
 
 # Pre-processing CUSP data
 
+#df <- read_excel(CUSP, sheet=2, n_max=51)
 
-df <- read_excel(CUSP, sheet=2, n_max=51)
-
-
-foreach(i = 3:13)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
-
-
-foreach(i = 15:18)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
-
+df <- read_excel(CUSP, sheet=2, skip=1, n_max=54)
 
 names(df) <- gsub(" ","_",names(df))
 
 
-for(i in 4:length(names(df))){
+#df[, which(df[3,i] %in% c("date"))]
+
+
+for(i in 1:length(names(df))){
+  if(df[3,i]=="date"){
+    df[,i][df[,i]=="0"]<-"50000"
+    df[,i]<-as.Date(as.numeric(unlist(df[,i])), origin="1899-12-30")
+#    for(j in 4:54){
+#      df[j,i]<-as.Date(as.numeric(df[j,i]), origin="1899-12-30")
+#      df[j,i]<-as.numeric(df[j,i])
+#      }
+    }
+}
+
+df<-df[-c(1,2,3),]
+
+#foreach(i = 3:13)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
+#foreach(i = 15:18)%do%{ df <- merge(df, read_excel(CUSP, i, n_max=51)) }
+
+#for(i in 4:length(names(df))){
   # If the data is not all binary, then it is a calendar column
-  if(!(all(df[,i]  %in% c(0,1), na.rm = TRUE))){
+#  if(!(all(df[,i]  %in% c(0,1), na.rm = TRUE))){
     # For some columns with dates, there are 0, we should have treated them as NA
     # Format them as 2030 instead
     # For sheet "State Characteristics", values are neither 0,1 nor calendar, we leave it alone
     # Only change those calendar columns
-    if(all(format(as.Date(df[,i], origin="1899-12-30"),"%Y")  %in% c(1899,2019,2020), na.rm = TRUE)){
-      df[,i]<-as.Date(df[,i], origin="1899-12-30")
-      for (j in 1:51) {if (year(df[j,i])==1899) {year(df[j,i])<-2030}}
-    } else {next}
-  } 
-}
+#    if(all(format(as.Date(df[,i], origin="1899-12-30"),"%Y")  %in% c(1899,2019,2020), na.rm = TRUE)){
+#      df[,i]<-as.Date(df[,i], origin="1899-12-30")
+#      for (j in 1:51) {if (year(df[j,i])==1899) {year(df[j,i])<-2030}}
+#    } else {next}
+#  }
+#}
 
 
 
@@ -296,11 +308,12 @@ df <- df[, -which(names(df) %in% c("State"))]
 #merge CUSP Data with county_data_augmented Data
 
 
-county_data_augmented["State_FIPS_Code"]<- as.numeric(fips(county_data_augmented$state, county = c()))
+county_data_augmented["FIPS_Code"]<- as.numeric(fips(county_data_augmented$state, county = c()))
 
 
-data<-merge(x=county_data_augmented, y=df, by = "State_FIPS_Code", all.x = TRUE)
+data<-merge(x=county_data_augmented, y=df, by = "FIPS_Code", all.x = TRUE)
 
+data<- data %>% dplyr::rename(State_FIPS_Code=FIPS_Code)
 
 data$datetime<-as.Date(data$datetime, "%Y-%m-%d")
 

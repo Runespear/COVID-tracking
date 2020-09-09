@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-46115,"Spink","South Dakota",0.049761509559061,3.73029658664769,0.0497615095590631,3.73029658664771,"2020-09-12",235,NA,0.0516231374115415,3.74518960946753,3.74332798161506,NA,NA,NA,NA,NA,NA
