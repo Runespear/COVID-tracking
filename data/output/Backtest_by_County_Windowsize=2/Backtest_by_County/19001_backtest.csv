@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+19001,"Adair","Iowa",-0.0200675630508104,2.91082918335313,0,3.0513021247088,"2020-09-09",232,NA,-0.0199054884073188,2.91212578050106,2.91196370585757,NA,NA,NA,NA,NA,NA

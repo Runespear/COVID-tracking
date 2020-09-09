@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48129,"Donley","Texas",0.00619197024791808,3.1850299779125,0.00619197024791918,3.1850299779125,"2020-04-28",98,3.01693448120459,0.0139253795587571,3.24689725239921,3.23916384308837,NA,NA,NA,NA,NA,NA

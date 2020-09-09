@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46087,"McCook","South Dakota",0.00583092031079497,3.24240076993371,0.00583092031079557,3.24240076993371,"2020-09-15",238,NA,0.0106086481688244,3.28062259279795,3.27584486493991,NA,NA,NA,NA,NA,NA
