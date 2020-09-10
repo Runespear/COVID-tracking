@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+2180,"Nome Census Area","Alaska",-0.0063897980987679,3.05921727150285,0,3.10394585819422,"2020-09-16",239,NA,-0.0121291370533321,3.01330255986633,3.0190418988209,NA,NA,NA,NA,NA,NA

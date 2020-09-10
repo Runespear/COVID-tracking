@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+21139,"Livingston","Kentucky",0.0649578962747702,3.57769932708831,0.064957896274771,3.57769932708831,"2020-09-16",239,NA,0.0644366656753239,3.57352948229274,3.57405071289219,NA,NA,NA,NA,NA,NA

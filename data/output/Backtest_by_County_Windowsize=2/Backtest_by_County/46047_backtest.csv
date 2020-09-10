@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46047,"Fall River","South Dakota",0.0453830058478189,4.05194350089649,0.0453830058478188,4.05194350089649,"2020-09-16",239,NA,0.0484973369871983,4.07685815001153,4.07374381887215,NA,NA,NA,NA,NA,NA

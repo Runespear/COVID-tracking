@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29079,"Grundy","Missouri",0.11017843627117,4.79914851671213,0.110178436271163,4.79914851671209,"2020-09-16",239,NA,0.0974085143631435,4.69698914144793,4.70975906335596,NA,NA,NA,NA,NA,NA

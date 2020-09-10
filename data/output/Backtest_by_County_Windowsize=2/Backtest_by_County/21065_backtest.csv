@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+21065,"Estill","Kentucky",0.0395656002061884,3.77778642405431,0.0395656002061888,3.77778642405432,"2020-09-16",239,NA,0.0410598690174952,3.78974057454477,3.78824630573347,NA,NA,NA,NA,NA,NA
