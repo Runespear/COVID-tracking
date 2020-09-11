@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+18025,"Crawford","Indiana",0.029852963149681,3.39885903004272,0.0298529631496804,3.39885903004271,"2020-09-17",240,NA,0.031734818098363,3.41391386963217,3.41203201468349,NA,NA,NA,NA,NA,NA

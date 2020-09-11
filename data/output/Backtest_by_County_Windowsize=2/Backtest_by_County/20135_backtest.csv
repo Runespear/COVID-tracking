@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20135,"Ness","Kansas",0.0555698511548081,3.84575619090062,0.0555698511548104,3.84575619090064,"2020-09-17",240,NA,0.0578959934646016,3.86436532937897,3.86203918706918,NA,NA,NA,NA,NA,NA

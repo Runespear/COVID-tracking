@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26019,"Benzie","Michigan",-0.030962225603967,2.90625847393715,0,3.12299405316492,"2020-09-17",240,NA,-0.0309451894114495,2.90639476347728,2.90637772728477,NA,NA,NA,NA,NA,NA

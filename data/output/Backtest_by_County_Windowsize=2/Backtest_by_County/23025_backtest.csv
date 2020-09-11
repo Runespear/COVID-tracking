@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+23025,"Somerset","Maine",0.0168071183163794,3.36469653004955,0.0168071183163803,3.36469653004956,"2020-09-17",240,NA,0.0186665256794959,3.37957178895449,3.37771238159137,NA,NA,NA,NA,NA,NA

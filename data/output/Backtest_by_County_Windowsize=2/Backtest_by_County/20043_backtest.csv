@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20043,"Doniphan","Kansas",0.0306146358196037,3.5616971264064,0.0306146358196044,3.56169712640641,"2020-09-17",240,NA,0.0327419159190629,3.57871536720207,3.57658808710262,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20195,"Trego","Kansas",-0.0061538655743815,3.0986091271564,0,3.14168618617707,"2020-09-17",240,NA,-0.0163970384551033,3.01666374411062,3.02690691699135,NA,NA,NA,NA,NA,NA
