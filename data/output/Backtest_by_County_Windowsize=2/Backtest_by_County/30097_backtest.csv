@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30097,"Sweet Grass","Montana",-0.0050633019565477,3.30185046598684,0,3.33729357968267,"2020-09-19",242,NA,-0.0155179058069317,3.21821363518377,3.22866823903415,NA,NA,NA,NA,NA,NA

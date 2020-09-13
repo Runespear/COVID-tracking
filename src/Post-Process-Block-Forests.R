@@ -153,7 +153,7 @@ for (cutoff in cutofflist){
   # Rename datetime to date.x
   names(test.df)[names(test.df) == "datetime"] <- "date.x"
   # Rename datetime to date.x
-  names(test.df)[names(test.df) == "new_rolled_cases"] <- "weekly new cases"
+  names(test.df)[names(test.df) == "weekly_cases"] <- "weekly new cases"
   
   
   # Write the csv

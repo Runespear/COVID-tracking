@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30023,"Deer Lodge","Montana",0.00549451931763948,3.99244883975065,0.00549451931763922,3.99244883975065,"2020-09-19",242,NA,0.00896925590282049,4.0202467324321,4.01677199584692,NA,NA,NA,NA,NA,NA

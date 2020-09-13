@@ -17,11 +17,11 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # Date ~= 2020-06-03
 
 # URL of NYTimes Data
-nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+#nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
 destfile <- paste("../data/us-counties_latest",".csv",sep="")
-county_data <- read.csv(nyt_url)
-write.csv(county_data, destfile, row.names=FALSE)
+#county_data <- read.csv(nyt_url)
+#write.csv(county_data, destfile, row.names=FALSE)
 # Pre-processing the data
 
 county_data <- read.csv(file = destfile)
@@ -43,7 +43,7 @@ county_data$days_from_start <- as.numeric(county_data$datetime- start_date , uni
 
 # Add logcases
 
-county_data$logcases <- log(county_data$cases)
+#county_data$logcases <- log(county_data$cases)
 
 
 # Obtain list of fips
@@ -53,29 +53,29 @@ fips_list = sort(unique(county_data$fips))
 
 # Take 7 day rolling average per county
 
-foreach(fips = fips_list)%do%{
-  county_slice = county_data[which(county_data$fips==fips), ]
-  county_slice$rolled_cases =  zoo::rollmean(county_slice$cases, 7, fill=NA, align="right")
-  county_data[which(county_data$fips==fips), "rolled_cases"] <- county_slice$rolled_cases
-}
+#foreach(fips = fips_list)%do%{
+#  county_slice = county_data[which(county_data$fips==fips), ]
+#  county_slice$rolled_cases =  zoo::rollmean(county_slice$cases, 7, fill=NA, align="right")
+#  county_data[which(county_data$fips==fips), "rolled_cases"] <- county_slice$rolled_cases
+#}
 
 # Obtain the daily new cases
 present.fips.list <- sort(unique(county_data$fips))
 
-county_data$new_rolled_cases <- NA
+county_data$weekly_cases <- NA
 # First loop through counties
 # present.fips.list
 county_data_backup <- county_data
 for (fips in present.fips.list){
   
-  fips.df <- county_data[which(county_data$fips==fips & !is.na(county_data$rolled_cases)),]
+  fips.df <- county_data[which(county_data$fips==fips & !is.na(county_data$cases)),]
   if (dim(fips.df)[1] == 0){
     print(paste("fips ",toString(fips)," has no entry ",sep=""))
     next
   }
   first.fips.date <- min(fips.df$days_from_start)
   last.fips.date <- max(fips.df$days_from_start)
-  fips.df[which(fips.df$days_from_start == first.fips.date),"new_rolled_cases"] <- fips.df[which(fips.df$days_from_start == first.fips.date),"rolled_cases"]
+  fips.df[which(fips.df$days_from_start == first.fips.date),"weekly_cases"] <- fips.df[which(fips.df$days_from_start == first.fips.date),"cases"]
   print(fips)
   if(first.fips.date == last.fips.date){
     print(paste("fips ",toString(fips)," only has one entry ",sep=""))
@@ -105,9 +105,9 @@ for (fips in present.fips.list){
   }
   for (day in (first.fips.date+7):last.fips.date){
     
-    fips.df[which(fips.df$days_from_start == day),"new_rolled_cases"] <- fips.df[which(fips.df$days_from_start == day),"rolled_cases"] - fips.df[which(fips.df$days_from_start == day-7),"rolled_cases"]
+    fips.df[which(fips.df$days_from_start == day),"weekly_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"] - fips.df[which(fips.df$days_from_start == day-7),"cases"]
   }
-  county_data[which(county_data$fips==fips& !is.na(county_data$rolled_cases)),"new_rolled_cases"] <- fips.df[,"new_rolled_cases"]
+  county_data[which(county_data$fips==fips& !is.na(county_data$cases)),"weekly_cases"] <- fips.df[,"weekly_cases"]
 }
 #break
 # Write intermediate result as processed_us-counties_latest.csv

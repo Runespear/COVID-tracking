@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55013,"Burnett","Wisconsin",0.0588406515380943,3.81308194242882,0.0588406515380964,3.81308194242883,"2020-09-18",241,NA,0.0607628840877617,3.82845995434131,3.82653757027649,NA,NA,NA,NA,NA,NA
+55013,"Burnett","Wisconsin",0.0689929603758384,3.95314106466886,0.0689929603758364,3.95314106466885,"2020-09-19",242,NA,0.0677185547796731,3.94294581989954,3.94422013660682,0.0101523088377441,0.01015230883774,0.00695567069191141,1,1,1

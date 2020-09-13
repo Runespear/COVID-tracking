@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55103,"Richland","Wisconsin",0.0199608619365004,3.72720545227909,0.0199608619364997,3.72720545227908,"2020-09-19",242,NA,0.0208319889069655,3.73417450836539,3.73330326202097,NA,NA,NA,NA,NA,NA

@@ -39,7 +39,7 @@
 1075,"Lamar","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1077,"Lauderdale","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1079,"Lawrence","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-1081,"Lee","Alabama","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1081,"Lee","Alabama","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1083,"Limestone","Alabama","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1085,"Lowndes","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1087,"Macon","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -57,7 +57,7 @@
 1111,"Randolph","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1113,"Russell","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1115,"St. Clair","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-1117,"Shelby","Alabama","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1117,"Shelby","Alabama","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1119,"Sumter","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1121,"Talladega","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1123,"Tallapoosa","Alabama",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -102,11 +102,11 @@
 4009,"Graham","Arizona","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4011,"Greenlee","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4012,"La Paz","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4013,"Maricopa","Arizona","2020-03-15",1.14285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4013,"Maricopa","Arizona","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4015,"Mohave","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4017,"Navajo","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4019,"Pima","Arizona","2020-03-15",1.42857142857143,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4021,"Pinal","Arizona","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4019,"Pima","Arizona","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4021,"Pinal","Arizona","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4023,"Santa Cruz","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4025,"Yavapai","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4027,"Yuma","Arizona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -135,7 +135,7 @@
 5045,"Faulkner","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5047,"Franklin","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5049,"Fulton","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5051,"Garland","Arkansas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5051,"Garland","Arkansas","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5053,"Grant","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5055,"Greene","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5057,"Hempstead","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -172,7 +172,7 @@
 5119,"Pulaski","Arkansas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5121,"Randolph","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5123,"St. Francis","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5125,"Saline","Arkansas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5125,"Saline","Arkansas","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5127,"Scott","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5129,"Searcy","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5131,"Sebastian","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -185,16 +185,16 @@
 5145,"White","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5147,"Woodruff","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5149,"Yell","Arkansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6001,"Alameda","California","2020-03-15",26,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6001,"Alameda","California","2020-03-15",34,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6003,"Alpine","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6005,"Amador","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6007,"Butte","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6009,"Calaveras","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6011,"Colusa","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6013,"Contra Costa","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6013,"Contra Costa","California","2020-03-15",16,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6015,"Del Norte","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6017,"El Dorado","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6019,"Fresno","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6019,"Fresno","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6021,"Glenn","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6023,"Humboldt","California","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6025,"Imperial","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -203,9 +203,9 @@
 6031,"Kings","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6033,"Lake","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6035,"Lassen","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6037,"Los Angeles","California","2020-03-15",28.5714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6039,"Madera","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6041,"Marin","California","2020-03-15",2.42857142857143,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6037,"Los Angeles","California","2020-03-15",55,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6039,"Madera","California","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6041,"Marin","California","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6043,"Mariposa","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6045,"Mendocino","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6047,"Merced","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -214,26 +214,26 @@
 6053,"Monterey","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6055,"Napa","California","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6057,"Nevada","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6059,"Orange","California","2020-03-15",6.71428571428571,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6061,"Placer","California","2020-03-15",3.85714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6059,"Orange","California","2020-03-15",14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6061,"Placer","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6063,"Plumas","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6065,"Riverside","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6067,"Sacramento","California","2020-03-15",14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6065,"Riverside","California","2020-03-15",11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6067,"Sacramento","California","2020-03-15",29,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6069,"San Benito","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6071,"San Bernardino","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6073,"San Diego","California","2020-03-15",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6075,"San Francisco","California","2020-03-15",17.7142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6071,"San Bernardino","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6073,"San Diego","California","2020-03-15",39,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6075,"San Francisco","California","2020-03-15",26,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6077,"San Joaquin","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6079,"San Luis Obispo","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6081,"San Mateo","California","2020-03-15",18.5714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6083,"Santa Barbara","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6085,"Santa Clara","California","2020-03-15",48.4285714285714,54,4.21106883653024,27.9217990637776,0.199783124246321,6.6084663274861,5.63124060981638,5.60955070625449,3.46949815293375,NA,NA
-6087,"Santa Cruz","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6089,"Shasta","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6081,"San Mateo","California","2020-03-15",31,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6083,"Santa Barbara","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6085,"Santa Clara","California","2020-03-15",77,54,4.21106883653024,27.9217990637776,0.199783124246321,6.6084663274861,5.63124060981638,5.60955070625449,3.46949815293375,NA,NA
+6087,"Santa Cruz","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6089,"Shasta","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6091,"Sierra","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6093,"Siskiyou","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6095,"Solano","California","2020-03-15",0.142857142857142,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6097,"Sonoma","California","2020-03-15",0.714285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6095,"Solano","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6097,"Sonoma","California","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6099,"Stanislaus","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6101,"Sutter","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6103,"Tehama","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -241,11 +241,11 @@
 6107,"Tulare","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6109,"Tuolumne","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6111,"Ventura","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6113,"Yolo","California","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6113,"Yolo","California","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6115,"Yuba","California",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8001,"Adams","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8003,"Alamosa","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8005,"Arapahoe","Colorado","2020-03-15",5.85714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8005,"Arapahoe","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8007,"Archuleta","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8009,"Baca","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8011,"Bent","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -259,26 +259,26 @@
 8025,"Crowley","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8027,"Custer","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8029,"Delta","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8031,"Denver","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8031,"Denver","Colorado","2020-03-15",26,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8033,"Dolores","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8035,"Douglas","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8037,"Eagle","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8035,"Douglas","Colorado","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8037,"Eagle","Colorado","2020-03-15",23,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8039,"Elbert","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8041,"El Paso","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8041,"El Paso","Colorado","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8043,"Fremont","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8045,"Garfield","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8045,"Garfield","Colorado","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8047,"Gilpin","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8049,"Grand","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8051,"Gunnison","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8053,"Hinsdale","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8055,"Huerfano","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8057,"Jackson","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8059,"Jefferson","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8059,"Jefferson","Colorado","2020-03-15",11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8061,"Kiowa County","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8063,"Kit Carson","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8065,"Lake","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8067,"La Plata","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8069,"Larimer","Colorado","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8069,"Larimer","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8071,"Las Animas","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8073,"Lincoln","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8075,"Logan","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -307,7 +307,7 @@
 8121,"Washington","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8123,"Weld","Colorado","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8125,"Yuma","Colorado",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-9001,"Fairfield","Connecticut","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+9001,"Fairfield","Connecticut","2020-03-15",15,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9003,"Hartford","Connecticut","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9005,"Litchfield","Connecticut","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9007,"Middlesex","Connecticut",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -318,16 +318,16 @@
 10001,"Kent","Delaware",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10003,"New Castle","Delaware","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10005,"Sussex","Delaware",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-11001,"District of Columbia","District of Columbia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+11001,"District of Columbia","District of Columbia","2020-03-15",16,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12001,"Alachua","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12003,"Baker","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12003,"Baker","Florida","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12005,"Bay","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12007,"Bradford","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12009,"Brevard","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12011,"Broward","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12011,"Broward","Florida","2020-03-15",34,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12013,"Calhoun","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12015,"Charlotte","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12017,"Citrus","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12015,"Charlotte","Florida","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12017,"Citrus","Florida","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12019,"Clay","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12021,"Collier","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12023,"Columbia","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -346,25 +346,25 @@
 12051,"Hendry","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12053,"Hernando","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12055,"Highlands","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12057,"Hillsborough","Florida","2020-03-15",1.14285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12057,"Hillsborough","Florida","2020-03-15",4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12059,"Holmes","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12061,"Indian River","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12063,"Jackson","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12065,"Jefferson","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12067,"Lafayette","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12069,"Lake","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12071,"Lee","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12071,"Lee","Florida","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12073,"Leon","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12075,"Levy","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12077,"Liberty","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12079,"Madison","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12081,"Manatee","Florida","2020-03-15",1.57142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12081,"Manatee","Florida","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12083,"Marion","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12085,"Martin","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12086,"Miami-Dade","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12087,"Monroe","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12089,"Nassau","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12091,"Okaloosa","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12091,"Okaloosa","Florida","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12093,"Okeechobee","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12095,"Orange","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12097,"Osceola","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -375,14 +375,14 @@
 12107,"Putnam","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12109,"St. Johns","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12111,"St. Lucie","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12113,"Santa Rosa","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12113,"Santa Rosa","Florida","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12115,"Sarasota","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12117,"Seminole","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12119,"Sumter","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12121,"Suwannee","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12123,"Taylor","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12125,"Union","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12127,"Volusia","Florida","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12127,"Volusia","Florida","2020-03-15",4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12129,"Wakulla","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12131,"Walton","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 12133,"Washington","Florida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -413,12 +413,12 @@
 13051,"Chatham","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13053,"Chattahoochee","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13055,"Chattooga","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13057,"Cherokee","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13059,"Clarke","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13057,"Cherokee","Georgia","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13059,"Clarke","Georgia","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13061,"Clay","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13063,"Clayton","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13063,"Clayton","Georgia","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13065,"Clinch","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13067,"Cobb","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13067,"Cobb","Georgia","2020-03-15",16,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13069,"Coffee","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13071,"Colquitt","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13073,"Columbia","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -429,10 +429,10 @@
 13083,"Dade","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13085,"Dawson","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13087,"Decatur","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13089,"DeKalb","Georgia","2020-03-15",4.85714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13089,"DeKalb","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13091,"Dodge","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13093,"Dooly","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13095,"Dougherty","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13095,"Dougherty","Georgia","2020-03-15",6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13097,"Douglas","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13099,"Early","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13101,"Echols","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -441,18 +441,18 @@
 13107,"Emanuel","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13109,"Evans","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13111,"Fannin","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13113,"Fayette","Georgia","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13115,"Floyd","Georgia","2020-03-15",2.14285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13113,"Fayette","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13115,"Floyd","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13117,"Forsyth","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13119,"Franklin","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13121,"Fulton","Georgia","2020-03-15",6.14285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13121,"Fulton","Georgia","2020-03-15",15,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13123,"Gilmer","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13125,"Glascock","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13127,"Glynn","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13129,"Gordon","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13131,"Grady","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13133,"Greene","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13135,"Gwinnett","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13135,"Gwinnett","Georgia","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13137,"Habersham","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13139,"Hall","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13141,"Hancock","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -492,7 +492,7 @@
 13211,"Morgan","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13213,"Murray","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13215,"Muscogee","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13217,"Newton","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13217,"Newton","Georgia","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13219,"Oconee","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13221,"Oglethorpe","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13223,"Paulding","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -500,7 +500,7 @@
 13227,"Pickens","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13229,"Pierce","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13231,"Pike","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13233,"Polk","Georgia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13233,"Polk","Georgia","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13235,"Pulaski","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13237,"Putnam","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13239,"Quitman","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -546,10 +546,10 @@
 13319,"Wilkinson","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 13321,"Worth","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 15001,"Hawaii","Hawaii",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-15003,"Honolulu","Hawaii","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+15003,"Honolulu","Hawaii","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 15005,"Kalawao County","Hawaii",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 15007,"Kauai","Hawaii","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-15009,"Maui","Hawaii","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+15009,"Maui","Hawaii","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 16001,"Ada","Idaho","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 16003,"Adams","Idaho",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 16005,"Bannock","Idaho",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -607,9 +607,9 @@
 17021,"Christian","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17023,"Clark","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17025,"Clay","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-17027,"Clinton","Illinois","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17027,"Clinton","Illinois","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17029,"Coles","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-17031,"Cook","Illinois","2020-03-15",29.7142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17031,"Cook","Illinois","2020-03-15",69,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17033,"Crawford","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17035,"Cumberland","Illinois","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17037,"DeKalb","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -691,10 +691,10 @@
 17189,"Washington","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17191,"Wayne","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17193,"White","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-17195,"Whiteside","Illinois","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17195,"Whiteside","Illinois","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17197,"Will","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17199,"Williamson","Illinois",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-17201,"Winnebago","Illinois","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17201,"Winnebago","Illinois","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 17203,"Woodford","Illinois","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18001,"Adams","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18003,"Allen","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -724,10 +724,10 @@
 18051,"Gibson","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18053,"Grant","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18055,"Greene","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18057,"Hamilton","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18057,"Hamilton","Indiana","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18059,"Hancock","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18061,"Harrison","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18063,"Hendricks","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18063,"Hendricks","Indiana","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18065,"Henry","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18067,"Howard","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18069,"Huntington","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -744,7 +744,7 @@
 18091,"LaPorte","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18093,"Lawrence","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18095,"Madison","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18097,"Marion","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18097,"Marion","Indiana","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18099,"Marshall","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18101,"Martin","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18103,"Miami","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -752,7 +752,7 @@
 18107,"Montgomery","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18109,"Morgan","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18111,"Newton","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18113,"Noble","Indiana","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18113,"Noble","Indiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18115,"Ohio","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18117,"Orange","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 18119,"Owen","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -790,7 +790,7 @@
 18183,"Whitley","Indiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19001,"Adair","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19003,"Adams","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-19005,"Allamakee","Iowa","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+19005,"Allamakee","Iowa","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19007,"Appanoose","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19009,"Audubon","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19011,"Benton","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -839,7 +839,7 @@
 19097,"Jackson","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19099,"Jasper","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19101,"Jefferson","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-19103,"Johnson","Iowa","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+19103,"Johnson","Iowa","2020-03-15",12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19105,"Jones","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19107,"Keokuk","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19109,"Kossuth","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -864,8 +864,8 @@
 19147,"Palo Alto","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19149,"Plymouth","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19151,"Pocahontas","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-19153,"Polk","Iowa","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-19155,"Pottawattamie","Iowa","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+19153,"Polk","Iowa","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+19155,"Pottawattamie","Iowa","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19157,"Poweshiek","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19159,"Ringgold","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 19161,"Sac","Iowa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -932,7 +932,7 @@
 20085,"Jackson","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 20087,"Jefferson","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 20089,"Jewell","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-20091,"Johnson","Kansas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+20091,"Johnson","Kansas","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 20093,"Kearny","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 20095,"Kingman","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 20097,"Kiowa","Kansas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1016,7 +1016,7 @@
 21043,"Carter","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21045,"Casey","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21047,"Christian","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-21049,"Clark","Kentucky","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21049,"Clark","Kentucky","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21051,"Clay","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21053,"Clinton","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21055,"Crittenden","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1025,7 +1025,7 @@
 21061,"Edmonson","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21063,"Elliott","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21065,"Estill","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-21067,"Fayette","Kentucky","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21067,"Fayette","Kentucky","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21069,"Fleming","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21071,"Floyd","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21073,"Franklin","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1040,14 +1040,14 @@
 21091,"Hancock","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21093,"Hardin","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21095,"Harlan","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-21097,"Harrison","Kentucky","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21097,"Harrison","Kentucky","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21099,"Hart","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21101,"Henderson","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21103,"Henry","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21105,"Hickman","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21107,"Hopkins","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21109,"Jackson","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-21111,"Jefferson","Kentucky","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21111,"Jefferson","Kentucky","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21113,"Jessamine","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21115,"Johnson","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 21117,"Kenton","Kentucky",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1137,7 +1137,7 @@
 22045,"Iberia","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22047,"Iberville","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22049,"Jackson","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-22051,"Jefferson","Louisiana","2020-03-15",4.57142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+22051,"Jefferson","Louisiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22053,"Jefferson Davis","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22055,"Lafayette","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22057,"Lafourche","Louisiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1155,7 +1155,7 @@
 22081,"Red River","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22083,"Richland","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22085,"Sabine","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-22087,"St. Bernard","Louisiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+22087,"St. Bernard","Louisiana","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22089,"St. Charles","Louisiana","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22091,"St. Helena","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 22093,"St. James","Louisiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1183,7 +1183,7 @@
 23009,"Hancock","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 23011,"Kennebec","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 23013,"Knox","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-23015,"Lincoln","Maine","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+23015,"Lincoln","Maine","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 23017,"Oxford","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 23019,"Penobscot","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 23021,"Piscataquis","Maine",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1203,11 +1203,11 @@
 24019,"Dorchester","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24021,"Frederick","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24023,"Garrett","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24025,"Harford","Maryland","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24027,"Howard","Maryland","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24025,"Harford","Maryland","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24027,"Howard","Maryland","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24029,"Kent","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24031,"Montgomery","Maryland","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24033,"Prince George's","Maryland","2020-03-15",5.28571428571429,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24031,"Montgomery","Maryland","2020-03-15",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24033,"Prince George's","Maryland","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24035,"Queen Anne's","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24037,"St. Mary's","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24039,"Somerset","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1215,21 +1215,21 @@
 24043,"Washington","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24045,"Wicomico","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 24047,"Worcester","Maryland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24510,"Baltimore city","Maryland","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24510,"Baltimore city","Maryland","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25001,"Barnstable","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25003,"Berkshire","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25003,"Berkshire","Massachusetts","2020-03-15",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25005,"Bristol","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25007,"Dukes","Massachusetts",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25009,"Essex","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25011,"Franklin","Massachusetts",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25013,"Hampden","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25013,"Hampden","Massachusetts","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25015,"Hampshire","Massachusetts",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25017,"Middlesex","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25017,"Middlesex","Massachusetts","2020-03-15",65,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 25019,"Nantucket","Massachusetts",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25021,"Norfolk","Massachusetts","2020-03-15",20.5714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25023,"Plymouth","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25025,"Suffolk","Massachusetts","2020-03-15",19.2857142857143,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25027,"Worcester","Massachusetts","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25021,"Norfolk","Massachusetts","2020-03-15",24,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25023,"Plymouth","Massachusetts","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25025,"Suffolk","Massachusetts","2020-03-15",22,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25027,"Worcester","Massachusetts","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26001,"Alcona","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26003,"Alger","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26005,"Allegan","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1299,7 +1299,7 @@
 26133,"Osceola","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26135,"Oscoda","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26137,"Otsego","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-26139,"Ottawa","Michigan","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+26139,"Ottawa","Michigan","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26141,"Presque Isle","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26143,"Roscommon","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 26145,"Saginaw","Michigan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1322,7 +1322,7 @@
 27013,"Blue Earth","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27015,"Brown","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27017,"Carlton","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-27019,"Carver","Minnesota","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27019,"Carver","Minnesota","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27021,"Cass","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27023,"Chippewa","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27025,"Chisago","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1374,7 +1374,7 @@
 27117,"Pipestone","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27119,"Polk","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27121,"Pope","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-27123,"Ramsey","Minnesota","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27123,"Ramsey","Minnesota","2020-03-15",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27125,"Red Lake","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27127,"Redwood","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27129,"Renville","Minnesota","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1393,8 +1393,8 @@
 27155,"Traverse","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27157,"Wabasha","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27159,"Wadena","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-27161,"Waseca","Minnesota","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-27163,"Washington","Minnesota","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27161,"Waseca","Minnesota","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27163,"Washington","Minnesota","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27165,"Watonwan","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27167,"Wilkin","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 27169,"Winona","Minnesota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1424,7 +1424,7 @@
 28043,"Grenada","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 28045,"Hancock","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 28047,"Harrison","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-28049,"Hinds","Mississippi","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+28049,"Hinds","Mississippi","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 28051,"Holmes","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 28053,"Humphreys","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 28055,"Issaquena","Mississippi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1577,7 +1577,7 @@
 29185,"St. Clair","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 29186,"Ste. Genevieve","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 29187,"St. Francois","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-29189,"St. Louis","Missouri","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+29189,"St. Louis","Missouri","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 29195,"Saline","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 29197,"Schuyler","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 29199,"Scotland","Missouri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1680,7 +1680,7 @@
 31049,"Deuel","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31051,"Dixon","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31053,"Dodge","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-31055,"Douglas","Nebraska","2020-03-15",9.57142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+31055,"Douglas","Nebraska","2020-03-15",14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31057,"Dundy","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31059,"Fillmore","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31061,"Franklin","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1747,7 +1747,7 @@
 31183,"Wheeler","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 31185,"York","Nebraska",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32001,"Churchill","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-32003,"Clark","Nevada","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+32003,"Clark","Nevada","2020-03-15",14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32005,"Douglas","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32007,"Elko","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32009,"Esmeralda County","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1760,39 +1760,39 @@
 32023,"Nye","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32027,"Pershing","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32029,"Storey","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-32031,"Washoe","Nevada","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+32031,"Washoe","Nevada","2020-03-15",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32033,"White Pine","Nevada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 32510,"Carson City","Nevada","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33001,"Belknap","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33003,"Carroll","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33005,"Cheshire","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33007,"Coos","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-33009,"Grafton","New Hampshire","2020-03-15",0.857142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-33011,"Hillsborough","New Hampshire","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+33009,"Grafton","New Hampshire","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+33011,"Hillsborough","New Hampshire","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33013,"Merrimack","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-33015,"Rockingham","New Hampshire","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+33015,"Rockingham","New Hampshire","2020-03-15",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33017,"Strafford","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 33019,"Sullivan","New Hampshire",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34001,"Atlantic","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34003,"Bergen","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34003,"Bergen","New Jersey","2020-03-15",28,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34005,"Burlington","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34007,"Camden","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34007,"Camden","New Jersey","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34009,"Cape May","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34011,"Cumberland","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34013,"Essex","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34015,"Gloucester","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34017,"Hudson","New Jersey","2020-03-15",3.14285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34017,"Hudson","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34019,"Hunterdon","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34021,"Mercer","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34023,"Middlesex","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34025,"Monmouth","New Jersey","2020-03-15",5.57142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34025,"Monmouth","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34027,"Morris","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34029,"Ocean","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34031,"Passaic","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34031,"Passaic","New Jersey","2020-03-15",4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34033,"Salem","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34035,"Somerset","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34037,"Sussex","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34039,"Union","New Jersey","2020-03-15",1.42857142857143,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34039,"Union","New Jersey","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 34041,"Warren","New Jersey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 35001,"Bernalillo","New Mexico","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 35003,"Catron","New Mexico",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1841,12 +1841,12 @@
 36023,"Cortland","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36025,"Delaware","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36027,"Dutchess","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36029,"Erie","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36029,"Erie","New York","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36031,"Essex","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36033,"Franklin","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36035,"Fulton","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36037,"Genesee","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36039,"Greene","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36039,"Greene","New York","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36041,"Hamilton","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36043,"Herkimer","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36045,"Jefferson","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1855,8 +1855,8 @@
 36051,"Livingston","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36053,"Madison","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36055,"Monroe","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36057,"Montgomery","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36059,"Nassau","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36057,"Montgomery","New York","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36059,"Nassau","New York","2020-03-15",93,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36061,"New York County","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36063,"Niagara","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36065,"Oneida","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1866,27 +1866,27 @@
 36073,"Orleans","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36075,"Oswego","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36077,"Otsego","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36079,"Putnam","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36079,"Putnam","New York","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36081,"Queens County","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36083,"Rensselaer","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36085,"Richmond County","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36087,"Rockland","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36087,"Rockland","New York","2020-03-15",11,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36089,"St. Lawrence","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36091,"Saratoga","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36091,"Saratoga","New York","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36093,"Schenectady","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36095,"Schoharie","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36097,"Schuyler","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36099,"Seneca","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36101,"Steuben","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36103,"Suffolk","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36103,"Suffolk","New York","2020-03-15",46,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36105,"Sullivan","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36107,"Tioga","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36109,"Tompkins","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36111,"Ulster","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36111,"Ulster","New York","2020-03-15",4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36113,"Warren","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36115,"Washington","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36117,"Wayne","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36119,"Westchester","New York","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36119,"Westchester","New York","2020-03-15",114,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36121,"Wyoming","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 36123,"Yates","New York",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37001,"Alamance","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1907,7 +1907,7 @@
 37031,"Carteret","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37033,"Caswell","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37035,"Catawba","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-37037,"Chatham","North Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+37037,"Chatham","North Carolina","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37039,"Cherokee","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37041,"Chowan","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37043,"Clay","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1980,13 +1980,13 @@
 37177,"Tyrrell","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37179,"Union","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37181,"Vance","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-37183,"Wake","North Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+37183,"Wake","North Carolina","2020-03-15",13,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37185,"Warren","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37187,"Washington","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-37189,"Watauga","North Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+37189,"Watauga","North Carolina","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37191,"Wayne","North Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37193,"Wilkes","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-37195,"Wilson","North Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+37195,"Wilson","North Carolina","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37197,"Yadkin","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 37199,"Yancey","North Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 38001,"Adams","North Dakota",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2059,7 +2059,7 @@
 39029,"Columbiana","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39031,"Coshocton","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39033,"Crawford","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-39035,"Cuyahoga","Ohio","2020-03-15",6.85714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+39035,"Cuyahoga","Ohio","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39037,"Darke","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39039,"Defiance","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39041,"Delaware","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2089,11 +2089,11 @@
 39089,"Licking","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39091,"Logan","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39093,"Lorain","Ohio","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-39095,"Lucas","Ohio","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+39095,"Lucas","Ohio","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39097,"Madison","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39099,"Mahoning","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39101,"Marion","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-39103,"Medina","Ohio","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+39103,"Medina","Ohio","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39105,"Meigs","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39107,"Mercer","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 39109,"Miami","Ohio",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2143,7 +2143,7 @@
 40021,"Cherokee","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40023,"Choctaw","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40025,"Cimarron","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-40027,"Cleveland","Oklahoma","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40027,"Cleveland","Oklahoma","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40029,"Coal","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40031,"Comanche","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40033,"Cotton","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2165,7 +2165,7 @@
 40065,"Jackson","Oklahoma","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40067,"Jefferson","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40069,"Johnston","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-40071,"Kay","Oklahoma","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40071,"Kay","Oklahoma","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40073,"Kingfisher","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40075,"Kiowa","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40077,"Latimer","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2189,7 +2189,7 @@
 40113,"Osage","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40115,"Ottawa","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40117,"Pawnee","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-40119,"Payne","Oklahoma","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40119,"Payne","Oklahoma","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40121,"Pittsburg","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40123,"Pontotoc","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40125,"Pottawatomie","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2201,7 +2201,7 @@
 40137,"Stephens","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40139,"Texas","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40141,"Tillman","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-40143,"Tulsa","Oklahoma","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40143,"Tulsa","Oklahoma","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40145,"Wagoner","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40147,"Washington","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 40149,"Washita","Oklahoma",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2216,21 +2216,21 @@
 41013,"Crook","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41015,"Curry","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41017,"Deschutes","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41019,"Douglas","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41019,"Douglas","Oregon","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41021,"Gilliam","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41023,"Grant","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41025,"Harney","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41027,"Hood River","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41029,"Jackson","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41029,"Jackson","Oregon","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41031,"Jefferson","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41033,"Josephine","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41035,"Klamath","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41035,"Klamath","Oregon","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41037,"Lake","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41039,"Lane","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41041,"Lincoln","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41043,"Linn","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41045,"Malheur","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41047,"Marion","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41047,"Marion","Oregon","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41049,"Morrow","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41051,"Multnomah","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41053,"Polk","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2240,9 +2240,9 @@
 41061,"Union","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41063,"Wallowa","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41065,"Wasco","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41067,"Washington","Oregon","2020-03-15",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41067,"Washington","Oregon","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 41069,"Wheeler County","Oregon",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-41071,"Yamhill","Oregon","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41071,"Yamhill","Oregon","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42001,"Adams","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42003,"Allegheny","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42005,"Armstrong","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2265,7 +2265,7 @@
 42039,"Crawford","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42041,"Cumberland","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42043,"Dauphin","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42045,"Delaware","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42045,"Delaware","Pennsylvania","2020-03-15",6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42047,"Elk","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42049,"Erie","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42051,"Fayette","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2281,14 +2281,14 @@
 42071,"Lancaster","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42073,"Lawrence","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42075,"Lebanon","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42077,"Lehigh","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42079,"Luzerne","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42077,"Lehigh","Pennsylvania","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42079,"Luzerne","Pennsylvania","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42081,"Lycoming","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42083,"McKean","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42085,"Mercer","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42087,"Mifflin","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42089,"Monroe","Pennsylvania","2020-03-15",2.71428571428571,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42091,"Montgomery","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42089,"Monroe","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42091,"Montgomery","Pennsylvania","2020-03-15",20,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42093,"Montour","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42095,"Northampton","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42097,"Northumberland","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2306,7 +2306,7 @@
 42121,"Venango","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42123,"Warren","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42125,"Washington","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-42127,"Wayne","Pennsylvania","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42127,"Wayne","Pennsylvania","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42129,"Westmoreland","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42131,"Wyoming","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 42133,"York","Pennsylvania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2318,13 +2318,13 @@
 45001,"Abbeville","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45003,"Aiken","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45005,"Allendale","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45007,"Anderson","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45007,"Anderson","South Carolina","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45009,"Bamberg","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45011,"Barnwell","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45013,"Beaufort","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45015,"Berkeley","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45017,"Calhoun","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45019,"Charleston","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45019,"Charleston","South Carolina","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45021,"Cherokee","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45023,"Chester","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45025,"Chesterfield","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2337,12 +2337,12 @@
 45039,"Fairfield","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45041,"Florence","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45043,"Georgetown","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45045,"Greenville","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45045,"Greenville","South Carolina","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45047,"Greenwood","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45049,"Hampton","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45051,"Horry","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45051,"Horry","South Carolina","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45053,"Jasper","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45055,"Kershaw","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45055,"Kershaw","South Carolina","2020-03-15",10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45057,"Lancaster","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45059,"Laurens","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45061,"Lee","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2356,7 +2356,7 @@
 45077,"Pickens","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45079,"Richland","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45081,"Saluda","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-45083,"Spartanburg","South Carolina","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45083,"Spartanburg","South Carolina","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45085,"Sumter","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45087,"Union","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 45089,"Williamsburg","South Carolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2446,7 +2446,7 @@
 47031,"Coffee","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47033,"Crockett","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47035,"Cumberland","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-47037,"Davidson","Tennessee","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47037,"Davidson","Tennessee","2020-03-15",16,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47039,"Decatur","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47041,"DeKalb","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47043,"Dickson","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2506,7 +2506,7 @@
 47151,"Scott","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47153,"Sequatchie","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47155,"Sevier","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-47157,"Shelby","Tennessee","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47157,"Shelby","Tennessee","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47159,"Smith","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47161,"Stewart","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47163,"Sullivan","Tennessee","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2521,7 +2521,7 @@
 47181,"Wayne","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47183,"Weakley","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47185,"White","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-47187,"Williamson","Tennessee","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47187,"Williamson","Tennessee","2020-03-15",13,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 47189,"Wilson","Tennessee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48001,"Anderson","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48003,"Andrews","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2537,7 +2537,7 @@
 48023,"Baylor","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48025,"Bee","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48027,"Bell","Texas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-48029,"Bexar","Texas","2020-03-15",0.285714285714286,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48029,"Bexar","Texas","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48031,"Blanco","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48033,"Borden County","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48035,"Bosque","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2565,7 +2565,7 @@
 48079,"Cochran","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48081,"Coke","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48083,"Coleman","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-48085,"Collin","Texas","2020-03-15",4.42857142857143,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48085,"Collin","Texas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48087,"Collingsworth","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48089,"Colorado","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48091,"Comal","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2583,7 +2583,7 @@
 48115,"Dawson","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48117,"Deaf Smith","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48119,"Delta","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-48121,"Denton","Texas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48121,"Denton","Texas","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48123,"DeWitt","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48125,"Dickens","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48127,"Dimmit","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2601,7 +2601,7 @@
 48151,"Fisher","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48153,"Floyd","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48155,"Foard","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-48157,"Fort Bend","Texas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48157,"Fort Bend","Texas","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48159,"Franklin","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48161,"Freestone","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48163,"Frio","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2623,7 +2623,7 @@
 48195,"Hansford","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48197,"Hardeman","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48199,"Hardin","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-48201,"Harris","Texas","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48201,"Harris","Texas","2020-03-15",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48203,"Harrison","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48205,"Hartley","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 48207,"Haskell","Texas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2782,7 +2782,7 @@
 49005,"Cache","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49007,"Carbon","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49009,"Daggett County","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-49011,"Davis","Utah","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+49011,"Davis","Utah","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49013,"Duchesne","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49015,"Emery","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49017,"Garfield","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2794,20 +2794,20 @@
 49029,"Morgan","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49031,"Piute","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49033,"Rich","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-49035,"Salt Lake","Utah","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+49035,"Salt Lake","Utah","2020-03-15",14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49037,"San Juan","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49039,"Sanpete","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49041,"Sevier","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49043,"Summit","Utah","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49045,"Tooele","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49047,"Uintah","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-49049,"Utah","Utah","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+49049,"Utah","Utah","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49051,"Wasatch","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-49053,"Washington","Utah","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+49053,"Washington","Utah","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49055,"Wayne","Utah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 49057,"Weber","Utah","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 50001,"Addison","Vermont",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-50003,"Bennington","Vermont","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+50003,"Bennington","Vermont","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 50005,"Caledonia","Vermont",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 50007,"Chittenden","Vermont","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 50009,"Essex","Vermont",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2848,7 +2848,7 @@
 51051,"Dickenson","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51053,"Dinwiddie","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51057,"Essex","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-51059,"Fairfax","Virginia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+51059,"Fairfax","Virginia","2020-03-15",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51061,"Fauquier","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51063,"Floyd","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51065,"Fluvanna","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2950,16 +2950,16 @@
 51775,"Salem city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51790,"Staunton city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51800,"Suffolk city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-51810,"Virginia Beach city","Virginia","2020-03-15",2.28571428571429,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+51810,"Virginia Beach city","Virginia","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51820,"Waynesboro city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51830,"Williamsburg city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 51840,"Winchester city","Virginia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53001,"Adams","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53003,"Asotin","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53005,"Benton","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53007,"Chelan","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53007,"Chelan","Washington","2020-03-15",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53009,"Clallam","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53011,"Clark","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53011,"Clark","Washington","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53013,"Columbia","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53015,"Cowlitz","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53017,"Douglas","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -2969,23 +2969,23 @@
 53025,"Grant","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53027,"Grays Harbor","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53029,"Island","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53031,"Jefferson","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53033,"King","Washington","2020-03-15",229.857142857143,54,5.63121178182137,20.8133761143989,0.199783124246321,8.02860927277723,7.04438641242985,7.02969365154562,3.46949815293375,NA,NA
-53035,"Kitsap","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53037,"Kittitas","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53031,"Jefferson","Washington","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53033,"King","Washington","2020-03-15",330,54,5.63121178182137,20.8133761143989,0.199783124246321,8.02860927277723,7.04438641242985,7.02969365154562,3.46949815293375,NA,NA
+53035,"Kitsap","Washington","2020-03-15",4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53037,"Kittitas","Washington","2020-03-15",2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53039,"Klickitat","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53041,"Lewis","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53043,"Lincoln","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53041,"Lewis","Washington","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53043,"Lincoln","Washington","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53045,"Mason","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53047,"Okanogan","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53049,"Pacific","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53051,"Pend Oreille","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53053,"Pierce","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53053,"Pierce","Washington","2020-03-15",25,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53055,"San Juan","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53057,"Skagit","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53059,"Skamania","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-53061,"Snohomish","Washington","2020-03-15",90,54,4.65531996967356,25.6981321008184,0.199783124246321,7.05271746062942,6.04427195830786,6.05380183939781,3.46949815293375,NA,NA
-53063,"Spokane","Washington","2020-03-15",0.857142857142857,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53061,"Snohomish","Washington","2020-03-15",139,54,4.65531996967356,25.6981321008184,0.199783124246321,7.05271746062942,6.04427195830786,6.05380183939781,3.46949815293375,NA,NA
+53063,"Spokane","Washington","2020-03-15",3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53065,"Stevens","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53067,"Thurston","Washington","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 53069,"Wahkiakum","Washington",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -3060,7 +3060,7 @@
 55019,"Clark","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55021,"Columbia","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55023,"Crawford","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-55025,"Dane","Wisconsin","2020-03-15",2.71428571428571,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55025,"Dane","Wisconsin","2020-03-15",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55027,"Dodge","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55029,"Door","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55031,"Douglas","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -3095,7 +3095,7 @@
 55087,"Outagamie","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55089,"Ozaukee","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55091,"Pepin","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-55093,"Pierce","Wisconsin","2020-03-15",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55093,"Pierce","Wisconsin","2020-03-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55095,"Polk","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55097,"Portage","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 55099,"Price","Wisconsin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -3234,4 +3234,4 @@
 78010,"St. Croix","Virgin Islands",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 78020,"St. John","Virgin Islands",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 78030,"St. Thomas","Virgin Islands",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-99999,"New York City","New York","2020-03-15",131.285714285714,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+99999,"New York City","New York","2020-03-15",316,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

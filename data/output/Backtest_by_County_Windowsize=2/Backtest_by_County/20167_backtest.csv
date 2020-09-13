@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20167,"Russell","Kansas",0.0412429585340497,4.03652269948573,0.041242958534049,4.03652269948573,"2020-09-19",242,NA,0.0409862888329282,4.03446934187677,4.03472601157789,NA,NA,NA,NA,NA,NA
