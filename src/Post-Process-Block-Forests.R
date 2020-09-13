@@ -169,6 +169,9 @@ for (cutoff in cutofflist){
     #mu<- 6.7
     #sigma<- 5.2
     #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
+    
+    test.df[which(test.df$state == "Massachusetts"),"Predicted_Double_Days"]<- NA
+    
     write.csv(test.df,"../data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
   }
 }
