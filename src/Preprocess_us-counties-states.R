@@ -1,12 +1,14 @@
+require("pacman")
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
 list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate","tidyverse")
 
 
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
+#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+#if(length(new.packages)) install.packages(new.packages)
 # Will need to add custom installation folder for servers without admin access
-lapply(list.of.packages, require, character.only = TRUE) 
+#lapply(list.of.packages, require, character.only = TRUE) 
 
+p_load(list.of.packages)
 
 # Set Working Directory to File source directory
 # Only works within RStudio

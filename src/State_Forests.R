@@ -1,13 +1,15 @@
 closeAllConnections()
+require("pacman")
 list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 list.of.packages <- c(list.of.packages, "zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr")
 
+p_load(list.of.packages)
 
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
+#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+#if(length(new.packages)) install.packages(new.packages)
 
 
-lapply(list.of.packages, require, character.only = TRUE)
+#lapply(list.of.packages, require, character.only = TRUE)
 
 
 
@@ -41,7 +43,7 @@ cutoff.list <- earliest_start:latest_date
 
 first.block.cutoff <- Inf
 
-
+break
 # Check for the first block file
 for (cutoff in cutoff.list){
   # See if block is already in there
