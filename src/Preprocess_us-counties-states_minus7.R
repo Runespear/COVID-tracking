@@ -1,28 +1,12 @@
-list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate")
+require("pacman")
+p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
+p_load("zoo","usmap","readxl","lubridate","here")
 
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
 
-lapply(list.of.packages, require, character.only = TRUE)
-
-# Set Working Directory to File source directory
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-
-#registerDoParallel(cores=6)
-
-# Blaine County, Idaho Ski Bar
-# fips = 16013
-# Cases = 126
-# Date ~= 2020-06-03
-
-# URL of NYTimes Data
-#nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+setwd(file.path(here(),"src"))
 
 destfile <- paste("../data/us-counties_latest",".csv",sep="")
-#county_data <- read.csv(nyt_url)
-#write.csv(county_data, destfile, row.names=FALSE)
-# Pre-processing the data
+
 
 county_data <- read.csv(file = destfile)
 county_data$datetime <- as.Date(county_data$date)

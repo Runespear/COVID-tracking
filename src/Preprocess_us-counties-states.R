@@ -3,18 +3,6 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo","usmap","readxl","lubridate","here")
 #p_load("tidyverse")
 
-
-#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-#if(length(new.packages)) install.packages(new.packages)
-# Will need to add custom installation folder for servers without admin access
-#lapply(list.of.packages, require, character.only = TRUE) 
-
-
-# Set Working Directory to File source directory
-# Only works within RStudio
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-#break
-
 #registerDoParallel(cores=6)
 
 setwd(file.path(here(),"src"))
@@ -86,7 +74,7 @@ for (fips in fips_list){
     next
   }
   for (day in (first.fips.date+1):last.fips.date){
-    print(day)
+    #print(day)
     county.day.slice <- fips.df[which(fips.df$days_from_start == day),]
     if (dim(county.day.slice)[1] == 0){
       # Missing days inbetween e.g. fips 31057 day 184 jumps to 189

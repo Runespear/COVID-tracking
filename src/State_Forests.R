@@ -1,20 +1,11 @@
 closeAllConnections()
 require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr")
-
-
-#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-#if(length(new.packages)) install.packages(new.packages)
-
-
-#lapply(list.of.packages, require, character.only = TRUE)
-
-
+p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr", "here")
 
 
 # Set Working Directory to File source directory
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+setwd(file.path(here(),"src"))
 
 
 #registerDoParallel(cores=detectCores())
