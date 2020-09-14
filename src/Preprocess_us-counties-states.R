@@ -1,6 +1,6 @@
 require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-p_load("zoo","usmap","readxl","lubridate")
+p_load("zoo","usmap","readxl","lubridate","here")
 #p_load("tidyverse")
 
 
@@ -12,12 +12,14 @@ p_load("zoo","usmap","readxl","lubridate")
 
 # Set Working Directory to File source directory
 # Only works within RStudio
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #break
 
 #registerDoParallel(cores=6)
 
+setwd(file.path(here(),"src"))
 
+#break
 # URL of NYTimes Data
 nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
