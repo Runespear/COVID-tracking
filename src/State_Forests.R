@@ -33,7 +33,7 @@ cutoff.list <- earliest_start:latest_date
 
 first.block.cutoff <- Inf
 
-break
+#break
 # Check for the first block file
 for (cutoff in cutoff.list){
   # See if block is already in there
