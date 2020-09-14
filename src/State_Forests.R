@@ -142,7 +142,7 @@ for(cutoff in cutoff.list){
     
     results.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = TRUE)
     state.tau.hat <- results.hat$predictions
-    mu.hat <- results.hat$variance.estimates
+    tau.var.hat <- results.hat$variance.estimates
     #state.tau.hat <- unlist(state.tau.hat)
     print(state.tau.hat)
     
@@ -169,7 +169,7 @@ for(cutoff in cutoff.list){
     results <- unique(results)
     results$t0.hat <- state.t0.hat
     results$tau.hat <- state.tau.hat
-    results$mu.hat <- mu.hat
+    results$tau.var.hat <- tau.var.hat
     results$predicted.grf.future <- (state.tau.hat*((cutoff + 7) - state.t0.hat ))
     results$predicted.grf.future.0 <- state.tau.hat*(windowsize-1 + 7)+ covariates.test.unique$log_rolled_cases.y
     results$predicted.grf.future.last <- state.tau.hat*(7)+ final.day.cases
