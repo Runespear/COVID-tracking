@@ -1,6 +1,7 @@
 require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-p_load("zoo","usmap","readxl","lubridate","tidyverse")
+p_load("zoo","usmap","readxl","lubridate")
+#p_load("tidyverse")
 
 
 #new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -21,7 +22,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
 
-destfile <- paste("../data/us-counties_latest",".csv",sep="")
+destfile <- paste("../data/us-counties_latest",".pcsv",sep="")
 county_data <- read.csv(nyt_url)
 write.csv(county_data, destfile, row.names=FALSE)
 
