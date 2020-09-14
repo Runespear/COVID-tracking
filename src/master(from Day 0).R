@@ -1,5 +1,6 @@
 # Set Working Directory to File source directory
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+require("pacman","here")
+setwd(file.path(here(),"src"))
 
 mainDir = "../data"
 block_dir = file.path(mainDir, "block_windowsize=2")
