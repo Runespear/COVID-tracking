@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 1073,"Jefferson","Alabama",66,"2020-03-27",4.72612279640575,36.613353196914,0.193799616428106,5.95646827830097e-05,7.05171819354302,6.09824062222122,6.08272011140249,3.57661791769894
 6001,"Alameda","California",66,"2020-03-27",5.04985600724954,32.9512939922268,0.180038822676884,1.42409323758771e-05,7.21032187937215,6.31877410240284,6.31012776598773,3.84998729859469
 6013,"Contra Costa","California",66,"2020-03-27",4.54025063988878,36.3936324935049,0.184515273889587,1.25352477403606e-05,6.75443392656383,5.84376008833848,5.83185755711589,3.75658429759435

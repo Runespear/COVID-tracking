@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 1003,"Baldwin","Alabama",89,"2020-04-19",4.54329478227,-7.89635088397221,0.0489553828415009,2.31391631776147e-05,5.08628563335976,4.88027943246415,4.88598246216051,14.1587531406729
 1015,"Calhoun","Alabama",89,"2020-04-19",4.12713438504509,-82.0608220135737,0.0250738054668246,2.23689739216925e-06,4.46466241243123,4.30441374991125,4.30265102331286,27.6442752767247
 1017,"Chambers","Alabama",89,"2020-04-19",5.39816270151775,-149.881350407816,0.023080774470068,4.42012734804147e-06,5.67513199515857,5.56322602605376,5.55972812280823,30.0313657784249

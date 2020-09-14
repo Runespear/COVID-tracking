@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 6001,"Alameda","California",62,"2020-03-23",4.41366371961706,35.8584300708673,0.208767075217773,0.000162118767410512,6.91886862223034,5.8980125565888,5.87503324614147,3.32019395221635
 6013,"Contra Costa","California",62,"2020-03-23",3.90052862600241,37.9808003904918,0.205083742012594,0.000144092565104888,6.36153353015353,5.42810106394318,5.33611482009057,3.3798251083081
 6037,"Los Angeles","California",62,"2020-03-23",5.73102699676277,32.2114023157544,0.231196095469536,0.000147548138943911,8.5053801423972,7.35140989474888,7.34939966504952,2.99809207050938

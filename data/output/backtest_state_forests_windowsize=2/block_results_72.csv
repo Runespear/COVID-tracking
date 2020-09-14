@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 1073,"Jefferson","Alabama",72,"2020-04-02",5.55793059764364,23.7309578914981,0.128450511654649,5.50311441527397e-05,7.09933673749943,6.49385427912708,6.45708417922619,5.39621969294707
 1081,"Lee","Alabama",72,"2020-04-02",4.24645234041956,28.6455507410268,0.110716029625327,1.94960121268737e-05,5.57504469592348,5.03789237011354,5.02146454779685,6.2605855981796
 1089,"Madison","Alabama",72,"2020-04-02",4.48702994368387,33.8919609562361,0.135526901419703,1.57817465650208e-05,6.11335276072031,5.44640350381184,5.43571825362179,5.11446195035028

@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 1001,"Autauga","Alabama",103,"2020-05-03",3.34235688163922,-60.2465031546382,0.0211212053031786,3.25630609537889e-06,3.59581134527736,3.49091765243344,3.49020531876147,32.8175958999665
 1003,"Baldwin","Alabama",103,"2020-05-03",4.83628190695148,397.705804612447,-0.0160731470594404,2.0050113596783e-06,4.62433770739047,4.72009125534567,4.7237698775354,-43.124546673816
 1005,"Barbour","Alabama",103,"2020-05-03",3.53888678443534,-75.1832919280845,0.0205454316022504,4.6511285687288e-06,3.80467065818803,3.68651344489782,3.68270480565109,33.7372898257354

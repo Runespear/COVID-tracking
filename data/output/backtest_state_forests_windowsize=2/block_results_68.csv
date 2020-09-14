@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 1073,"Jefferson","Alabama",68,"2020-03-29",5.07338650465973,34.4278910297026,0.1775642991539,1.12540018285109e-05,7.20415809450653,6.32367052680935,6.31633659873703,3.90364044947557
 4013,"Maricopa","Arizona",68,"2020-03-29",5.78382518232974,37.1490225200685,0.223737194727736,1.40091227238745e-05,8.46867151906257,7.34562186664998,7.34998554542389,3.09804179588214
 5119,"Pulaski","Arkansas",68,"2020-03-29",4.37305796469112,32.8723915547793,0.145151181602828,8.30429188730268e-05,6.11487214392506,5.45557514893808,5.38911623591092,4.77534645537078

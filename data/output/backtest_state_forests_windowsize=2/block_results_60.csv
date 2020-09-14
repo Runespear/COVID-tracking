@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 6001,"Alameda","California",60,"2020-03-21",4.02023659006838,38.8264619569902,0.248568778171943,0.000550127225730992,7.00306192813169,5.84777504523671,5.76021803727198,2.78855287320306
 6037,"Los Angeles","California",60,"2020-03-21",5.2722666893481,33.7895055520564,0.248568778171943,0.000550127225730992,8.25509202741141,7.01430868104601,7.0122481365517,2.78855287320306
 6075,"San Francisco","California",60,"2020-03-21",4.03044076024262,38.7854102599537,0.248568778171943,0.000550127225730992,7.01326609830593,5.87745081338283,5.77042220744622,2.78855287320306

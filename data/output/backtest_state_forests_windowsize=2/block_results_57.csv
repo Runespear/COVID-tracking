@@ -1,4 +1,4 @@
-"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","mu.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
+"fips","county","state","days_from_start","datetime","log_rolled_cases.x","t0.hat","tau.hat","tau.var.hat","predicted.grf.future","predicted.grf.future.0","predicted.grf.future.last","Predicted_Double_Days"
 6085,"Santa Clara","California",57,"2020-03-18",4.74368912012365,29.3695079654492,0.209614935145081,0.000790988560126065,7.25906834186463,6.24868060501761,6.21099366613922,3.30676428223111
 25017,"Middlesex","Massachusetts",57,"2020-03-18",4.30983989269805,31.4392518371123,0.209614935145081,0.000790988560126065,6.82521911443903,5.86657422318708,5.77714443871362,3.30676428223111
 36119,"Westchester","New York",57,"2020-03-18",5.55627633754761,25.4929367809506,0.209614935145081,0.000790988560126065,8.07165555928859,6.9716590263608,7.02358088356318,3.30676428223111
