@@ -1,6 +1,6 @@
 closeAllConnections()
 require("pacman")
-p_loada("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
+p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table", "here")
 
 
