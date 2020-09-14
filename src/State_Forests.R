@@ -48,21 +48,24 @@ for (cutoff in cutoff.list){
     break
   }
 }
-num_trees=200
 cutoff.list <- first.block.cutoff:latest_date
 #cutoff.list <- latest_date:latest_date
 # Main loop, parallelize later
 
 
 
+num_trees=2000
 
 mainDir = "../data/output"
 subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),sep="")
 outputfolder = file.path(mainDir, subDir)
 
+grf.subfolder = paste("grf_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
+grf.outputfolder = file.path(mainDir,grf.subfolder)
 
 dir.create(outputfolder, showWarnings = FALSE)
-
+# Create grf object folder
+dir.create(grf.outputfolder, showWarnings = FALSE)
 
 #cutoff.list <- 120:120
 
@@ -120,6 +123,12 @@ for(cutoff in cutoff.list){
     
     state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
     
+    #Save the tau.forest object
+    #grf.outputfolder
+    tau.forest.fname <- paste("grf_stateforest_cutoff=",toString(cutoff),".rds",sep="")
+    tau.forest.path <- file.path(grf.outputfolder,tau.forest.fname)
+    saveRDS(state.tau.forest,tau.forest.path)
+    
     exclusion.test <- c("shifted_log_rolled_cases","new_rolled_cases","datetime","State_FIPS_Code","county","state","shifted_time")
     
     current.block <- read.csv(file.path(block.folder, paste("block_",toString(cutoff),".csv",sep="")))
@@ -130,7 +139,10 @@ for(cutoff in cutoff.list){
     final.day.cases <- covariates.test.unique$log_rolled_cases.x
     covariates.test.unique <- covariates.test.unique[,-which(names(covariates.test.unique) %in% c("log_rolled_cases.x"))]
     
-    state.tau.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = FALSE)$predictions
+    
+    results.hat <- predict(state.tau.forest, covariates.test.unique, estimate.variance = TRUE)
+    state.tau.hat <- results.hat$predictions
+    mu.hat <- results.hat$variance.estimates
     #state.tau.hat <- unlist(state.tau.hat)
     print(state.tau.hat)
     
@@ -157,6 +169,7 @@ for(cutoff in cutoff.list){
     results <- unique(results)
     results$t0.hat <- state.t0.hat
     results$tau.hat <- state.tau.hat
+    results$mu.hat <- mu.hat
     results$predicted.grf.future <- (state.tau.hat*((cutoff + 7) - state.t0.hat ))
     results$predicted.grf.future.0 <- state.tau.hat*(windowsize-1 + 7)+ covariates.test.unique$log_rolled_cases.y
     results$predicted.grf.future.last <- state.tau.hat*(7)+ final.day.cases
