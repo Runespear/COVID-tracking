@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 __pycache__
-.Rhistory
+**/.Rhistory
+**/.nfs*
 .RDataTmp
 **/augmented_us-counties_latest.csv
 **/augmented_us-counties-states_latest.csv
