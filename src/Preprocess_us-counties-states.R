@@ -1,6 +1,6 @@
 require("pacman")
-list.of.packages <- c("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate","tidyverse")
+p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
+p_load("zoo","usmap","readxl","lubridate","tidyverse")
 
 
 #new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -8,12 +8,11 @@ list.of.packages <- c(list.of.packages, "zoo","usmap","readxl","lubridate","tidy
 # Will need to add custom installation folder for servers without admin access
 #lapply(list.of.packages, require, character.only = TRUE) 
 
-p_load(list.of.packages)
 
 # Set Working Directory to File source directory
 # Only works within RStudio
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-
+#break
 
 #registerDoParallel(cores=6)
 
