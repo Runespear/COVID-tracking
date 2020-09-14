@@ -6,3 +6,5 @@ __pycache__
 **/augmented_us-counties-states_latest.csv
 **/processed_us-counties_latest_minus7.csv
 **/us-counties_latest.csv
+**/grf_windowsize=*
+
