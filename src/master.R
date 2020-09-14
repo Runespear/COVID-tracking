@@ -1,5 +1,6 @@
 # Set Working Directory to File source directory
-require("pacman","here")
+require("pacman")
+p_load("here")
 setwd(file.path(here(),"src"))
 
 #2
