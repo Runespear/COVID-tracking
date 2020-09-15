@@ -76,7 +76,7 @@ counter <- 1
 
 
 #cutofflist=earliest_start:latest_date
-#cutoff.list = latest_date:(latest_date)
+cutoff.list = latest_date:(latest_date)
 
 
 #cutoff.list
