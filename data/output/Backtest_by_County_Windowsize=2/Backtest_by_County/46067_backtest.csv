@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46067,"Hutchinson","South Dakota",0.0229895182246946,3.3855004735557,0.0229895182246955,3.38550047355571,"2020-09-20",243,NA,0.025825156186224,3.40818557724793,3.40534993928641,NA,NA,NA,NA,NA,NA

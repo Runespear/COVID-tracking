@@ -1,3 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
 72055,"Guanica","Puerto Rico",0.0242436116099949,3.34178894463141,0.024243611609994,3.3417889446314,"2020-09-06",229,3.04452243772342,0.0282758224962681,3.37404663172159,3.37001442083532,NA,NA,NA,NA,NA,NA
-72055,"Guanica","Puerto Rico",-0.0529926591727618,2.67357382351409,0,3.04452243772342,"2020-09-13",236,NA,-0.0469432182816467,2.72196922161076,2.71591990975189,-0.0772362707827567,-0.024243611609994,-0.0752190407779148,-1,-1,-1

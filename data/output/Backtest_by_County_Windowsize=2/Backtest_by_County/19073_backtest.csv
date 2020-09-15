@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+19073,"Greene","Iowa",6.2803698347348e-16,3.23023958351852,0,3.23023958351852,"2020-09-20",243,NA,0.00439752294991291,3.26541976711782,3.26102224416791,NA,NA,NA,NA,NA,NA
