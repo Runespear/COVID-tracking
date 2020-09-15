@@ -54,10 +54,10 @@ cutoff.list <- first.block.cutoff:latest_date
 
 
 
-num_trees=2000
+num_trees=200
 
 mainDir = "../data/output"
-subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),sep="")
+subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
 outputfolder = file.path(mainDir, subDir)
 
 grf.subfolder = paste("grf_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
@@ -76,7 +76,7 @@ counter <- 1
 
 
 #cutofflist=earliest_start:latest_date
-#cutoff.list = 200:(latest_date)
+#cutoff.list = latest_date:(latest_date)
 
 
 #cutoff.list
