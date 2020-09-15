@@ -29,11 +29,12 @@ mainDir <- "../data/output"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
 windowsize=2
+num_trees=200
 
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
 
-block.filename <- paste("block_mse_windowsize=",toString(windowsize),".csv",sep="")
+block.filename <- paste("block_mse_windowsize=",toString(windowsize),"_numtrees=","num_trees=",toString(num_trees),".csv",sep="")
 block.filename <- file.path(mainDir,block.filename)
 
 block_df <- read.csv(block.filename)
@@ -65,7 +66,7 @@ days<-restricted_state_df2$cutoff
 MaxDay<-max(days)
 MinDay<-min(days)
 
-png(paste("../data/output/","RMSE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
+png(paste("../data/output/","RMSE_windowsize=",toString(windowsize),"_numtrees=",toString(numtrees),"_plot.png",sep=""), width = 1080, height = 720)
 
 title="One Week Prediction"
 

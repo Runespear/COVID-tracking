@@ -54,7 +54,7 @@ cutoff.list <- first.block.cutoff:latest_date
 
 
 
-num_trees=200
+num_trees=2000
 
 mainDir = "../data/output"
 subDir = paste("backtest_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")

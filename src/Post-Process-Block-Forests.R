@@ -39,7 +39,9 @@ missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.d
 
 # Loop through files in .,/data/output/backtest_state_forests
 windowsize=2
-backtest.folder <- paste("../data/output/backtest_state_forests_windowsize=",toString(windowsize),sep="")
+num_trees =200
+
+backtest.folder <- paste("../data/output/backtest_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
 
 fips_all <- sort(unique(county_data$fips))
@@ -70,7 +72,7 @@ for (cutoff.check in start_date:end_date){
 # Create a folder for analysis results
 
 
-confusion.block.folder <- paste("../data/output/confusion_state_forests_windowsize=",toString(windowsize),sep="")
+confusion.block.folder <- paste("../data/output/confusion_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
 dir.create(confusion.block.folder, showWarnings=FALSE)
 
 
@@ -174,8 +176,8 @@ for (cutoff in cutofflist){
 # Write the mse
 
 
-write.csv(mse.table,paste("../data/output/block_mse_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+write.csv(mse.table,paste("../data/output/block_mse_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),".csv",sep=""),row.names=FALSE)
 
-write.csv(mape.table,paste("../data/output/block_mape_windowsize=",toString(windowsize),".csv",sep=""),row.names=FALSE)
+write.csv(mape.table,paste("../data/output/block_mape_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),".csv",sep=""),row.names=FALSE)
 
 closeAllConnections()
