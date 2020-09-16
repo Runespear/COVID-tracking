@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46101,"Moody","South Dakota",0.0109891215755925,3.34049985481525,0.0109891215755922,3.34049985481525,"2020-09-22",245,NA,0.0130782268631742,3.3572126971159,3.35512359182833,NA,NA,NA,NA,NA,NA

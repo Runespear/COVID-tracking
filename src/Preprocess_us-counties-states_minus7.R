@@ -101,11 +101,21 @@ for (fips in present.fips.list){
   }
   # Below is to calculate new weekly cases
   if (first.fips.date+7 > last.fips.date){
-    next
+    #next
+  #}
+  for(day in first.fips.date:last.fips.date){
+    fips.df[which(fips.df$days_from_start == day),"weekly_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]
   }
-  for (day in (first.fips.date+7):last.fips.date){
+  next
+  }else{
     
+    for(day in first.fips.date:(first.fips.date+6)){
+      fips.df[which(fips.df$days_from_start == day),"weekly_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"]
+    }
+    
+  for (day in (first.fips.date+7):last.fips.date){
     fips.df[which(fips.df$days_from_start == day),"weekly_cases"] <- fips.df[which(fips.df$days_from_start == day),"cases"] - fips.df[which(fips.df$days_from_start == day-7),"cases"]
+    }
   }
   county_data[which(county_data$fips==fips& !is.na(county_data$cases)),"weekly_cases"] <- fips.df[,"weekly_cases"]
 }

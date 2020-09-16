@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26101,"Manistee","Michigan",0.0245411089161183,3.3318230872581,0.0245411089161189,3.3318230872581,"2020-09-22",245,NA,0.0275163630116476,3.35562512002233,3.3526498659268,NA,NA,NA,NA,NA,NA

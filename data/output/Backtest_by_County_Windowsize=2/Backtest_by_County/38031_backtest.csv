@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38031,"Foster","North Dakota",0.0477906638363493,3.39925979189539,0.0477906638363486,3.39925979189538,"2020-09-22",245,NA,0.04957151839255,3.41350662834499,3.41172577378879,NA,NA,NA,NA,NA,NA
