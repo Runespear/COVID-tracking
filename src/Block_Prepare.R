@@ -16,7 +16,7 @@ registerDoParallel(cores=detectCores())
 destfile = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 
 
-county_data <- fread(file = destfile)
+county_data <- read.csv(file = destfile)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
