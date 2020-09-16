@@ -1,6 +1,6 @@
 require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
-p_load("zoo","usmap","readxl","lubridate","here","data.table")
+p_load("zoo","usmap","readxl","lubridate","here","data.table","readr")
 #p_load("tidyverse")
 
 #registerDoParallel(cores=6)
@@ -13,13 +13,13 @@ nyt_url <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-co
 
 
 destfile <- paste("../data/us-counties_latest",".csv",sep="")
-county_data <- fread(nyt_url)
+county_data <- read.csv(nyt_url)
 fwrite(county_data, destfile, row.names=FALSE)
 
 
 # URL of COVID Tracking Data
 track_url<-"https://covidtracking.com/data/download/all-states-history.csv"
-track_data<-fread(track_url)
+track_data<-read.csv(track_url)
 
 # Pre-processing the data
 
@@ -27,7 +27,7 @@ track_data<-track_data[, !(names(track_data) %in% c("dataQualityGrade"))]
 track_data$date<-ymd(track_data$date)
 
 
-county_data <- fread(file = destfile)
+county_data <- read.csv(file = destfile)
 county_data$datetime <- as.Date(county_data$date)
 county_data$date <- as.Date(county_data$date)
 
@@ -208,7 +208,7 @@ county_data = county_data[complete.cases(county_data),]
 # Process county features
 
 
-county_features <- fread(file=file.path("../data/county_features.csv"))
+county_features <- read_csv(file=file.path("../data/county_features.csv"))
 
 
 # Drop all "M_..." prefix
