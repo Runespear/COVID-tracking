@@ -5,8 +5,8 @@ p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr", "here")
 
 
 # Set Working Directory to File source directory
-setwd(file.path(here(),"src"))
-
+#setwd(file.path(here(),"src"))
+setwd(file.path("/home/zwang937/COVID-tracking/src"))
 
 #registerDoParallel(cores=detectCores())
 
