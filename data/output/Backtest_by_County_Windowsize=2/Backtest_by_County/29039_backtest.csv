@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29039,"Cedar","Missouri",0.0548082364949898,3.44838280050587,0.0548082364949929,3.44838280050589,"2020-09-21",244,NA,0.059608104389194,3.4867817436595,3.4819818757653,NA,NA,NA,NA,NA,NA

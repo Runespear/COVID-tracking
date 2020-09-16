@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20165,"Rush","Kansas",0.0125787822068607,3.21731514162654,0.0125787822068606,3.21731514162654,"2020-09-21",244,NA,0.0139605304385312,3.2283691274799,3.22698737924824,NA,NA,NA,NA,NA,NA

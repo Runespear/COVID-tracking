@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29061,"Daviess","Missouri",0.0788400617077751,4.22998778908645,0.0788400617077762,4.22998778908646,"2020-09-21",244,NA,0.0726826482291521,4.18072848125747,4.1868858947361,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46107,"Potter","South Dakota",0.0176995770993985,3.31965044714314,0.0176995770993997,3.31965044714314,"2020-09-21",244,NA,0.020014925055384,3.33817323079102,3.33585788283504,NA,NA,NA,NA,NA,NA

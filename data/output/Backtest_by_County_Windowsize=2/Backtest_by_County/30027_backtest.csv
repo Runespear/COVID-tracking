@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30027,"Fergus","Montana",0.0778170223568062,3.82991762429692,0.077817022356808,3.82991762429693,"2020-09-21",244,NA,0.0676421116169489,3.74851833837805,3.75869324911791,NA,NA,NA,NA,NA,NA
