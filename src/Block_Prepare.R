@@ -16,7 +16,7 @@ registerDoParallel(cores=detectCores())
 destfile = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 
 
-county_data <- read.csv(file = destfile)
+county_data <- fread(file = destfile)
 county_data$log_rolled_cases <- log(county_data$rolled_cases)
 county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 
@@ -99,7 +99,7 @@ for(cutoff in cutofflist){
 
   
   block_file_path = file.path(block_dir, paste("block_",toString(cutoff),".csv",sep=""))
-  write.csv(Tmain,block_file_path,row.names=FALSE)
+  fwrite(Tmain,block_file_path,row.names=FALSE)
   print(paste("Finished writing block for cutoff=",toString(cutoff),setp=""))
 }
 
