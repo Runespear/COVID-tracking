@@ -90,12 +90,14 @@ for(cutoff in cutoff.list){
   #################################
   # See if block is already in there
   # Block is numbered by last day in it
+  print(paste("Working on cutoff=",toString(cutoff),sep=""))
   try({
     start_time <- Sys.time()
     # Given my current cutoff, which block numbers should I use?
     fname <- paste("block_",toString(cutoff),".csv",sep="")
     full.path <- file.path(block.folder,fname)
-    
+    state.tau.forest <- NULL 
+    gc()
     # Concatenate every 7 days until no more
     # e.g. 51 is the start
     # Then on 63, we have 63,56
@@ -120,7 +122,7 @@ for(cutoff in cutoff.list){
     
     covariates <- (df[,-which(names(df) %in% exclusion)])
     #covariates <- unique(covariates)
-    
+    print("training grf") 
     state.tau.forest <- grf::causal_forest(X=covariates, Y=outcome, W= treatment, num.trees = num_trees)
     
     #Save the tau.forest object
@@ -160,7 +162,7 @@ for(cutoff in cutoff.list){
     }
     state.t0.hat <- (E.log_rolled_cases - state.tau.hat*E.shifted_time)/(-state.tau.hat)
     
-    print(state.t0.hat)
+    #print(state.t0.hat)
    
     # Write down results
     results <- data.frame("fips"=identifiers[1],"log_rolled_cases.y"=identifiers[2],"days_from_start"=cutoff)
@@ -176,7 +178,7 @@ for(cutoff in cutoff.list){
     results$Predicted_Double_Days <- log(2,exp(1))/state.tau.hat
     #results$date <- unique(current.block[which(current.block$shifted_time==6),"datetime"])
     #results$log_rolled_cases.x <- (current.block[which(current.block$shifted_time==6),"log_rolled_cases.x"])
-    
+    print("writing results")
     output.fname = paste("block_results_",toString(cutoff),".csv",sep="")
     destfolder = file.path(outputfolder,output.fname)
     write.csv(results, destfolder, row.names=FALSE)
@@ -186,7 +188,7 @@ for(cutoff in cutoff.list){
     time_taken <- end_time - start_time
     
     print(paste("Time taken for cutoff=",toString(cutoff)," is ",toString(time_taken),sep=""))
-    
+    gc() 
     if (counter >= 10){
       
       #break
