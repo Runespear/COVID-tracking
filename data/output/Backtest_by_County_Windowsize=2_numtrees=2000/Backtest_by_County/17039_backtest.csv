@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17039,"De Witt","Illinois",0.0986993752910404,4.32848178676367,0.0986993752910448,4.3284817867637,"2020-09-23",246,NA,0.0858488989630291,4.22567797613957,4.23852845246759,NA,NA,NA,NA,NA,NA

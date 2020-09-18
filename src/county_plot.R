@@ -3,7 +3,9 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","hash", "e1071","dplyr","here")
 
 # Set Working Directory to File source directory
-setwd(file.path(here(),"src"))
+#setwd(file.path(here(),"src"))
+setwd("~/COVID-tracking/src")
+
 #source("county_analysis.R")
 registerDoParallel(cores=detectCores())
 options(bitmapType='cairo')
@@ -45,8 +47,8 @@ dir.create(plotDir)
 #DplotDir <- file.path(CountyPlot,"Backtest_by_County_Dplots")
 #dir.create(DplotDir)
 
-for(c in county_list){
-#foreach(c=county_list)%dopar%{
+#for(c in county_list){
+foreach(c=county_list)%dopar%{
     
     check.file.name <- paste0(toString(c),"_backtest.csv")
     check.file.full.name <- file.path(CountyDir, check.file.name) 

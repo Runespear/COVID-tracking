@@ -3,7 +3,8 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo","usmap","readxl","lubridate","here")
 
 
-setwd(file.path(here(),"src"))
+#setwd(file.path(here(),"src"))
+setwd("~/COVID-tracking/src")
 
 destfile <- paste("../data/us-counties_latest",".csv",sep="")
 

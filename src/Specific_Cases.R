@@ -4,7 +4,9 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table", "lubridate","data.table","here")
 
 # Set Working Directory to File source directory
-setwd(file.path(here(),"src"))
+#setwd(file.path(here(),"src"))
+setwd("~/COVID-tracking/src")
+
 source("county_analysis(shifted).R")
 
 #registerDoParallel(cores=detectCores())

@@ -1,6 +1,11 @@
-Rscript Preprocess_us-counties-states.R
-Rscript Specific_Cases.R
-Rscript Block_Prepare.R
-Rscript State_Forests.R
-Rscript Preprocess_us-counties-states_minus7.R
-Rscript Post-Process-Block-Forests.R
+#!/bin/bash
+SRC="~/COVID-tracking/src/"
+eval Rscript "${SRC}Preprocess_us-counties-states.R"
+eval Rscript "${SRC}Specific_Cases.R"
+eval Rscript "${SRC}Block_Prepare.R"
+eval Rscript "${SRC}State_Forests.R"
+eval Rscript "${SRC}Preprocess_us-counties-states_minus7.R"
+eval Rscript "${SRC}Post-Process-Block-Forests.R"
+eval Rscript "${SRC}RMSE_Plot.R"
+eval Rscript "${SRC}MAPE_Plot.R"
+eval Rscript "${SRC}county_plot.R"

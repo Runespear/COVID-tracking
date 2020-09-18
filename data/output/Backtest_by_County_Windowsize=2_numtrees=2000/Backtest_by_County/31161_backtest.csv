@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31161,"Sheridan","Nebraska",0.0515873687904951,3.60258723831891,0.0515873687904937,3.6025872383189,"2020-09-23",246,NA,0.0530580783247856,3.61435291459323,3.61288220505894,NA,NA,NA,NA,NA,NA

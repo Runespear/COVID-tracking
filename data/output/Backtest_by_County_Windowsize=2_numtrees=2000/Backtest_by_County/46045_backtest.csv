@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46045,"Edmunds","South Dakota",0.0964602661875572,4.29383212158028,0.0964602661875613,4.29383212158031,"2020-09-23",246,NA,0.0749791547770453,4.12198323029618,4.1434643417067,NA,NA,NA,NA,NA,NA

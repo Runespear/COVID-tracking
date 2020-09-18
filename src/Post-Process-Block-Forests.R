@@ -4,7 +4,8 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr","here")
 
 
-setwd(file.path(here(),"src"))
+#setwd(file.path(here(),"src"))
+setwd("~/COVID-tracking/src")
 
 registerDoParallel(cores=detectCores())
 

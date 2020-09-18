@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+21189,"Owsley","Kentucky",-0.0200675630508141,2.9108291833531,0,3.0513021247088,"2020-09-17",240,NA,-0.0224449031473579,2.89181046258075,2.89418780267729,NA,NA,NA,NA,NA,NA
+21189,"Owsley","Kentucky",-0.0484523833859438,2.66368305762125,0,3.00284974132285,"2020-09-18",241,NA,-0.0486456110953348,2.66213723594612,2.66233046365551,-0.0283848203351297,0,-0.0262007079479769,-1,0,-1

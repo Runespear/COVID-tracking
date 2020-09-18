@@ -3,7 +3,8 @@ require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","here")
 
-setwd(file.path(here(),"src"))
+#setwd(file.path(here(),"src"))
+setwd("~/COVID-tracking/src")
 #source("county_analysis.R")
 
 registerDoParallel(cores=detectCores())
