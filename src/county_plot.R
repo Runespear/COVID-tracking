@@ -1,12 +1,12 @@
 require("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
-p_load("zoo", "dtw", "foreach", "evaluate","rlist","hash", "e1071","here")
+p_load("zoo", "dtw", "foreach", "evaluate","rlist","hash", "e1071","dplyr","here")
 
 # Set Working Directory to File source directory
 setwd(file.path(here(),"src"))
 #source("county_analysis.R")
 registerDoParallel(cores=detectCores())
-
+options(bitmapType='cairo')
 # Location of processed county data
 
 mainDir <- "../data/output"
@@ -19,11 +19,12 @@ county_data <- read.csv(file = destfile)
 county_list <- sort(unique(county_data$fips))
 
 windowsize=2
+numtrees=2000
 
 # Backtest directory
 backtestDir <- file.path(mainDir,"backtest")
 
-forest_backtestDir<-file.path(mainDir,paste0("backtest_state_forests_windowsize=",toString(windowsize)))
+forest_backtestDir<-file.path(mainDir,paste0("backtest_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(numtrees)))
 
 # read all the allstates_$(CUTOFF)_grf.csv files
 #cutoff_list <- earliest_start:latest_date
@@ -31,7 +32,7 @@ forest_backtestDir<-file.path(mainDir,paste0("backtest_state_forests_windowsize=
 
 # Place to save resuslts
 
-CountyPlot<-file.path(mainDir,paste0("Backtest_by_County_Windowsize=",toString(windowsize)))
+CountyPlot<-file.path(mainDir,paste0("Backtest_by_County_Windowsize=",toString(windowsize),"_numtrees=",toString(numtrees)))
 dir.create(CountyPlot)
 
 
@@ -44,7 +45,7 @@ dir.create(plotDir)
 #DplotDir <- file.path(CountyPlot,"Backtest_by_County_Dplots")
 #dir.create(DplotDir)
 
-  for(c in county_list){
+for(c in county_list){
 #foreach(c=county_list)%dopar%{
     
     check.file.name <- paste0(toString(c),"_backtest.csv")
@@ -151,7 +152,7 @@ dir.create(plotDir)
     #plot_file_path= file.path(plotDir, paste(toString(c),"_plot.png",sep=""))
     #png(plot_file_path, width = 1080, height = 720))
     
-    png(paste("../data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
+    png(paste("../data/output/",paste0("Backtest_by_County_Windowsize=",toString(windowsize),"_numtrees=",toString(numtrees)),"/Backtest_by_County_plots/",toString(c),"_plot.png",sep=""), width = 1080, height = 720)
     
     title=paste("One Week Prediction","(",toString(plot.prepare$county[1])," county, ",toString(plot.prepare$state[1]),")",sep="")
     

@@ -9,7 +9,7 @@ setwd(file.path(here(),"src"))
 registerDoParallel(cores=detectCores())
 
 
-
+options(bitmapType='cairo')
 # Location of MSE data
 
 mainDir <- "../data/output"
@@ -29,12 +29,12 @@ mainDir <- "../data/output"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
 windowsize=2
-num_trees=200
+numtrees=2000
 
 filename_raw <- paste("mse_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
 
-block.filename <- paste("block_mse_windowsize=",toString(windowsize),"_numtrees=","num_trees=",toString(num_trees),".csv",sep="")
+block.filename <- paste("block_mse_windowsize=",toString(windowsize),"_numtrees=",toString(numtrees),".csv",sep="")
 block.filename <- file.path(mainDir,block.filename)
 
 block_df <- read.csv(block.filename)

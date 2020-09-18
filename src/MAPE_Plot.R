@@ -9,7 +9,7 @@ setwd(file.path(here(),"src"))
 
 registerDoParallel(cores=detectCores())
 
-
+options(bitmapType='cairo')
 
 # Location of mape data
 
@@ -30,11 +30,12 @@ mainDir <- "../data/output"
 #backtest_dir = file.path(mainDir, subDir)
 #dir.create(backtest_dir)
 windowsize=2
+numtrees=2000
 
 filename_raw <- paste("mape_table",".csv",sep="")
 filename <- file.path(mainDir,filename_raw)
 
-block.filename <- paste("block_mape_windowsize=",toString(windowsize),".csv",sep="")
+block.filename <- paste("block_mape_windowsize=",toString(windowsize),"_numtrees=",toString(numtrees),".csv",sep="")
 block.filename <- file.path(mainDir,block.filename)
 
 block_df <- read.csv(block.filename)
@@ -64,7 +65,7 @@ days<-restricted_state_df2$cutoff
 MaxDay<-max(days)
 MinDay<-min(days)
 
-png(paste("../data/output/","MAPE_windowsize=",toString(windowsize),"_plot.png",sep=""), width = 1080, height = 720)
+png(paste("../data/output/","MAPE_windowsize=",toString(windowsize),"_numtrees=",toString(numtrees),"_plot.png",sep=""), width = 1080, height = 720)
 
 title="One Week Prediction"
 
