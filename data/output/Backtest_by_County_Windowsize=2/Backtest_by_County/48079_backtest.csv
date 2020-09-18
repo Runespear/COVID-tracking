@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-48079,"Cochran","Texas",-0.00619197024792009,3.09215042419371,0,3.13549421592915,"2020-08-21",213,3.01693448120459,-0.0166412498727428,3.00855618719513,3.01900546681995,NA,NA,NA,NA,NA,NA
+48079,"Cochran","Texas",-0.00619197024792009,3.09215042419371,0,3.13549421592915,"2020-08-21",213,3.01693448120459,-0.0157693797386747,3.01553114826767,3.02510855775843,NA,NA,NA,NA,NA,NA

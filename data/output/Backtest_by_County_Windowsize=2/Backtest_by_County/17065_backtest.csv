@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-17065,"Hamilton","Illinois",0.0470675108579912,3.54261772616516,0.0470675108579881,3.54261772616513,"2020-08-27",219,3.02390315052069,0.0492317291964271,3.55993147287265,3.55776725453421,NA,NA,NA,NA,NA,NA
+17065,"Hamilton","Illinois",0.0470675108579912,3.54261772616516,0.0470675108579881,3.54261772616513,"2020-08-27",219,3.02390315052069,0.0490025945911145,3.55809839603015,3.55616331229702,NA,NA,NA,NA,NA,NA
