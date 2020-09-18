@@ -39,7 +39,7 @@ missing.fips.list <- all.info.fips[which(! all.info.fips %in% unique(fips.list.d
 
 # Loop through files in .,/data/output/backtest_state_forests
 windowsize=2
-num_trees =200
+num_trees =2000
 
 backtest.folder <- paste("../data/output/backtest_state_forests_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),sep="")
 filelist <- list.files(path=backtest.folder, pattern="*.csv", full.names=FALSE, recursive=FALSE)
