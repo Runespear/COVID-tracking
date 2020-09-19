@@ -90,10 +90,10 @@ for(cutoff in cutofflist){
   
   # Training Set
   
-  # Get rid of counties where there are less than 7 records so far
+  # Get rid of counties where there are less than 2 records so far
   restricted_state_df <- subset(county_data, days_from_start <= cutoff)
   tt <- table(restricted_state_df$fips)
-  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=7]) )
+  restricted_state_df <- subset(restricted_state_df,  fips %in% names(tt[tt>=2]) )
   
   # Get rid of counties that have less than 10 log_rolled_cases in the past3 days
   #restricted_state_df <- subset(county_data, days_from_start > cutoff-window_number & days_from_start <= cutoff)

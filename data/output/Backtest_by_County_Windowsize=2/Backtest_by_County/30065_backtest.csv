@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30065,"Musselshell","Montana",0.0350913198112702,3.27646283204415,0.0350913198112695,3.27646283204415,"2020-09-25",248,NA,0.0390776353586939,3.30835335642354,3.30436704087612,NA,NA,NA,NA,NA,NA

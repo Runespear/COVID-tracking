@@ -63,10 +63,10 @@ for(cutoff in cutofflist){
   print(paste("Starting computation for cutoff=",toString(cutoff),sep=""))
   
   first<-cutoff-windowsize
-  # Get rid of counties where there are less than 7 records so far
+  # Get rid of counties where there are less than 2 records so far
   restricted_state_df0 <- subset(county_data, days_from_start <= cutoff)
   tt <- table(restricted_state_df0$fips)
-  restricted_state_df0 <- subset(restricted_state_df0,  fips %in% names(tt[tt>=7]) )
+  restricted_state_df0 <- subset(restricted_state_df0,  fips %in% names(tt[tt>=2]) )
   
   # Get rid of counties that have less than 20 log_rolled_cases in the past 2 days
   restricted_state_df0 <- subset(restricted_state_df0, days_from_start >= cutoff-1 & days_from_start <= cutoff)

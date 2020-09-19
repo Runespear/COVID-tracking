@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55107,"Rusk","Wisconsin",0.0675932911325338,3.55768081026486,0.0675932911325314,3.55768081026484,"2020-09-25",248,NA,0.070712798439872,3.58263686872357,3.57951736141622,NA,NA,NA,NA,NA,NA
