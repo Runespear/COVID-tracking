@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+32033,"White Pine","Nevada",-0.0117648415795867,3.10163467481065,0,3.18398856586776,"2020-09-24",247,NA,-0.017976501083852,3.05194139877653,3.0581530582808,NA,NA,NA,NA,NA,NA

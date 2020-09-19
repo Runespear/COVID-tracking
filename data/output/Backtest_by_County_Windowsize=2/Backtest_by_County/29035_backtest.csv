@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29035,"Carter","Missouri",0.0561945583436425,3.6569379121916,0.0561945583436412,3.65693791219159,"2020-09-24",247,NA,0.057740490707123,3.66930537109944,3.66775943873597,NA,NA,NA,NA,NA,NA

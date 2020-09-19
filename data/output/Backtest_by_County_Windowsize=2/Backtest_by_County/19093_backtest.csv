@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+19093,"Ida","Iowa",0.0645385211375733,4.05103694338726,0.0645385211375715,4.05103694338725,"2020-09-24",247,NA,0.064154009332897,4.04796084894986,4.04834536075453,NA,NA,NA,NA,NA,NA

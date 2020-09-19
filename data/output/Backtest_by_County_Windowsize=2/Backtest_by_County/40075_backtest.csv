@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40075,"Kiowa","Oklahoma",0.00711746776886276,3.05267201570489,0.00711746776886191,3.05267201570489,"2020-09-24",247,NA,0.0107492774665562,3.08172649328644,3.07809468358874,NA,NA,NA,NA,NA,NA

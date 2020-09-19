@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20003,"Anderson","Kansas",0.0746108637911757,3.60680381887535,0.0746108637911758,3.60680381887535,"2020-09-24",247,NA,0.0761091035284135,3.61878973677326,3.61729149703601,NA,NA,NA,NA,NA,NA
