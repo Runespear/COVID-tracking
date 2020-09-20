@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20205,"Wilson","Kansas",0.00373832211060561,3.67124508622978,0.00373832211060554,3.67124508622978,"2020-09-25",248,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

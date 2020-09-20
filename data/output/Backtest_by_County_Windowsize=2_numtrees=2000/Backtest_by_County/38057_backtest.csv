@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38057,"Mercer","North Dakota",0.11297266560349,4.66498144052148,0.112972665603487,4.66498144052146,"2020-09-25",248,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

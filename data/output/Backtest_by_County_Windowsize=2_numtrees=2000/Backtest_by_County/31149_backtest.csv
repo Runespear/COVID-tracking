@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31149,"Rock","Nebraska",0.0096619109117377,3.45926130702817,0.00966191091173751,3.45926130702817,"2020-09-25",248,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

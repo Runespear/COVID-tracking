@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+56009,"Converse","Wyoming",0.104043859773083,4.31578635808379,0.10404385977308,4.31578635808377,"2020-09-25",248,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
