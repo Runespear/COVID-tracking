@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38045,"LaMoure","North Dakota",0.0484523833859496,3.39046880841045,0.0484523833859472,3.39046880841043,"2020-09-26",249,NA,0.0557056671325202,3.44849507838301,3.44124179463644,NA,NA,NA,NA,NA,NA

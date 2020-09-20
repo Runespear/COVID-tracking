@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29139,"Montgomery","Missouri",0.0275879565188306,3.23763813335524,0.0275879565188304,3.23763813335524,"2020-09-26",249,NA,0.0299713220586558,3.25670505767384,3.25432169213401,NA,NA,NA,NA,NA,NA

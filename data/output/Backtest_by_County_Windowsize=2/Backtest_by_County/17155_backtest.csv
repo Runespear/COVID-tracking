@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17155,"Putnam","Illinois",0.0544352065550202,3.45241613364475,0.05443520655502,3.45241613364475,"2020-09-26",249,NA,0.0592562888627893,3.4909847921069,3.48616370979914,NA,NA,NA,NA,NA,NA
