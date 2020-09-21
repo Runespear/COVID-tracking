@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20163,"Rooks","Kansas",0.0382212128201987,3.39681215591991,0.0382212128201993,3.39681215591991,"2020-09-26",249,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+20163,"Rooks","Kansas",0.0368139731227122,3.42377545116021,0.0368139731227139,3.42377545116023,"2020-09-27",250,NA,NA,NA,NA,-0.0014072396974865,-0.0014072396974854,NA,-1,-1,NA
