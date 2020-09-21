@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55003,"Ashland","Wisconsin",0.107485914970136,3.86273706108394,0.107485914970141,3.86273706108398,"2020-09-27",250,NA,0.0984682941641995,3.79059609463645,3.79961371544239,NA,NA,NA,NA,NA,NA

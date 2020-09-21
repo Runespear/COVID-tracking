@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20131,"Nemaha","Kansas",0.0858612906063963,3.71771391821643,0.0858612906063945,3.71771391821642,"2020-09-27",250,NA,0.0836139563611204,3.69973524425422,3.70198257849949,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31003,"Antelope","Nebraska",0.111591065408463,3.91663167378839,0.111591065408461,3.91663167378838,"2020-09-27",250,NA,0.0960616116982928,3.79239604410703,3.8079254978172,NA,NA,NA,NA,NA,NA

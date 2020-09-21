@@ -1,2 +1,3 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
 17003,"Alexander","Illinois",0.0544352065550233,3.45241613364478,0.05443520655502,3.45241613364475,"2020-09-26",249,NA,0.055871993529296,3.46391042943896,3.46247364246468,NA,NA,NA,NA,NA,NA
+17003,"Alexander","Illinois",0.0453151962120405,3.43389125745594,0.0453151962120422,3.43389125745595,"2020-09-27",250,NA,0.0474086886234561,3.45063919674726,3.44854570433584,-0.0091200103429828,-0.0091200103429778,-0.0084633049058399,-1,-1,-1

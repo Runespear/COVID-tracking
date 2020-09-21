@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40151,"Woods","Oklahoma",0.288990117111804,5.61828421588574,0.288990117111795,5.61828421588568,"2020-09-27",250,NA,0.111971824838027,4.20213787769554,4.3791561699693,NA,NA,NA,NA,NA,NA

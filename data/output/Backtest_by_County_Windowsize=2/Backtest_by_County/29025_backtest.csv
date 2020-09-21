@@ -1,2 +1,3 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
 29025,"Caldwell","Missouri",0.114047506471297,3.97041620866052,0.114047506471297,3.97041620866052,"2020-09-26",249,NA,0.10084498163325,3.86479600995615,3.87799853479419,NA,NA,NA,NA,NA,NA
+29025,"Caldwell","Missouri",0.113114804437832,4.0770020988641,0.113114804437829,4.07700209886408,"2020-09-27",250,NA,0.10198114022189,3.98793278513656,3.9990664493525,-0.000932702033464988,-0.000932702033468,0.00113615858864001,-1,-1,1

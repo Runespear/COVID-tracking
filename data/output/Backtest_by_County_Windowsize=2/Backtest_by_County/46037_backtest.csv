@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46037,"Day","South Dakota",0.0540672212702752,3.45644092068289,0.054067221270274,3.45644092068288,"2020-09-27",250,NA,0.0595495534926068,3.50029957846154,3.49481724623921,NA,NA,NA,NA,NA,NA
