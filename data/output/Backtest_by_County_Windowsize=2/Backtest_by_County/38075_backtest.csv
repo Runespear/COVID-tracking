@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38075,"Renville","North Dakota",0.108213584640237,3.86144095067588,0.108213584640234,3.86144095067586,"2020-09-29",252,NA,0.0964894557232381,3.7676479193399,3.77937204825689,NA,NA,NA,NA,NA,NA

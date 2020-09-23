@@ -176,6 +176,8 @@ for (cutoff in cutofflist){
     
     test.df[which(test.df$state == "Massachusetts"),"Predicted_Double_Days"]<- NA
     test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 45037),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 45003),"Predicted_Double_Days"]<- NA
     
     final.df<-merge(x=test.df,y=county_14data, by="fips", all.x=TRUE)
     
