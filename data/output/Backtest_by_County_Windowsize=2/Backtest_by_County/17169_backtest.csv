@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17169,"Schuyler","Illinois",0.0526437334854262,3.47245199259221,0.0526437334854246,3.4724519925922,"2020-09-28",251,NA,0.0598718363627172,3.53027681561054,3.52304871273324,NA,NA,NA,NA,NA,NA

@@ -175,6 +175,7 @@ for (cutoff in cutofflist){
     #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
     
     test.df[which(test.df$state == "Massachusetts"),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
     
     final.df<-merge(x=test.df,y=county_14data, by="fips", all.x=TRUE)
     
