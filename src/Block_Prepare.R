@@ -5,8 +5,8 @@ p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table", "here")
 
 
 # Set Working Directory to File source directory
-#setwd(file.path(here(),"src"))
-setwd("~/COVID-tracking/src")
+setwd(file.path(here(),"src"))
+#setwd("~/COVID-tracking/src")
 
 source("county_analysis_lm.R")
 registerDoParallel(cores=detectCores())

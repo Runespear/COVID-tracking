@@ -4,8 +4,8 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table","plyr","here")
 
 
-#setwd(file.path(here(),"src"))
-setwd("~/COVID-tracking/src")
+setwd(file.path(here(),"src"))
+#setwd("~/COVID-tracking/src")
 
 registerDoParallel(cores=detectCores())
 
@@ -82,8 +82,8 @@ mse.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mse"=NA, "block.ms
 
 mape.table <- data.frame("cutoff"=cutoff.start:end_date,"block.mape"=NA, "block.mape.0"=NA, "block.mape.last"=NA)
 
-cutofflist<-cutoff.start:end_date
-#cutofflist<-(end_date-1):end_date
+cutofflist<-cutoff.start:(end_date)
+#cutofflist<-cutoff.start:(241)
 
 
 for (cutoff in cutofflist){

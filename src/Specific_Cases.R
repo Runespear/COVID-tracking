@@ -4,8 +4,8 @@ p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doP
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","data.table", "lubridate","data.table","here")
 
 # Set Working Directory to File source directory
-#setwd(file.path(here(),"src"))
-setwd("~/COVID-tracking/src")
+setwd(file.path(here(),"src"))
+#setwd("~/COVID-tracking/src")
 
 source("county_analysis(shifted).R")
 
@@ -180,6 +180,7 @@ performance.table<- rbind(performance.table0,performance.table1)
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
 write.csv(performance.table,file.path(mainDir,"mse_table.csv"),row.names=FALSE)
+write.csv(performance.table,file.path(mainDir, paste("mse_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
 
 mape.list <- list(cutoff=cutoff.list, lm.mape=lm.mape.list, slm.mape=slm.mape.list)
 mape.table1 <- as.data.frame(mape.list)
@@ -193,7 +194,7 @@ mape.table<- rbind(mape.table0,mape.table1)
 
 
 write.csv(mape.table,file.path(mainDir,"mape_table.csv"),row.names=FALSE)
-
+write.csv(performance.table,file.path(mainDir, paste("mape_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
 
 closeAllConnections()
 

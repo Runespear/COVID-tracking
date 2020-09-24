@@ -5,8 +5,8 @@ p_load("zoo","usmap","readxl","lubridate","here","data.table","readr")
 
 #registerDoParallel(cores=6)
 
-#setwd(file.path(here(),"src"))
-setwd("~/COVID-tracking/src")
+setwd(file.path(here(),"src"))
+#setwd("~/COVID-tracking/src")
 
 #break
 # URL of NYTimes Data
