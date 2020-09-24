@@ -171,7 +171,7 @@ for(cutoff in updatelist){
 performance.list <- list(cutoff=cutoff.list, lm.mse=lm.mse.list, slm.mse=slm.mse.list)
 performance.table1 <- as.data.frame(performance.list)
 
-destfile = file.path(mainDir,"mse_table.csv")
+destfile = file.path(mainDir,paste("mse_table_windowsize=",toString(windowsize+1),".csv",sep=""))
 performance.table0 <- read.csv(file = destfile)
 
 performance.table<- rbind(performance.table0,performance.table1)
@@ -179,7 +179,7 @@ performance.table<- rbind(performance.table0,performance.table1)
 
 # discrepancy = restricted_state_df2[which(restricted_state_df2$lm.mse != restricted_state_df2$slm.mse),]
 
-write.csv(performance.table,file.path(mainDir,"mse_table.csv"),row.names=FALSE)
+write.csv(performance.table,file.path(mainDir,paste("mape_table_windowsize=",toString(windowsize+1),".csv",sep="")),row.names=FALSE)
 write.csv(performance.table,file.path(mainDir, paste("mse_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
 
 mape.list <- list(cutoff=cutoff.list, lm.mape=lm.mape.list, slm.mape=slm.mape.list)
@@ -194,7 +194,7 @@ mape.table<- rbind(mape.table0,mape.table1)
 
 
 write.csv(mape.table,file.path(mainDir,"mape_table.csv"),row.names=FALSE)
-write.csv(performance.table,file.path(mainDir, paste("mape_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
+write.csv(mape.table,file.path(mainDir, paste("mape_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
 
 closeAllConnections()
 
