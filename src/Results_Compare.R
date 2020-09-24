@@ -101,17 +101,17 @@ for (i in c(1,2)){
   block.last.metric <- df.to.plot[,c(paste("block.",metric.to.plot,".last",sep=""))]
   legend.list <- c(paste("block.",metric.to.plot,".last",sep=""))
   
-  cl <- rainbow(length(wsize.list + 1))
-  png(paste("../data/output/",metric.to.plot,"_compare_lm_numtrees=",toString(numtrees),".png" ,sep="") )
-  plot(days, block.last.metric, pch=19, col=rainbow[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(0,0.1),xaxs="i",yaxs="i",lty=1, main=title)
+  cl <- rainbow(length(wsize.list)+1)
+  png(paste("../data/output/",metric.to.plot,"_compare_lm_numtrees=",toString(numtrees),".png" ,sep=""), width = 1080, height = 720 )
+  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(0,0.1),xaxs="i",yaxs="i",lty=1, main=title)
   # Plot lm metrics
   for (j in 1:length(wsize.list)){
     
     lm.metric <- df.to.plot[,c(paste("lm.",metric.to.plot,".windowsize=",wsize.list[j],sep=""))]
-    lines(days, lm.metric, col=cl[j+1], type=j+1)
+    lines(days, lm.metric, col=cl[j+1], lty=j+1)
     legend.list <- c(legend.list,paste("lm.",metric.to.plot,".windowsize=",wsize.list[j],sep=""))
   }
-  legend(MinDay, 0.1, legend=legend.list, col=cl, lty=1:(wsize.list+1), cex=0.8)
+  legend(MinDay, 0.1, legend=legend.list, col=cl, lty=1:(length(wsize.list)+1), cex=0.8)
   
   dev.off()
 }

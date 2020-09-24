@@ -24,7 +24,7 @@ county_data <- subset(county_data, log_rolled_cases >= log(20,exp(1)))
 state_list = sort(unique(county_data$state))
 # switch to state_list for all states, Idaho, California, Massachusetts, Texas
 # windowsize = n-1
-windowsize = 13
+windowsize = 1
 window_number= windowsize +3
 predictionsize = 7
 #for (cutoff in (earliest_start+windowsize):(latest_date -predictionsize)){
