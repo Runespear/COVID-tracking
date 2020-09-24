@@ -1,4 +1,4 @@
-require("data.table")
+library("data.table")
 
 county_analysis <- function(restricted_state_df0, cutoffstart,cutoffend, predictionsize){
   

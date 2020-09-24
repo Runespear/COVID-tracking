@@ -1,4 +1,4 @@
-require("pacman")
+library("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime","rlist")
 p_load("zoo", "dtw", "foreach", "evaluate","rlist","hash", "e1071","dplyr","here")
 

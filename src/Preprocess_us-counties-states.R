@@ -1,4 +1,4 @@
-require("pacman")
+library("pacman")
 p_load("ggplot2", "Rcpp", "grf", "caret", "mltools", "rpart", "minpack.lm", "doParallel", "rattle", "anytime")
 p_load("zoo","usmap","readxl","lubridate","here","data.table","readr")
 #p_load("tidyverse")
