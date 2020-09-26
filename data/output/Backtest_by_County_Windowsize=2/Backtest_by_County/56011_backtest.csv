@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+56011,"Crook","Wyoming",0.0411016756855534,3.34574788668902,0.041101675685554,3.34574788668902,"2020-10-01",254,NA,0.0533899310736737,3.44405392979398,3.43176567440587,NA,NA,NA,NA,NA,NA

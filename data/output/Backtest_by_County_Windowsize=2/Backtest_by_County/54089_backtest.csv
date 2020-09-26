@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54089,"Summers","West Virginia",0.0898038948613012,3.77646731578056,0.0898038948613031,3.77646731578057,"2020-10-01",254,NA,0.0852118473919259,3.73973093602556,3.74432298349493,NA,NA,NA,NA,NA,NA

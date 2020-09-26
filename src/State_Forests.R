@@ -106,7 +106,7 @@ for(cutoff in cutoff.list){
     # Then on 63, we have 63,56
     shift <- (cutoff - first.block.cutoff)%%windowsize 
     data.cutoff.list <- c(seq(first.block.cutoff + shift, cutoff, windowsize))
-    
+    #data.cutoff.list <- c(seq(first.block.cutoff, cutoff, 1))
     print(data.cutoff.list)
     
     block.fullpath.list <- c()

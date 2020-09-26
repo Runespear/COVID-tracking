@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-21091,"Hancock","Kentucky",0.0341330063694581,3.29696720147635,0.034133006369458,3.29696720147635,"2020-08-04",196,3.01693448120459,0.0354948710785401,3.30786211914901,3.30650025443993,NA,NA,NA,NA,NA,NA
+21091,"Hancock","Kentucky",0.0341330063694589,3.29696720147636,0.034133006369458,3.29696720147635,"2020-08-04",196,3.01693448120459,0.0360284170335957,3.31213048678946,3.31023507612532,NA,NA,NA,NA,NA,NA

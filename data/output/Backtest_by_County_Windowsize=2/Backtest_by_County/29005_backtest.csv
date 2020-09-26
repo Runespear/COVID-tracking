@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-29005,"Atchison","Missouri",-0.00706716722309668,2.95337957076118,0,3.00284974132285,"2020-09-26",249,NA,-0.0140513076638502,2.89750644723515,2.9044905876759,NA,NA,NA,NA,NA,NA
+29005,"Atchison","Missouri",-0.00706716722309486,2.95337957076119,0,3.00284974132285,"2020-09-26",249,NA,-0.0120224516157612,2.91373729561986,2.91869258001252,NA,NA,NA,NA,NA,NA

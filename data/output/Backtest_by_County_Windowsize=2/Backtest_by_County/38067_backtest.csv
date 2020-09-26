@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+38067,"Pembina","North Dakota",0.104670622563888,3.86818857387636,0.104670622563889,3.86818857387638,"2020-10-01",254,NA,0.0961396364807728,3.79994068521144,3.80847167129456,NA,NA,NA,NA,NA,NA

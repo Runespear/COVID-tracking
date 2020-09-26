@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+5105,"Perry","Arkansas",0.0212022076506016,3.1653499347588,0.0212022076506018,3.1653499347588,"2020-10-01",254,NA,0.0245691700431712,3.19228563389936,3.18891867150679,NA,NA,NA,NA,NA,NA

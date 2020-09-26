@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30059,"Meagher","Montana",0.0138891121606679,3.12804737848994,0.0138891121606677,3.12804737848993,"2020-10-01",254,NA,0.0150301849322643,3.1371759606627,3.13603488789111,NA,NA,NA,NA,NA,NA
