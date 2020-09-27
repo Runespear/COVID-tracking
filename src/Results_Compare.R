@@ -88,7 +88,7 @@ for(wsize in wsize.list){
   
   #max.mape.improvement <- c(max.mape.improvement,max(mape.compare.df$compare.mape))
   #max.rmse.improvement <- c(max.rmse.improvement,max(mse.compare.df$compare.rmse))
-  break
+  
   
   
 }
@@ -104,10 +104,10 @@ write.csv(rmse.compare.df,file.path(output.folder,paste("rmse_block_lm_compare_n
  # plot the lm.mse and lm.mape (2,4,8,16) v.s. block.last.mse and block.last.mape
 #######################################################################
 
-table.list <- list(mse.compare.df,mape.compare.df, rmse.compare.df)
-metric.list <- c("mse","mape","rmse")
+table.list <- list(mape.compare.df, mse.compare.df, rmse.compare.df)
+metric.list <- c("mape","mse","rmse")
 
-for (i in c(1,3)){
+for (i in c(1,2,3)){
   print(i)
   df.to.plot <- table.list[[i]]
   metric.to.plot <- metric.list[i]
@@ -125,7 +125,7 @@ for (i in c(1,3)){
   
   cl <- rainbow(length(wsize.list)+1)
   png(paste("../data/output/",metric.to.plot,"_compare_lm_numtrees=",toString(numtrees),".png" ,sep=""), width = 1080, height = 720 )
-  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(0,0.6),xaxs="i",yaxs="i",lty=1, main=title)
+  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(0,0.12*i),xaxs="i",yaxs="i",lty=1, main=title)
   # Plot lm metrics
   for (j in 1:length(wsize.list)){
     
