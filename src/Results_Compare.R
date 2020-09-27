@@ -28,6 +28,9 @@ block.mse.df <- read.csv(file.path(output.folder,block.mse.fname))
 block.mape.df <- read.csv(file.path(output.folder,block.mape.fname))
 block.rmse.df <- read.csv(file.path(output.folder,block.rmse.fname))
 
+names(block.mse.df)[names(block.mse.df) == "block.mse.last"] <- paste("grf.mse")
+names(block.rmse.df)[names(block.rmse.df) == "block.rmse.last"] <- paste("grf.rmse")
+names(block.mape.df)[names(block.mape.df) == "block.mape.last"] <- paste("grf.mape")
 
 block.mse.df <- subset(block.mse.df, select=-c(block.mse,block.mse.0))
 block.mape.df <- subset(block.mape.df, select=-c(block.mape,block.mape.0))
@@ -120,12 +123,12 @@ for (i in c(1,2,3)){
   MinDay <- min(days)
   MaxDay <- max(days)
   
-  block.last.metric <- df.to.plot[,c(paste("block.",metric.to.plot,".last",sep=""))]
-  legend.list <- c(paste("block.",metric.to.plot,".last",sep=""))
+  block.last.metric <- df.to.plot[,c(paste("grf.",metric.to.plot,sep=""))]
+  legend.list <- c(paste("grf.",metric.to.plot,".last",sep=""))
   
   cl <- rainbow(length(wsize.list)+1)
   png(paste("../data/output/",metric.to.plot,"_compare_lm_numtrees=",toString(numtrees),".png" ,sep=""), width = 1080, height = 720 )
-  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(0,0.12*i),xaxs="i",yaxs="i",lty=1, main=title)
+  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(min(block.last.metric)-0.001,0.12*i),xaxs="i",yaxs="i",lty=1, main=title)
   # Plot lm metrics
   for (j in 1:length(wsize.list)){
     
@@ -133,7 +136,7 @@ for (i in c(1,2,3)){
     lines(days, lm.metric, col=cl[j+1], lty=1)
     legend.list <- c(legend.list,paste("lm.",metric.to.plot,".windowsize=",wsize.list[j],sep=""))
   }
-  legend(MinDay, 0.2, legend=legend.list, col=cl, lty=1, cex=0.8)
+  legend("topright", legend=legend.list, col=cl, lty=1, cex=2)
   
   dev.off()
 }
