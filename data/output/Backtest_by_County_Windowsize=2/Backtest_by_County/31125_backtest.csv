@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31125,"Nance","Nebraska",0.134387190708422,4.1127939983204,0.134387190708419,4.11279399832037,"2020-10-03",256,NA,0.0977428884048646,3.81963957989195,3.85628388219549,NA,NA,NA,NA,NA,NA

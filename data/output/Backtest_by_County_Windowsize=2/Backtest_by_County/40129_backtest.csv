@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40129,"Roger Mills","Oklahoma",0.114929966673971,4.023385591586,0.114929966673976,4.02338559158603,"2020-10-03",256,NA,0.101603236531069,3.91677175044277,3.93009848058568,NA,NA,NA,NA,NA,NA

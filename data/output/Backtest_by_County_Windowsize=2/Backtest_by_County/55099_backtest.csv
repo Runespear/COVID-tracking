@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+55099,"Price","Wisconsin",0.192077731739324,4.72651014190954,0.192077731739318,4.72651014190949,"2020-10-03",256,NA,0.106979723595627,4.04572607675997,4.13082408490366,NA,NA,NA,NA,NA,NA

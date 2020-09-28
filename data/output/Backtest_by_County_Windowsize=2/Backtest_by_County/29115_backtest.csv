@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29115,"Linn","Missouri",0.152107778197464,4.2125944991337,0.152107778197459,4.21259449913366,"2020-10-03",256,NA,0.0970030657153387,3.7717567992767,3.82686151175882,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40149,"Washita","Oklahoma",0.110900696033448,4.02889175444465,0.110900696033445,4.02889175444463,"2020-10-03",256,NA,0.104250453267683,3.97568981231853,3.98234005508429,NA,NA,NA,NA,NA,NA

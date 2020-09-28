@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48137,"Edwards","Texas",0.182321556793945,4.61860777919684,0.182321556793954,4.6186077791969,"2020-10-03",256,NA,0.157418210723986,4.41938101063716,4.44428435670712,NA,NA,NA,NA,NA,NA

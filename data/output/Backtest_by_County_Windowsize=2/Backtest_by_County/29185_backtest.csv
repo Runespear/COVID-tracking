@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29185,"St. Clair","Missouri",0.16184302545041,4.34604632831209,0.161843025450418,4.34604632831214,"2020-10-02",255,NA,0.12153347888571,4.02356995579448,4.06387950235919,NA,NA,NA,NA,NA,NA
+29185,"St. Clair","Missouri",0.144249608844549,4.3671420209156,0.144249608844544,4.36714202091557,"2020-10-03",256,NA,0.106220253045992,4.06290717452716,4.1009365303257,-0.017593416605861,-0.017593416605874,-0.015313225839718,-1,-1,-1

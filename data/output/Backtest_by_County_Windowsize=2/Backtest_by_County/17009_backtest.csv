@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+17009,"Brown","Illinois",0.11926342082682,4.0188325116555,0.119263420826817,4.01883251165548,"2020-10-03",256,NA,0.0957970734906431,3.83110173296608,3.85456808030226,NA,NA,NA,NA,NA,NA
