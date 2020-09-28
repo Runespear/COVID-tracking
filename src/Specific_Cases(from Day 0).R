@@ -122,9 +122,7 @@ for (windowsize in c(15,7,3,1)){
       restricted_state_df2$lm.mse<-with(restricted_state_df2,(predicted.lm-log_rolled_cases.y)**2)
       restricted_state_df2$slm.mse<-with(restricted_state_df2,(predicted.slm-log_rolled_cases.y)**2)
       
-      restricted_state_df2$lm.rmse<-with(restricted_state_df2,abs(predicted.lm-log_rolled_cases.y))
-      restricted_state_df2$slm.rmse<-with(restricted_state_df2,abs(predicted.slm-log_rolled_cases.y))
-      
+
       
       restricted_state_df2$lm.mape <- with(restricted_state_df2, abs( (predicted.lm - log_rolled_cases.y)/log_rolled_cases.y ))
       restricted_state_df2$slm.mape <- with(restricted_state_df2, abs( (predicted.slm - log_rolled_cases.y)/log_rolled_cases.y ))
@@ -186,11 +184,6 @@ for (windowsize in c(15,7,3,1)){
   write.csv(mape.table,file.path(mainDir,paste("mape_table.csv" ,sep="")),row.names=FALSE)
   write.csv(mape.table,file.path(mainDir, paste("mape_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
   
-  print("Writing rmse")
-  rmse.list <- list(cutoff=cutoff.list, lm.rmse=lm.rmse.list, slm.rmse=slm.rmse.list)
-  rmse.table <- as.data.frame(rmse.list)
-  write.csv(rmse.table,file.path(mainDir,paste("rmse_table.csv" ,sep="")),row.names=FALSE)
-  write.csv(rmse.table,file.path(mainDir, paste("rmse_table_windowsize=",toString(windowsize+1),".csv",sep="") ),row.names=FALSE)
 }
 
 

@@ -21,20 +21,21 @@ output.folder <- "../data/output"
 
 block.mse.fname <- paste("block_mse_windowsize=2_numtrees=",toString(numtrees),".csv",sep="")
 block.mape.fname <- paste("block_mape_windowsize=2_numtrees=",toString(numtrees),".csv",sep="")
-block.rmse.fname <- paste("block_rmse_windowsize=2_numtrees=",toString(numtrees),".csv",sep="")
 
 
 block.mse.df <- read.csv(file.path(output.folder,block.mse.fname))
 block.mape.df <- read.csv(file.path(output.folder,block.mape.fname))
-block.rmse.df <- read.csv(file.path(output.folder,block.rmse.fname))
+block.rmse.df <- block.mse.df
 
 names(block.mse.df)[names(block.mse.df) == "block.mse.last"] <- paste("grf.mse")
-names(block.rmse.df)[names(block.rmse.df) == "block.rmse.last"] <- paste("grf.rmse")
+names(block.rmse.df)[names(block.rmse.df) == "block.mse.last"] <- paste("grf.rmse")
 names(block.mape.df)[names(block.mape.df) == "block.mape.last"] <- paste("grf.mape")
+
+block.rmse.df$grf.rmse <- sqrt(block.rmse.df$grf.rmse)
 
 block.mse.df <- subset(block.mse.df, select=-c(block.mse,block.mse.0))
 block.mape.df <- subset(block.mape.df, select=-c(block.mape,block.mape.0))
-block.rmse.df <- subset(block.rmse.df, select=-c(block.rmse,block.rmse.0))
+block.rmse.df <- subset(block.rmse.df, select=-c(block.mse,block.mse.0))
 
 
 block.mse.df <- na.omit(block.mse.df)
@@ -54,11 +55,10 @@ wsize.list <- c(2,4,8,16)
 for(wsize in wsize.list){
   lm.mse.fname <- paste("mse_table_windowsize=",toString(wsize),".csv",sep="")
   lm.mape.fname <- paste("mape_table_windowsize=",toString(wsize),".csv",sep="")
-  lm.rmse.fname <- paste("rmse_table_windowsize=",toString(wsize),".csv",sep="")
-  
+
   lm.mse.df <- read.csv(file.path(output.folder,lm.mse.fname))
   lm.mape.df <- read.csv(file.path(output.folder,lm.mape.fname))
-  lm.rmse.df <- read.csv(file.path(output.folder,lm.rmse.fname))
+  lm.rmse.df <- lm.mse.df
   
   lm.mse.df <- subset(lm.mse.df, select=-c(slm.mse))
   names(lm.mse.df)[names(lm.mse.df) == "lm.mse"] <- paste("lm.mse.windowsize=",toString(wsize),sep="")
@@ -66,9 +66,10 @@ for(wsize in wsize.list){
   lm.mape.df <- subset(lm.mape.df, select=-c(slm.mape))
   names(lm.mape.df)[names(lm.mape.df) == "lm.mape"] <- paste("lm.mape.windowsize=",toString(wsize),sep="")
   
-  lm.rmse.df <- subset(lm.rmse.df, select=-c(slm.rmse))
-  names(lm.rmse.df)[names(lm.rmse.df) == "lm.rmse"] <- paste("lm.rmse.windowsize=",toString(wsize),sep="")
+  lm.rmse.df <- subset(lm.rmse.df, select=-c(slm.mse))
+  names(lm.rmse.df)[names(lm.rmse.df) == "lm.mse"] <- paste("lm.rmse.windowsize=",toString(wsize),sep="")
   
+  lm.rmse.df[,paste("lm.rmse.windowsize=",toString(wsize),sep="")] <- sqrt(lm.rmse.df[,paste("lm.rmse.windowsize=",toString(wsize),sep="")])
   
   #lm.mse.df
   # Drop the NA
@@ -127,8 +128,11 @@ for (i in c(1,2,3)){
   legend.list <- c(paste("grf.",metric.to.plot,".last",sep=""))
   
   cl <- rainbow(length(wsize.list)+1)
+  cl[2:(length(wsize.list)+1)] <- rev(cl[2:(length(wsize.list)+1)])
+  cl[2:3] <- rev(cl[2:3])
   png(paste("../data/output/",metric.to.plot,"_compare_lm_numtrees=",toString(numtrees),".png" ,sep=""), width = 1080, height = 720 )
-  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(min(block.last.metric)-0.001,0.12*i),xaxs="i",yaxs="i",lty=1, main=title)
+  
+  plot(days, block.last.metric, pch=19, col=cl[1], type="l", xlab="days", ylab=metric.to.plot, xlim=c(MinDay,MaxDay),ylim=c(min(block.last.metric)-0.001,min(block.last.metric)*3 ),xaxs="i",yaxs="i",lty=1, main=title)
   # Plot lm metrics
   for (j in 1:length(wsize.list)){
     
@@ -140,4 +144,7 @@ for (i in c(1,2,3)){
   
   dev.off()
 }
+
+mape.improvement = 0
+rmse.improvement = 0
 

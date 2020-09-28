@@ -134,11 +134,6 @@ for (cutoff in cutofflist){
     new.df[mask,"block.mse.0"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])**2
     new.df[mask,"block.mse.last"] <- (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.last"])**2
     
-    new.df[mask,"block.rmse"] <- abs(new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past"])
-    new.df[mask,"block.rmse.0"] <- abs(new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])
-    new.df[mask,"block.rmse.last"] <- abs(new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.last"])
-    
-    
     
     new.df[mask,"block.mape"] <- abs( (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past"])/new.df[mask,"log_rolled_cases.x.x"] )
     new.df[mask,"block.mape.0"] <- abs( (new.df[mask,"log_rolled_cases.x.x"] - new.df[mask,"predicted.grf.past.0"])/new.df[mask,"log_rolled_cases.x.x"] )
@@ -147,10 +142,6 @@ for (cutoff in cutofflist){
     mse.table[which(mse.table$cutoff==cutoff),"block.mse"] <- mean(na.omit(new.df[,"block.mse"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.0"] <- mean(na.omit(new.df[,"block.mse.0"]))
     mse.table[which(mse.table$cutoff==cutoff),"block.mse.last"] <- mean(na.omit(new.df[,"block.mse.last"]))
-    
-    rmse.table[which(rmse.table$cutoff==cutoff),"block.rmse"] <- mean(na.omit(new.df[,"block.rmse"]))
-    rmse.table[which(rmse.table$cutoff==cutoff),"block.rmse.0"] <- mean(na.omit(new.df[,"block.rmse.0"]))
-    rmse.table[which(rmse.table$cutoff==cutoff),"block.rmse.last"] <- mean(na.omit(new.df[,"block.rmse.last"]))
     
     
     mape.table[which(mape.table$cutoff==cutoff),"block.mape"] <- mean(na.omit(new.df[,"block.mape"]))
@@ -195,7 +186,6 @@ write.csv(mse.table,paste("../data/output/block_mse_windowsize=",toString(window
 
 write.csv(mape.table,paste("../data/output/block_mape_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),".csv",sep=""),row.names=FALSE)
 
-write.csv(rmse.table,paste("../data/output/block_rmse_windowsize=",toString(windowsize),"_numtrees=",toString(num_trees),".csv",sep=""),row.names=FALSE)
 
 
 closeAllConnections()
