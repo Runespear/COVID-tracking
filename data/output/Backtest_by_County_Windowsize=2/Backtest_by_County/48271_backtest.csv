@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48271,"Kinney","Texas",-0.00664454271867087,3.01821334601025,0,3.06472514504094,"2020-10-05",258,NA,-0.0157584987145819,2.94530169804295,2.95441565403887,NA,NA,NA,NA,NA,NA
+48271,"Kinney","Texas",-0.00668898815079455,3.01121323983458,0,3.05803615689015,"2020-10-06",259,NA,-0.0142524038266197,2.95070591442798,2.95826933010381,-4.44454321236803e-05,0,0.0015060948879622,-1,0,1

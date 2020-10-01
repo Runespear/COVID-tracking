@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54001,"Barbour","West Virginia",0.179971379449,4.44968794413795,0.179971379449001,4.44968794413795,"2020-10-06",259,NA,0.107608739815807,3.87078682707241,3.9431494667056,NA,NA,NA,NA,NA,NA

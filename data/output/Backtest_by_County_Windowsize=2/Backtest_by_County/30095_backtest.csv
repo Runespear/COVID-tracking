@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30095,"Stillwater","Montana",0.107358518320505,3.92359329160498,0.107358518320503,3.92359329160496,"2020-10-05",258,NA,0.0986865394694298,3.85421746079638,3.86288943964745,NA,NA,NA,NA,NA,NA
+30095,"Stillwater","Montana",0.0969419451922289,3.94761922489927,0.0969419451922291,3.94761922489928,"2020-10-06",259,NA,0.0940281419685241,3.92430879910963,3.92722260233334,-0.0104165731282761,-0.0104165731282739,-0.0046583975009057,-1,-1,-1

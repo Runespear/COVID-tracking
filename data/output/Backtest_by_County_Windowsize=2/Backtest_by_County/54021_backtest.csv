@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54021,"Gilmer","West Virginia",0.0903840614682684,3.77437461645495,0.0903840614682689,3.77437461645495,"2020-10-06",259,NA,0.0804090631066722,3.69457462956218,3.70454962792378,NA,NA,NA,NA,NA,NA
