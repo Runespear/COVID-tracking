@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46091,"Marshall","South Dakota",0.0339015516756816,3.30203600677071,0.0339015516756809,3.30203600677071,"2020-10-09",262,NA,0.0400037630302764,3.35085369760747,3.34475148625287,NA,NA,NA,NA,NA,NA
+46091,"Marshall","South Dakota",0.032789822822991,3.32704372762487,0.0327898228229904,3.32704372762486,"2020-10-10",263,NA,0.03877653888464,3.37493745611806,3.36895074005641,-0.0011117288526906,-0.0011117288526905,-0.0012272241456364,-1,-1,-1

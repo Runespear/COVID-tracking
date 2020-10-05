@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-26097,"Mackinac","Michigan",-0.0141846349919588,2.89643982861028,0,2.99573227355399,"2020-09-26",249,NA,-0.0175304799600716,2.86967306886538,2.87301891383349,NA,NA,NA,NA,NA,NA
+26097,"Mackinac","Michigan",0.0548082364949943,3.4483828005059,0.0548082364949929,3.44838280050589,"2020-10-10",263,NA,0.0572106960016542,3.46760247655918,3.46520001705252,NA,NA,NA,NA,NA,NA

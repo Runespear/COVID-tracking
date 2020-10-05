@@ -256,7 +256,7 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 #CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
-CUSP = paste("../data/COVID-19 US state policy database 9_21_2020",".xlsx",sep="")
+CUSP = paste("../data/COVID-19 US state policy database 10_2_2020",".xlsx",sep="")
 
 # Pre-processing CUSP data
 
@@ -318,12 +318,16 @@ data<- data %>% dplyr::rename(State_FIPS_Code=FIPS_Code)
 data$datetime<-as.Date(data$datetime, "%Y-%m-%d")
 
 
-for (i in length(names(county_data_augmented)):length(names(data))) {
+for (i in (length(names(county_data_augmented))+2):length(names(data))) {
   # Set number of days  policies that have already started by this datetime as 1,2,3...., 
   # otherwise 0
   if (inherits(data[,i], 'Date')){
     data[,i]<-data$datetime-data[,i]+1
     data[,i][data[,i]<0]<-0
+    data[,i]<-as.numeric(data[,i])
+  }
+  if (inherits(data[,i], 'character')){
+    data[,i]<-as.numeric(data[,i])
   }
 }
 

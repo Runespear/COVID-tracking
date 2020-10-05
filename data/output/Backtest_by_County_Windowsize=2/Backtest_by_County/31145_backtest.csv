@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31145,"Red Willow","Nebraska",0.144039370222929,4.16223187032939,0.144039370222936,4.16223187032943,"2020-10-10",263,NA,0.109697428369174,3.88749633549934,3.9218382773531,NA,NA,NA,NA,NA,NA

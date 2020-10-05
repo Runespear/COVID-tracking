@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+49015,"Emery","Utah",0.0408219945202532,3.35047910668271,0.0408219945202526,3.35047910668271,"2020-10-10",263,NA,0.0453060419381897,3.38635148602621,3.38186743860827,NA,NA,NA,NA,NA,NA

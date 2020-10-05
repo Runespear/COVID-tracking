@@ -1,2 +1,2 @@
 "fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-20029,"Cloud","Kansas",0.048790164169433,3.38605358690945,0.0487901641694322,3.38605358690945,"2020-09-08",231,3.01693448120459,0.0523107712065493,3.41421844320638,3.41069783616927,NA,NA,NA,NA,NA,NA
+20029,"Cloud","Kansas",0.0487901641694322,3.38605358690945,0.0487901641694322,3.38605358690945,"2020-09-08",231,3.01693448120459,0.0535052961823274,3.42377464301261,3.41905951099971,NA,NA,NA,NA,NA,NA

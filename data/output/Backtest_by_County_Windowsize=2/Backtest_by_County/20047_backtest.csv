@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-20047,"Edwards","Kansas",0,3.00284974132285,0,3.00284974132285,"2020-10-01",254,NA,-0.0166977617808338,2.86926764707618,2.88596540885701,NA,NA,NA,NA,NA,NA
