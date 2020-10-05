@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20109,"Logan","Kansas",0.107358518320501,3.92359329160495,0.107358518320503,3.92359329160496,"2020-10-11",264,NA,0.0957723916159647,3.83090427796866,3.84249040467319,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46117,"Stanley","South Dakota",0.0204785313435384,3.19465184411357,0.0204785313435396,3.19465184411358,"2020-10-11",264,NA,0.0251609473676036,3.23211117230609,3.22742875628203,NA,NA,NA,NA,NA,NA

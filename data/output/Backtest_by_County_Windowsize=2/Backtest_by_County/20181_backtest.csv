@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20181,"Sherman","Kansas",0.099090902644221,3.81663037167446,0.099090902644229,3.81663037167452,"2020-10-11",264,NA,0.091832056055484,3.75855959896456,3.76581844555331,NA,NA,NA,NA,NA,NA

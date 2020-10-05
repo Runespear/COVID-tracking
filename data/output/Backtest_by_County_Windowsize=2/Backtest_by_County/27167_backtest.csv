@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27167,"Wilkin","Minnesota",0.0756374142056212,3.60083158719896,0.0756374142056218,3.60083158719896,"2020-10-11",264,NA,0.0767942643029941,3.61008638797794,3.60892953788057,NA,NA,NA,NA,NA,NA

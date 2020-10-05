@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54093,"Tucker","West Virginia",0.0764703639918358,3.6831325996943,0.0764703639918372,3.68313259969431,"2020-10-11",264,NA,0.0836083302403287,3.74023632968224,3.73309836343375,NA,NA,NA,NA,NA,NA
