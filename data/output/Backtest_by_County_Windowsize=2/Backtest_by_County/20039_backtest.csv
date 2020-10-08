@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20039,"Decatur","Kansas",0.0209066848193128,3.17717038710045,0.020906684819312,3.17717038710044,"2020-10-13",266,NA,0.024723063741383,3.20770141847701,3.20388503955494,NA,NA,NA,NA,NA,NA

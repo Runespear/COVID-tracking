@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31015,"Boyd","Nebraska",0.0419641990990344,3.33144586634627,0.0419641990990343,3.33144586634626,"2020-10-13",266,NA,0.0488941207543754,3.38688523958899,3.37995531793366,NA,NA,NA,NA,NA,NA

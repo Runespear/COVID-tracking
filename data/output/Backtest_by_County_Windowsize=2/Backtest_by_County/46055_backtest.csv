@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46055,"Haakon","South Dakota",0.0137933221323368,3.13424972757938,0.0137933221323365,3.13424972757938,"2020-10-12",265,NA,0.0164879557656789,3.15580679664612,3.15311216301278,NA,NA,NA,NA,NA,NA
+46055,"Haakon","South Dakota",0.0203396842371216,3.20041394655,0.0203396842371215,3.20041394655,"2020-10-13",266,NA,0.0237881614731728,3.22800176443841,3.22455328720236,0.0065463621047848,0.006546362104785,0.0073002057074939,1,1,1

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46061,"Hanson","South Dakota",0.053345980705291,3.46446431829535,0.053345980705291,3.46446431829535,"2020-10-13",266,NA,0.0547487977691817,3.47568685480648,3.47428403774259,NA,NA,NA,NA,NA,NA
