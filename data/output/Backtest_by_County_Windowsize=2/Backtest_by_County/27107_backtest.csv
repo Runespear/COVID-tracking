@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27107,"Norman","Minnesota",0.0947079515416166,3.82903330009255,0.0947079515416167,3.82903330009255,"2020-10-17",270,NA,0.0883548376734969,3.77820838914759,3.78456150301571,NA,NA,NA,NA,NA,NA

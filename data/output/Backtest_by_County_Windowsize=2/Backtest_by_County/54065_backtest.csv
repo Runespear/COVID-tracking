@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54065,"Morgan","West Virginia",0.0336732151065894,3.30708219350574,0.0336732151065875,3.30708219350573,"2020-10-17",270,NA,0.0406919780615312,3.36323229714528,3.35621353419033,NA,NA,NA,NA,NA,NA

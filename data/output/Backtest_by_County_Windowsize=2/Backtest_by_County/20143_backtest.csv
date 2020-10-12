@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20143,"Ottawa","Kansas",0.192206316026507,4.60902021597165,0.192206316026494,4.60902021597156,"2020-10-17",270,NA,0.0945889727881507,3.82808147006482,3.92569881330316,NA,NA,NA,NA,NA,NA
