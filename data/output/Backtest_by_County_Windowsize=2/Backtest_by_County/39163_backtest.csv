@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+39163,"Vinton","Ohio",0.0594234204708009,3.51990980148983,0.0594234204708015,3.51990980148984,"2020-10-20",273,NA,0.0622418868305428,3.54245753236776,3.53963906600802,NA,NA,NA,NA,NA,NA
