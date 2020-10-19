@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-30091,"Sheridan","Montana",0.0477906638363448,3.39925979189536,0.0477906638363486,3.39925979189538,"2020-10-20",273,NA,0.0524434562340361,3.43648213107688,3.43182933867919,NA,NA,NA,NA,NA,NA

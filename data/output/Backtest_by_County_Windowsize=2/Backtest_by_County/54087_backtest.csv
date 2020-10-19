@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-54087,"Roane","West Virginia",0.0741079721537226,3.60979825843437,0.0741079721537234,3.60979825843438,"2020-10-20",273,NA,0.0724736376241815,3.59672358219804,3.59835791672759,NA,NA,NA,NA,NA,NA

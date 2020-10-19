@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-51097,"King and Queen","Virginia",-0.0204785313435411,2.88747387396047,0,3.03082359336526,"2020-10-04",257,NA,-0.0217388275183127,2.8773915045623,2.87865180073707,NA,NA,NA,NA,NA,NA

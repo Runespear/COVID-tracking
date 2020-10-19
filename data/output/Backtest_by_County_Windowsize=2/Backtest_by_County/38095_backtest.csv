@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-38095,"Towner","North Dakota",0.139501559611022,4.28809614024962,0.139501559611023,4.28809614024963,"2020-10-20",273,NA,0.101691647136238,3.98561684045135,4.02342675292614,NA,NA,NA,NA,NA,NA

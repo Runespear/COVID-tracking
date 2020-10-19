@@ -170,20 +170,24 @@ for (cutoff in cutofflist){
     destfile <- paste("../data/14_Day_Table",".csv",sep="")
     county_14data <- read.csv(file = destfile)
     
+    destfile <- paste("../data/30_Day_Table",".csv",sep="")
+    county_30check <- read.csv(file = destfile)
+    
     #mu<- 6.7
     #sigma<- 5.2
     #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
     
-    #test.df[which(test.df$state == "Massachusetts"),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$state == "North Carolina"),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$state == "Alabama"),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 45037),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 45003),"Predicted_Double_Days"]<- NA
+    #test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
+    #test.df[which(test.df$state == "North Carolina"),"Predicted_Double_Days"]<- NA
+    #test.df[which(test.df$state == "Alabama"),"Predicted_Double_Days"]<- NA
+    #test.df[which(test.df$fips == 45037),"Predicted_Double_Days"]<- NA
+    #test.df[which(test.df$fips == 45003),"Predicted_Double_Days"]<- NA
     
-    final.df<-merge(x=test.df,y=county_14data, by="fips", all.x=TRUE)
+   final.df<-merge(x=merge(x=test.df,y=county_30check, by="fips", all.x=TRUE),y=county_14data, by="fips", all.x=TRUE)
     
-    write.csv(final.df,"../data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
+   final.df[which(final.df$d20 == 1),"Predicted_Double_Days"]<- NA
+    
+   write.csv(final.df,"../data/output/file_to_plot/confusion_block_latest.csv",row.names=FALSE)
   }
 }
 

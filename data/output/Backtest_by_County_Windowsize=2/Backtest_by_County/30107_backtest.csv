@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-30107,"Wheatland","Montana",0.156079320733651,4.29993669057802,0.156079320733665,4.29993669057812,"2020-10-20",273,NA,0.107108072243323,3.90816670265538,3.95713795114572,NA,NA,NA,NA,NA,NA
