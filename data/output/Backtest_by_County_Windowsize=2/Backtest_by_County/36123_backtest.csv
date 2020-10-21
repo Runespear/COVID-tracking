@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+36123,"Yates","New York",0.124751704972484,4.01494812098446,0.124751704972476,4.0149481209844,"2020-10-27",280,NA,0.0901120617057431,3.73783097485054,3.77247061811727,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30011,"Carter","Montana",0.102809493866224,3.93281160722279,0.102809493866224,3.93281160722279,"2020-10-27",280,NA,0.0948408434875773,3.86906240419361,3.87703105457226,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40067,"Jefferson","Oklahoma",0.0586487270815119,3.52722597354224,0.0586487270815081,3.52722597354221,"2020-10-26",279,NA,0.0606567894666278,3.54329047262317,3.54128241023804,NA,NA,NA,NA,NA,NA
+40067,"Jefferson","Oklahoma",0.0673036818961083,3.65511433914052,0.0673036818961035,3.65511433914048,"2020-10-27",280,NA,0.065781202159817,3.64293450125019,3.64445698098648,0.0086549548145964,0.0086549548145954,0.0051244126931892,1,1,1

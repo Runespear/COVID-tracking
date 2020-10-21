@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+30077,"Powell","Montana",0.286057376724799,5.37950146715669,0.286057376724779,5.37950146715655,"2020-10-27",280,NA,0.114355592807186,4.00588719581581,4.1775889797334,NA,NA,NA,NA,NA,NA

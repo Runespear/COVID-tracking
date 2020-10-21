@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26009,"Antrim","Michigan",0.117016458386189,3.96695526045477,0.117016458386189,3.96695526045478,"2020-10-27",280,NA,0.097568066419096,3.81136812471803,3.83081651668512,NA,NA,NA,NA,NA,NA

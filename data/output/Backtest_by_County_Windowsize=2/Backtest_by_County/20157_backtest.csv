@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20157,"Republic","Kansas",0.0471467784257023,3.40799782077088,0.0471467784257023,3.40799782077088,"2020-10-27",280,NA,0.0524111046224997,3.45011243034526,3.44484810414846,NA,NA,NA,NA,NA,NA
