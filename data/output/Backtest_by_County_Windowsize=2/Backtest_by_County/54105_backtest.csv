@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54105,"Wirt","West Virginia",0.0909717782057328,3.77229666336928,0.0909717782057267,3.77229666336924,"2020-11-01",285,NA,0.0913540048961174,3.77535447689236,3.77497225020197,NA,NA,NA,NA,NA,NA

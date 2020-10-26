@@ -132,6 +132,7 @@ for (fips in fips_list){
   county_30data[which(county_30data$fips==fips),"d20"]<-as.numeric(isTRUE(dtest< -20))
 }
 
+write.csv(county_30data,"../data/30_Day_Check.csv",row.names=FALSE)
 
 final<-county_30data[, which(names(county_30data) %in% c("fips", "d20"))]
 

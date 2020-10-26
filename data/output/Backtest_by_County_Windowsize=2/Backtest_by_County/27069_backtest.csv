@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27069,"Kittson","Minnesota",0.0870113769896379,3.71302549712169,0.0870113769896319,3.71302549712165,"2020-11-01",285,NA,0.0866982566928042,3.71052053474702,3.71083365504385,NA,NA,NA,NA,NA,NA

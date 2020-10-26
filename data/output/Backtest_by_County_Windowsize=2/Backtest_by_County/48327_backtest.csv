@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48327,"Menard","Texas",0.131769277631129,4.06407112959497,0.131769277631121,4.06407112959491,"2020-11-01",285,NA,0.0766689335898318,3.6232683772646,3.67836872130589,NA,NA,NA,NA,NA,NA

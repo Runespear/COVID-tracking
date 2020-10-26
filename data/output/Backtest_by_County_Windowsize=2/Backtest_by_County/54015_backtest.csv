@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54015,"Clay","West Virginia",0.00711746776886208,3.05267201570489,0.00711746776886191,3.05267201570489,"2020-11-01",285,NA,0.0101503645597665,3.07693519003212,3.07390229324122,NA,NA,NA,NA,NA,NA
