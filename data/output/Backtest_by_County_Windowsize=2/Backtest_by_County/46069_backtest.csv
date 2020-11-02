@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+46069,"Hyde","South Dakota",0.0346055291774768,3.28676114196576,0.0346055291774747,3.28676114196575,"2020-11-08",292,NA,0.0416228090752773,3.34289938114817,3.33588210125036,NA,NA,NA,NA,NA,NA

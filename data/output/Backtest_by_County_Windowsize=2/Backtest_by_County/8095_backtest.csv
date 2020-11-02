@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8095,"Phillips","Colorado",0.0864325057723112,3.71536319669917,0.0864325057723048,3.71536319669913,"2020-11-08",292,NA,0.0857077022944066,3.70956476887594,3.71028957235384,NA,NA,NA,NA,NA,NA

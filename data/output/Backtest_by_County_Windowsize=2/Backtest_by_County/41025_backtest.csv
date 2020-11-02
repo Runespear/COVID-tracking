@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+41025,"Harney","Oregon",0.101096116871372,3.81161867629383,0.101096116871372,3.81161867629383,"2020-11-08",292,NA,0.0889001567203954,3.71405099508601,3.72624695523699,NA,NA,NA,NA,NA,NA

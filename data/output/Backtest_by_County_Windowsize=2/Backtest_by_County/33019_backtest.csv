@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+33019,"Sullivan","New Hampshire",0.0736118173432484,3.61279768926667,0.073611817343243,3.61279768926663,"2020-11-08",292,NA,0.0788405768357376,3.65462776520659,3.64939900571409,NA,NA,NA,NA,NA,NA
