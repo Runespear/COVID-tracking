@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31069,"Garden","Nebraska",0.163745171221004,4.45780142151949,0.163745171221017,4.45780142151959,"2020-11-10",294,NA,0.102947425511775,3.97141945584565,4.03221720155489,NA,NA,NA,NA,NA,NA

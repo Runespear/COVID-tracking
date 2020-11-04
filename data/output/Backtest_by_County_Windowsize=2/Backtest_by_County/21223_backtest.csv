@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+21223,"Trimble","Kentucky",0.0898038948613012,3.77646731578056,0.0898038948613031,3.77646731578057,"2020-11-10",294,NA,0.0927730989069406,3.80022094814567,3.79725174410003,NA,NA,NA,NA,NA,NA

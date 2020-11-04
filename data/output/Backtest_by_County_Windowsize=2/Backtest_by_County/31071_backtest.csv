@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+31071,"Garfield","Nebraska",0.0465200156348895,3.41668256280254,0.0465200156348931,3.41668256280257,"2020-11-10",294,NA,0.0518900465992379,3.45964281051732,3.45427277955299,NA,NA,NA,NA,NA,NA

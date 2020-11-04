@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20141,"Osborne","Kansas",0.0551864155672897,3.44434106586117,0.0551864155672939,3.4443410658612,"2020-11-10",294,NA,0.0588833799385566,3.4739167808313,3.47021981646005,NA,NA,NA,NA,NA,NA

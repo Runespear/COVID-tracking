@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+54095,"Tyler","West Virginia",0.129411073651491,4.1132589610029,0.129411073651502,4.11325896100298,"2020-11-09",293,NA,0.101992654146381,3.89391160496201,3.92133002446712,NA,NA,NA,NA,NA,NA
+54095,"Tyler","West Virginia",0.119707964065968,4.16504515797021,0.11970796406597,4.16504515797023,"2020-11-10",294,NA,0.105190018422727,4.04890159282427,4.06341953846753,-0.00970310958552299,-0.00970310958553201,0.003197364276346,-1,-1,1
