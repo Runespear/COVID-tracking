@@ -1,0 +1,4 @@
+*.ipynb linguist-documentation
+*.R linguist-language=R
+*.R linguist-detectable=true
+*.ipynb linguiest-detectable=false
