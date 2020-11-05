@@ -1,5 +1,4 @@
-# COVID-tracking
-COVID-19 Outbreak Detection Tool
+# COVID-19 Outbreak Detection Tool
 
 [Main App](https://analytics-modeling.shinyapps.io/outbreakdetection/)
 
