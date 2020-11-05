@@ -1,15 +1,13 @@
 # COVID-tracking
-NYAS COVID-Tracking
+COVID-19 Outbreak Detection Tool
 
-[Launchpad Link](https://joinlaunchpad.com/#/projects/1682/an-algorithm-to-detect-community-outbreak-of-covid-19)
+[Main App](https://analytics-modeling.shinyapps.io/outbreakdetection/)
 
-Read the Executive Summary and Submission Slide to understand what's going on
+The COVID-19 Outbreak Detection Tool detects recent COVID-19 outbreaks in U.S. counties. The tool leverages machine learning to predict how fast an outbreak could spread at the county level by estimating the doubling time of COVID-19 cases. It accounts for reported COVID-19 cases and deaths, face mask mandates, social distancing policies, the CDC’s Social Vulnerability Index, changes in tests performed and rate of positive tests. The tool offers an interactive map and a data explorer allowing users to filter and rearrange counties based on predicted trends, which get updated at least once per week.
 
-Example code demonstrated in the ipynb file
+![alt text](https://github.com/Runespear/COVID-tracking/blob/master/OutbreakNY_1016.png?raw=true)
 
-Data files are also included in the ```data``` folder
+Data files are included in the ```data``` folder. Source code is located at the ```src``` folder. The backend workflow can be found at ```WorkFlow.txt```.
 
-Backend Workflow:
+To reference, please cite [the paper](https://arxiv.org/abs/2011.01219).
 
-```Preprocess-us-counties.R ``` to pull the latest data from NYTimes repo + augment with various features and preprocess data. The processed data exceeeds GitHub file size limits so you have to construct it locally first.   
-```Specific_Cases.R``` to backtest the log linear model, simple grf, and the augmented grf
