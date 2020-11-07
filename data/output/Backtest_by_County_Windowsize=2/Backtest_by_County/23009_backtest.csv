@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+23009,"Hancock","Maine",0.0712275092883691,3.6278562311971,0.0712275092883687,3.6278562311971,"2020-11-13",297,NA,0.0778281217073699,3.68066113054911,3.67406051813011,NA,NA,NA,NA,NA,NA

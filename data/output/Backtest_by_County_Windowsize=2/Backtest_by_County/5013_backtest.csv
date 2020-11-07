@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+5013,"Calhoun","Arkansas",0.112618878108153,3.97232071262483,0.112618878108146,3.97232071262478,"2020-11-13",297,NA,0.0839296210936651,3.74280665650893,3.77149591352342,NA,NA,NA,NA,NA,NA

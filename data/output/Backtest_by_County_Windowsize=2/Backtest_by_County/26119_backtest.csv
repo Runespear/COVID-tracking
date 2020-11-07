@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+26119,"Montmorency","Michigan",0.0594234204708016,3.51990980148984,0.0594234204708015,3.51990980148984,"2020-11-13",297,NA,0.0640733171222834,3.55710897470169,3.5524590780502,NA,NA,NA,NA,NA,NA

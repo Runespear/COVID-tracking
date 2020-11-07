@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+50019,"Orleans","Vermont",0.0779615414697201,3.67499445646656,0.0779615414697155,3.67499445646652,"2020-11-13",297,NA,0.0825376725263363,3.71160350491949,3.70702737386287,NA,NA,NA,NA,NA,NA

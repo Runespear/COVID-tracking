@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+36033,"Franklin","New York",0.181138824544904,4.45196033768209,0.181138824544905,4.4519603376821,"2020-11-13",297,NA,0.105496684833148,3.84682321998803,3.92246535969979,NA,NA,NA,NA,NA,NA
