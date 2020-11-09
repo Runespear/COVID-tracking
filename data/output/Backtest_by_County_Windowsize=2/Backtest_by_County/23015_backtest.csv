@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+23015,"Lincoln","Maine",0.0841920912203554,3.72483885447164,0.0841920912203498,3.7248388544716,"2020-11-15",299,NA,0.0911329233158403,3.78036551123552,3.77342467914003,NA,NA,NA,NA,NA,NA

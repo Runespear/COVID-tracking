@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+51580,"Covington city","Virginia",0.221800367767741,4.83243909903208,0.221800367767742,4.83243909903209,"2020-11-14",298,NA,0.103429625444109,3.88547316044302,4.00384390276665,NA,NA,NA,NA,NA,NA
+51580,"Covington city","Virginia",0.13083960095882,4.32655333232844,0.130839600958811,4.32655333232837,"2020-11-15",299,NA,0.101226465957549,4.08964825231828,4.11926138731955,-0.090960766808921,-0.090960766808931,-0.00220315948656,-1,-1,-1

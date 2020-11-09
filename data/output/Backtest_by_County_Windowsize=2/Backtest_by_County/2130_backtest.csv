@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+2130,"Ketchikan Gateway Borough","Alaska",0.217064505237841,4.89655136674798,0.217064505237827,4.89655136674788,"2020-11-15",299,NA,0.117997499862637,4.10401532374636,4.20308232912156,NA,NA,NA,NA,NA,NA

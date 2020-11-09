@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+27031,"Cook","Minnesota",0.0614527792136679,3.50153914225529,0.0614527792136643,3.50153914225526,"2020-11-15",299,NA,0.0654675824973231,3.53365756852453,3.52964276524087,NA,NA,NA,NA,NA,NA
