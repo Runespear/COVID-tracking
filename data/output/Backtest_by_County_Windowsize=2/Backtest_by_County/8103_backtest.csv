@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8103,"Rio Blanco","Colorado",0.134387190708418,4.11279399832037,0.134387190708419,4.11279399832037,"2020-11-22",306,NA,0.123674640351767,4.02709359546717,4.03780614582381,NA,NA,NA,NA,NA,NA

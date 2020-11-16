@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8073,"Lincoln","Colorado",0.265334773759781,5.37526507228876,0.265334773759782,5.37526507228877,"2020-11-22",306,NA,0.154862372950367,4.49148586581345,4.60195826662287,NA,NA,NA,NA,NA,NA

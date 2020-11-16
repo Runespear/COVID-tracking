@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29129,"Mercer","Missouri",0.0795120629277381,3.66692009678716,0.0795120629277331,3.66692009678712,"2020-11-22",306,NA,0.0859186029489865,3.71817241695715,3.7117658769359,NA,NA,NA,NA,NA,NA

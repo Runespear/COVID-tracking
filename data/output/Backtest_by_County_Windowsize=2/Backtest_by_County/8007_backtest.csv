@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8007,"Archuleta","Colorado",0.133531392624524,4.06398341455018,0.133531392624525,4.06398341455019,"2020-11-22",306,NA,0.124559368699586,3.99220722315068,4.00117924707562,NA,NA,NA,NA,NA,NA
