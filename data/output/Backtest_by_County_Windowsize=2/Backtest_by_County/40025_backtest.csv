@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+40025,"Cimarron","Oklahoma",0.0281708769666991,3.22109928928758,0.0281708769666977,3.22109928928757,"2020-11-28",312,NA,0.0335426552578316,3.26407351561664,3.25870173732551,NA,NA,NA,NA,NA,NA
+40025,"Cimarron","Oklahoma",0.0408219945202495,3.35047910668269,0.0408219945202526,3.35047910668271,"2020-11-29",313,NA,0.0497206550573665,3.42166839097962,3.41276973044251,0.0126511175535504,0.0126511175535549,0.0161779997995349,1,1,1

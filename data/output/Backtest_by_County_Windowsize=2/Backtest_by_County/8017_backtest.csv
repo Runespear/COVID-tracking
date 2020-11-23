@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8017,"Cheyenne","Colorado",0.139466128144334,4.1602514628781,0.139466128144335,4.1602514628781,"2020-11-29",313,NA,0.116709211394362,3.97819612887832,4.00095304562829,NA,NA,NA,NA,NA,NA

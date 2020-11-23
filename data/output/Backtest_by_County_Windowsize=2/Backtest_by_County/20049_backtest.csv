@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20049,"Elk","Kansas",0.0746108637911744,3.60680381887535,0.0746108637911758,3.60680381887535,"2020-11-29",313,NA,0.0783439351456758,3.63666838971136,3.63293531835685,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48191,"Hall","Texas",0.115512887121837,3.96862553469813,0.115512887121846,3.96862553469819,"2020-11-29",313,NA,0.106377614437335,3.8955433532221,3.90467862590661,NA,NA,NA,NA,NA,NA

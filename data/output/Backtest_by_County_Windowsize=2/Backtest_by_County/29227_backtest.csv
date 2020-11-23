@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+29227,"Worth","Missouri",0.068992871486949,3.54767524544958,0.0689928714869503,3.54767524544959,"2020-11-29",313,NA,0.0774545588804423,3.61536874459753,3.60690705720404,NA,NA,NA,NA,NA,NA

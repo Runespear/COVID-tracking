@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+20105,"Lincoln","Kansas",0.14310084364067,4.24875260731959,0.143100843640672,4.2487526073196,"2020-11-29",313,NA,0.103001885714492,3.92796094391015,3.96805990183634,NA,NA,NA,NA,NA,NA
