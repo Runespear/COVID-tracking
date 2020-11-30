@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+49033,"Rich","Utah",0.0140847398817406,3.11552766037678,0.0140847398817399,3.11552766037677,"2020-12-06",320,NA,0.0165877171699463,3.13555147868242,3.13304850139421,NA,NA,NA,NA,NA,NA
