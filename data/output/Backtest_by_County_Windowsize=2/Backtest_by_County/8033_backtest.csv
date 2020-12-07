@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+8033,"Dolores","Colorado",0.0795120629277329,3.66692009678712,0.0795120629277331,3.66692009678712,"2020-12-13",327,NA,0.0784756243426578,3.65862858810652,3.65966502669159,NA,NA,NA,NA,NA,NA

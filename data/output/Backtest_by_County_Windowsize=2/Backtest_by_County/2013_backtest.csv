@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+2013,"Aleutians East Borough","Alaska",0.0206192872027347,3.18885744814257,0.0206192872027344,3.18885744814256,"2020-12-13",327,NA,0.0231774487866495,3.20932274081389,3.20676457922997,NA,NA,NA,NA,NA,NA
