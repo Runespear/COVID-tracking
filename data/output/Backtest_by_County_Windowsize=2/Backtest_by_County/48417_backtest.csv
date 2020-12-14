@@ -1,0 +1,3 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+48417,"Shackelford","Texas",0.332261704084841,5.8479819206737,0.33226170408487,5.84798192067391,"2020-12-19",333,NA,0.25483771483803,5.22859000669919,5.30601399594603,NA,NA,NA,NA,NA,NA
+48417,"Shackelford","Texas",0.245672664374216,5.48753130707357,0.245672664374237,5.48753130707372,"2020-12-20",334,NA,0.245170314553854,5.48351250851065,5.48401485833104,-0.086589039710625,-0.086589039710633,-0.00966740028417604,-1,-1,-1
