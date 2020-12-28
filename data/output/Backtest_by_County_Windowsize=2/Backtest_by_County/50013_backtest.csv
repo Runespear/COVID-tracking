@@ -1,3 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-50013,"Grand Isle","Vermont",0,3.00284974132285,0,3.00284974132285,"2020-12-05",319,NA,0.000622614869537011,3.00783066027915,3.00720804540961,NA,NA,NA,NA,NA,NA
-50013,"Grand Isle","Vermont",-0.00711746776886333,2.94590999917195,0,2.99573227355399,"2020-12-06",320,NA,-0.00219932649977118,2.98525512932468,2.98033698805559,-0.00711746776886333,0,-0.00282194136930819,-1,0,-1

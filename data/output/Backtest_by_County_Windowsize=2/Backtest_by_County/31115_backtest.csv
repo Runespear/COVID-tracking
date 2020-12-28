@@ -1,2 +1,0 @@
-"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
-31115,"Loup","Nebraska",-0.0141846349919559,2.8964398286103,0,2.99573227355399,"2020-12-05",319,NA,-0.0149648355774024,2.89019822392673,2.89097842451217,NA,NA,NA,NA,NA,NA
