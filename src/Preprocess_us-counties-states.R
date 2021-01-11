@@ -256,13 +256,13 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 #CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
-CUSP = paste("../data/COVID-19 US state policy database 12_17_2020",".xlsx",sep="")
+CUSP = paste("../data/COVID-19 US state policy database 1_7_2021",".xlsx",sep="")
 
 # Pre-processing CUSP data
 
 #df <- read_excel(CUSP, sheet=2, n_max=51)
 
-df <- read_excel(CUSP, sheet=2, skip=1, n_max=54)
+df <- read_excel(CUSP, sheet=1, skip=1, n_max=54)
 
 names(df) <- gsub(" ","_",names(df))
 
