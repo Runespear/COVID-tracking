@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+50013,"Grand Isle","Vermont",0.00706716722309543,3.05938707910762,0.00706716722309553,3.05938707910762,"2021-01-31",376,NA,0.0127316821265487,3.10470319833524,3.09903868343179,NA,NA,NA,NA,NA,NA
