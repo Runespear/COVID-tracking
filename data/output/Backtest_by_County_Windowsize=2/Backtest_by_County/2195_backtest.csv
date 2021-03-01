@@ -1,0 +1,2 @@
+"fips","county","state","r.lm","predicted.lm","r.slm","predicted.slm","date.y","days_from_start.y","log_rolled_cases.y","tau.hat","predicted.grf.future.0","predicted.grf.future.last","D.r.lm","D.r.slm","D.tau.hat","B.D.r.lm","B.D.r.slm","B.D.tau.hat"
+2195,"Petersburg Borough","Alaska",0.167537760609706,4.46329613804258,0.16753776060972,4.46329613804268,"2021-03-07",411,NA,0.0459686439501428,3.49074320476606,3.61231232142564,NA,NA,NA,NA,NA,NA
