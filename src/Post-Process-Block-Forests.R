@@ -180,9 +180,12 @@ for (cutoff in cutofflist){
     #test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
     #test.df[which(test.df$state == "North Carolina"),"Predicted_Double_Days"]<- NA
     #test.df[which(test.df$state == "Alabama"),"Predicted_Double_Days"]<- NA
-    #test.df[which(test.df$fips == 45037),"Predicted_Double_Days"]<- NA
-    #test.df[which(test.df$fips == 1097),"Predicted_Double_Days"]<- NA
-    #test.df[which(test.df$state == "Michigan"),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1055),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1015),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1095),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1009),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1115),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$fips == 1133),"Predicted_Double_Days"]<- NA
     
    final.df<-merge(x=merge(x=test.df,y=county_30check, by="fips", all.x=TRUE),y=county_14data, by="fips", all.x=TRUE)
     
