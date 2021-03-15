@@ -177,15 +177,15 @@ for (cutoff in cutofflist){
     #sigma<- 5.2
     #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
     
-    #test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
-    #test.df[which(test.df$state == "North Carolina"),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$state == "Iowa"),"Predicted_Double_Days"]<- NA
+    test.df[which(test.df$state == "Missouri"),"Predicted_Double_Days"]<- NA
     #test.df[which(test.df$state == "Alabama"),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1055),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1015),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1095),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1009),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1115),"Predicted_Double_Days"]<- NA
-    test.df[which(test.df$fips == 1133),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1055),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1015),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1095),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1009),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1115),"Predicted_Double_Days"]<- NA
+    # test.df[which(test.df$fips == 1133),"Predicted_Double_Days"]<- NA
     
    final.df<-merge(x=merge(x=test.df,y=county_30check, by="fips", all.x=TRUE),y=county_14data, by="fips", all.x=TRUE)
     
