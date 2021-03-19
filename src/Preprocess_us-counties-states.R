@@ -256,7 +256,7 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 #CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
-CUSP = paste("../data/COVID-19 US state policy database 2_17_2021",".xlsx",sep="")
+CUSP = paste("../data/COVID-19 US state policy database 3_15_2021",".xlsx",sep="")
 
 # Pre-processing CUSP data
 
