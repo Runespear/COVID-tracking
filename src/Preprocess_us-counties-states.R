@@ -256,7 +256,7 @@ write.csv(county_data_augmented, end_file, row.names=FALSE)
 
 #CUSP = paste("../data/COVID-19 US state policy database (CUSP)",".xlsx",sep="")
 
-CUSP = paste("../data/COVID-19 US state policy database 4_6_2021",".xlsx",sep="")
+CUSP = paste("../data/COVID-19 US state policy database 5_14_2021",".xlsx",sep="")
 
 # Pre-processing CUSP data
 
@@ -339,14 +339,50 @@ dataT<-merge(x=data, y=track_data, by = c("State_Abbreviation","date"), all.x = 
 # DROP State_Abbreviation, state 
 dataT <- dataT[, -which(names(dataT) %in% c("State_Abbreviation"))]
 
+act_url<-"https://api.covidactnow.org/v2/counties.timeseries.csv?apiKey=e279791654264256bb7896d5a7b00e82"
+act_data<-read.csv(act_url)
+
+act_data$date<-as.Date(act_data$date, "%Y-%m-%d")
+act_data <- act_data[, which(names(act_data) %in% c("date","fips","metrics.testPositivityRatio","metrics.vaccinationsInitiatedRatio","metrics.vaccinationsCompletedRatio"))]
 
 
+act_dataF <- act_data[FALSE,]
+
+for (fips in fips_list){
+
+  fips.df <- act_data[which(act_data$fips==fips),]
+  if (dim(fips.df)[1] == 0){
+    print(paste("fips ",toString(fips)," has no entry ",sep=""))
+    next
+  }
+  first.fips.date <- min(fips.df$date)
+  last.fips.date <- max(fips.df$date)
+  
+  if(first.fips.date == last.fips.date){
+    print(paste("fips ",toString(fips)," only has one entry ",sep=""))
+    next
+  }
+  
+  fips.df[which(fips.df$date==first.fips.date),"metrics.testPositivityRatio"]<-0
+  fips.df[which(fips.df$date==first.fips.date),"metrics.vaccinationsInitiatedRatio"]<-0
+  fips.df[which(fips.df$date==first.fips.date),"metrics.vaccinationsCompletedRatio"]<-0
+  
+  fips.df<-na.locf(fips.df)
+  fips.df$metrics.testPositivityRatio =  zoo::rollmean(fips.df$metrics.testPositivityRatio, 7, fill=NA, align="right")
+  # Append the data
+  act_dataF<-rbind(act_dataF,fips.df)
+  
+  print(paste("fips ",toString(fips)," vaccination data complete ",sep=""))
+}
+
+
+dataF<-merge(x=dataT, y=act_dataF, by = c("fips","date"), all.x = TRUE)
 
 end_file = paste("../data/augmented_us-counties-states_latest",".csv",sep="")
 #end_file = paste("../data/processed_us-counties_latest",".csv",sep="")
 
 
-write.csv(dataT, end_file, row.names=FALSE)
+write.csv(dataF, end_file, row.names=FALSE)
 
 
 closeAllConnections()
