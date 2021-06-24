@@ -173,6 +173,12 @@ for (cutoff in cutofflist){
     destfile <- paste("../data/30_Day_Table",".csv",sep="")
     county_30check <- read.csv(file = destfile)
     
+    destfile <- paste("../data/augmented_us-counties-states_latest",".csv",sep="")
+    county_ActNow <- read.csv(file = destfile)
+    county_ActNow<-subset(county_ActNow,days_from_start==end_date)
+    county_ActNow <- county_ActNow[, which(names(county_ActNow) %in% c("fips","metrics.testPositivityRatio","metrics.vaccinationsInitiatedRatio","metrics.vaccinationsCompletedRatio"))]
+    
+    
     #mu<- 6.7
     #sigma<- 5.2
     #test.df$Rt<-with(test.df,exp(tau.hat*mu-0.5*(tau.hat**2)*(sigma**2)))
@@ -193,7 +199,7 @@ for (cutoff in cutofflist){
     # test.df[which(test.df$fips == 48085),"Predicted_Double_Days"]<- NA
     
     
-   final.df<-merge(x=merge(x=test.df,y=county_30check, by="fips", all.x=TRUE),y=county_14data, by="fips", all.x=TRUE)
+   final.df<-merge(x=merge(x=merge(x=test.df,y=county_ActNow, by="fips", all.x=TRUE), y=county_30check, by="fips", all.x=TRUE), y=county_14data, by="fips", all.x=TRUE)
     
    final.df[which(final.df$d20 == 1),"Predicted_Double_Days"]<- NA
     
