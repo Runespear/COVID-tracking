@@ -346,7 +346,9 @@ act_data$date<-as.Date(act_data$date, "%Y-%m-%d")
 act_data <- act_data[, which(names(act_data) %in% c("date","fips","metrics.testPositivityRatio","metrics.vaccinationsInitiatedRatio","metrics.vaccinationsCompletedRatio"))]
 
 
-act_dataF <- act_data[FALSE,]
+act_dataF <- act_data[FALSE,] #clear all entry
+
+end<-max(act_data$date)
 
 for (fips in fips_list){
 
@@ -368,7 +370,15 @@ for (fips in fips_list){
   fips.df[which(fips.df$date==first.fips.date),"metrics.vaccinationsCompletedRatio"]<-0
   
   fips.df<-na.locf(fips.df) #Last Observation Carried Forward
-  fips.df$metrics.testPositivityRatio =  zoo::rollmean(fips.df$metrics.testPositivityRatio, 7, fill=NA, align="right")
+  #fips.df$metrics.testPositivityRatio =  zoo::rollmean(fips.df$metrics.testPositivityRatio, 7, fill=NA, align="right")
+  
+  if(last.fips.date>end){
+    imputter <- fips.df[which(fips.df$date==last.fips.date),]
+    imputter$date<-end
+    fips.df<-rbind(fips.df,imputter)
+  }
+  
+  
   # Append the data
   act_dataF<-rbind(act_dataF,fips.df)
   
