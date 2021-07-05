@@ -378,6 +378,11 @@ for (fips in fips_list){
     fips.df<-rbind(fips.df,imputter)
   }
   
+  if(fips.df[which(fips.df$date==last.fips.date),"metrics.vaccinationsInitiatedRatio"]==0){
+    fips.df[which(fips.df$date==last.fips.date),"metrics.vaccinationsInitiatedRatio"]<-NA
+    fips.df[which(fips.df$date==last.fips.date),"metrics.vaccinationsCompletedRatio"]<-NA
+  }
+  
   
   # Append the data
   act_dataF<-rbind(act_dataF,fips.df)
