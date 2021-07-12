@@ -188,12 +188,14 @@ for (cutoff in cutofflist){
     
      # test.df[which(test.df$state == "Texas"),"Predicted_Double_Days"]<- NA
       test.df[which(test.df$state == "Florida"),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 48419),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 48223),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 48387),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 48449),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 48365),"Predicted_Double_Days"]<- NA
-      test.df[which(test.df$fips == 39017),"Predicted_Double_Days"]<- NA
+      
+      # test.df[which(test.df$fips == 48419),"Predicted_Double_Days"]<- NA
+      # test.df[which(test.df$fips == 48223),"Predicted_Double_Days"]<- NA
+      # test.df[which(test.df$fips == 48387),"Predicted_Double_Days"]<- NA
+      # test.df[which(test.df$fips == 48449),"Predicted_Double_Days"]<- NA
+      # test.df[which(test.df$fips == 48365),"Predicted_Double_Days"]<- NA
+      # test.df[which(test.df$fips == 39017),"Predicted_Double_Days"]<- NA
+      
     # test.df[which(test.df$fips == 48231),"Predicted_Double_Days"]<- NA
     #test.df[which(test.df$fips == 21121),"Predicted_Double_Days"]<- NA
     #test.df[which(test.df$fips == 21125),"Predicted_Double_Days"]<- NA
